@@ -202,8 +202,9 @@ directory and receive a registry row before being used in prose.
 
 R045 adds the first reproducibility appendix inventory that links claims,
 tables, commands, environment state, and provenance caveats to their source
-artifacts. Before submission, repair or replace local version provenance because
-the current `.git` directory is not recognized as a valid repository.
+artifacts. The project now has a valid public Git repository for the current
+source state; R048 remains the historical source-snapshot repair for the earlier
+invalid-Git workspace state.
 
 R047 adds source/hash/compute/command ledgers for the current evidence chain.
 Use `results/r047_evidence_provenance_package/` before any artifact-review or
@@ -211,10 +212,11 @@ rebuttal packaging. The remaining reproducibility risks are invalid local Git
 metadata, incomplete R020/R021 launch-command provenance, and partial rather
 than complete wall-clock accounting for historical runs.
 
-R048 resolves the first two risks by providing a deterministic source snapshot
-and a transparent command-provenance boundary note. The local `.git` state is
-still invalid, so cite the source snapshot hash unless a future submission step
-creates a valid repository or institutional source archive.
+R048 resolves the first two risks for the pre-publication workspace by providing
+a deterministic source snapshot and a transparent command-provenance boundary
+note. For future submission packaging, cite the public Git repository for the
+current source state and keep the R048 snapshot/hash as the historical repair
+record for the earlier invalid-Git state.
 
 R049 makes the provenance layer executable:
 
@@ -261,6 +263,7 @@ Secondary reviewer-agent feedback was not run in this turn because sub-agent spa
 - [x] Replace invalid local Git provenance with a deterministic source snapshot (`results/r048_version_command_provenance/`).
 - [x] Reconstruct and explicitly bound R020/R021 command-provenance context (`results/r048_version_command_provenance/`).
 - [x] Add a tested provenance-validation gate (`results/r049_provenance_validation/`).
-- [ ] Decide whether submission packaging also needs a valid Git repository or institutional source archive.
+- [x] Initialize and publish a valid GitHub repository for the current source state.
+- [ ] Decide whether submission packaging also needs an institutional source archive.
 - [ ] Rerun citation-context audit after R045 prose is stable.
 - [ ] Decide whether to add a small robotics breadth package before submission.

@@ -91,7 +91,7 @@ bibliographic metadata entries, and leaves no wrong-context citation known in
 the current draft. R043 selects IEEE T-ASE as the primary target route, with
 T-RO as a stretch target and RA-L/RAS/EAAI as contingencies. The next
 paper-facing gates are target-specific manuscript alignment, optional robotics
-breadth evidence, version-provenance repair, compute accounting, and local PDF
+breadth evidence, compute accounting, public source packaging, and local PDF
 compile/runtime resolution. R044 audits the local runtime and reproducibility
 state: Python 3.11.13, the pinned robosuite/MuJoCo stack, and CUDA-enabled
 PyTorch are available, smoke paths run locally, but `.git` metadata is invalid
@@ -109,4 +109,7 @@ and random_b450 have raw run summaries/checkpoints, and reconstructed commands
 are templates rather than archived original launch logs. R049 adds an automated
 provenance-validation gate: the default command validates R047/R048 package
 self-consistency, while `--compare-current-files` intentionally reports drift
-between historical ledgers and the current working tree.
+between historical ledgers and the current working tree. After the public GitHub
+initialization, the current source state is tracked by a valid Git repository;
+R048 remains the historical repair artifact for the earlier invalid-Git
+workspace state.

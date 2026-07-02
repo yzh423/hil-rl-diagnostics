@@ -109,13 +109,15 @@ Current venue caveat: R043 selects IEEE T-ASE as the primary target route based
 on official scope and metric pages. Final SCI Q1 / CAS partition status still
 needs an institutional JCR/CAS check before submission.
 
-Current reproducibility caveat: R048 replaces the unavailable local Git commit
-with a deterministic source snapshot and records R020/R021 command provenance
-boundaries. The local `.git` metadata is still invalid, R020/R021 original
-central launch commands are still not archival logs, and only three scanned
-paper-core CSVs expose explicit `wall_time_s`. R049 adds a default provenance
-validation command; its drift mode currently reports expected differences
-between historical R047/R048 ledgers and the post-R049 working tree.
+Current reproducibility caveat: R048 records the pre-publication state where a
+valid Git commit was unavailable and replaces it with a deterministic source
+snapshot. The project now also has a valid public GitHub repository for the
+current source state, while R047/R048 remain the provenance records for
+historical evidence and source-snapshot boundaries. R020/R021 original central
+launch commands are still not archival logs, and only three scanned paper-core
+CSVs expose explicit `wall_time_s`. R049 adds a default provenance validation
+command; its drift mode reports expected differences between historical R047/R048
+ledgers and the current working tree.
 
 Current manuscript caveat: R045 adds a first T-ASE-style Note to Practitioners
 and reproducibility appendix inventory. It does not add new citations,
@@ -144,8 +146,9 @@ experiments, or a positive LV-VoI method claim.
 
 ## Best Next Moves
 
-1. Decide whether submission packaging needs a fresh source snapshot or valid
-   Git repository after R049.
+1. Keep the public GitHub package clean: source, registry-backed evidence,
+   figures, tables, and audits should stay tracked, while local process notes,
+   checkpoints, caches, and third-party PDFs should stay untracked.
 2. Decide whether to add a small robotics breadth package: cleaned Stack
    appendix or no new runs.
 3. Decide whether to install/fix a local LaTeX runtime or keep drafting in TeX

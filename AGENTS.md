@@ -87,12 +87,17 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
 
 ## Current High-Value Next Tasks
 
-- Use R048 as the current replacement for invalid local Git/version provenance
-  and for R020/R021 command-provenance boundaries.
+- Keep public GitHub packaging clean: track source, registry-backed evidence,
+  figures, tables, audits, and paper files; keep local process notes,
+  third-party PDFs, caches, checkpoints, and bulky generated archives untracked.
+- Use the current public Git repository for source-state tracking after the
+  repository initialization, while keeping R048 as the historical record of the
+  earlier invalid-Git/source-snapshot repair and R020/R021 command-provenance
+  boundaries.
 - Use R049 to validate R047/R048 provenance package self-consistency before
   claiming the provenance layer is ready.
-- Decide whether submission packaging also needs a valid Git repository or an
-  institutional source archive in addition to the R048 source snapshot.
+- Decide whether submission packaging also needs an institutional source archive
+  in addition to the public Git repository and R048 source snapshot.
 - Use R047 as the current source/hash/compute/command provenance package before
   making paper-facing evidence claims.
 - Rerun citation-context audit after the R045 Note to Practitioners and

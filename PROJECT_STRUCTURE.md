@@ -26,7 +26,6 @@ project stays readable as results accumulate.
 | Current manuscript skeleton | `paper/main.tex` |
 | Human-readable result map | `results/RESULTS_INDEX.md` |
 | Figure and table asset map | `figures/FIGURE_ASSET_INDEX.md` |
-| Experiment history and next milestones | `refine-logs/EXPERIMENT_TRACKER.md` |
 | Future agent working rules | `AGENTS.md` |
 
 ## Directory Map
@@ -42,8 +41,11 @@ project stays readable as results accumulate.
 | `figures/` | Paper figures and LaTeX tables | R026 and R029 paper assets. Use `figures/FIGURE_ASSET_INDEX.md`. |
 | `paper/` | Current manuscript skeleton | R038 diagnostic-protocol draft using R029/R036 assets and R042-audited citations. |
 | `proposal/` | Proposal and literature notes | Earlier method-positive proposal material; useful for background, not the current claim source. |
-| `refine-logs/` | Planning and audit logs | Tracker, experiment plan, and earlier optimization notes. |
 | `docs/decisions/` | Architecture and research-decision records | Records decisions that future work should not re-litigate casually. |
+
+Process-style experiment notes and local planning logs are intentionally kept
+out of the public GitHub repository. Use the evidence registry, result index,
+manifests, and audit packages for public-facing provenance.
 
 ## Paper-Facing Evidence Flow
 

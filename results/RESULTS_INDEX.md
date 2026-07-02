@@ -71,7 +71,7 @@ evidence unless promoted through a new registry row with a clear primary source.
 
 | Directory | Status | Reason |
 |---|---|---|
-| `results/r046_robocasa_dynamics_pilot_triage/` | VOID, excluded from registry | Created from a user message later corrected as belonging to another project. Do not use for this paper. |
+| `results/r046_robocasa_dynamics_pilot_triage/` | VOID, excluded from registry and public repository tracking | Created from a user message later corrected as belonging to another project. Do not use for this paper. |
 
 ## Current Registry Rows
 

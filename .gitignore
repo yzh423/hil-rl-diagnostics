@@ -42,6 +42,7 @@ Thumbs.db
 *.tmp
 *.temp
 ~$*
+*.pid
 
 # Local literature PDFs; keep citation metadata, not third-party PDFs, in Git.
 /*.pdf
@@ -49,3 +50,10 @@ Thumbs.db
 # Large generated binary artifacts stay local; manifests and hashes are tracked.
 results/**/checkpoints/
 results/**/source_snapshot*.zip
+
+# Local planning and process notes stay out of the public repository.
+refine-logs/
+results/**/r*_decision_note.md
+results/**/r*_start_note.md
+results/**/r*_diagnostic_note.md
+results/r046_robocasa_dynamics_pilot_triage/
