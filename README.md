@@ -1,14 +1,15 @@
-# HIL-RL Diagnostics
+# HIL-RL Human-Attention Diagnostics
 
-Cost-matched diagnostic evaluation for human-in-the-loop reinforcement learning
-intervention triggers in robotic manipulation.
+Cost-matched diagnostic evaluation for human-attention allocation in
+human-in-the-loop reinforcement learning for robotic manipulation.
 
 This repository is organized around a cautious scientific position: the current
 LV-VoI trigger is **not** a positive method result. Under a stricter protocol,
 the conclusion reverses: a cost-matched random intervention family dominates the
 current LV-VoI variant on the Lift case study. The contribution is therefore a
-diagnostic evaluation protocol: cost matching, repeated checkpoint evaluation,
-and intervention-trace analysis before claiming trigger superiority.
+diagnostic evaluation protocol for attention-allocation claims: cost matching,
+repeated checkpoint evaluation, and intervention-trace analysis before claiming
+that a trigger uses human effort more efficiently.
 
 Start with:
 
@@ -40,12 +41,13 @@ README images:
 
 ## Current Evidence Boundary
 
-The current manuscript route is a diagnostic-protocol paper, not a paper that
-claims the current trigger is superior.
+The current manuscript route is a diagnostic-protocol paper about scarce human
+attention in robot learning, not a paper that claims the current trigger is
+superior.
 
 | Claim | Evidence status |
 |---|---|
-| Cost-matched random baselines are necessary. | R021: `random_b350` reaches `439/500 = 87.8%` at cost `177.0`, while LV-VoI scale3 reaches `416/500 = 83.2%` at cost `202.0`. |
+| Cost-matched random baselines are necessary for attention-allocation claims. | R021: `random_b350` reaches `439/500 = 87.8%` at cost `177.0`, while LV-VoI scale3 reaches `416/500 = 83.2%` at cost `202.0`. |
 | Repeated checkpoint evaluation is required. | R020-R024 use repeated autonomous checkpoint evaluation rather than one final checkpoint. |
 | Lightweight trigger repairs do not recover the claim. | R022 and R024 remain dominated by same-seed `random_b350`. |
 | Trace diagnostics are useful for redesign. | R023/R024 show over-triggering and score/timing mismatch rather than a simple "too far from the cube" failure mode. |

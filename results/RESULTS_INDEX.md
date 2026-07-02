@@ -1,6 +1,6 @@
 # Results Index
 
-Last updated: 2026-07-02
+Last updated: 2026-07-03
 
 This file is a human-readable map of `results/`. The machine-readable claim
 source is `results/EXPERIMENT_EVIDENCE_REGISTRY.csv`.
@@ -45,6 +45,7 @@ source is `results/EXPERIMENT_EVIDENCE_REGISTRY.csv`.
 | R047 | `results/r047_evidence_provenance_package/` | Evidence-provenance support | Registry source inventory, artifact hashes, available compute accounting, command provenance inventory, and gap analysis. |
 | R048 | `results/r048_version_command_provenance/` | Version and command provenance support | Deterministic source snapshot, Git failure diagnostic, R020/R021 checkpoint inventories, and reconstructed command templates. |
 | R049 | `results/r049_provenance_validation/` | Provenance-validation support | Tested validator and CLI for R047/R048 package self-consistency plus optional current-file drift diagnosis. |
+| R050 | `results/r050_theme_deepening/` | Manuscript/theme support | Deepens the paper spine around human-attention allocation diagnostics without adding experiments, citations, or positive LV-VoI claims. |
 
 ## Baseline And Historical Runs
 
@@ -75,7 +76,7 @@ evidence unless promoted through a new registry row with a clear primary source.
 
 ## Current Registry Rows
 
-The registry currently covers R020-R049, excluding voided R046. Add new rows when:
+The registry currently covers R020-R050, excluding voided R046. Add new rows when:
 
 - a result supports or rejects a paper claim;
 - a derived paper artifact is created;

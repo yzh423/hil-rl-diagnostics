@@ -1,6 +1,6 @@
 # Paper Plan
 
-**Working title**: When Cost Matching Changes the Conclusion: A Diagnostic Evaluation Protocol for Human-in-the-Loop RL Intervention Triggers in Robotic Manipulation
+**Working title**: Cost-Matched Diagnostics for Human-Attention Allocation in Human-in-the-Loop Robot Learning
 
 **Venue target**: Primary route is IEEE Transactions on Automation Science and
 Engineering (T-ASE), with IEEE Transactions on Robotics (T-RO) as a stretch
@@ -8,21 +8,23 @@ target and RA-L / Robotics and Autonomous Systems / Engineering Applications of
 Artificial Intelligence as contingencies. R043 records the source-backed venue
 matrix in `results/r043_venue_targeting/`.
 
-**Paper type**: Empirical diagnostic protocol paper with a robotic manipulation case study. Negative findings are treated as evidence for the protocol, not as the paper identity.
+**Paper type**: Empirical diagnostic protocol paper with a robotic manipulation case study. The theme is human-attention allocation under scarce intervention budgets; negative findings are treated as evidence for the protocol, not as the paper identity.
 
-**Date**: 2026-07-02
+**Date**: 2026-07-03
 
 **Page budget**: 12-14 pages for journal-style draft, including references if targeting IEEE Transactions-style venues.
 
 ## Central Thesis
 
-HIL-RL intervention triggers can appear human-efficient under weak evaluation,
-but the conclusion can reverse once random baselines are cost matched,
-checkpoints are repeatedly evaluated, and interventions are traced at the start
-level. The paper's main contribution is a diagnostic evaluation protocol for
-robotic HIL-RL trigger claims, demonstrated through a robosuite manipulation
-case study in which the current LV-VoI trigger and two lightweight repairs are
-dominated by cost-matched random baselines.
+In HIL-RL for robot learning, an intervention trigger is a policy for allocating
+scarce human attention during training. A trigger can appear human-efficient
+under weak evaluation, but the conclusion can reverse once random baselines are
+cost matched, checkpoints are repeatedly evaluated, and interventions are
+traced at the start level. The paper's main contribution is a diagnostic
+evaluation protocol for human-attention allocation claims in robotic HIL-RL,
+demonstrated through a robosuite manipulation case study in which the current
+LV-VoI trigger and two lightweight repairs are dominated by cost-matched random
+baselines.
 
 R028 refines this framing in `results/r028_framework_refinement/`. Use that
 package before drafting claims, section prose, or rebuttal text.
@@ -54,12 +56,18 @@ R049 adds the executable provenance-validation gate. Use the default command as
 part of verification; use drift mode only to decide whether a fresh source
 snapshot is needed.
 
+R050 deepens the paper spine from "trigger diagnostics" to "human-attention
+allocation diagnostics" without changing the evidence boundary. Use it as the
+current narrative rule: the paper evaluates whether a trigger really improves
+the allocation of scarce human intervention effort, not whether LV-VoI is a
+positive method result.
+
 ## Claims-Evidence Matrix
 
 | Claim | Evidence | Status | Section |
 |---|---|---|---|
-| Cost-matched random baselines are necessary. | R021 `random_b350` reached `439/500 = 87.8%` at cost 177.0, dominating LV-VoI scale3 `416/500 = 83.2%` at cost 202.0. | Supported | Section 4 |
-| Repeated checkpoint evaluation is required for reliable HIL-RL claims. | R020-R024 use `5 x 20` checkpoint reevaluation; R024 seed results vary from 61% to 94%. | Supported | Section 3, Section 4 |
+| Cost-matched random baselines are necessary for human-attention allocation claims. | R021 `random_b350` reached `439/500 = 87.8%` at cost 177.0, dominating LV-VoI scale3 `416/500 = 83.2%` at cost 202.0. | Supported | Section 4 |
+| Repeated checkpoint evaluation is required for reliable HIL-RL attention-allocation claims. | R020-R024 use `5 x 20` checkpoint reevaluation; R024 seed results vary from 61% to 94%. | Supported | Section 3, Section 4 |
 | Simple trigger repairs do not fix random dominance. | R022 min-disagree: `226/300 = 75.3%`, cost 211.7. R024 score-floor: `233/300 = 77.7%`, cost 253.3. Both lose to same-seed `random_b350`: `259/300 = 86.3%`, cost 95.0. | Supported | Section 5 |
 | Trace diagnostics reveal over-triggering and score calibration issues. | R023: LV-VoI starts closer to cube than random but starts 96 times vs random 55. R024: floor blocks low-score starts but still starts 94 times. | Supported | Section 5 |
 | Current method does not yet generalize to Stack. | R018/R019 Stack variants are dominated by strong no-online matched BC. | Supported limitation | Section 6 / Appendix |
@@ -68,25 +76,25 @@ snapshot is needed.
 
 ### 0. Abstract
 
-- **Problem**: HIL-RL trigger claims can be fragile when random baselines are not cost matched and checkpoint variance is under-measured.
-- **Approach**: Define and apply a diagnostic protocol: cost-matched random families, repeated checkpoint evaluation, and trace-level intervention diagnostics.
+- **Problem**: HIL-RL trigger claims are really human-attention allocation claims, and they can be fragile when random baselines are not cost matched and checkpoint variance is under-measured.
+- **Approach**: Define and apply a diagnostic protocol with three validity gates: cost-matched random families, repeated checkpoint evaluation, and trace-level intervention diagnostics.
 - **Key result**: A cost-matched random baseline (`random_b350`) dominates LV-VoI scale3 on Lift: `87.8%` repeated success at cost 177.0 vs `83.2%` at cost 202.0; two lightweight repairs also remain dominated.
-- **Implication**: Before claiming intervention-trigger superiority, HIL-RL papers should show that the claim survives cost-matched random families, repeated checkpoint estimates, and trace-level budget diagnostics.
+- **Implication**: Before claiming intervention-trigger superiority, HIL-RL papers should show that the attention-allocation claim survives cost-matched random families, repeated checkpoint estimates, and trace-level budget diagnostics.
 
 ### 1. Introduction
 
-- **Opening**: Human interventions can rescue RL from unsafe or unproductive trajectories, but intervention timing is itself a scarce-resource decision.
+- **Opening**: Human interventions can rescue RL from unsafe or unproductive trajectories, but intervention timing is a scarce human-attention allocation decision.
 - **Gap**: Many evaluations compare against a single random budget or a single final checkpoint, leaving room for optimistic intervention-efficiency conclusions.
 - **Research questions**:
   - RQ1: Does a foresighted VoI trigger remain Pareto-superior after cost matching?
   - RQ2: Can simple disagreement or score-calibration repairs recover the advantage?
   - RQ3: What diagnostics reveal why a trigger spends budget inefficiently?
 - **Contributions**:
-  1. A cost-matched HIL-RL trigger evaluation protocol for robotic manipulation.
+  1. A cost-matched HIL-RL trigger evaluation protocol for human-attention allocation in robotic manipulation.
   2. A case-study reversal: current LV-VoI variants are dominated by cost-matched random under this protocol.
   3. Trace diagnostics showing over-triggering and score/timing mismatch.
   4. Practical stop/continue rules for trigger redesign.
-- **Hero figure**: Pipeline + success-cost reversal + intervention start distribution.
+- **Hero figure**: Protocol gates + success-cost reversal + intervention start distribution.
 
 ### 2. Related Work
 
@@ -135,7 +143,7 @@ the R037/R042 audit records before adding or rewriting literature claims.
 - Figure 4: timing bins.
 - Figure 5: R024 score-over-time.
 
-### 6. Discussion: Evaluation Rules for Future HIL-RL Triggers
+### 6. Discussion: Evaluation Rules for Future HIL-RL Attention Allocation
 
 - Cost matching is not optional.
 - Repeated checkpoint evaluation should be standard.
@@ -146,9 +154,10 @@ the R037/R042 audit records before adding or rewriting literature claims.
 ### 7. Conclusion
 
 The paper should conclude with the evaluation lesson, not the failed trigger:
-before claiming that an intervention trigger is more human-efficient, HIL-RL
-papers should show that the claim survives cost-matched random families,
-repeated checkpoint estimates, and trace-level budget diagnostics.
+before claiming that an intervention trigger allocates human effort more
+efficiently, HIL-RL papers should show that the claim survives cost-matched
+random families, repeated checkpoint estimates, and trace-level budget
+diagnostics.
 
 ## Figure Plan
 
@@ -234,7 +243,7 @@ Secondary reviewer-agent feedback was not run in this turn because sub-agent spa
 
 - The paper is stronger as a diagnostic benchmark than as a method paper.
 - The biggest risk is perceived lack of positive algorithmic contribution.
-- The minimum fix is to make the protocol itself crisp: cost-matched random families, repeated checkpoint evaluation, and trace diagnostics become the contribution.
+- The minimum fix is to make the protocol itself crisp: cost-matched random families, repeated checkpoint evaluation, and trace diagnostics become the contribution for evaluating human-attention allocation claims.
 - Another risk is limited task breadth; Stack should be framed as boundary evidence, not as positive transfer.
 - R028 strengthens the framing further: call the paper a diagnostic protocol
   paper with a robotic case study, not a negative-findings paper.
@@ -264,6 +273,7 @@ Secondary reviewer-agent feedback was not run in this turn because sub-agent spa
 - [x] Reconstruct and explicitly bound R020/R021 command-provenance context (`results/r048_version_command_provenance/`).
 - [x] Add a tested provenance-validation gate (`results/r049_provenance_validation/`).
 - [x] Initialize and publish a valid GitHub repository for the current source state.
+- [x] Deepen the paper spine around human-attention allocation diagnostics (`results/r050_theme_deepening/`).
 - [ ] Decide whether submission packaging also needs an institutional source archive.
 - [ ] Rerun citation-context audit after R045 prose is stable.
 - [ ] Decide whether to add a small robotics breadth package before submission.

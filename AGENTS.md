@@ -1,6 +1,6 @@
 # Agent Working Rules
 
-Last updated: 2026-07-02
+Last updated: 2026-07-03
 
 This file is for Codex agents and future automation working in this repository.
 Read it before changing experiments, evidence rows, paper text, or project
@@ -21,9 +21,9 @@ Before making paper-facing changes, read:
 
 ## Current Scientific Position
 
-The current paper route is a cost-matched HIL-RL diagnostic protocol with a
-robotic manipulation case study. The current LV-VoI trigger is not a positive
-method result.
+The current paper route is a cost-matched HIL-RL diagnostic protocol for
+human-attention allocation in robotic manipulation. The current LV-VoI trigger
+is not a positive method result.
 
 Protected claim:
 

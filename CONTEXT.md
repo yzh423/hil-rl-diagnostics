@@ -1,6 +1,6 @@
 # FORESIGHT-HIL Context
 
-Last updated: 2026-07-02
+Last updated: 2026-07-03
 
 This file gives future humans and agents the project vocabulary. Use it before
 editing experiment logic, paper claims, result summaries, or figure captions.
@@ -8,14 +8,14 @@ editing experiment logic, paper claims, result summaries, or figure captions.
 ## Current Research Route
 
 FORESIGHT-HIL is currently framed as a cost-matched HIL-RL diagnostic protocol
-paper with a robotic manipulation case study. The current LV-VoI trigger is not
-claimed as superior. R020-R024 show that the conclusion changes under stronger
-evaluation: `random_b350` dominates LV-VoI scale3 after cost matching, and two
-simple trigger repairs remain dominated.
+paper about human-attention allocation in robotic manipulation. The current
+LV-VoI trigger is not claimed as superior. R020-R024 show that the conclusion
+changes under stronger evaluation: `random_b350` dominates LV-VoI scale3 after
+cost matching, and two simple trigger repairs remain dominated.
 
 The paper contribution is therefore:
 
-- strict cost-matched evaluation of intervention triggers;
+- strict cost-matched evaluation of human-attention allocation claims;
 - repeated checkpoint evaluation instead of single-checkpoint reporting;
 - intervention trace diagnostics at the start level;
 - explicit negative findings that motivate protocol discipline before trigger
@@ -28,6 +28,7 @@ The paper contribution is therefore:
 | HIL-RL | Human-in-the-loop reinforcement learning with a scarce intervention budget. |
 | Simulated human | A privileged scripted oracle used as the intervention source. It is not a real teleoperator. |
 | Intervention trigger | A rule deciding when to request or apply oracle control. |
+| Human-attention allocation | The current paper framing for intervention timing: the trigger decides when scarce human correction effort is spent. |
 | LV-VoI trigger | The learning-value Value-of-Information trigger implemented through `VoIGate` and related flags. |
 | Random budget family | Random intervention baselines swept across budgets so cost can be matched. |
 | Cost matching | Comparing strategies at similar realized human-step cost, not only at nominal budget. |
@@ -112,4 +113,7 @@ self-consistency, while `--compare-current-files` intentionally reports drift
 between historical ledgers and the current working tree. After the public GitHub
 initialization, the current source state is tracked by a valid Git repository;
 R048 remains the historical repair artifact for the earlier invalid-Git
-workspace state.
+workspace state. R050 deepens the current paper spine from trigger diagnostics
+to human-attention allocation diagnostics, updating the manuscript, plan, and
+public project framing without changing evidence boundaries, citations, or raw
+results.

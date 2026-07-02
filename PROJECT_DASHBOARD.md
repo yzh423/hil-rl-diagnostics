@@ -1,19 +1,19 @@
 # FORESIGHT-HIL Project Dashboard
 
-Last updated: 2026-07-02
+Last updated: 2026-07-03
 
 This is the one-page entry point for the current project state. Use it before
 running new experiments, editing paper claims, or revising the manuscript.
 
 ## Current Route
 
-FORESIGHT-HIL is currently a cost-matched HIL-RL diagnostic protocol paper with
-a robotic manipulation case study. The current LV-VoI trigger is not claimed as
-superior.
+FORESIGHT-HIL is currently a cost-matched HIL-RL diagnostic protocol paper about
+human-attention allocation in robotic manipulation. The current LV-VoI trigger
+is not claimed as superior.
 
 The defensible contribution is:
 
-- cost-matched random-family evaluation for intervention triggers;
+- cost-matched random-family evaluation for human-attention allocation claims;
 - repeated checkpoint evaluation rather than single-checkpoint reporting;
 - start-level intervention trace diagnostics;
 - negative trigger-repair findings that motivate protocol discipline before
@@ -42,6 +42,7 @@ cost.
 | Evidence provenance package | `results/r047_evidence_provenance_package/EVIDENCE_PROVENANCE_AUDIT.md` |
 | Version and command provenance repair | `results/r048_version_command_provenance/VERSION_PROVENANCE_REPAIR.md` |
 | Provenance validation gate | `results/r049_provenance_validation/PROVENANCE_VALIDATION_MODULE.md` |
+| Theme deepening package | `results/r050_theme_deepening/THEME_DEEPENING.md` |
 | Future agent rules | `AGENTS.md` |
 
 ## Evidence Chain
@@ -96,6 +97,7 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
 | Evidence provenance package | `results/r047_evidence_provenance_package/` |
 | Version and command provenance repair | `results/r048_version_command_provenance/` |
 | Provenance validation gate | `results/r049_provenance_validation/` |
+| Theme deepening package | `results/r050_theme_deepening/` |
 
 Current compile caveat: PDF compilation is blocked by the local LaTeX runtime or
 Tectonic cache availability. This is not currently a verified source-file
@@ -119,9 +121,9 @@ CSVs expose explicit `wall_time_s`. R049 adds a default provenance validation
 command; its drift mode reports expected differences between historical R047/R048
 ledgers and the current working tree.
 
-Current manuscript caveat: R045 adds a first T-ASE-style Note to Practitioners
-and reproducibility appendix inventory. It does not add new citations,
-experiments, or a positive LV-VoI method claim.
+Current manuscript caveat: R050 deepens the manuscript theme from trigger
+diagnostics to human-attention allocation diagnostics. It does not add new
+citations, experiments, or a positive LV-VoI method claim.
 
 ## Code Map
 
