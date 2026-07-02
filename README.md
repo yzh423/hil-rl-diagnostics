@@ -21,16 +21,22 @@ Start with:
 ## Visual Summary
 
 <p align="center">
-  <img src="figures/fig1_protocol_hero_r029.png" alt="Protocol overview" width="900">
+  <img src="figures/fig1_protocol_hero_r029.png" alt="Protocol overview" width="760">
 </p>
 
-| Cost-matched frontier | Trigger repairs | Intervention timing |
-|---|---|---|
-| ![Cost-matched frontier](figures/qa_rendered/fig2_cost_matched_frontier.png) | ![Trigger repairs](figures/qa_rendered/fig3_trigger_repairs.png) | ![Intervention timing](figures/qa_rendered/fig4_intervention_timing.png) |
+<p align="center">
+  <img src="figures/qa_rendered/fig2_cost_matched_frontier.png" alt="Cost-matched success-cost frontier" width="620">
+</p>
 
-| Score diagnostics | Trace geometry | R024 repair comparison |
-|---|---|---|
-| ![Score over time](figures/qa_rendered/fig5_score_over_time.png) | ![Trace geometry](results/r023_real_trace_seed0_2/r023_intervention_geometry_boxplots.png) | ![R024 repair comparison](results/r024_score_floor_seed0_2/r024_success_cost_compare.png) |
+Additional diagnostics are available as linked artifacts rather than inline
+README images:
+
+- [trigger repair comparison](figures/qa_rendered/fig3_trigger_repairs.png)
+- [intervention timing distribution](figures/qa_rendered/fig4_intervention_timing.png)
+- [score-over-time diagnostic](figures/qa_rendered/fig5_score_over_time.png)
+- [trace geometry boxplots](results/r023_real_trace_seed0_2/r023_intervention_geometry_boxplots.png)
+- [R024 repair comparison](results/r024_score_floor_seed0_2/r024_success_cost_compare.png)
+- [full figure and table asset index](figures/FIGURE_ASSET_INDEX.md)
 
 ## Current Evidence Boundary
 
