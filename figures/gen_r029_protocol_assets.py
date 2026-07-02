@@ -70,26 +70,26 @@ def save_both(fig, stem):
 
 def draw_protocol_panel(ax, checklist):
     ax.axis("off")
-    y = 0.91
-    dy = 0.17
+    y = 0.90
+    dy = 0.185
     for row in checklist:
         gate = row["gate_id"]
         title = row["protocol_gate"]
         hero_text = row["hero_text"]
         color = COLORS["random"] if gate in ("G1", "G2") else COLORS["none"]
         box = FancyBboxPatch(
-            (0.02, y - 0.105), 0.93, 0.105,
-            boxstyle="round,pad=0.012,rounding_size=0.018",
+            (0.045, y - 0.125), 0.87, 0.125,
+            boxstyle="round,pad=0.010,rounding_size=0.018",
             linewidth=0.8, edgecolor=color, facecolor="white",
             transform=ax.transAxes, clip_on=False,
         )
         ax.add_patch(box)
-        ax.text(0.045, y - 0.030, gate, transform=ax.transAxes,
+        ax.text(0.075, y - 0.043, gate, transform=ax.transAxes,
                 color=color, fontsize=7.2, fontweight="bold",
                 ha="left", va="center")
-        ax.text(0.15, y - 0.030, title, transform=ax.transAxes,
+        ax.text(0.195, y - 0.043, title, transform=ax.transAxes,
                 fontsize=6.8, fontweight="bold", ha="left", va="center")
-        ax.text(0.15, y - 0.072, hero_text, transform=ax.transAxes,
+        ax.text(0.195, y - 0.086, hero_text, transform=ax.transAxes,
                 fontsize=6.1, color="#444444", ha="left", va="center")
         y -= dy
     panel_label(ax, "A")
@@ -105,13 +105,17 @@ def draw_cost_panel(ax):
         ax.errorbar(x, y, yerr=yerr(row), fmt="o", markersize=6,
                     color=strategy_color(name), capsize=2.5, lw=1.2)
         if name == "random_b350":
-            offset = (-48, -8)
+            xytext = (151.5, 87.45)
+            textcoords = "data"
+            va = "top"
         else:
-            offset = (8, -16)
+            xytext = (8, -16)
+            textcoords = "offset points"
+            va = "center"
         ax.annotate(
-            f"{LABELS[name]}\n{y:.1f}% @ {x:.0f} steps",
-            (x, y), xytext=offset, textcoords="offset points",
-            fontsize=7, ha="left"
+            f"{LABELS[name]}\n{y:.1f}%\n{x:.0f} steps",
+            (x, y), xytext=xytext, textcoords=textcoords,
+            fontsize=7, ha="left", va=va
         )
     ax.annotate(
         "higher success\nlower cost",
@@ -158,11 +162,12 @@ def draw_trace_panel(ax):
 
 def fig1_protocol_hero():
     checklist = read_csv(R029 / "protocol_checklist.csv")
-    fig = plt.figure(figsize=(7.45, 3.0))
-    gs = fig.add_gridspec(1, 3, width_ratios=[1.72, 1.0, 1.0], wspace=0.43)
-    draw_protocol_panel(fig.add_subplot(gs[0, 0]), checklist)
-    draw_cost_panel(fig.add_subplot(gs[0, 1]))
-    draw_trace_panel(fig.add_subplot(gs[0, 2]))
+    fig = plt.figure(figsize=(7.15, 5.15))
+    gs = fig.add_gridspec(
+        2, 2, height_ratios=[1.0, 1.08], hspace=0.42, wspace=0.36)
+    draw_protocol_panel(fig.add_subplot(gs[0, :]), checklist)
+    draw_cost_panel(fig.add_subplot(gs[1, 0]))
+    draw_trace_panel(fig.add_subplot(gs[1, 1]))
     save_both(fig, "fig1_protocol_hero_r029")
 
 
