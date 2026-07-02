@@ -1,0 +1,7 @@
+diagnostic,task,seed,total_steps,n_demos,bc_pretrain_steps,strategy,voi_tau,total_successes,total_episodes,repeated_success,success_ci_low,success_ci_high,best_human_steps,training_best_success,interpretation
+r015_none_baseline,Stack,0,10000,20,5000,none,,28,60,0.4667,0.3463,0.5911,0,0.5500,reference no-human baseline from R015
+r015_random_baseline,Stack,0,10000,20,5000,random,,26,60,0.4333,0.3157,0.5590,373,0.6500,reference random baseline from R015
+r015_lift_tuned_voi,Stack,0,10000,20,5000,voi,0.01,22,60,0.3667,0.2562,0.4932,80,0.3500,Lift-tuned trigger is too conservative / not positive on Stack
+r016_bc_capacity,Stack,0,0,50,10000,none,,32,60,0.5333,0.4089,0.6537,0,0.5000,more demos and stronger BC improve Stack but do not solve variance
+r016_always_stress,Stack,0,6000,20,5000,always,,4,20,0.2000,0.0807,0.4160,0,0.2500,online all-oracle replay stress is negative; more oracle data alone is not enough
+r016_aggressive_voi_tau0,Stack,0,6000,20,5000,voi,0.0,33,60,0.5500,0.4249,0.6691,600,0.4500,current best Stack diagnostic; lower threshold helps but consumes full budget

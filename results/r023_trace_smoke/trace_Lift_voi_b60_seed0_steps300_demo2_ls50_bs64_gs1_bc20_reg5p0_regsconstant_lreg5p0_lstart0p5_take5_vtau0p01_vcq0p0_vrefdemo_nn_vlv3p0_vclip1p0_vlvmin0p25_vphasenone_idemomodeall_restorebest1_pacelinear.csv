@@ -1,0 +1,4 @@
+env_step,episode,episode_step,task,strategy,seed,human_steps,budget_used_frac,engagements,candidate,score,p_fail,eef_z,cube_z,gripper_to_cube_norm,gripper_to_cube_xy,cubeA_z,cubeB_z,gripper_to_cubeA_norm,gripper_to_cubeB_norm,stack_cubeA_lifted
+1,0,0,Lift,voi,0,1,0.0167,1,1,10.000000,1.000000,1.023579,0.830835,0.205827,0.072214,nan,nan,nan,nan,
+23,0,22,Lift,voi,0,6,0.1000,2,1,10.000000,1.000000,1.019053,0.820620,0.224400,0.104784,nan,nan,nan,nan,
+54,0,53,Lift,voi,0,11,0.1833,3,1,10.000000,1.000000,1.223792,0.820620,0.408194,0.063829,nan,nan,nan,nan,

@@ -1,0 +1,16 @@
+\begin{table*}[t]
+\centering
+\caption{Negative trigger findings. Each hypothesis was stopped once it remained dominated by cost-matched baselines or failed the diagnostic test.}
+\label{tab:negative_findings}
+\begin{tabular}{p{0.10\textwidth}p{0.31\textwidth}p{0.34\textwidth}p{0.17\textwidth}}
+\toprule
+ID & Hypothesis & Observed result & Decision \\
+\midrule
+NF1 & LV-VoI scale3 should be more human-efficient than random at similar success & random\_b350 reached 439/500=87.8\% at cost177.0 while LV-VoI scale3 reached 416/500=83.2\% at cost202.0 & Reject trigger superiority claim \\
+NF2 & Minimum policy-reference disagreement should remove low-value LV-VoI queries & min-disagree reached 226/300=75.3\% cost211.7 vs random\_b350 259/300=86.3\% cost95.0 & Do not expand \\
+NF3 & Low-confidence mid-late score floor should reduce wasted budget & score floor reached 233/300=77.7\% cost253.3 and still had 94 starts vs original 96 & Do not expand \\
+NF4 & LV-VoI fails because it intervenes far from the cube & LV-VoI starts were closer: g2c\_norm 0.217 vs random 0.285 & Reject far-from-cube explanation \\
+NF5 & Lightweight Stack trigger/replay fixes transfer & no-online 131/180=72.8\% dominated random and Stack LV-VoI at 107/180=59.4\% & Keep Stack as failure analysis \\
+\bottomrule
+\end{tabular}
+\end{table*}

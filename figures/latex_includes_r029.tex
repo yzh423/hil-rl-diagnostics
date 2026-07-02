@@ -1,0 +1,10 @@
+% === R029 Fig. 1: Protocol-Centered Hero ===
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.95\textwidth]{figures/fig1_protocol_hero_r029.pdf}
+    \caption{Diagnostic protocol for HIL-RL intervention-trigger claims. The protocol requires cost-matched random families, repeated checkpoint evaluation, best/final policy accounting, trace-level intervention diagnostics, and a same-seed stop gate before expansion. Applied to robosuite Lift, it reverses an initially plausible LV-VoI conclusion: \texttt{random\_b350} achieves higher repeated success at lower best-step human cost than LV-VoI scale3. Trace diagnostics show that LV-VoI starts more interventions while starting closer to the cube, rejecting a simple far-from-object explanation.}
+    \label{fig:protocol_hero}
+\end{figure*}
+
+% === R029 Table: Protocol Checklist ===
+\input{figures/TABLE_protocol_checklist.tex}

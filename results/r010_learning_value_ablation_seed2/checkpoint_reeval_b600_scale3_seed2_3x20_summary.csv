@@ -1,0 +1,2 @@
+checkpoint,task,n_repeats,success_mean,success_std,return_mean,return_std,total_successes,total_episodes,success_ci_low,success_ci_high
+results\r010_learning_value_ablation_seed2\checkpoints\best_Lift_voi_b600_seed2_steps10000_demo20_ls500_bs256_gs1_bc5000_reg50p0_regsconstant_lreg50p0_lstart0p5_take20_vtau0p01_vcq0p0_vrefdemo_nn_vlv3p0_vclip1p0_restorebest1_pacelinear.zip,Lift,3,0.7833,0.0624,119.5633,12.4749,47,60,0.6638,0.8688

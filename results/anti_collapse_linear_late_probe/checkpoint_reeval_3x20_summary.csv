@@ -1,0 +1,2 @@
+checkpoint,task,n_repeats,success_mean,success_std,return_mean,return_std,total_successes,total_episodes,success_ci_low,success_ci_high
+results\anti_collapse_linear_late_probe\checkpoints\best_Lift_voi_b600_seed1_steps10000_demo20_ls500_bs256_gs1_bc5000_reg50p0_regslinear_late_lreg150p0_lstart0p5_vtau0p01_vcq0p0_take20_pacelinear.zip,Lift,3,0.8500,0.1414,137.8286,18.9560,51,60,0.7389,0.9190

@@ -1,0 +1,41 @@
+{
+  "created_at_local": "2026-07-02T22:02:23",
+  "git_dir_last_write_time_note": "Filesystem timestamp not normalized; inspect local metadata if needed.",
+  "git_entry_count": 0,
+  "git_log_head": {
+    "command": [
+      "git",
+      "log",
+      "-1",
+      "--oneline"
+    ],
+    "returncode": 128,
+    "stderr": "fatal: not a git repository (or any of the parent directories): .git",
+    "stdout": ""
+  },
+  "git_path": ".git",
+  "git_path_exists": true,
+  "git_path_is_dir": true,
+  "git_path_is_file": false,
+  "git_rev_parse_show_toplevel": {
+    "command": [
+      "git",
+      "rev-parse",
+      "--show-toplevel"
+    ],
+    "returncode": 128,
+    "stderr": "fatal: not a git repository (or any of the parent directories): .git",
+    "stdout": ""
+  },
+  "git_status_short": {
+    "command": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "returncode": 128,
+    "stderr": "fatal: not a git repository (or any of the parent directories): .git",
+    "stdout": ""
+  },
+  "interpretation": "Local .git exists as an empty directory, so Git cannot provide commit provenance. Use the R048 source snapshot manifest/archive hash as the current replacement provenance."
+}

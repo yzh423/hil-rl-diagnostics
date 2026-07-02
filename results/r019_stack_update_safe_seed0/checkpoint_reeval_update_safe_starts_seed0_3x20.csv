@@ -1,0 +1,4 @@
+checkpoint,task,backend,repeat,seed,success_rate,return_mean,successes,episodes,success_ci_low,success_ci_high
+results\r019_stack_update_safe_seed0\checkpoints\best_Stack_voi_b600_seed0_r019_update_safe_starts_seed0.zip,Stack,robosuite,0,777,0.6000,46.5905,12,20,0.3866,0.7812
+results\r019_stack_update_safe_seed0\checkpoints\best_Stack_voi_b600_seed0_r019_update_safe_starts_seed0.zip,Stack,robosuite,1,778,0.6000,50.3969,12,20,0.3866,0.7812
+results\r019_stack_update_safe_seed0\checkpoints\best_Stack_voi_b600_seed0_r019_update_safe_starts_seed0.zip,Stack,robosuite,2,779,0.7000,58.3832,14,20,0.4810,0.8545

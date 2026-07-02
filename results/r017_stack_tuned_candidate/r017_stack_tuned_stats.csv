@@ -1,0 +1,5 @@
+comparison,success_diff_pp,test,statistic,p_two_sided,interpretation
+r017_stack_tuned_voi_vs_r015_none_baseline,31.67,episode_level_two_proportion_z,3.5827,0.0003,sanity check only; strong seed0 improvement over no-human baseline
+r017_stack_tuned_voi_vs_r015_random_baseline,35.00,episode_level_two_proportion_z,3.9273,0.0001,sanity check only; strong seed0 improvement over random baseline
+r017_stack_tuned_voi_vs_r016_aggressive_voi_tau0,23.33,episode_level_two_proportion_z,2.7111,0.0067,sanity check only; stronger imitation substantially improves tau0 VoI
+r017_stack_tuned_voi_vs_r016_bc_capacity,25.00,episode_level_two_proportion_z,2.8872,0.0039,sanity check only; online tau0 VoI improves over stronger BC-only

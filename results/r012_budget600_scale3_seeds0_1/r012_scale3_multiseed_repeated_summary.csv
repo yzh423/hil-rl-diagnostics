@@ -1,0 +1,2 @@
+candidate,seeds,total_successes,total_episodes,repeated_success,success_ci_low,success_ci_high,mean_best_human_steps,seed0_successes,seed0_best_human_steps,seed1_successes,seed1_best_human_steps,seed2_source,seed2_successes,seed2_best_human_steps,interpretation
+r012_budget600_scale3_all_seeds,0-2,152,180,0.8444,0.7844,0.8901,283.3,50,80,55,386,r010_budget600_scale3_seed2,47,384,current strongest learning-value VoI candidate; higher human cost than budget300 but substantially more reliable and stronger than R008/R009 aggregate

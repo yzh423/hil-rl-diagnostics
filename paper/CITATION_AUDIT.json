@@ -1,0 +1,73 @@
+{
+  "audit_skill": "citation-audit",
+  "verdict": "PASS",
+  "reason_code": "all_entries_keep_after_metadata_fixes",
+  "summary": "All 15 cited entries exist and support their current manuscript contexts after six metadata fixes.",
+  "audited_input_hashes": {
+    "references.bib": "sha256:84FE0BB63D7686FF554A60EE24F6A6D2C641C12F7BB0AC9FCC4A7AD9AB3C1925",
+    "main.tex": "sha256:508A9307A56BA5CFE67FAF55E4AF472C17B849BF6734AB26F2FDEF4B1478E10C",
+    "sections/01_introduction.tex": "sha256:B3B354661C10BB9EBFFC66006597596549E66909B0AD6DE11C2E796262256900",
+    "sections/02_related_work.tex": "sha256:55A41CC4B5D6FB5185DC5B78018678860BD57CB8DB63FA76C80F663A166EAEB9",
+    "sections/03_protocol_setup.tex": "sha256:CF6E7FF580EE92BB40DB1239986D42B4F93C273C5070D30947FE82ACE670D285",
+    "sections/04_results.tex": "sha256:06A82AD16D06C07CD74546837127164E449F92F1E8648774585EA250DCA5F6E1",
+    "sections/05_discussion.tex": "sha256:F50CA3B2C719507E852B4C867C03667635F93DA2178F40C0EAB03C5287018C55",
+    "sections/06_conclusion.tex": "sha256:5B04FEBC2BF60BBC6CAFCB0F754CB443DA5F7D01490DC6317E6C6C0C040436DD",
+    "sections/99_references.tex": "sha256:1FA5808868233817BAC63687ECD99B3AC5A569713E2D2B29AF15AC21EF5A4C6A"
+  },
+  "trace_path": ".aris/traces/citation-audit/2026-07-02_run01/",
+  "thread_id": "local-direct-audit",
+  "reviewer_model": "codex-direct-web-audit",
+  "reviewer_reasoning": "manual-authoritative-source-check",
+  "generated_at": "2026-07-02T00:00:00Z",
+  "details": {
+    "total_entries": 15,
+    "counts": {
+      "KEEP": 15,
+      "FIX": 0,
+      "REPLACE": 0,
+      "REMOVE": 0
+    },
+    "metadata_fixes_applied": [
+      "luo2025hilserl",
+      "ball2023rlpd",
+      "mandlekar2021robomimic",
+      "hoque2021thrifty",
+      "cai2025aim",
+      "guo2017calibration"
+    ],
+    "source_urls": {
+      "luo2025hilserl": "https://arxiv.org/abs/2410.21845",
+      "retzlaff2024hitl": "https://www.jair.org/index.php/jair/article/view/15348",
+      "ball2023rlpd": "https://proceedings.mlr.press/v202/ball23a.html",
+      "mandlekar2021robomimic": "https://proceedings.mlr.press/v164/mandlekar22a.html",
+      "hoque2021thrifty": "https://proceedings.mlr.press/v164/hoque22a.html",
+      "cai2025aim": "https://arxiv.org/abs/2506.09176",
+      "chua2018pets": "https://papers.nips.cc/paper_files/paper/2018/hash/3de568f8597b94bda53149c7d7f5958c-Abstract.html",
+      "janner2019mbpo": "https://papers.nips.cc/paper_files/paper/2019/hash/5faf461eff3099671ad63c6f3f094f7f-Abstract.html",
+      "guo2017calibration": "https://proceedings.mlr.press/v70/guo17a.html",
+      "haarnoja2018sac": "https://proceedings.mlr.press/v80/haarnoja18b.html",
+      "sac2018applications": "https://arxiv.org/abs/1812.05905",
+      "robosuite2020": "https://arxiv.org/abs/2009.12293",
+      "henderson2018deeprlmatters": "https://ojs.aaai.org/index.php/AAAI/article/view/11694",
+      "agarwal2021statisticalprecipice": "https://arxiv.org/abs/2108.13264",
+      "wilson1927score": "https://doi.org/10.1080/01621459.1927.10502953"
+    },
+    "per_entry": [
+      {"key": "luo2025hilserl", "verdict": "KEEP", "axis_failures": [], "note": "Metadata corrected to arXiv; context supports HIL-RL systems with demonstrations/corrections/off-policy RL."},
+      {"key": "retzlaff2024hitl", "verdict": "KEEP", "axis_failures": [], "note": "JAIR source supports HITL-RL workflow and human involvement across phases."},
+      {"key": "ball2023rlpd", "verdict": "KEEP", "axis_failures": [], "note": "PMLR source supports mixing offline data with online off-policy RL."},
+      {"key": "mandlekar2021robomimic", "verdict": "KEEP", "axis_failures": [], "note": "PMLR source supports offline human-demonstration learning for robot manipulation."},
+      {"key": "hoque2021thrifty", "verdict": "KEEP", "axis_failures": [], "note": "PMLR source supports budget-aware novelty/risk gating."},
+      {"key": "cai2025aim", "verdict": "KEEP", "axis_failures": [], "note": "Metadata corrected to arXiv; context supports adaptive robot-gated intervention."},
+      {"key": "chua2018pets", "verdict": "KEEP", "axis_failures": [], "note": "NeurIPS source supports uncertainty-aware probabilistic dynamics models."},
+      {"key": "janner2019mbpo", "verdict": "KEEP", "axis_failures": [], "note": "NeurIPS source supports short model rollouts and when-to-trust-model framing."},
+      {"key": "guo2017calibration", "verdict": "KEEP", "axis_failures": [], "note": "PMLR source supports calibration/miscalibration context."},
+      {"key": "haarnoja2018sac", "verdict": "KEEP", "axis_failures": [], "note": "PMLR source supports SAC algorithm citation."},
+      {"key": "sac2018applications", "verdict": "KEEP", "axis_failures": [], "note": "arXiv source supports SAC applications/stability context."},
+      {"key": "robosuite2020", "verdict": "KEEP", "axis_failures": [], "note": "arXiv source supports robosuite simulator/framework citation."},
+      {"key": "henderson2018deeprlmatters", "verdict": "KEEP", "axis_failures": [], "note": "AAAI source supports RL reproducibility/reporting concerns."},
+      {"key": "agarwal2021statisticalprecipice", "verdict": "KEEP", "axis_failures": [], "note": "arXiv source supports few-run RL uncertainty and interval-reporting concerns."},
+      {"key": "wilson1927score", "verdict": "KEEP", "axis_failures": [], "note": "R037 CrossRef-verified source supports Wilson interval citation."}
+    ]
+  }
+}

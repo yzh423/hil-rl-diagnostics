@@ -1,0 +1,4 @@
+checkpoint,task,backend,repeat,seed,success_rate,return_mean,successes,episodes,success_ci_low,success_ci_high
+results\r019_stack_phase_guard_seed0\checkpoints\best_Stack_voi_b600_seed0_r019_phase_guard_seed0.zip,Stack,robosuite,0,777,0.4500,44.3021,9,20,0.2582,0.6579
+results\r019_stack_phase_guard_seed0\checkpoints\best_Stack_voi_b600_seed0_r019_phase_guard_seed0.zip,Stack,robosuite,1,778,0.7500,58.7294,15,20,0.5313,0.8881
+results\r019_stack_phase_guard_seed0\checkpoints\best_Stack_voi_b600_seed0_r019_phase_guard_seed0.zip,Stack,robosuite,2,779,0.5500,55.7679,11,20,0.3421,0.7418

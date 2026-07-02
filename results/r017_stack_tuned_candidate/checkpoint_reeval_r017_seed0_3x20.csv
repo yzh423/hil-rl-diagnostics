@@ -1,0 +1,4 @@
+checkpoint,task,backend,repeat,seed,success_rate,return_mean,successes,episodes,success_ci_low,success_ci_high
+results\r017_stack_tuned_candidate\checkpoints\best_Stack_voi_b600_seed0_r017_tau0_bc50_pre10000_6000.zip,Stack,robosuite,0,777,0.7500,65.9071,15,20,0.5313,0.8881
+results\r017_stack_tuned_candidate\checkpoints\best_Stack_voi_b600_seed0_r017_tau0_bc50_pre10000_6000.zip,Stack,robosuite,1,778,0.8000,88.5151,16,20,0.5840,0.9193
+results\r017_stack_tuned_candidate\checkpoints\best_Stack_voi_b600_seed0_r017_tau0_bc50_pre10000_6000.zip,Stack,robosuite,2,779,0.8000,54.4484,16,20,0.5840,0.9193

@@ -1,0 +1,4 @@
+system,seeds,total_successes,total_episodes,repeated_success,success_ci_low,success_ci_high,mean_best_human_steps,mean_best_engagements,seed0_successes,seed0_best_human_steps,seed1_successes,seed1_best_human_steps,seed2_successes,seed2_best_human_steps,source,interpretation
+none_restore_best,0-2,134,180,0.7444,0.6761,0.8026,0.0,0.0,49,0,39,0,46,0,R004 seed0 + R013 seeds1-2,strong no-human baseline; lower success but zero extra human cost
+random_restore_best_b600,0-2,134,180,0.7444,0.6761,0.8026,342.0,18.0,45,157,60,269,29,600,R004 seed0 + R013 seeds1-2,strong stochastic-human baseline with high seed variance; lower aggregate success and higher mean best-step human cost than scale3 VoI
+learning_value_voi_b600_scale3,0-2,152,180,0.8444,0.7844,0.8901,283.3,14.7,50,80,55,386,47,384,R012 seeds0-1 + R010 seed2,current main method candidate; +10.0 pp over none/random at lower mean best-step cost than random

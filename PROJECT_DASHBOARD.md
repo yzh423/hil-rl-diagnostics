@@ -1,0 +1,156 @@
+# FORESIGHT-HIL Project Dashboard
+
+Last updated: 2026-07-02
+
+This is the one-page entry point for the current project state. Use it before
+running new experiments, editing paper claims, or revising the manuscript.
+
+## Current Route
+
+FORESIGHT-HIL is currently a cost-matched HIL-RL diagnostic protocol paper with
+a robotic manipulation case study. The current LV-VoI trigger is not claimed as
+superior.
+
+The defensible contribution is:
+
+- cost-matched random-family evaluation for intervention triggers;
+- repeated checkpoint evaluation rather than single-checkpoint reporting;
+- start-level intervention trace diagnostics;
+- negative trigger-repair findings that motivate protocol discipline before
+  new method design.
+
+The strongest current evidence is R020-R024. R021 is the decisive cost-matched
+reversal: `random_b350` outperforms LV-VoI scale3 while using less human-step
+cost.
+
+## Read First
+
+| Need | File |
+|---|---|
+| Project vocabulary and claim boundaries | `CONTEXT.md` |
+| Directory and artifact map | `PROJECT_STRUCTURE.md` |
+| Current paper route and section plan | `PAPER_PLAN.md` |
+| Result archive map | `results/RESULTS_INDEX.md` |
+| Machine-readable evidence registry | `results/EXPERIMENT_EVIDENCE_REGISTRY.csv` |
+| Human-readable evidence rules | `results/EXPERIMENT_EVIDENCE_REGISTRY.md` |
+| Figure and table assets | `figures/FIGURE_ASSET_INDEX.md` |
+| Current manuscript skeleton | `paper/main.tex` |
+| Current citation-context audit | `paper/CITATION_AUDIT.md` |
+| Target journal matrix | `results/r043_venue_targeting/VENUE_TARGET_MATRIX.md` |
+| Environment and reproducibility audit | `results/r044_environment_reproducibility_audit/PROJECT_ENVIRONMENT_REPRODUCIBILITY_AUDIT.md` |
+| T-ASE manuscript alignment | `results/r045_tase_reproducibility_alignment/MANUSCRIPT_ALIGNMENT.md` |
+| Evidence provenance package | `results/r047_evidence_provenance_package/EVIDENCE_PROVENANCE_AUDIT.md` |
+| Version and command provenance repair | `results/r048_version_command_provenance/VERSION_PROVENANCE_REPAIR.md` |
+| Provenance validation gate | `results/r049_provenance_validation/PROVENANCE_VALIDATION_MODULE.md` |
+| Future agent rules | `AGENTS.md` |
+
+## Evidence Chain
+
+| Layer | Canonical artifact | Rule |
+|---|---|---|
+| Raw evidence | `results/r0xx_*` | Do not edit historical CSVs or checkpoint summaries. |
+| Claim index | `results/EXPERIMENT_EVIDENCE_REGISTRY.csv` | Every paper number must trace to a registry row. |
+| Numeric audit | `python scripts/audit_registry_numbers.py` | Run before copying numbers into prose, tables, or captions. |
+| Source audit | `python scripts/validate_evidence_registry.py` | Run after changing registry rows or cited sources. |
+| Provenance package | `results/r047_evidence_provenance_package/` | Use for source hashes, partial compute accounting, command inventory, and known provenance gaps. |
+| Source snapshot | `results/r048_version_command_provenance/` | Use when a valid Git commit hash is unavailable; cites deterministic source archive and R020/R021 command provenance boundaries. |
+| Provenance validation | `python scripts/validate_provenance_package.py` | Run after evidence/provenance package changes; use `--compare-current-files` only for drift diagnosis. |
+| Display assets | `figures/` | Prefer R029/R036 assets for the current route. |
+| Manuscript | `paper/` | Keep current-route writing separate from historical `proposal/`. |
+
+## Canonical Commands
+
+Run these after changing project structure, evidence rows, paper assets, or
+evaluation code:
+
+```powershell
+python scripts\validate_evidence_registry.py
+python scripts\audit_registry_numbers.py
+python scripts\generate_claim_tables.py
+python scripts\validate_provenance_package.py
+python -m unittest discover -s tests
+```
+
+Use this citation check when `paper/references.bib` changes:
+
+```powershell
+python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citations.py paper\references.bib --report results\r042_citation_context_audit\paper_references_validation_after_r042.json --verbose
+```
+
+## Paper Assets
+
+| Asset | Preferred source |
+|---|---|
+| Fig. 1 protocol hero | `figures/fig1_protocol_hero_r029.pdf` |
+| Main cost-matched table | `figures/TABLE_registry_costmatched_results_r036.tex` |
+| Trigger-repair table | `figures/TABLE_registry_trigger_repairs_r036.tex` |
+| Protocol checklist | `figures/TABLE_protocol_checklist.tex` |
+| Manuscript entry point | `paper/main.tex` |
+| Skeleton manifest | `results/r038_manuscript_skeleton/MANIFEST.md` |
+| First prose-polish manifest | `results/r040_manuscript_polish/MANIFEST.md` |
+| Results/Discussion polish manifest | `results/r041_results_discussion_polish/MANIFEST.md` |
+| Citation-context audit | `paper/CITATION_AUDIT.md` and `results/r042_citation_context_audit/` |
+| Venue targeting matrix | `results/r043_venue_targeting/VENUE_TARGET_MATRIX.md` |
+| Reproducibility audit | `results/r044_environment_reproducibility_audit/` |
+| Practitioner and reproducibility appendix pass | `results/r045_tase_reproducibility_alignment/` |
+| Evidence provenance package | `results/r047_evidence_provenance_package/` |
+| Version and command provenance repair | `results/r048_version_command_provenance/` |
+| Provenance validation gate | `results/r049_provenance_validation/` |
+
+Current compile caveat: PDF compilation is blocked by the local LaTeX runtime or
+Tectonic cache availability. This is not currently a verified source-file
+error.
+
+Current citation caveat: R042 audited all 15 citation keys used by the current
+manuscript contexts and fixed six metadata entries. It did not expand the
+literature review or choose the final journal reference style.
+
+Current venue caveat: R043 selects IEEE T-ASE as the primary target route based
+on official scope and metric pages. Final SCI Q1 / CAS partition status still
+needs an institutional JCR/CAS check before submission.
+
+Current reproducibility caveat: R048 replaces the unavailable local Git commit
+with a deterministic source snapshot and records R020/R021 command provenance
+boundaries. The local `.git` metadata is still invalid, R020/R021 original
+central launch commands are still not archival logs, and only three scanned
+paper-core CSVs expose explicit `wall_time_s`. R049 adds a default provenance
+validation command; its drift mode currently reports expected differences
+between historical R047/R048 ledgers and the post-R049 working tree.
+
+Current manuscript caveat: R045 adds a first T-ASE-style Note to Practitioners
+and reproducibility appendix inventory. It does not add new citations,
+experiments, or a positive LV-VoI method claim.
+
+## Code Map
+
+| Area | Current role |
+|---|---|
+| `foresight_hil/experiments/bookkeeping.py` | Run labels, summaries, best checkpoints, and cost metadata. |
+| `foresight_hil/experiments/trace.py` | Stable intervention-trace schema and row construction. |
+| `foresight_hil/experiments/strategy_specs.py` | Comparison strategy identity and CLI construction. |
+| `foresight_hil/evaluation/protocol.py` | Repeated checkpoint summary aggregation. |
+| `foresight_hil/evaluation/registry_validation.py` | Registry source existence and CSV readability checks. |
+| `foresight_hil/evaluation/registry_numeric_audit.py` | Registry numeric checks against primary CSV rows. |
+| `foresight_hil/evaluation/claim_tables.py` | Registry-driven Markdown and LaTeX claim tables. |
+| `scripts/train_robosuite_hil.py` | Still the largest mixed training/evaluation script. Refactor only with tests. |
+
+## Do Not Claim
+
+- Do not claim LV-VoI superiority for the current Lift setup.
+- Do not claim real-human or real-robot validation.
+- Do not use smoke runs as paper evidence.
+- Do not treat R023 traces as the main success-rate evidence.
+- Do not add references from memory. Use audited citation artifacts first.
+
+## Best Next Moves
+
+1. Decide whether submission packaging needs a fresh source snapshot or valid
+   Git repository after R049.
+2. Decide whether to add a small robotics breadth package: cleaned Stack
+   appendix or no new runs.
+3. Decide whether to install/fix a local LaTeX runtime or keep drafting in TeX
+   without compiling PDF locally.
+4. Run a fresh citation-context audit after the R045 prose stabilizes.
+5. Only after the diagnostic paper spine is stable, decide whether a future
+   method should be phase-aware, contact-aware, or a separate benchmark-only
+   extension.

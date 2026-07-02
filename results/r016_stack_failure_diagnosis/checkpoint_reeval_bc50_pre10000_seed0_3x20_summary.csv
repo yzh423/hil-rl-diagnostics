@@ -1,0 +1,2 @@
+checkpoint,task,n_repeats,success_mean,success_std,return_mean,return_std,total_successes,total_episodes,success_ci_low,success_ci_high
+results\r016_stack_failure_diagnosis\checkpoints\best_Stack_none_b600_seed0_r016_bc50_pre10000.zip,Stack,3,0.5333,0.0624,46.6359,2.7488,32,60,0.4089,0.6537

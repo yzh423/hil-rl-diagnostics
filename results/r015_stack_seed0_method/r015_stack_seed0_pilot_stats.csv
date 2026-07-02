@@ -1,0 +1,3 @@
+comparison,success_diff_pp,test,statistic,p_two_sided,interpretation
+learning_value_voi_b600_scale3_vs_none_restore_best,-10.00,episode_level_two_proportion_z,-1.1110,0.2666,no evidence that Lift-tuned method improves Stack seed0 over no-intervention
+learning_value_voi_b600_scale3_vs_random_restore_best_b600,-6.67,episode_level_two_proportion_z,-0.7454,0.4561,no evidence that Lift-tuned method improves Stack seed0 over random

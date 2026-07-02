@@ -1,0 +1,2 @@
+checkpoint,task,n_repeats,success_mean,success_std,return_mean,return_std,total_successes,total_episodes,success_ci_low,success_ci_high
+results\r014_robustness_seeds3_4_baselines\checkpoints\best_Lift_random_b600_seed3_steps10000_demo20_ls500_bs256_gs1_bc5000_reg50p0_regsconstant_lreg50p0_lstart0p5_take20_vtau0p01_vcq0p0_vrefnone_vlv0p0_vclip1p0_restorebest1_pacelinear.zip,Lift,3,0.9667,0.0236,148.2523,9.7512,58,60,0.8864,0.9908

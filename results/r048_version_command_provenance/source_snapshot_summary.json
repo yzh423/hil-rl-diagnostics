@@ -1,0 +1,28 @@
+{
+  "archive": "results/r048_version_command_provenance/source_snapshot_r048.zip",
+  "archive_bytes": 766287,
+  "archive_sha256": "b4bed68cb8abbe8f8bdf1fa046993626139f3e129952bb1561b66c5f89c42358",
+  "created_at_local": "2026-07-02T22:09:09",
+  "deterministic_zip_timestamp": "2026-07-02T00:00:00",
+  "exclusion_policy": [
+    "historical raw result directories are excluded except selected paper-support/provenance directories",
+    "checkpoint archives are excluded from the source snapshot and tracked separately in R048 checkpoint inventories",
+    "local cache, invalid .git metadata, source_snapshot summary/manifest files, and narrative R048 docs are excluded from the archive itself",
+    "R047 remains the registered-evidence hash ledger; R048 is the current source snapshot plus separate command provenance package"
+  ],
+  "file_count": 156,
+  "included_categories": [
+    "decision_docs",
+    "evidence_registry",
+    "experiment_scripts",
+    "figure_table_assets",
+    "paper_source",
+    "planning_logs",
+    "provenance_and_paper_support",
+    "python_source",
+    "r048_machine_provenance",
+    "root_control",
+    "tests"
+  ],
+  "manifest": "results/r048_version_command_provenance/source_snapshot_manifest.csv"
+}

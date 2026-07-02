@@ -1,0 +1,51 @@
+# Python cache and local tooling
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.numba_cache/
+
+# Local environments
+.venv/
+venv/
+env/
+.env
+.env.*
+!.env.example
+
+# Local agent/editor state
+.agents/
+.codex/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# LaTeX intermediate files
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# Temporary scratch files
+*.tmp
+*.temp
+~$*
+
+# Local literature PDFs; keep citation metadata, not third-party PDFs, in Git.
+/*.pdf
+
+# Large generated binary artifacts stay local; manifests and hashes are tracked.
+results/**/checkpoints/
+results/**/source_snapshot*.zip

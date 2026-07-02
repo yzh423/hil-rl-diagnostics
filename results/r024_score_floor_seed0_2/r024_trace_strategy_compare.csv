@@ -1,0 +1,4 @@
+strategy,seeds,trace_starts,mean_starts_per_seed,mean_start_step,median_start_step,early_0_2k_frac,mid_2_6k_frac,late_6_10k_frac,mean_g2c_norm,median_g2c_norm,mean_g2c_xy,median_g2c_xy,mean_score,score_saturation_frac_ge_9p9,mean_p_fail,p_fail_saturation_frac_ge_0p99,mean_final_success,mean_best_human_steps,after_floor_step_frac,after_floor_low_score_starts,median_score
+random_b350,0;1;2,55,18.333333,4599.472727,4451.000000,0.272727,0.345455,0.381818,0.284851,0.290285,0.235331,0.237418,,,,,0.833333,95.000000,,,
+lv_voi_scale3,0;1;2,96,32.000000,5222.604167,4624.000000,0.125000,0.500000,0.375000,0.217166,0.213054,0.152267,0.113720,1.282268,0.125000,0.138896,0.125000,0.816667,276.000000,,,
+score_floor_vlv3_after4000_floor0p05,0;1;2,94,31.333333,5249.808511,4717.500000,0.127660,0.489362,0.382979,0.234083,0.210407,0.160375,0.112041,1.340630,0.127660,0.151691,0.127660,,,0.872340,0,0.067165

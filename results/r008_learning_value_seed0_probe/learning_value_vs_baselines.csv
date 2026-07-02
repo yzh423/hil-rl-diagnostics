@@ -1,0 +1,5 @@
+variant,source,seed,human_steps,engagements,raw_final_success_rate,restored_final_success_rate,best_eval_success_rate,best_eval_step,repeated_best_success,total_successes,total_episodes,success_ci_low,success_ci_high,interpretation
+none_restorebest,results\r004_restorebest_seed0_probe,0,0,0,0.3000,0.6500,0.9000,2000,0.8167,49,60,0.7008,0.8944,strong demo-regularized SAC baseline; still slightly best on seed 0
+random600_restorebest,results\r004_restorebest_seed0_probe,0,600,32,0.3500,0.7000,0.7500,2000,0.7500,45,60,0.6277,0.8422,random human budget baseline
+plain_voi600_restorebest,results\r004_restorebest_seed0_probe,0,600,31,0.1000,0.5500,0.5500,2000,0.5333,32,60,0.4089,0.6537,previous tuned VoI underperformed
+learning_value_voi600_restorebest,results\r008_learning_value_seed0_probe,0,600,31,0.2000,0.5000,0.9000,2000,0.8000,48,60,0.6822,0.8817,demo-nearest learning-value gate strongly improves repeated best over plain VoI and random but does not clearly beat none

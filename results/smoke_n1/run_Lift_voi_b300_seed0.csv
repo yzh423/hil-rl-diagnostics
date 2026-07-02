@@ -1,0 +1,4 @@
+env_step,eval_success_rate,eval_return,human_steps,engagements,demo_size,online_size
+2000,0.0000,0.2387,40,4,2040,2000
+4000,0.0000,0.2462,40,4,2040,4000
+6000,0.0000,4.5638,40,4,2040,6000

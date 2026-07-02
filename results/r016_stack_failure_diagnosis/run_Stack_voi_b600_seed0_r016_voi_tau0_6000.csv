@@ -1,0 +1,5 @@
+env_step,eval_success_rate,eval_return,eval_successes,eval_episodes,eval_success_ci_low,eval_success_ci_high,human_steps,budget_used_frac,engagements,demo_size,online_size,voi_candidate_rate,voi_score_mean,voi_p_fail_mean,bc_reg_loss_mean
+0,0.1000,12.4789,2,20,0.0279,0.3010,0,0.0000,0,4000,0,nan,nan,nan,nan
+2000,0.1000,19.4587,2,20,0.0279,0.3010,585,0.9750,30,4585,2000,0.0150,0.2076,0.0208,0.008761
+4000,0.4000,34.4005,8,20,0.2188,0.6134,585,0.9750,30,4585,4000,0.0000,0.0000,0.0000,0.004246
+6000,0.4500,29.1999,9,20,0.2582,0.6579,600,1.0000,31,4600,6000,0.0005,0.0059,0.0018,0.002515

@@ -1,0 +1,4 @@
+option,seed0_successes,seed1_successes,seed2_variant,seed2_successes,total_successes,total_episodes,repeated_success,success_ci_low,success_ci_high,mean_best_human_steps,interpretation
+keep_r009_seed2,48,45,r009_scale2_budget600,38,131,180,0.7278,0.6585,0.7875,176.7,original R008/R009 aggregate
+replace_seed2_with_budget300,48,45,r010_scale2_budget300,45,138,180,0.7667,0.6997,0.8225,131.7,stronger and cheaper aggregate; attractive Pareto candidate
+replace_seed2_with_scale3,48,45,r010_scale3_budget600,47,140,180,0.7778,0.7116,0.8324,174.7,best aggregate success; slightly higher cost than budget300 option

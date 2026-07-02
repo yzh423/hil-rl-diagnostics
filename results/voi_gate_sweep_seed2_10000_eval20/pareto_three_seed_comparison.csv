@@ -1,0 +1,5 @@
+variant,seeds,n_seeds,final_success_mean,final_success_std,best_success_mean,best_success_std,human_steps_mean,human_steps_std,engagements_mean
+none baseline,0 1 2,3,0.5167,0.3118,0.9000,0.0816,0.0,0.0,0.0
+voi default b1000,0 1 2,3,0.7333,0.1312,0.8333,0.0624,113.3,4.7,11.3
+voi tau.01/cq0 b600 take20,0 1 2,3,0.5333,0.2055,0.9000,0.0816,600.0,0.0,31.3
+random b1000,0 1 2,3,0.8500,0.0408,0.9667,0.0471,1000.0,0.0,102.3

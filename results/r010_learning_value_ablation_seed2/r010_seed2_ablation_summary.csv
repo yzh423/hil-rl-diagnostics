@@ -1,0 +1,4 @@
+variant,seed,budget,learning_value_scale,best_eval_step,best_human_steps,best_budget_used_frac,best_engagements,raw_final_success_rate,restored_final_success_rate,training_best_success_rate,repeated_best_success,total_successes,total_episodes,repeated_success_ci_low,repeated_success_ci_high,interpretation
+r009_baseline_scale2_budget600,2,600,2.0,6000,390,0.6500,20,0.5000,0.7000,0.7000,0.6333,38,60,0.5068,0.7438,weakest R009 seed; motivation for R010
+r010_scale2_budget300,2,300,2.0,8000,255,0.8500,13,0.6500,0.8500,0.9000,0.7500,45,60,0.6277,0.8422,better success than R009 with lower best-step human cost
+r010_scale3_budget600,2,600,3.0,6000,384,0.6400,20,0.7500,0.8500,0.9500,0.7833,47,60,0.6638,0.8688,best seed2 success; higher human cost than budget300

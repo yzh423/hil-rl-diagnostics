@@ -1,0 +1,24 @@
+\section{Results}
+
+The main result is a reversal under cost matching. In the initial five-seed reliability check, LV-VoI scale3 appeared plausible because it achieved a success rate close to a higher-cost random baseline. That interpretation changed once the random family was swept around the method's realized human cost. As shown in Table~\ref{tab:registry_costmatched_claims}, random b350 achieved 439/500 repeated successes (87.8\%, 95\% CI [84.6, 90.4]) at 177.0 best-step human steps, whereas LV-VoI scale3 achieved 416/500 repeated successes (83.2\%, 95\% CI [79.7, 86.2]) at 202.0 best-step human steps. The learned trigger is therefore not on the observed Lift success-cost frontier under the current protocol.
+
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.95\textwidth]{fig1_protocol_hero_r029.pdf}
+    \caption{Protocol-centered overview of the diagnostic evaluation route. The figure summarizes the HIL-RL trigger setting, the cost-matched reversal, and the intervention trace diagnosis that motivates protocol discipline before further trigger redesign.}
+    \label{fig:protocol_hero}
+\end{figure*}
+
+\input{figures/TABLE_registry_costmatched_results_r036.tex}
+
+The reversal is not an artifact of including only one random budget. Random b450 and random b600 provide higher-cost random-family points, while random b350 provides the lower-cost point that invalidates the original efficiency interpretation. This matters because LV-VoI scale3 would look more favorable if it were compared only with the original higher-cost random condition. The result therefore supports the first protocol gate: a trigger claim should be tested against a local random success-cost frontier, not against a single random baseline selected before the realized method cost is known.
+
+Two lightweight trigger repairs remain negative under the same discipline. The minimum-disagreement repair reached 226/300 repeated successes (75.3\%, 95\% CI [70.2, 79.9]) at 211.7 best-step human steps. The score-floor repair reached 233/300 repeated successes (77.7\%, 95\% CI [72.6, 82.0]) at 253.3 best-step human steps. Both are below the same-seed random b350 reference, which reached 259/300 repeated successes (86.3\%, 95\% CI [82.0, 89.8]) at 95.0 best-step human steps. Table~\ref{tab:registry_trigger_repairs} is generated from the audited registry and is the preferred numeric source for this repair comparison.
+
+\input{figures/TABLE_registry_trigger_repairs_r036.tex}
+
+The trace results sharpen the mechanism claim. LV-VoI does not fail merely because it requests interventions far from the cube. In the R023 traces, LV-VoI starts were closer to the cube than random on average, with mean gripper-to-cube norm 0.217 for LV-VoI versus 0.285 for random b350, and mean gripper-to-cube planar distance 0.152 versus 0.235. However, LV-VoI used 96 intervention starts across seeds 0--2 compared with 55 starts for random b350. The trigger therefore appears to spend more budget despite querying in geometrically plausible states, which points away from a simple distance-threshold repair.
+
+The score-floor repair confirms this interpretation. R024 mechanically removed low-score starts after step 4000: the trace table records zero post-floor starts below the 0.05 threshold. Nevertheless, the repair still produced 94 intervention starts, almost the same as the original LV-VoI count of 96 and far above the random b350 count of 55. Its median accepted score was only 0.067, indicating that the floor was too weak to create random-level selectivity. Together, the repair and trace results support a narrower conclusion: the current trigger suffers from budget-control and score-timing mismatch, and any new trigger should be evaluated through the same cost-matched and trace-level protocol before being expanded.
+
+Stack provides boundary evidence rather than a positive generalization result. With a strong matched behavioral-cloning initialization, the no-online-human Stack baseline achieved 131/180 repeated successes (72.8\%) at zero online human cost, while both random intervention and Stack-tuned LV-VoI achieved 107/180 repeated successes (59.4\%) at substantial human cost. These results do not support a broad robotics-transfer claim for the current trigger. They instead reinforce the paper's conservative framing: the Lift evidence motivates the diagnostic protocol, and Stack shows that adding online interventions can be harmful when the task and update mechanism are not aligned.

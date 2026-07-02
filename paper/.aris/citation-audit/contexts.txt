@@ -1,0 +1,33 @@
+# Citation Contexts
+
+Date: 2026-07-02
+Paper dir: paper
+Bib file: references.bib
+
+## sections/01_introduction.tex:3
+
+Human-in-the-loop reinforcement learning (HIL-RL) is attractive for robotic manipulation because human interventions can redirect an agent away from unsafe, unproductive, or low-value exploration while adding corrective data to the learning process. Recent robot-learning systems combine interventions, demonstrations, and off-policy updates to improve sample efficiency in manipulation settings \cite{luo2025hilserl,ball2023rlpd}. More broadly, surveys of human involvement in learning systems emphasize that the human can shape development, training, evaluation, and deployment rather than merely supply an initial dataset \cite{retzlaff2024hitl}. In this setting, intervention timing is a scientific question in its own right: the human is not only a source of better actions, but also a scarce resource whose attention must be allocated carefully.
+
+## sections/01_introduction.tex:11
+
+The resulting contribution is bounded but useful. We present a robotic manipulation case study in robosuite \cite{robosuite2020} using an SAC-style off-policy learner \cite{haarnoja2018sac,sac2018applications} and a scripted privileged-state oracle as the simulated intervention source. We show that cost matching reverses the apparent LV-VoI advantage, that two lightweight repairs remain dominated by same-seed random baselines, and that intervention traces point to budget-control and score-timing mismatch rather than a simple far-from-object failure. The paper therefore does not claim that the current LV-VoI trigger is superior. Its claim is that HIL-RL trigger papers should pass cost-matched, repeated-evaluation, and trace-level diagnostic gates before presenting intervention timing as a human-efficient improvement.
+
+## sections/02_related_work.tex:3
+
+HIL-RL and intervention learning have developed around the practical need to learn manipulation policies with fewer unsafe or low-value interactions. HIL-SERL-style systems combine human interventions with off-policy reinforcement learning and offline data, while RLPD shows how offline data can be mixed with online updates for efficient learning \cite{luo2025hilserl,ball2023rlpd}. Demonstration-learning infrastructure such as robomimic provides a complementary view of what matters when using human demonstration data for robot manipulation \cite{mandlekar2021robomimic}. These works motivate the learning backbone used here, but they do not by themselves settle how to evaluate a trigger that decides when the human should intervene.
+
+## sections/02_related_work.tex:5
+
+Interactive imitation learning and robot-gated correction study related querying problems. ThriftyDAgger treats expert queries as budgeted and gates them by novelty and risk, while adaptive intervention mechanisms can reduce takeover cost in robot-gated imitation learning \cite{hoque2021thrifty,cai2025aim}. Those systems are important baselines for the idea that a robot can decide when to ask, but the current paper studies a different diagnostic question: whether an HIL-RL intervention trigger remains convincing after cost-matched random baselines and repeated checkpoint estimates.
+
+## sections/02_related_work.tex:7
+
+Model-based and calibration literature informs the diagnostic interpretation. PETS and MBPO motivate uncertainty-aware short rollouts and caution about when learned models should be trusted \cite{chua2018pets,janner2019mbpo}. Calibration work shows that neural-network confidence scores can be miscalibrated, which is directly relevant when a trigger score is used to spend a scarce human budget \cite{guo2017calibration}. Deep RL evaluation studies further warn that small numbers of seeds and point estimates can support unstable conclusions, motivating interval estimates and more careful reporting \cite{henderson2018deeprlmatters,agarwal2021statisticalprecipice}. The present work combines these concerns into an evaluation protocol for intervention-trigger claims.
+
+## sections/03_protocol_setup.tex:7
+
+Repeated checkpoint evaluation is used to reduce dependence on a single final policy or a single restored-best evaluation. For paper-facing Lift claims, selected checkpoints are evaluated with repeated rollouts and reported as success counts, success proportions, Wilson confidence intervals, and realized human-step cost. Wilson intervals are used because they behave more reliably than simple normal approximations for finite binomial samples, especially near high success rates \cite{wilson1927score}. The protocol also keeps best-step and final-policy accounting separate so that a policy's apparent success is not confused with late training collapse or checkpoint-selection noise.
+
+## sections/03_protocol_setup.tex:11
+
+The current case study uses robosuite Lift and Stack as simulated robotic manipulation environments \cite{robosuite2020}. The learner follows an off-policy SAC-style setup \cite{haarnoja2018sac,sac2018applications} with demonstration and intervention data motivated by offline-to-online robot learning and demonstration-learning practice \cite{ball2023rlpd,mandlekar2021robomimic}. The evaluated intervention strategies include no intervention, a random-budget family, LV-VoI scale3, a minimum-disagreement LV-VoI repair, and a score-floor LV-VoI repair. Lift supplies the main cost-matched diagnostic evidence; Stack is retained as boundary evidence showing that the current intervention mechanism does not yet transfer as a positive method result.

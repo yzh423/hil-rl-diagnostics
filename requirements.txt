@@ -1,0 +1,25 @@
+# Core prototype (numpy-only) — runs the toy demo without any sim engine.
+numpy>=1.24
+
+# ---------------------------------------------------------------------------
+# Real simulated-robot HIL track (scripts/train_robosuite_hil.py).
+# Versions below are the exact ones verified on Windows + Python 3.11 + RTX 4090.
+# ---------------------------------------------------------------------------
+gymnasium==0.28.1
+stable-baselines3==2.3.2     # SAC actor (PyTorch)
+mujoco==3.3.0                # PIN: robosuite 1.5.2 is incompatible with mujoco 3.10
+                             # (mj_fullM signature change -> TypeError). 3.3.0 works.
+robosuite==1.5.2             # MuJoCo manipulation tasks (Lift / Door / ...)
+matplotlib>=3.7              # results plot (success-vs-human-cost)
+
+# PyTorch: install the CUDA build appropriate for your GPU. Verified with:
+#   torch==2.4.0+cu124  (CUDA 12.4, works on the RTX 4090 Laptop)
+# CPU-only is acceptable for a smoke run:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+# CUDA 12.4 build:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu124
+torch>=2.2
+
+# Isaac Lab (GPU-parallel, optional headline track): install via NVIDIA
+# Omniverse / pip per official docs (needs NVIDIA GPU). Not required for the
+# MuJoCo/robosuite track above.

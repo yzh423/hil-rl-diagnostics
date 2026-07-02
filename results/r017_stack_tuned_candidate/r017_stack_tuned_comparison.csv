@@ -1,0 +1,7 @@
+system,task,seed,total_successes,total_episodes,repeated_success,success_ci_low,success_ci_high,best_human_steps,n_demos,bc_pretrain_steps,total_steps,voi_tau,source,interpretation
+r015_none_baseline,Stack,0,28,60,0.4667,0.3463,0.5911,0,20,5000,10000,,results/r015_stack_seed0_baselines,no-human Stack seed0 baseline
+r015_random_baseline,Stack,0,26,60,0.4333,0.3157,0.5590,373,20,5000,10000,,results/r015_stack_seed0_baselines,random budget baseline from R015
+r015_lift_tuned_voi,Stack,0,22,60,0.3667,0.2562,0.4932,80,20,5000,10000,0.01,results/r015_stack_seed0_method,Lift-tuned trigger transfers poorly
+r016_bc_capacity,Stack,0,32,60,0.5333,0.4089,0.6537,0,50,10000,0,,results/r016_stack_failure_diagnosis,stronger imitation helps but is not enough alone
+r016_aggressive_voi_tau0,Stack,0,33,60,0.5500,0.4249,0.6691,600,20,5000,6000,0.0,results/r016_stack_failure_diagnosis,lower threshold helps but is still limited with 20 demos
+r017_stack_tuned_voi,Stack,0,47,60,0.7833,0.6638,0.8688,600,50,10000,6000,0.0,results/r017_stack_tuned_candidate,current Stack-tuned candidate; strong seed0 improvement but uses full budget

@@ -1,0 +1,67 @@
+{
+  "filepath": "results\\r027_citation_source_bank\\bibtex_candidates_to_add.bib",
+  "total_entries": 6,
+  "valid_entries": 6,
+  "errors": [],
+  "warnings": [
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry sac2018applications: Missing recommended field \"volume\"",
+      "entry": "sac2018applications"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry sac2018applications: Missing recommended field \"pages\"",
+      "entry": "sac2018applications"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry robosuite2020: Missing recommended field \"volume\"",
+      "entry": "robosuite2020"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry robosuite2020: Missing recommended field \"pages\"",
+      "entry": "robosuite2020"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry henderson2018deeprlmatters: Missing recommended field \"pages\"",
+      "entry": "henderson2018deeprlmatters"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry agarwal2021statisticalprecipice: Missing recommended field \"volume\"",
+      "entry": "agarwal2021statisticalprecipice"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry agarwal2021statisticalprecipice: Missing recommended field \"pages\"",
+      "entry": "agarwal2021statisticalprecipice"
+    }
+  ],
+  "duplicates": [],
+  "venue_standard_checked": null,
+  "min_count_checked": null,
+  "manuscript_results": {
+    "checked": false,
+    "manuscript_filepath": null,
+    "cited_keys": [],
+    "missing_keys": [],
+    "unused_keys": []
+  }
+}

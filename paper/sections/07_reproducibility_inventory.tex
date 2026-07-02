@@ -1,0 +1,48 @@
+\section{Reproducibility Inventory}
+\label{app:reproducibility_inventory}
+
+The manuscript is organized around a registry-first reproducibility path. Raw run directories under \texttt{results/r0xx\_*} are treated as immutable evidence archives, while paper-facing claims are routed through \texttt{results/EXPERIMENT\_EVIDENCE\_REGISTRY.csv}. This structure is intended to make the diagnostic protocol reproducible without requiring a reader to infer which raw CSV, checkpoint summary, figure script, or prose note supports a claim. Any future rerun should write to a new result directory and receive a new registry row before it is used in the manuscript.
+
+\begin{table*}[t]
+\centering
+\caption{Reproducibility inventory for the current diagnostic-protocol draft. The entries list the artifact that should be inspected before changing a claim, table, or figure.}
+\label{tab:reproducibility_inventory}
+\small
+\begin{tabular}{p{0.18\textwidth}p{0.30\textwidth}p{0.42\textwidth}}
+\toprule
+\textbf{Need} & \textbf{Primary artifact} & \textbf{Purpose} \\
+\midrule
+Claim index & \texttt{results/EXPERIMENT\_EVIDENCE\_REGISTRY.csv} & Machine-readable source for success rates, confidence intervals, human-step costs, paper-artifact decisions, and claim status. \\
+Result map & \texttt{results/RESULTS\_INDEX.md} & Human-readable map separating paper-core evidence, historical baselines, and smoke/debug outputs. \\
+Numeric audit & \texttt{scripts/audit\_registry\_numbers.py} & Checks registry numbers against primary CSV rows before they are copied into prose, captions, or tables. \\
+Source audit & \texttt{scripts/validate\_evidence\_registry.py} & Checks that registry primary sources exist and that CSV sources are readable. \\
+Claim tables & \texttt{scripts/generate\_claim\_tables.py} and R036 tables & Regenerates the cost-matched and trigger-repair tables from audited registry rows. \\
+Paper-core runs & R020--R024 result directories & Store the Lift cost-matched reversal, negative repairs, and intervention trace diagnostics. \\
+Trace schema & \texttt{foresight\_hil/experiments/trace.py} and R023/R024 trace CSVs & Define and record intervention-start timing, budget fraction, geometry, score, and predicted failure diagnostics. \\
+Reproduction commands & \texttt{results/r044\_environment\_reproducibility\_audit/REPRODUCTION\_COMMANDS.md} & Central command sheet for smoke checks, verification, and future paper-core rerun planning. \\
+Citation contexts & \texttt{paper/CITATION\_AUDIT.md} & Current ledger showing that the manuscript citation contexts were audited without adding unsupported citation keys. \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+The current local environment audit records Python 3.11.13, robosuite 1.5.2, MuJoCo 3.3.0, Stable-Baselines3 2.3.2, Gymnasium 0.28.1, NumPy 1.26.4, and PyTorch 2.4.0 with CUDA 12.4 available. These versions are sufficient for local smoke checks and registry validation on the audited machine. The same audit also records a known upstream Gym compatibility warning emitted through Stable-Baselines3 imports; the warning does not currently fail the unit test suite.
+
+\begin{table*}[t]
+\centering
+\caption{Compute and evidence-accounting status for the current paper route. Wall-time accounting for historical paper-core runs is not yet complete and is kept as a pre-submission gap rather than filled retrospectively.}
+\label{tab:compute_accounting_status}
+\small
+\begin{tabular}{p{0.18\textwidth}p{0.25\textwidth}p{0.47\textwidth}}
+\toprule
+\textbf{Evidence layer} & \textbf{Recorded fields} & \textbf{Remaining pre-submission action} \\
+\midrule
+Lift main comparison & Seeds, repeated success counts, Wilson intervals, and realized best-step human cost are registered for R020--R021. & Preserve exact rerun commands in a fresh reproduction directory if the full comparison is regenerated. \\
+Repair gates & Same-seed seeds 0--2 success, cost, and confidence intervals are registered for R022 and R024. & Keep the negative gate interpretation unless a substantially different mechanism is tested under a new result ID. \\
+Trace diagnostics & Intervention-start counts, timing, budget fraction, geometry, score, and predicted failure fields are archived for R023/R024. & Use trace summaries to motivate future methods, but do not treat traces as the primary success-rate evidence. \\
+Runtime environment & R044 records package versions, CUDA availability, CLI help checks, and smoke-run outputs. & Add a reviewer-facing environment export or container specification before submission. \\
+Version provenance & Project files are organized and audited, but local \texttt{.git} metadata is not recognized as a valid repository. & Repair the repository metadata or create a dated source snapshot before external release. \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+This inventory is deliberately conservative. It makes missing provenance and historical wall-time accounting visible instead of smoothing them over. The reproducibility claim is therefore limited to the audited registry, command templates, generated tables, and smoke-verified local runtime; it is not a claim that every historical run can be re-created without additional compute or environment setup.

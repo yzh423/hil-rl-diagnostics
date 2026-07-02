@@ -1,0 +1,5 @@
+seed,source,best_eval_step,best_human_steps,best_budget_used_frac,best_engagements,raw_final_success_rate,restored_final_success_rate,training_best_success_rate,repeated_best_success,total_successes,total_episodes,repeated_success_ci_low,repeated_success_ci_high,final_human_steps,interpretation
+0,results\r008_learning_value_seed0_probe,2000,60,0.1000,3,0.2000,0.5000,0.9000,0.8000,48,60,0.6822,0.8817,600,learning-value gate strongly improved over plain seed-0 VoI
+1,results\r009_learning_value_seeds1_2,4000,80,0.1333,4,0.6500,0.6000,0.7000,0.7500,45,60,0.6277,0.8422,600,stable positive repeated checkpoint
+2,results\r009_learning_value_seeds1_2,6000,390,0.6500,20,0.5000,0.7000,0.7000,0.6333,38,60,0.5068,0.7438,600,weaker seed; benefit appears less consistent
+aggregate,seeds0-2,,176.7,0.2944,9.0,0.4500,0.6000,0.7667,0.7278,131,180,0.6585,0.7875,600,three-seed repeated best is positive vs plain seed-0 VoI but not yet a decisive Pareto claim

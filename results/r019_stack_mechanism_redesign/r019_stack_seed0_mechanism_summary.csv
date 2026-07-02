@@ -1,0 +1,6 @@
+variant,source,total_successes,total_episodes,repeated_success,success_ci_low,success_ci_high,success_std,return_mean,best_human_steps,config,summary_csv
+none_matched_bc_seed0,R018 matched Stack baseline,47,60,0.7833,0.6638,0.8688,0.0471,61.5764,0,"50 demos, 10000 BC, no online human",results/r018_stack_matched_baselines_seeds0_2/checkpoint_reeval_none_seed0_3x20_summary.csv
+r017_original_tau0_seed0,R017 Stack-tuned candidate,47,60,0.7833,0.6638,0.8688,0.0236,69.6235,600,"tau0 + demo_nn LV scale3, intervention_demo_mode=all",results/r017_stack_tuned_candidate/checkpoint_reeval_r017_seed0_3x20_summary.csv
+r019_update_safe_starts_seed0,R019 update-safe replay pilot,38,60,0.6333,0.5068,0.7438,0.0471,51.7902,0,only engagement starts enter demo replay,results/r019_stack_update_safe_seed0/checkpoint_reeval_update_safe_starts_seed0_3x20_summary.csv
+r019_phase_guard_b600_seed0,R019 Stack phase guard pilot,35,60,0.5833,0.4573,0.6994,0.1247,52.9331,252,"stack_pick_place phase guard, budget600",results/r019_stack_phase_guard_seed0/checkpoint_reeval_phase_guard_seed0_3x20_summary.csv
+r019_phase_guard_b300_seed0,R019 Stack phase guard budget-clamp pilot,34,60,0.5667,0.4410,0.6843,0.0471,39.1950,0,"stack_pick_place phase guard, budget300",results/r019_stack_phase_guard_budget300_seed0/checkpoint_reeval_phase_guard_budget300_seed0_3x20_summary.csv

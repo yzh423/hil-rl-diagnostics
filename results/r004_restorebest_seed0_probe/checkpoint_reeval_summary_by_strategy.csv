@@ -1,0 +1,4 @@
+strategy,checkpoint_source,n_repeats,total_successes,total_episodes,success_mean,success_std,success_ci_low,success_ci_high,return_mean,return_std
+none,results\r004_restorebest_seed0_probe\checkpoint_reeval_none_3x20_summary.csv,3,49,60,0.8167,0.1247,0.7008,0.8944,134.3933,19.8026
+random,results\r004_restorebest_seed0_probe\checkpoint_reeval_random_3x20_summary.csv,3,45,60,0.7500,0.0707,0.6277,0.8422,118.8457,8.3296
+voi,results\r004_restorebest_seed0_probe\checkpoint_reeval_3x20_summary.csv,3,32,60,0.5333,0.0471,0.4089,0.6537,79.1124,3.2878

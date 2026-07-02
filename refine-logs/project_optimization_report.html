@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FORESIGHT-HIL Project Optimization Report</title>
+  <style>
+    :root {
+      --bg: #f7f7f4;
+      --ink: #171717;
+      --muted: #5f6368;
+      --line: #d7d7cf;
+      --panel: #ffffff;
+      --accent: #0f766e;
+      --warn: #b45309;
+      --bad: #b91c1c;
+      --good: #2563eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 32px 24px 56px;
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 22px;
+      margin-bottom: 24px;
+    }
+    h1 { margin: 0 0 8px; font-size: 34px; letter-spacing: 0; }
+    h2 { margin: 34px 0 12px; font-size: 22px; }
+    h3 { margin: 18px 0 8px; font-size: 17px; }
+    p { margin: 8px 0; }
+    .subtitle { color: var(--muted); max-width: 820px; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      margin: 18px 0 8px;
+    }
+    .metric, .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .metric strong {
+      display: block;
+      font-size: 28px;
+      line-height: 1.1;
+    }
+    .metric span { color: var(--muted); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 10px 12px;
+      text-align: left;
+      vertical-align: top;
+      font-size: 14px;
+    }
+    th { background: #ecece5; }
+    tr:last-child td { border-bottom: 0; }
+    code {
+      background: #eeeeea;
+      border: 1px solid #deded7;
+      padding: 1px 5px;
+      border-radius: 5px;
+      font-family: Consolas, monospace;
+      font-size: 0.92em;
+    }
+    .must { color: var(--bad); font-weight: 700; }
+    .should { color: var(--warn); font-weight: 700; }
+    .later { color: var(--good); font-weight: 700; }
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .step {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      padding: 12px;
+      min-height: 116px;
+    }
+    .small { color: var(--muted); font-size: 13px; }
+    @media (max-width: 900px) {
+      .grid, .flow { grid-template-columns: 1fr; }
+      main { padding: 24px 16px 40px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>FORESIGHT-HIL Project Optimization Report</h1>
+      <p class="subtitle">Audit date: 2026-07-01. Scope: full project scan after R026, focused on SCI Q1 readiness, reproducibility, code maintainability, and method-redesign options.</p>
+    </header>
+
+    <section class="grid">
+      <div class="metric"><strong>60 KB</strong><span>Main training script hotspot: <code>scripts/train_robosuite_hil.py</code></span></div>
+      <div class="metric"><strong>457</strong><span>CSV artifacts under <code>results/</code>; evidence needs indexing.</span></div>
+      <div class="metric"><strong>75</strong><span>Checkpoint zip files; distinguish paper-core from scratch runs.</span></div>
+    </section>
+
+    <section>
+      <h2>Executive Diagnosis</h2>
+      <div class="card">
+        <p>The strongest near-term optimization target is not another heuristic trigger. The project now has enough negative evidence to support a cost-matched HIL-RL diagnostic-benchmark paper, but its artifacts still carry two competing stories: the original positive-method framing and the R021-R026 diagnostic pivot.</p>
+        <p>The second strongest target is engineering reproducibility. The main training entry point mixes CLI configuration, run identity, checkpoint bookkeeping, robosuite setup, trace logging, SAC training, evaluation, and summary writing. This makes future experiments slower to verify and raises the risk of configuration drift.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Priority Targets</h2>
+      <table>
+        <thead>
+          <tr><th>Rank</th><th>Target</th><th>Priority</th><th>Why It Matters</th><th>First Action</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td>Paper-story alignment</td><td class="must">MUST</td><td>README still reads like a positive VoI-method paper, while <code>PAPER_PLAN.md</code> has pivoted to diagnostic/negative findings.</td><td>Rewrite README top sections and project summary around cost-matched evaluation, repeated checkpoint evaluation, and trace diagnostics.</td></tr>
+          <tr><td>2</td><td>Citation and source audit</td><td class="must">MUST</td><td>Related Work and method claims remain marked <code>[VERIFY]</code>; SCI Q1 needs verified authoritative citations.</td><td>Execute R027: build a citation support bank from <code>proposal/references.bib</code> and map claims to sources.</td></tr>
+          <tr><td>3</td><td>Experiment evidence registry</td><td class="must">MUST</td><td>R020-R026 facts are duplicated across README, tracker, plan, figures, CSVs, and notes.</td><td>Create one machine-readable evidence index for R020-R026 and generate tables/figure inputs from it.</td></tr>
+          <tr><td>4</td><td>Training script modularization</td><td class="must">MUST</td><td><code>scripts/train_robosuite_hil.py</code> is a shallow module: too many responsibilities in one file.</td><td>Extract run config, bookkeeping, trace schema, and evaluation helpers into <code>foresight_hil/experiments/</code>.</td></tr>
+          <tr><td>5</td><td>Strategy/config identity cleanup</td><td class="should">SHOULD</td><td>Driver and trainer both construct labels and pass long VoI flag lists; budget matching is a scientific risk.</td><td>Introduce declarative strategy specs with per-strategy budgets and canonical run IDs.</td></tr>
+          <tr><td>6</td><td>Result artifact hygiene</td><td class="should">SHOULD</td><td>Historical runs, smoke tests, checkpoints, and paper-core evidence are hard to distinguish.</td><td>Add <code>results/RESULTS_INDEX.csv</code> or YAML with artifact tags: paper-core, diagnostic, smoke, superseded.</td></tr>
+          <tr><td>7</td><td>Evaluation protocol module</td><td class="should">SHOULD</td><td>The evaluation protocol is a contribution but currently spread across scripts.</td><td>Centralize repeated checkpoint evaluation, Wilson intervals, best-step reporting, and trace summaries.</td></tr>
+          <tr><td>8</td><td>Figure 1 polish</td><td class="should">SHOULD</td><td>R026 data plots are usable, but the hero diagnostic summary is still draft.</td><td>Redesign Fig. 1 as a final narrative figure: protocol, cost-matched reversal, trigger diagnosis.</td></tr>
+          <tr><td>9</td><td>Parallel-budget allocation module</td><td class="later">LATER</td><td>The submodular/diversity allocator remains a real future novelty hook, but not needed for the diagnostic paper.</td><td>Defer unless a positive-method contribution becomes necessary.</td></tr>
+          <tr><td>10</td><td>Second-task/robotics breadth</td><td class="later">LATER</td><td>Stack is currently boundary/negative evidence, not positive transfer.</td><td>Keep Stack as limitation; expand only after manuscript needs are clear.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Recommended Next Sequence</h2>
+      <div class="flow">
+        <div class="step"><h3>1. R027</h3><p>Citation audit and source bank.</p></div>
+        <div class="step"><h3>2. Alignment</h3><p>Update README and paper-facing summary to the diagnostic thesis.</p></div>
+        <div class="step"><h3>3. Registry</h3><p>Build an evidence index for R020-R026 and regenerate tables from it.</p></div>
+        <div class="step"><h3>4. Modules</h3><p>Extract config, bookkeeping, trace, and evaluation helpers.</p></div>
+        <div class="step"><h3>5. Draft</h3><p>Write Introduction and Evaluation Protocol with verified sources and registry-backed numbers.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Stop Rule</h2>
+      <div class="card">
+        <p>Do not start a new R024-style trigger repair unless it is motivated by a clear diagnostic failure mode and evaluated first against same-seed <code>random_b350</code> with repeated checkpoint evaluation. The current best route is paper credibility and evidence discipline, not more small heuristic variants.</p>
+      </div>
+      <p class="small">Durable Markdown version: <code>refine-logs/PROJECT_OPTIMIZATION_TARGETS.md</code></p>
+    </section>
+  </main>
+</body>
+</html>

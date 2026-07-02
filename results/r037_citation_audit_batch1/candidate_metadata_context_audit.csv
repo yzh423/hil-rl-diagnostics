@@ -1,0 +1,7 @@
+cite_key,verdict,metadata_status,context_status,primary_source,secondary_source,recommended_action,caution
+haarnoja2018sac,KEEP,verified,appropriate,PMLR ICML 2018 page,,add_to_candidate_pool,"Preferred primary SAC algorithm citation."
+sac2018applications,KEEP,verified,appropriate,arXiv 1812.05905,,keep_as_optional,"Use for SAC applications/robotics stability, not as the primary SAC venue."
+robosuite2020,KEEP,verified,appropriate,arXiv 2009.12293,robosuite.ai link from arXiv,add_to_candidate_pool,"Current arXiv page is v3 revised in 2025; year kept as original 2020 submission."
+henderson2018deeprlmatters,FIX_APPLIED,verified,appropriate,AAAI proceedings DOI,arXiv 1709.06560,add_to_candidate_pool,"Candidate upgraded from arXiv-only metadata to official AAAI 2018 DOI metadata."
+agarwal2021statisticalprecipice,KEEP_WITH_CAUTION,partially_verified,appropriate,arXiv 2108.13264,,keep_arxiv_until_proceedings_resolved,"arXiv verifies title/authors and notes NeurIPS 2021 Outstanding Paper; automated proceedings lookup did not resolve a canonical URL."
+wilson1927score,KEEP,verified,appropriate,CrossRef DOI,,add_to_candidate_pool,"Use narrowly for Wilson score/binomial-proportion interval formula."

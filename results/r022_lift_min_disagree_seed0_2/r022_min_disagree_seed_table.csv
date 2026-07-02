@@ -1,0 +1,7 @@
+strategy,seed,total_successes,total_episodes,repeated_success,success_ci_low,success_ci_high,return_mean,best_human_steps,best_eval_step,summary_csv
+min_disagree_vlv0p25,0,61,100,0.6100,0.5120,0.6998,99.4987,487.0000,8000,results/r022_lift_min_disagree_seed0_2/checkpoint_reeval_min_disagree_seed0_5x20_summary.csv
+min_disagree_vlv0p25,1,93,100,0.9300,0.8625,0.9657,152.4155,68.0000,4000,results/r022_lift_min_disagree_seed0_2/checkpoint_reeval_min_disagree_seed1_5x20_summary.csv
+min_disagree_vlv0p25,2,72,100,0.7200,0.6251,0.7986,126.9389,80.0000,2000,results/r022_lift_min_disagree_seed0_2/checkpoint_reeval_min_disagree_seed2_5x20_summary.csv
+random_b350,0,74,100,0.7400,0.6463,0.8160,119.3600,100.0000,2000,results/r021_random_budget350_costmatch/checkpoint_reeval_random_b350_seed0_5x20_summary.csv
+random_b350,1,98,100,0.9800,0.9300,0.9945,146.5361,85.0000,2000,results/r021_random_budget350_costmatch/checkpoint_reeval_random_b350_seed1_5x20_summary.csv
+random_b350,2,87,100,0.8700,0.7902,0.9224,127.2210,100.0000,2000,results/r021_random_budget350_costmatch/checkpoint_reeval_random_b350_seed2_5x20_summary.csv

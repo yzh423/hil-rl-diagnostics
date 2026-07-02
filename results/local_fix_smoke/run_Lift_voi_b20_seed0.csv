@@ -1,0 +1,2 @@
+env_step,eval_success_rate,eval_return,eval_successes,eval_episodes,eval_success_ci_low,eval_success_ci_high,human_steps,budget_used_frac,engagements,demo_size,online_size,voi_candidate_rate,voi_score_mean,voi_p_fail_mean
+20,0.0000,0.3836,0,2,0.0000,0.6576,12,0.6000,2,212,20,0.1000,3848.4079,0.2000

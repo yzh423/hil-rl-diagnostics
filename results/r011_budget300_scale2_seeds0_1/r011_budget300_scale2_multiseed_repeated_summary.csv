@@ -1,0 +1,2 @@
+candidate,seeds,total_successes,total_episodes,repeated_success,success_ci_low,success_ci_high,mean_best_human_steps,seed0_successes,seed0_best_human_steps,seed1_successes,seed1_best_human_steps,seed2_source,seed2_successes,seed2_best_human_steps,interpretation
+r011_budget300_scale2_all_seeds,0-2,118,180,0.6556,0.5835,0.7211,111.7,36,40,37,40,r010_budget300_scale2_seed2,45,255,cheaper than R009 but materially less reliable after repeated checkpoint evaluation; not a main Pareto candidate

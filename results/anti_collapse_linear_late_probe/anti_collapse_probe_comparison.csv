@@ -1,0 +1,3 @@
+variant,source,seed,final_success_rate,best_success_rate,best_eval_step,repeated_checkpoint_success,human_steps,engagements,best_final_gap,interpretation
+constant_bc_reg50_take20,results/voi_gate_sweep_seed2_10000_eval20/robosuite_hil_summary.csv,1,0.3000,1.0000,,NA,600,31,0.7000,baseline collapse-prone run; strong intermediate policy but weak final policy
+linear_late_bc_reg50_to_150_take20,results/anti_collapse_linear_late_probe/robosuite_hil_summary.csv,1,0.2000,0.8000,2000,0.8500,600,31,0.6000,late actor anchoring alone did not prevent final-policy collapse; repeated best-checkpoint evaluation remains strong

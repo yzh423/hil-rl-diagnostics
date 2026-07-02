@@ -1,0 +1,2 @@
+task,backend,strategy,budget,human_noise,human_delay,human_skill,human_dropout,seed,total_steps,n_demos,bc_pretrain_steps,bc_final_mse,bc_actor_reg_coef,final_success_rate,best_success_rate,human_steps,budget_used_frac,engagements,final_eval_successes,final_eval_episodes,final_success_ci_low,final_success_ci_high,wall_time_s
+Lift,robosuite,voi,300,0.0,0,1.0,0.0,0,1000,20,5000,0.005209,10.0,0.0000,0.2000,172,0.5733,18,0,10,0.0000,0.2775,238.7

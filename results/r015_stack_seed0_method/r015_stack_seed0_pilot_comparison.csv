@@ -1,0 +1,4 @@
+system,task,seed,total_successes,total_episodes,repeated_success,success_ci_low,success_ci_high,mean_best_human_steps,best_eval_step,training_best_success,source,interpretation
+none_restore_best,Stack,0,28,60,0.4667,0.3463,0.5911,0,4000,0.5500,results/r015_stack_seed0_baselines,current strongest Stack seed0 result; no extra human steps
+random_restore_best_b600,Stack,0,26,60,0.4333,0.3157,0.5590,373,6000,0.6500,results/r015_stack_seed0_baselines,uses human budget but repeated best is close to none
+learning_value_voi_b600_scale3,Stack,0,22,60,0.3667,0.2562,0.4932,80,2000,0.3500,results/r015_stack_seed0_method,Lift-tuned method does not transfer positively to Stack seed0

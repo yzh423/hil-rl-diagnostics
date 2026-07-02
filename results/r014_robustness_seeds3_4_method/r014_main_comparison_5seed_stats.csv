@@ -1,0 +1,3 @@
+comparison,success_diff_pp,test,statistic,p_two_sided,interpretation
+learning_value_voi_b600_scale3_vs_none_restore_best,6.33,episode_level_two_proportion_z,2.0263,0.0427,sanity check only; favors method over no-human baseline but seed-level robustness should be reported
+learning_value_voi_b600_scale3_vs_random_restore_best_b600,1.67,episode_level_two_proportion_z,0.5640,0.5727,not a reliable success advantage over random; main distinction is lower mean best-step human cost

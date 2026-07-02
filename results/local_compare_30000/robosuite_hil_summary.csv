@@ -1,0 +1,2 @@
+task,backend,strategy,budget,human_noise,human_delay,human_skill,human_dropout,seed,total_steps,n_demos,final_success_rate,best_success_rate,human_steps,engagements,wall_time_s
+Lift,robosuite,voi,4000,0.0,0,1.0,0.0,0,30000,20,0.0000,0.0000,944,96,1317.2

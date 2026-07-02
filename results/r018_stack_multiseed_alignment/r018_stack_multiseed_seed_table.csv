@@ -1,0 +1,10 @@
+strategy,seed,total_successes,total_episodes,repeated_success,success_ci_low,success_ci_high,return_mean,return_std,best_human_steps,summary_csv,notes
+voi_stack_tuned,0,47,60,0.7833,0.6638,0.8688,69.6235,14.1538,600,results/r017_stack_tuned_candidate/checkpoint_reeval_r017_seed0_3x20_summary.csv,"R017 Stack-tuned seed0: 50 demos, 10000 BC, tau0, demo_nn LV scale3"
+voi_stack_tuned,1,33,60,0.5500,0.4249,0.6691,48.5733,8.1590,600,results/r018_stack_tuned_method_seeds1_2/checkpoint_reeval_method_seed1_3x20_summary.csv,R018 Stack-tuned seed1 matched protocol
+voi_stack_tuned,2,27,60,0.4500,0.3309,0.5751,39.3636,7.2994,100,results/r018_stack_tuned_method_seeds1_2/checkpoint_reeval_method_seed2_3x20_summary.csv,R018 Stack-tuned seed2 matched protocol; best training checkpoint selected at step2000
+none_matched_bc,0,47,60,0.7833,0.6638,0.8688,61.5764,3.1785,0,results/r018_stack_matched_baselines_seeds0_2/checkpoint_reeval_none_seed0_3x20_summary.csv,No online human; same 50-demo BC / SAC / restore protocol
+none_matched_bc,1,39,60,0.6500,0.5236,0.7583,64.6389,8.1282,0,results/r018_stack_matched_baselines_seeds0_2/checkpoint_reeval_none_seed1_3x20_summary.csv,No online human; same 50-demo BC / SAC / restore protocol
+none_matched_bc,2,45,60,0.7500,0.6277,0.8422,67.0733,8.9646,0,results/r018_stack_matched_baselines_seeds0_2/checkpoint_reeval_none_seed2_3x20_summary.csv,No online human; same 50-demo BC / SAC / restore protocol
+random_matched_bc,0,40,60,0.6667,0.5406,0.7727,54.5024,15.1252,420,results/r018_stack_matched_baselines_seeds0_2/checkpoint_reeval_random_seed0_3x20_summary.csv,Random online human budget baseline; same 50-demo BC / SAC / restore protocol
+random_matched_bc,1,42,60,0.7000,0.5749,0.8010,62.3474,19.8623,414,results/r018_stack_matched_baselines_seeds0_2/checkpoint_reeval_random_seed1_3x20_summary.csv,Random online human budget baseline; same 50-demo BC / SAC / restore protocol
+random_matched_bc,2,25,60,0.4167,0.3006,0.5427,33.8038,4.7352,600,results/r018_stack_matched_baselines_seeds0_2/checkpoint_reeval_random_seed2_3x20_summary.csv,Random online human budget baseline; same 50-demo BC / SAC / restore protocol

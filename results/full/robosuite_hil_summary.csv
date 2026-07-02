@@ -1,0 +1,13 @@
+task,backend,strategy,budget,human_noise,human_delay,human_skill,human_dropout,seed,total_steps,n_demos,final_success_rate,best_success_rate,human_steps,engagements,wall_time_s
+Lift,robosuite,none,4000,0.0,0,1.0,0.0,0,150000,20,0.1000,0.7500,0,0,3720.5
+Lift,robosuite,always,4000,0.0,0,1.0,0.0,0,150000,20,0.0000,0.0000,150000,15000,3119.3
+Lift,robosuite,random,4000,0.0,0,1.0,0.0,0,150000,20,0.9000,1.0000,4000,414,3052.4
+Lift,robosuite,voi,4000,0.0,0,1.0,0.0,0,150000,20,0.7000,0.8000,4000,410,3181.5
+Lift,robosuite,none,4000,0.0,0,1.0,0.0,1,150000,20,0.0000,0.5500,0,0,3059.7
+Lift,robosuite,always,4000,0.0,0,1.0,0.0,1,150000,20,0.0000,0.0000,150000,15000,3054.9
+Lift,robosuite,random,4000,0.0,0,1.0,0.0,1,150000,20,0.7000,0.7000,4000,409,3052.2
+Lift,robosuite,voi,4000,0.0,0,1.0,0.0,1,150000,20,0.0000,0.9500,4000,409,3209.1
+Lift,robosuite,none,4000,0.0,0,1.0,0.0,2,150000,20,0.6500,1.0000,0,0,3067.0
+Lift,robosuite,always,4000,0.0,0,1.0,0.0,2,150000,20,0.0000,0.0000,150000,15000,3076.1
+Lift,robosuite,random,4000,0.0,0,1.0,0.0,2,150000,20,0.3000,0.6000,4000,409,3073.6
+Lift,robosuite,voi,4000,0.0,0,1.0,0.0,2,150000,20,1.0000,1.0000,3997,414,4300.6

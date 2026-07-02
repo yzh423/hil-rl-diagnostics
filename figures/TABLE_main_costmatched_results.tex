@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{Cost-matched Lift results with repeated checkpoint evaluation. Success is aggregated over five seeds with $5\times20$ episodes per seed.}
+\label{tab:cost_matched_lift}
+\begin{tabular}{lcccc}
+\toprule
+Strategy & Success & 95\% CI & Human steps & $\Delta$ vs. LV-VoI \\
+\midrule
+No intervention & 80.0\% & [76.3, 83.3] & 0.0 & -3.2 pp \\
+\textbf{Random b350} & 87.8\% & [84.6, 90.4] & 177.0 & +4.6 pp \\
+LV-VoI scale3 & 83.2\% & [79.7, 86.2] & 202.0 & +0.0 pp \\
+Random b450 & 85.2\% & [81.8, 88.0] & 250.0 & +2.0 pp \\
+Random b600 & 85.2\% & [81.8, 88.0] & 269.2 & +2.0 pp \\
+\bottomrule
+\end{tabular}
+\end{table}

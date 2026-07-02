@@ -1,0 +1,2 @@
+checkpoint,task,n_repeats,success_mean,success_std,return_mean,return_std,total_successes,total_episodes,success_ci_low,success_ci_high
+results\r019_stack_update_safe_seed0\checkpoints\best_Stack_voi_b600_seed0_r019_update_safe_starts_seed0.zip,Stack,3,0.6333,0.0471,51.7902,4.9141,38,60,0.5068,0.7438

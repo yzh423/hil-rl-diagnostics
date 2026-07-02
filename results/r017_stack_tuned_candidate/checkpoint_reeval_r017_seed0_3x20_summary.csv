@@ -1,0 +1,2 @@
+checkpoint,task,n_repeats,success_mean,success_std,return_mean,return_std,total_successes,total_episodes,success_ci_low,success_ci_high
+results\r017_stack_tuned_candidate\checkpoints\best_Stack_voi_b600_seed0_r017_tau0_bc50_pre10000_6000.zip,Stack,3,0.7833,0.0236,69.6235,14.1538,47,60,0.6638,0.8688

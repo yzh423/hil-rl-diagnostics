@@ -1,0 +1,4 @@
+system,seeds,total_successes,total_episodes,repeated_success,success_ci_low,success_ci_high,mean_best_human_steps,mean_best_engagements,seed3_successes,seed3_best_human_steps,seed4_successes,seed4_best_human_steps,interpretation
+learning_value_voi_b600_scale3,3-4,104,120,0.8667,0.7943,0.9173,80.0,4.0,53,80,51,80,method remains strong on new seeds and reaches best checkpoints early
+none_restore_best,3-4,103,120,0.8583,0.7848,0.9106,0.0,0.0,51,0,52,0,no-human baseline is also very strong on new seeds
+random_restore_best_b600,3-4,117,120,0.9750,0.9290,0.9915,160.0,8.0,58,160,59,160,random baseline is near-saturated on new seeds

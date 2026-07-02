@@ -1,0 +1,4 @@
+strategy,success_mean,success_std,human_steps_mean,engagements_mean,n_seeds
+none,0.0000,0.0000,0.0,0.0,1
+random,0.0000,0.0000,30.0,3.0,1
+voi,0.0000,0.0000,30.0,3.0,1

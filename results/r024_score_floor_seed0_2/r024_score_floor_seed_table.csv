@@ -1,0 +1,4 @@
+strategy,seed,total_successes,total_episodes,repeated_success,success_ci_low,success_ci_high,success_std,return_mean,best_eval_step,best_human_steps,training_restored_success,raw_final_success,summary_csv
+score_floor_vlv3_after4000_floor0p05,0,61,100,0.6100,0.5120,0.6998,0.0663,98.1939,2000,80.0,0.5000,0.1000,results/r024_score_floor_seed0_2/checkpoint_reeval_score_floor_seed0_5x20_summary.csv
+score_floor_vlv3_after4000_floor0p05,1,94,100,0.9400,0.8752,0.9722,0.0583,140.7236,10000,600.0,0.9500,0.9500,results/r024_score_floor_seed0_2/checkpoint_reeval_score_floor_seed1_5x20_summary.csv
+score_floor_vlv3_after4000_floor0p05,2,78,100,0.7800,0.6893,0.8500,0.1364,129.5703,4000,80.0,0.6000,0.1500,results/r024_score_floor_seed0_2/checkpoint_reeval_score_floor_seed2_5x20_summary.csv

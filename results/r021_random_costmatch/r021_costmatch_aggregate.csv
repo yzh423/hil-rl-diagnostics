@@ -1,0 +1,6 @@
+strategy,seeds,total_successes,total_episodes,repeated_success,success_ci_low,success_ci_high,seed_success_mean,seed_success_std,mean_best_human_steps,mean_return,delta_success_vs_none_pp,delta_success_vs_random_pp,delta_human_steps_vs_none,delta_human_steps_vs_random,delta_success_vs_lvvoi_pp,delta_human_steps_vs_lvvoi
+none,0;1;2;3;4,400,500,0.8000,0.7627,0.8327,0.8000,0.0447,0.0,130.8545,0.0,-5.2,0.0,-269.2,-3.2,-202.0
+random_b350,0;1;2;3;4,439,500,0.8780,0.8464,0.9038,0.8780,0.1123,177.0,141.5071,7.8,,,,4.6,-25.0
+lv_voi_scale3,0;1;2;3;4,416,500,0.8320,0.7967,0.8622,0.8320,0.0507,202.0,134.9603,3.2,-2.0,202.0,-67.2,0.0,0.0
+random_b450,0;1;2;3;4,426,500,0.8520,0.8182,0.8804,0.8520,0.1112,250.0,141.8277,5.2,,,,2.0,48.0
+random_b600,0;1;2;3;4,426,500,0.8520,0.8182,0.8804,0.8520,0.1866,269.2,135.4453,5.2,0.0,269.2,0.0,2.0,67.2

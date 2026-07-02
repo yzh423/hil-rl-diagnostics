@@ -1,0 +1,40 @@
+[provenance] FAIL checks=6 files=289 issues=38
+[provenance] root=.
+[issue] check=r047-artifact-hashes path=PROJECT_DASHBOARD.md :: byte size mismatch: expected 7395, actual 8371
+[issue] check=r047-artifact-hashes path=PROJECT_DASHBOARD.md :: sha256 mismatch
+[issue] check=r047-artifact-hashes path=CONTEXT.md :: byte size mismatch: expected 6338, actual 6945
+[issue] check=r047-artifact-hashes path=CONTEXT.md :: sha256 mismatch
+[issue] check=r047-artifact-hashes path=PROJECT_STRUCTURE.md :: byte size mismatch: expected 9973, actual 11237
+[issue] check=r047-artifact-hashes path=PROJECT_STRUCTURE.md :: sha256 mismatch
+[issue] check=r047-artifact-hashes path=PAPER_PLAN.md :: byte size mismatch: expected 15674, actual 16978
+[issue] check=r047-artifact-hashes path=PAPER_PLAN.md :: sha256 mismatch
+[issue] check=r047-artifact-hashes path=AGENTS.md :: byte size mismatch: expected 3867, actual 4240
+[issue] check=r047-artifact-hashes path=AGENTS.md :: sha256 mismatch
+[issue] check=r047-artifact-hashes path=results/EXPERIMENT_EVIDENCE_REGISTRY.csv :: byte size mismatch: expected 9922, actual 10665
+[issue] check=r047-artifact-hashes path=results/EXPERIMENT_EVIDENCE_REGISTRY.csv :: sha256 mismatch
+[issue] check=r047-artifact-hashes path=results/EXPERIMENT_EVIDENCE_REGISTRY.md :: byte size mismatch: expected 4113, actual 4526
+[issue] check=r047-artifact-hashes path=results/EXPERIMENT_EVIDENCE_REGISTRY.md :: sha256 mismatch
+[issue] check=r047-artifact-hashes path=results/RESULTS_INDEX.md :: byte size mismatch: expected 5653, actual 6067
+[issue] check=r047-artifact-hashes path=results/RESULTS_INDEX.md :: sha256 mismatch
+[issue] check=source-snapshot path=AGENTS.md :: disk byte size mismatch
+[issue] check=source-snapshot path=AGENTS.md :: disk sha256 mismatch
+[issue] check=source-snapshot path=CONTEXT.md :: disk byte size mismatch
+[issue] check=source-snapshot path=CONTEXT.md :: disk sha256 mismatch
+[issue] check=source-snapshot path=PAPER_PLAN.md :: disk byte size mismatch
+[issue] check=source-snapshot path=PAPER_PLAN.md :: disk sha256 mismatch
+[issue] check=source-snapshot path=PROJECT_DASHBOARD.md :: disk byte size mismatch
+[issue] check=source-snapshot path=PROJECT_DASHBOARD.md :: disk sha256 mismatch
+[issue] check=source-snapshot path=PROJECT_STRUCTURE.md :: disk byte size mismatch
+[issue] check=source-snapshot path=PROJECT_STRUCTURE.md :: disk sha256 mismatch
+[issue] check=source-snapshot path=README.md :: disk byte size mismatch
+[issue] check=source-snapshot path=README.md :: disk sha256 mismatch
+[issue] check=source-snapshot path=foresight_hil/evaluation/__init__.py :: disk byte size mismatch
+[issue] check=source-snapshot path=foresight_hil/evaluation/__init__.py :: disk sha256 mismatch
+[issue] check=source-snapshot path=refine-logs/EXPERIMENT_TRACKER.md :: disk byte size mismatch
+[issue] check=source-snapshot path=refine-logs/EXPERIMENT_TRACKER.md :: disk sha256 mismatch
+[issue] check=source-snapshot path=results/EXPERIMENT_EVIDENCE_REGISTRY.csv :: disk byte size mismatch
+[issue] check=source-snapshot path=results/EXPERIMENT_EVIDENCE_REGISTRY.csv :: disk sha256 mismatch
+[issue] check=source-snapshot path=results/EXPERIMENT_EVIDENCE_REGISTRY.md :: disk byte size mismatch
+[issue] check=source-snapshot path=results/EXPERIMENT_EVIDENCE_REGISTRY.md :: disk sha256 mismatch
+[issue] check=source-snapshot path=results/RESULTS_INDEX.md :: disk byte size mismatch
+[issue] check=source-snapshot path=results/RESULTS_INDEX.md :: disk sha256 mismatch

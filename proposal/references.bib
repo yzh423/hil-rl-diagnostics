@@ -1,0 +1,715 @@
+% ============================================================
+% FORESIGHT-HIL references
+% Every entry verified against an authoritative source (arXiv
+% abstract pages via the arXiv API, DOI/publisher pages,
+% OpenReview, PMLR/JAIR). Each entry carries a trailing
+% "% verified:" comment naming the source. Entries that could
+% not be fully confirmed are flagged "% UNVERIFIED".
+% Last audited: 2026-06-25. See citation_audit.md for the full table.
+% ============================================================
+
+% ---------- A. HIL-RL for manipulation ----------
+@article{luo2025hilserl,
+  title   = {Precise and Dexterous Robotic Manipulation via Human-in-the-Loop Reinforcement Learning},
+  author  = {Luo, Jianlan and Xu, Charles and Wu, Jeffrey and Levine, Sergey},
+  journal = {Science Robotics},
+  volume  = {10},
+  number  = {105},
+  pages   = {eads5033},
+  year    = {2025},
+  doi     = {10.1126/scirobotics.ads5033},
+  note    = {arXiv:2410.21845}
+}
+% verified: arxiv.org/abs/2410.21845 + science.org/doi/10.1126/scirobotics.ads5033
+
+@article{liu2026pact,
+  title   = {Preference-Calibrated Human-in-the-Loop Reinforcement Learning for Robotic Manipulation},
+  author  = {Liu, Zeyi and Liu, Guangyao and Qu, Yinuo and Xue, Yuquan and Jia, Bofang and Yang, Chunhua and Gui, Weihua and Huang, Keke and Wang, Ziwei},
+  journal = {arXiv preprint arXiv:2606.03949},
+  year    = {2026}
+}
+% verified: arxiv.org/abs/2606.03949 (title + full author list confirmed)
+
+@inproceedings{luo2024serl,
+  title     = {{SERL}: A Software Suite for Sample-Efficient Robotic Reinforcement Learning},
+  author    = {Luo, Jianlan and Hu, Zheyuan and Xu, Charles and Tan, You Liang and Berg, Jacob and Sharma, Archit and Schaal, Stefan and Finn, Chelsea and Gupta, Abhishek and Levine, Sergey},
+  booktitle = {IEEE International Conference on Robotics and Automation (ICRA)},
+  pages     = {16961--16969},
+  year      = {2024},
+  note      = {arXiv:2401.16013}
+}
+% verified: arxiv.org/abs/2401.16013 (title/authors/venue). Page numbers from IEEE Xplore, not independently re-verified.
+
+@article{uniintervene2026,
+  title   = {UniIntervene: Agentic Intervention for Efficient Real-World Reinforcement Learning},
+  author  = {Deng, Haoyuan and Gao, Yitong and Lin, Yudong and Liu, Haichao and Wu, Zhenyu and Wang, Ziwei},
+  journal = {arXiv preprint arXiv:2606.12372},
+  year    = {2026}
+}
+% verified: arxiv.org/abs/2606.12372 (placeholder "Anonymous" replaced with confirmed authors)
+
+@article{silri2025,
+  title   = {Real-world Reinforcement Learning from Suboptimal Interventions},
+  author  = {Zhao, Yinuo and Jin, Huiqian and Jiang, Lechun and Zhang, Xinyi and Wu, Kun and Ren, Pei and Xu, Zhiyuan and Che, Zhengping and Sun, Lei and Wu, Dapeng and Liu, Chi Harold and Tang, Jian},
+  journal = {arXiv preprint arXiv:2512.24288},
+  year    = {2025},
+  note    = {SiLRI}
+}
+% verified: arxiv.org/abs/2512.24288 (placeholder "Anonymous" replaced with confirmed authors)
+
+@article{ohprl2026,
+  title   = {{OHP-RL}: Online Human Preference as Guidance in Reinforcement Learning for Robot Manipulation},
+  author  = {Mo, Yunyang and Li, Jian and Wu, Qiwei and Kang, Yihang and Xu, Renjing},
+  journal = {arXiv preprint arXiv:2605.15971},
+  year    = {2026}
+}
+% verified: arxiv.org/abs/2605.15971 (placeholder "Anonymous" replaced with confirmed authors)
+
+@article{rove2026,
+  title   = {{ROVE}: Unlocking Human Interventions for Humanoid Manipulation via Reinforcement Learning},
+  author  = {Xiao, Wei and Tang, Weiliang and Ge, Yuying and Zhou, Hui and Mu, Yao and Zhang, Li and Ge, Yixiao},
+  journal = {arXiv preprint arXiv:2606.17011},
+  year    = {2026}
+}
+% verified: arxiv.org/abs/2606.17011 (placeholder "Anonymous" replaced with confirmed authors)
+
+% ---------- B. Robot-/uncertainty-gated requesting ----------
+@inproceedings{cai2025aim,
+  title     = {Robot-Gated Interactive Imitation Learning with Adaptive Intervention Mechanism},
+  author    = {Cai, Haoyuan and Peng, Zhenghao and Zhou, Bolei},
+  booktitle = {Proceedings of the 42nd International Conference on Machine Learning (ICML)},
+  series    = {PMLR},
+  volume    = {267},
+  pages     = {6243--6256},
+  year      = {2025},
+  note      = {arXiv:2506.09176}
+}
+% verified: proceedings.mlr.press/v267/cai25e.html + arxiv.org/abs/2506.09176 (author "and others" replaced)
+
+@inproceedings{hoque2021thrifty,
+  title     = {ThriftyDAgger: Budget-Aware Novelty and Risk Gating for Interactive Imitation Learning},
+  author    = {Hoque, Ryan and Balakrishna, Ashwin and Novoseller, Ellen and Wilcox, Albert and Brown, Daniel S. and Goldberg, Ken},
+  booktitle = {Conference on Robot Learning (CoRL)},
+  year      = {2021},
+  note      = {arXiv:2109.08273}
+}
+% verified: arxiv.org/abs/2109.08273 (title + full author list confirmed)
+
+@article{mile2025,
+  title   = {{MILE}: Model-based Intervention Learning},
+  author  = {Korkmaz, Yigit and B{\i}y{\i}k, Erdem},
+  journal = {arXiv preprint arXiv:2502.13519},
+  year    = {2025}
+}
+% verified: arxiv.org/abs/2502.13519 (placeholder "Anonymous" replaced with confirmed authors)
+
+@inproceedings{kurenkov2019acteach,
+  title     = {AC-Teach: A Bayesian Actor-Critic Method for Policy Learning with an Ensemble of Suboptimal Teachers},
+  author    = {Kurenkov, Andrey and Mandlekar, Ajay and Mart{\'\i}n-Mart{\'\i}n, Roberto and Savarese, Silvio and Garg, Animesh},
+  booktitle = {Conference on Robot Learning (CoRL)},
+  year      = {2019},
+  note      = {arXiv:1909.04121}
+}
+% verified: arxiv.org/abs/1909.04121 (title + authors confirmed)
+
+@article{zhang2020apil,
+  title   = {Active Imitation Learning from Multiple Non-Deterministic Teachers: Formulation, Challenges, and Algorithms},
+  author  = {Nguyen, Khanh and Daum{\'e} III, Hal},
+  journal = {arXiv preprint arXiv:2006.07777},
+  year    = {2020}
+}
+% verified: arxiv.org/abs/2006.07777 -- CORRECTED: real authors are Nguyen & Daume III, NOT "Zhang". Bib key kept for stability.
+
+% ---------- C. World models + human ----------
+@article{hiwm2026,
+  title   = {Hi-WM: Human-in-the-World-Model for Scalable Robot Post-Training},
+  author  = {Li, Yaxuan and Zhou, Zhongyi and Chen, Yefei and Guo, Yanjiang and Liu, Jiaming and Zhang, Shanghang and Chen, Jianyu and Zhu, Yichen},
+  journal = {arXiv preprint arXiv:2604.21741},
+  year    = {2026}
+}
+% verified: arxiv.org/abs/2604.21741 (placeholder "Anonymous" replaced with confirmed authors)
+
+@misc{vlaintheloop2026,
+  title        = {VLA-in-the-Loop: Online Policy Correction with World Models for Robust Robotic Grasping},
+  author       = {Xu, Shaoqing and Li, Fang and Duan, Zhixiang and Yang, Yifan and Xie, Tianshi and Yang, Zhi-Xin},
+  howpublished = {OpenReview, submitted to ICLR 2026 (under review)},
+  note         = {OpenReview:aT4LG8c6DE; submission 5405},
+  year         = {2026}
+}
+% verified: openreview.net/forum?id=aT4LG8c6DE -- NOTE: under-review submission, not an accepted/published paper.
+
+% ---------- D. Model-based RL foundations ----------
+@article{moerland2023mbrl,
+  title   = {Model-based Reinforcement Learning: A Survey},
+  author  = {Moerland, Thomas M. and Broekens, Joost and Plaat, Aske and Jonker, Catholijn M.},
+  journal = {Foundations and Trends in Machine Learning},
+  volume  = {16},
+  number  = {1},
+  pages   = {1--118},
+  year    = {2023},
+  note    = {arXiv:2006.16712}
+}
+% verified: arxiv.org/abs/2006.16712 (title/authors confirmed; FnT ML vol 16(1) 2023)
+
+@article{luo2022mbrlsurvey,
+  title   = {A Survey on Model-based Reinforcement Learning},
+  author  = {Luo, Fan-Ming and Xu, Tian and Lai, Hang and Chen, Xiong-Hui and Zhang, Weinan and Yu, Yang},
+  journal = {arXiv preprint arXiv:2206.09328},
+  year    = {2022}
+}
+% verified: arxiv.org/abs/2206.09328 (title + authors confirmed)
+
+@article{pinosky2022hybrid,
+  title   = {Hybrid control for combining model-based and model-free reinforcement learning},
+  author  = {Pinosky, Allison and Abraham, Ian and Broad, Alexander and Argall, Brenna and Murphey, Todd D.},
+  journal = {The International Journal of Robotics Research},
+  volume  = {42},
+  number  = {6},
+  pages   = {337--355},
+  year    = {2023},
+  doi     = {10.1177/02783649221083331}
+}
+% verified: journals.sagepub.com/doi/10.1177/02783649221083331 -- CORRECTED year 2022 -> 2023 (print issue); DOI added. Bib key kept for stability.
+
+@inproceedings{ball2023rlpd,
+  title     = {Efficient Online Reinforcement Learning with Offline Data},
+  author    = {Ball, Philip J. and Smith, Laura and Kostrikov, Ilya and Levine, Sergey},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  pages     = {1577--1594},
+  year      = {2023},
+  note      = {arXiv:2302.02948}
+}
+% verified: arxiv.org/abs/2302.02948 (title/authors confirmed)
+
+@inproceedings{chua2018pets,
+  title     = {Deep Reinforcement Learning in a Handful of Trials using Probabilistic Dynamics Models},
+  author    = {Chua, Kurtland and Calandra, Roberto and McAllister, Rowan and Levine, Sergey},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2018},
+  note      = {arXiv:1805.12114}
+}
+% verified: arxiv.org/abs/1805.12114 (title + authors confirmed)
+
+@article{hafner2023dreamerv3,
+  title   = {Mastering Diverse Domains through World Models},
+  author  = {Hafner, Danijar and Pasukonis, Jurgis and Ba, Jimmy and Lillicrap, Timothy},
+  journal = {arXiv preprint arXiv:2301.04104},
+  year    = {2023}
+}
+% verified: arxiv.org/abs/2301.04104 (title/authors confirmed; later appeared in Nature 2025)
+
+% ---------- E. HITL position / explainability ----------
+@article{retzlaff2024hitl,
+  title   = {Human-in-the-Loop Reinforcement Learning: A Survey and Position on Requirements, Challenges, and Opportunities},
+  author  = {Retzlaff, Carl Orge and Das, Srijita and Wayllace, Christabel and Mousavi, Payam and Afshari, Mohammad and Yang, Tianpei and Saranti, Anna and Angerschmid, Alessa and Taylor, Matthew E. and Holzinger, Andreas},
+  journal = {Journal of Artificial Intelligence Research},
+  volume  = {79},
+  pages   = {359--415},
+  year    = {2024},
+  doi     = {10.1613/jair.1.15348}
+}
+% verified: jair.org/index.php/jair/article/view/15348 (vol 79, 359-415, 2024; DOI added)
+
+% ---------- F. Shared autonomy / driving (pivot option) ----------
+@inproceedings{li2022haco,
+  title     = {Efficient Learning of Safe Driving Policy via Human-AI Copilot Optimization},
+  author    = {Li, Quanyi and Peng, Zhenghao and Zhou, Bolei},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2022},
+  note      = {arXiv:2202.10341}
+}
+% verified: arxiv.org/abs/2202.10341 (title + authors confirmed)
+
+@article{huang2024haim,
+  title   = {Human as AI mentor: Enhanced human-in-the-loop reinforcement learning for safe and efficient autonomous driving},
+  author  = {Huang, Zilin and Sheng, Zihao and Ma, Chengyuan and Chen, Sikai},
+  journal = {Communications in Transportation Research},
+  volume  = {4},
+  pages   = {100127},
+  year    = {2024},
+  doi     = {10.1016/j.commtr.2024.100127},
+  note    = {arXiv:2401.03160}
+}
+% verified: sciencedirect.com/science/article/pii/S2772424724000106 (journal title differs from arXiv title "HAIM-DRL: ...")
+
+@article{huang2024safehil,
+  title   = {Safety-Aware Human-in-the-Loop Reinforcement Learning with Shared Control for Autonomous Driving},
+  author  = {Huang, Wenhui and Liu, Haochen and Huang, Zhiyu and Lv, Chen},
+  journal = {IEEE Transactions on Intelligent Transportation Systems},
+  volume  = {25},
+  number  = {11},
+  pages   = {16181--16192},
+  year    = {2024},
+  doi     = {10.1109/TITS.2024.3420959}
+}
+% verified: ieeexplore.ieee.org/document/10596046 (author "and others" replaced; vol/pages added)
+
+@article{huang2024perlhf,
+  title   = {Trustworthy Human-AI Collaboration: Reinforcement Learning with Human Feedback and Physics Knowledge for Safe Autonomous Driving},
+  author  = {Huang, Zilin and Sheng, Zihao and Chen, Sikai},
+  journal = {arXiv preprint arXiv:2409.00858},
+  year    = {2024}
+}
+% verified: arxiv.org/abs/2409.00858 (author "and others" replaced with confirmed authors)
+
+% ---------- G. Query-budget / interactive theory ----------
+@article{asking2025help,
+  title   = {Safe Learning Under Irreversible Dynamics via Asking for Help},
+  author  = {Plaut, Benjamin and Li{\'e}vano-Karim, Juan and Zhu, Hanlin and Russell, Stuart},
+  journal = {arXiv preprint arXiv:2502.14043},
+  year    = {2025}
+}
+% verified: arxiv.org/abs/2502.14043 (placeholder "Anonymous" replaced with confirmed authors)
+
+@article{multisource2026,
+  title   = {Regret Bounds for Reinforcement Learning from Multi-Source Imperfect Preferences},
+  author  = {Shi, Ming and Liang, Yingbin and Shroff, Ness B. and Swami, Ananthram},
+  journal = {arXiv preprint arXiv:2603.20453},
+  year    = {2026}
+}
+% verified: arxiv.org/abs/2603.20453 (placeholder "Anonymous" replaced with confirmed authors)
+
+@article{onlinerlhf2025,
+  title   = {Towards Efficient Online Exploration for Reinforcement Learning with Human Feedback},
+  author  = {Li, Gen and Yan, Yuling},
+  journal = {arXiv preprint arXiv:2509.22633},
+  year    = {2025}
+}
+% verified: arxiv.org/abs/2509.22633 (placeholder "Anonymous" replaced with confirmed authors)
+
+% ============================================================
+% H. Added during 2026-06-25 audit -- additional verified prior art
+% ============================================================
+
+% --- Interactive / corrective imitation learning (when & whom to ask) ---
+@inproceedings{ross2011dagger,
+  title     = {A Reduction of Imitation Learning and Structured Prediction to No-Regret Online Learning},
+  author    = {Ross, St{\'e}phane and Gordon, Geoffrey J. and Bagnell, J. Andrew},
+  booktitle = {International Conference on Artificial Intelligence and Statistics (AISTATS)},
+  series    = {PMLR},
+  volume    = {15},
+  pages     = {627--635},
+  year      = {2011},
+  note      = {arXiv:1011.0686}
+}
+% verified: arxiv.org/abs/1011.0686 (DAgger; title/authors confirmed)
+
+@inproceedings{kelly2019hgdagger,
+  title     = {HG-DAgger: Interactive Imitation Learning with Human Experts},
+  author    = {Kelly, Michael and Sidrane, Chelsea and Driggs-Campbell, Katherine and Kochenderfer, Mykel J.},
+  booktitle = {IEEE International Conference on Robotics and Automation (ICRA)},
+  year      = {2019},
+  note      = {arXiv:1810.02890}
+}
+% verified: arxiv.org/abs/1810.02890 (title + authors confirmed)
+
+@inproceedings{menda2019ensembledagger,
+  title     = {EnsembleDAgger: A Bayesian Approach to Safe Imitation Learning},
+  author    = {Menda, Kunal and Driggs-Campbell, Katherine and Kochenderfer, Mykel J.},
+  booktitle = {IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year      = {2019},
+  note      = {arXiv:1807.08364}
+}
+% verified: arxiv.org/abs/1807.08364 (title + authors confirmed)
+
+@inproceedings{hoque2021lazydagger,
+  title     = {LazyDAgger: Reducing Context Switching in Interactive Imitation Learning},
+  author    = {Hoque, Ryan and Balakrishna, Ashwin and Putterman, Carl and Luo, Michael and Brown, Daniel S. and Seita, Daniel and Thananjeyan, Brijen and Novoseller, Ellen and Goldberg, Ken},
+  booktitle = {IEEE International Conference on Automation Science and Engineering (CASE)},
+  year      = {2021},
+  note      = {arXiv:2104.00053}
+}
+% verified: arxiv.org/abs/2104.00053 (title + full author list confirmed)
+
+@article{mandlekar2021iwr,
+  title   = {Human-in-the-Loop Imitation Learning using Remote Teleoperation},
+  author  = {Mandlekar, Ajay and Xu, Danfei and Mart{\'\i}n-Mart{\'\i}n, Roberto and Zhu, Yuke and Fei-Fei, Li and Savarese, Silvio},
+  journal = {arXiv preprint arXiv:2012.06733},
+  year    = {2020}
+}
+% verified: arxiv.org/abs/2012.06733 (introduces IWR; title/authors confirmed)
+
+% --- Uncertainty-aware / ensemble model-based RL ---
+@inproceedings{janner2019mbpo,
+  title     = {When to Trust Your Model: Model-Based Policy Optimization},
+  author    = {Janner, Michael and Fu, Justin and Zhang, Marvin and Levine, Sergey},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2019},
+  note      = {arXiv:1906.08253}
+}
+% verified: arxiv.org/abs/1906.08253 (MBPO; title + authors confirmed)
+
+% --- Preference-based RL ---
+@inproceedings{christiano2017preferences,
+  title     = {Deep Reinforcement Learning from Human Preferences},
+  author    = {Christiano, Paul F. and Leike, Jan and Brown, Tom B. and Martic, Miljan and Legg, Shane and Amodei, Dario},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2017},
+  note      = {arXiv:1706.03741}
+}
+% verified: arxiv.org/abs/1706.03741 (title + authors confirmed)
+
+@inproceedings{lee2021pebble,
+  title     = {PEBBLE: Feedback-Efficient Interactive Reinforcement Learning via Relabeling Experience and Unsupervised Pre-training},
+  author    = {Lee, Kimin and Smith, Laura and Abbeel, Pieter},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  year      = {2021},
+  note      = {arXiv:2106.05091}
+}
+% verified: arxiv.org/abs/2106.05091 (title + authors confirmed)
+
+@inproceedings{rafailov2023dpo,
+  title     = {Direct Preference Optimization: Your Language Model is Secretly a Reward Model},
+  author    = {Rafailov, Rafael and Sharma, Archit and Mitchell, Eric and Ermon, Stefano and Manning, Christopher D. and Finn, Chelsea},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2023},
+  note      = {arXiv:2305.18290}
+}
+% verified: arxiv.org/abs/2305.18290 (title + authors confirmed)
+
+% --- Reset-free / autonomous real-world robot RL ---
+@inproceedings{gupta2021resetfree,
+  title     = {Reset-Free Reinforcement Learning via Multi-Task Learning: Learning Dexterous Manipulation Behaviors without Human Intervention},
+  author    = {Gupta, Abhishek and Yu, Justin and Zhao, Tony Z. and Kumar, Vikash and Rovinsky, Aaron and Xu, Kelvin and Devlin, Thomas and Levine, Sergey},
+  booktitle = {IEEE International Conference on Robotics and Automation (ICRA)},
+  year      = {2021},
+  note      = {arXiv:2104.11203}
+}
+% verified: arxiv.org/abs/2104.11203 (title + full author list confirmed)
+
+@inproceedings{sharma2022earl,
+  title     = {Autonomous Reinforcement Learning: Formalism and Benchmarking},
+  author    = {Sharma, Archit and Xu, Kelvin and Sardana, Nikhil and Gupta, Abhishek and Hausman, Karol and Levine, Sergey and Finn, Chelsea},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2022},
+  note      = {arXiv:2112.09605}
+}
+% verified: arxiv.org/abs/2112.09605 (EARL benchmark; title + authors confirmed)
+
+@inproceedings{smith2022walk,
+  title     = {A Walk in the Park: Learning to Walk in 20 Minutes With Model-Free Reinforcement Learning},
+  author    = {Smith, Laura and Kostrikov, Ilya and Levine, Sergey},
+  booktitle = {Conference on Robot Learning (CoRL)},
+  year      = {2022},
+  note      = {arXiv:2208.07860}
+}
+% verified: arxiv.org/abs/2208.07860 (title + authors confirmed)
+
+% ============================================================
+% I. Added during 2026-06-25 expansion pass -- M1/M2/T1 reconciliation,
+%    verification of innovation_gaps.md candidates, and additional prior art.
+%    Every entry verified against arXiv API / PMLR / NeurIPS proceedings /
+%    DBLP / publisher pages this pass; trailing "% verified:" names the source.
+% ============================================================
+
+% ---------- I.1 Decision-aware / value-equivalent / value-aware model learning (M1, X1) ----------
+@inproceedings{farahmand2017vaml,
+  title     = {Value-Aware Loss Function for Model-based Reinforcement Learning},
+  author    = {Farahmand, Amir-massoud and Barreto, Andr{\'e} and Nikovski, Daniel},
+  booktitle = {International Conference on Artificial Intelligence and Statistics (AISTATS)},
+  series    = {PMLR},
+  volume    = {54},
+  pages     = {1486--1494},
+  year      = {2017}
+}
+% verified: proceedings.mlr.press/v54/farahmand17a.html (original VAML; PMLR 54:1486-1494)
+
+@inproceedings{farahmand2018itervaml,
+  title     = {Iterative Value-Aware Model Learning},
+  author    = {Farahmand, Amir-massoud},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  pages     = {9090--9101},
+  year      = {2018}
+}
+% verified: proceedings.neurips.cc/paper/2018/hash/7a2347d96752880e3d58d72e9813cc14-Abstract.html + dblp.org/rec/conf/nips/Farahmand18 (single-author; NeurIPS 2018; not on arXiv)
+
+@inproceedings{grimm2020valueequiv,
+  title     = {The Value Equivalence Principle for Model-Based Reinforcement Learning},
+  author    = {Grimm, Christopher and Barreto, Andr{\'e} and Singh, Satinder and Silver, David},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2020},
+  note      = {arXiv:2011.03506}
+}
+% verified: arxiv.org/abs/2011.03506 (title/authors confirmed; NeurIPS 2020)
+
+@article{asadi2018wasserstein,
+  title   = {Equivalence Between Wasserstein and Value-Aware Loss for Model-based Reinforcement Learning},
+  author  = {Asadi, Kavosh and Cater, Evan and Misra, Dipendra and Littman, Michael L.},
+  journal = {arXiv preprint arXiv:1806.01265},
+  year    = {2018}
+}
+% verified: arxiv.org/abs/1806.01265 (title/authors confirmed; FAIM 2018 workshop paper)
+
+@article{modhe2021modeladvantage,
+  title   = {Model-Advantage and Value-Aware Models for Model-Based Reinforcement Learning: Bridging the Gap in Theory and Practice},
+  author  = {Modhe, Nirbhay and Kamath, Harish and Batra, Dhruv and Kalyan, Ashwin},
+  journal = {arXiv preprint arXiv:2106.14080},
+  year    = {2021}
+}
+% verified: arxiv.org/abs/2106.14080 (title/authors confirmed)
+
+@article{voelcker2023lambda,
+  title   = {{$\lambda$}-models: Effective Decision-Aware Reinforcement Learning with Latent Models},
+  author  = {Voelcker, Claas A. and Ahmadian, Arash and Abachi, Romina and Gilitschenski, Igor and Farahmand, Amir-massoud},
+  journal = {arXiv preprint arXiv:2306.17366},
+  year    = {2023}
+}
+% verified: arxiv.org/abs/2306.17366 (title/authors confirmed; no DBLP venue record -> cited as preprint)
+
+% ---------- I.2 World models for control / manipulation (M3) ----------
+@inproceedings{hansen2024tdmpc2,
+  title     = {{TD-MPC2}: Scalable, Robust World Models for Continuous Control},
+  author    = {Hansen, Nicklas and Su, Hao and Wang, Xiaolong},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2024},
+  note      = {arXiv:2310.16828}
+}
+% verified: arxiv.org/abs/2310.16828 (title/authors confirmed; ICLR 2024 per arXiv comment)
+
+@article{schrittwieser2020muzero,
+  title   = {Mastering Atari, Go, Chess and Shogi by Planning with a Learned Model},
+  author  = {Schrittwieser, Julian and Antonoglou, Ioannis and Hubert, Thomas and Simonyan, Karen and Sifre, Laurent and Schmitt, Simon and Guez, Arthur and Lockhart, Edward and Hassabis, Demis and Graepel, Thore and Lillicrap, Timothy and Silver, David},
+  journal = {Nature},
+  year    = {2020},
+  doi     = {10.1038/s41586-020-03051-4},
+  note    = {arXiv:1911.08265}
+}
+% verified: arxiv.org/abs/1911.08265 (title/authors + Nature DOI confirmed via arXiv DOI field)
+
+@inproceedings{micheli2023iris,
+  title     = {Transformers are Sample-Efficient World Models},
+  author    = {Micheli, Vincent and Alonso, Eloi and Fleuret, Fran{\c{c}}ois},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2023},
+  note      = {IRIS; arXiv:2209.00588}
+}
+% verified: arxiv.org/abs/2209.00588 (title/authors confirmed; ICLR 2023 notable-top-5% per arXiv comment)
+
+@inproceedings{robine2023twm,
+  title     = {Transformer-based World Models Are Happy With 100k Interactions},
+  author    = {Robine, Jan and H{\"o}ftmann, Marc and Uelwer, Tobias and Harmeling, Stefan},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2023},
+  note      = {TWM; arXiv:2303.07109}
+}
+% verified: arxiv.org/abs/2303.07109 (title/authors confirmed; ICLR 2023 per arXiv comment)
+
+@inproceedings{zhang2023storm,
+  title     = {{STORM}: Efficient Stochastic Transformer based World Models for Reinforcement Learning},
+  author    = {Zhang, Weipu and Wang, Gang and Sun, Jian and Yuan, Yetian and Huang, Gao},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2023},
+  note      = {arXiv:2310.09615}
+}
+% verified: arxiv.org/abs/2310.09615 + dblp.org/rec/conf/nips/ZhangWSYH23 (NeurIPS 2023)
+
+@inproceedings{alonso2024diamond,
+  title     = {Diffusion for World Modeling: Visual Details Matter in Atari},
+  author    = {Alonso, Eloi and Jelley, Adam and Micheli, Vincent and Kanervisto, Anssi and Storkey, Amos and Pearce, Tim and Fleuret, Fran{\c{c}}ois},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2024},
+  note      = {DIAMOND; arXiv:2405.12399}
+}
+% verified: arxiv.org/abs/2405.12399 (title/authors confirmed; NeurIPS 2024 Spotlight per arXiv comment)
+
+@inproceedings{wu2022daydreamer,
+  title     = {DayDreamer: World Models for Physical Robot Learning},
+  author    = {Wu, Philipp and Escontrela, Alejandro and Hafner, Danijar and Goldberg, Ken and Abbeel, Pieter},
+  booktitle = {Conference on Robot Learning (CoRL)},
+  series    = {PMLR},
+  volume    = {205},
+  pages     = {2226--2240},
+  year      = {2022},
+  note      = {arXiv:2206.14176}
+}
+% verified: arxiv.org/abs/2206.14176 + dblp.org/rec/conf/corl/WuEHAG22 (CoRL 2022, PMLR 205:2226-2240)
+
+% ---------- I.3 Plasticity / sample-efficiency / offline->online (T1, T2) ----------
+@inproceedings{nikishin2022primacy,
+  title     = {The Primacy Bias in Deep Reinforcement Learning},
+  author    = {Nikishin, Evgenii and Schwarzer, Max and D'Oro, Pierluca and Bacon, Pierre-Luc and Courville, Aaron},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  year      = {2022},
+  note      = {arXiv:2205.07802}
+}
+% verified: arxiv.org/abs/2205.07802 (title/authors confirmed; ICML 2022 per arXiv comment)
+
+@inproceedings{sokar2023redo,
+  title     = {The Dormant Neuron Phenomenon in Deep Reinforcement Learning},
+  author    = {Sokar, Ghada and Agarwal, Rishabh and Castro, Pablo Samuel and Evci, Utku},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  year      = {2023},
+  note      = {ReDo; arXiv:2302.12902}
+}
+% verified: arxiv.org/abs/2302.12902 (title/authors confirmed; ICML 2023 Oral per arXiv comment)
+
+@inproceedings{schwarzer2023bbf,
+  title     = {Bigger, Better, Faster: Human-level Atari with human-level efficiency},
+  author    = {Schwarzer, Max and Obando-Ceron, Johan and Courville, Aaron and Bellemare, Marc and Agarwal, Rishabh and Castro, Pablo Samuel},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  year      = {2023},
+  note      = {BBF; arXiv:2305.19452}
+}
+% verified: arxiv.org/abs/2305.19452 (title/authors confirmed; ICML 2023 per arXiv comment)
+
+@inproceedings{lyle2023plasticity,
+  title     = {Understanding plasticity in neural networks},
+  author    = {Lyle, Clare and Zheng, Zeyu and Nikishin, Evgenii and Pires, Bernardo Avila and Pascanu, Razvan and Dabney, Will},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  year      = {2023},
+  note      = {arXiv:2303.01486}
+}
+% verified: arxiv.org/abs/2303.01486 (title/authors confirmed; ICML 2023 Oral per arXiv comment)
+
+@article{dohare2024plasticity,
+  title   = {Maintaining Plasticity in Deep Continual Learning},
+  author  = {Dohare, Shibhansh and Hernandez-Garcia, J. Fernando and Rahman, Parash and Mahmood, A. Rupam and Sutton, Richard S.},
+  journal = {arXiv preprint arXiv:2306.13812},
+  year    = {2023}
+}
+% verified: arxiv.org/abs/2306.13812 (title/authors confirmed; later published in Nature 2024 -- DOI not independently re-verified, so cited as arXiv)
+
+@inproceedings{chen2021redq,
+  title     = {Randomized Ensembled Double Q-Learning: Learning Fast Without a Model},
+  author    = {Chen, Xinyue and Wang, Che and Zhou, Zijian and Ross, Keith W.},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2021},
+  note      = {REDQ; arXiv:2101.05982}
+}
+% verified: arxiv.org/abs/2101.05982 (title/authors confirmed; ICLR 2021 per arXiv comment)
+
+@inproceedings{nakamoto2023calql,
+  title     = {{Cal-QL}: Calibrated Offline RL Pre-Training for Efficient Online Fine-Tuning},
+  author    = {Nakamoto, Mitsuhiko and Zhai, Yuexiang and Singh, Anikait and Sobol Mark, Max and Ma, Yi and Finn, Chelsea and Kumar, Aviral and Levine, Sergey},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2023},
+  note      = {arXiv:2303.05479}
+}
+% verified: arxiv.org/abs/2303.05479 (title/authors confirmed; NeurIPS 2023 per arXiv comment)
+
+% ---------- I.4 Calibration & active querying / information gain (M2, T4) ----------
+@inproceedings{guo2017calibration,
+  title     = {On Calibration of Modern Neural Networks},
+  author    = {Guo, Chuan and Pleiss, Geoff and Sun, Yu and Weinberger, Kilian Q.},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  year      = {2017},
+  note      = {arXiv:1706.04599}
+}
+% verified: arxiv.org/abs/1706.04599 (title/authors confirmed; ICML 2017 per arXiv comment; temperature/Platt scaling)
+
+@article{gal2017activelearning,
+  title   = {Deep Bayesian Active Learning with Image Data},
+  author  = {Gal, Yarin and Islam, Riashat and Ghahramani, Zoubin},
+  journal = {arXiv preprint arXiv:1703.02910},
+  year    = {2017}
+}
+% verified: arxiv.org/abs/1703.02910 (title/authors confirmed; venue not re-verified -> cited as preprint)
+
+% ---------- I.5 Preference-based RL (feedback-efficiency + imperfect teachers) ----------
+@inproceedings{park2022surf,
+  title     = {{SURF}: Semi-supervised Reward Learning with Data Augmentation for Feedback-efficient Preference-based Reinforcement Learning},
+  author    = {Park, Jongjin and Seo, Younggyo and Shin, Jinwoo and Lee, Honglak and Abbeel, Pieter and Lee, Kimin},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2022},
+  note      = {arXiv:2203.10050}
+}
+% verified: arxiv.org/abs/2203.10050 (title/authors confirmed; ICLR 2022 per arXiv comment)
+
+@inproceedings{lee2021bpref,
+  title     = {{B-Pref}: Benchmarking Preference-Based Reinforcement Learning},
+  author    = {Lee, Kimin and Smith, Laura and Dragan, Anca and Abbeel, Pieter},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS) Datasets and Benchmarks Track},
+  year      = {2021},
+  note      = {arXiv:2111.03026}
+}
+% verified: arxiv.org/abs/2111.03026 (title/authors confirmed; NeurIPS 2021 D&B per arXiv comment; simulates irrational teachers)
+
+% ---------- I.6 Interactive HITL deployment / reset-free recovery ----------
+@inproceedings{liu2023sirius,
+  title     = {Robot Learning on the Job: Human-in-the-Loop Autonomy and Learning During Deployment},
+  author    = {Liu, Huihan and Nasiriany, Soroush and Zhang, Lance and Bao, Zhiyao and Zhu, Yuke},
+  booktitle = {Robotics: Science and Systems (RSS)},
+  year      = {2023},
+  note      = {Sirius; arXiv:2211.08416}
+}
+% verified: arxiv.org/abs/2211.08416 (title/authors confirmed; RSS 2023 per arXiv comment; trust-weighted BC)
+
+@inproceedings{eysenbach2018leavenotrace,
+  title     = {Leave no Trace: Learning to Reset for Safe and Autonomous Reinforcement Learning},
+  author    = {Eysenbach, Benjamin and Gu, Shixiang and Ibarz, Julian and Levine, Sergey},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2018},
+  note      = {arXiv:1711.06782}
+}
+% verified: arxiv.org/abs/1711.06782 + dblp.org/rec/conf/iclr/EysenbachGIL18 (ICLR 2018)
+
+% ---------- I.7 VLA + world-model coupling (M4 surrogate-human direction) ----------
+@article{cen2025worldvla,
+  title   = {WorldVLA: Towards Autoregressive Action World Model},
+  author  = {Cen, Jun and Yu, Chaohui and Yuan, Hangjie and Jiang, Yuming and Huang, Siteng and Guo, Jiayan and Li, Xin and Song, Yibing and Luo, Hao and Wang, Fan and Zhao, Deli and Chen, Hao},
+  journal = {arXiv preprint arXiv:2506.21539},
+  year    = {2025}
+}
+% verified: arxiv.org/abs/2506.21539 (title + 12-author list confirmed)
+
+@article{cen2025rynnvla2,
+  title   = {RynnVLA-002: A Unified Vision-Language-Action and World Model},
+  author  = {Cen, Jun and Huang, Siteng and Yuan, Yuqian and Li, Kehan and Yuan, Hangjie and Yu, Chaohui and Hou, Bohan and Jiang, Yuming and Guo, Jiayan and Li, Xin and Luo, Hao and Wang, Fan and Zhao, Deli and Chen, Hao},
+  journal = {arXiv preprint arXiv:2511.17502},
+  year    = {2025}
+}
+% verified: arxiv.org/abs/2511.17502 (title + 14-author list confirmed)
+
+% ---------- I.8 Benchmarks / libraries / tooling (system-artifact argument) ----------
+@inproceedings{mandlekar2021robomimic,
+  title     = {What Matters in Learning from Offline Human Demonstrations for Robot Manipulation},
+  author    = {Mandlekar, Ajay and Xu, Danfei and Wong, Josiah and Nasiriany, Soroush and Wang, Chen and Kulkarni, Rohun and Fei-Fei, Li and Savarese, Silvio and Zhu, Yuke and Mart{\'\i}n-Mart{\'\i}n, Roberto},
+  booktitle = {Conference on Robot Learning (CoRL)},
+  year      = {2021},
+  note      = {robomimic; arXiv:2108.03298}
+}
+% verified: arxiv.org/abs/2108.03298 (title + full author list confirmed; CoRL 2021 Oral per arXiv comment)
+
+@article{tao2025maniskill3,
+  title   = {ManiSkill3: GPU Parallelized Robotics Simulation and Rendering for Generalizable Embodied AI},
+  author  = {Tao, Stone and Xiang, Fanbo and Shukla, Arth and Qin, Yuzhe and Hinrichsen, Xander and Yuan, Xiaodi and Bao, Chen and Lin, Xinsong and Liu, Yulin and Chan, Tse-kai and Gao, Yuan and Li, Xuanlin and Mu, Tongzhou and Xiao, Nan and Gurha, Arnav and Rajesh, Viswesh Nagaswamy and Choi, Yong Woo and Chen, Yen-Ru and Huang, Zhiao and Calandra, Roberto and Chen, Rui and Luo, Shan and Su, Hao},
+  journal = {arXiv preprint arXiv:2410.00425},
+  year    = {2024}
+}
+% verified: arxiv.org/abs/2410.00425 (title + full 23-author list confirmed; venue not re-verified -> cited as preprint)
+
+@article{pineda2021mbrllib,
+  title   = {MBRL-Lib: A Modular Library for Model-based Reinforcement Learning},
+  author  = {Pineda, Luis and Amos, Brandon and Zhang, Amy and Lambert, Nathan O. and Calandra, Roberto},
+  journal = {arXiv preprint arXiv:2104.10159},
+  year    = {2021}
+}
+% verified: arxiv.org/abs/2104.10159 (title/authors confirmed)
+
+@article{huang2022cleanrl,
+  title   = {CleanRL: High-quality Single-file Implementations of Deep Reinforcement Learning Algorithms},
+  author  = {Huang, Shengyi and Dossa, Rousslan Fernand Julien and Ye, Chang and Braga, Jeff},
+  journal = {arXiv preprint arXiv:2111.08819},
+  year    = {2021}
+}
+% verified: arxiv.org/abs/2111.08819 (title/authors confirmed; later JMLR 23(274) -- journal metadata not re-verified, cited as preprint)
+
+@article{seno2022d3rlpy,
+  title   = {d3rlpy: An Offline Deep Reinforcement Learning Library},
+  author  = {Seno, Takuma and Imai, Michita},
+  journal = {Journal of Machine Learning Research},
+  volume  = {23},
+  number  = {315},
+  pages   = {1--20},
+  year    = {2022},
+  note    = {arXiv:2111.03788}
+}
+% verified: arxiv.org/abs/2111.03788 (title/authors + JMLR 23(315):1-20 journal_ref confirmed on arXiv)
+
+@article{cadene2026lerobot,
+  title   = {LeRobot: An Open-Source Library for End-to-End Robot Learning},
+  author  = {Cadene, Remi and Aliberts, Simon and Capuano, Francesco and Aractingi, Michel and Zouitine, Adil and Kooijmans, Pepijn and Choghari, Jade and Russi, Martino and Pascal, Caroline and Palma, Steven and Shukor, Mustafa and Moss, Jess and Soare, Alexander and Aubakirova, Dana and Lhoest, Quentin and Gallou{\'e}dec, Quentin and Wolf, Thomas},
+  journal = {arXiv preprint arXiv:2602.22818},
+  year    = {2026}
+}
+% verified: arxiv.org/abs/2602.22818 (title + 17-author list confirmed)

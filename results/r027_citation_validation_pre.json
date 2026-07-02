@@ -1,0 +1,816 @@
+{
+  "filepath": "proposal\\references.bib",
+  "total_entries": 74,
+  "valid_entries": 74,
+  "errors": [],
+  "warnings": [
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry liu2026pact: Missing recommended field \"volume\"",
+      "entry": "liu2026pact"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry liu2026pact: Missing recommended field \"pages\"",
+      "entry": "liu2026pact"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry liu2026pact: Missing recommended field \"doi\"",
+      "entry": "liu2026pact"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry uniintervene2026: Missing recommended field \"volume\"",
+      "entry": "uniintervene2026"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry uniintervene2026: Missing recommended field \"pages\"",
+      "entry": "uniintervene2026"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry uniintervene2026: Missing recommended field \"doi\"",
+      "entry": "uniintervene2026"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry silri2025: Missing recommended field \"volume\"",
+      "entry": "silri2025"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry silri2025: Missing recommended field \"pages\"",
+      "entry": "silri2025"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry silri2025: Missing recommended field \"doi\"",
+      "entry": "silri2025"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry ohprl2026: Missing recommended field \"volume\"",
+      "entry": "ohprl2026"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry ohprl2026: Missing recommended field \"pages\"",
+      "entry": "ohprl2026"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry ohprl2026: Missing recommended field \"doi\"",
+      "entry": "ohprl2026"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry rove2026: Missing recommended field \"volume\"",
+      "entry": "rove2026"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry rove2026: Missing recommended field \"pages\"",
+      "entry": "rove2026"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry rove2026: Missing recommended field \"doi\"",
+      "entry": "rove2026"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry hoque2021thrifty: Missing recommended field \"pages\"",
+      "entry": "hoque2021thrifty"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry mile2025: Missing recommended field \"volume\"",
+      "entry": "mile2025"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry mile2025: Missing recommended field \"pages\"",
+      "entry": "mile2025"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry mile2025: Missing recommended field \"doi\"",
+      "entry": "mile2025"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry kurenkov2019acteach: Missing recommended field \"pages\"",
+      "entry": "kurenkov2019acteach"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry zhang2020apil: Missing recommended field \"volume\"",
+      "entry": "zhang2020apil"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry zhang2020apil: Missing recommended field \"pages\"",
+      "entry": "zhang2020apil"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry zhang2020apil: Missing recommended field \"doi\"",
+      "entry": "zhang2020apil"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry hiwm2026: Missing recommended field \"volume\"",
+      "entry": "hiwm2026"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry hiwm2026: Missing recommended field \"pages\"",
+      "entry": "hiwm2026"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry hiwm2026: Missing recommended field \"doi\"",
+      "entry": "hiwm2026"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry moerland2023mbrl: Missing recommended field \"doi\"",
+      "entry": "moerland2023mbrl"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry luo2022mbrlsurvey: Missing recommended field \"volume\"",
+      "entry": "luo2022mbrlsurvey"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry luo2022mbrlsurvey: Missing recommended field \"pages\"",
+      "entry": "luo2022mbrlsurvey"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry luo2022mbrlsurvey: Missing recommended field \"doi\"",
+      "entry": "luo2022mbrlsurvey"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry chua2018pets: Missing recommended field \"pages\"",
+      "entry": "chua2018pets"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry hafner2023dreamerv3: Missing recommended field \"volume\"",
+      "entry": "hafner2023dreamerv3"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry hafner2023dreamerv3: Missing recommended field \"pages\"",
+      "entry": "hafner2023dreamerv3"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry hafner2023dreamerv3: Missing recommended field \"doi\"",
+      "entry": "hafner2023dreamerv3"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry li2022haco: Missing recommended field \"pages\"",
+      "entry": "li2022haco"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry huang2024perlhf: Missing recommended field \"volume\"",
+      "entry": "huang2024perlhf"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry huang2024perlhf: Missing recommended field \"pages\"",
+      "entry": "huang2024perlhf"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry huang2024perlhf: Missing recommended field \"doi\"",
+      "entry": "huang2024perlhf"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry asking2025help: Missing recommended field \"volume\"",
+      "entry": "asking2025help"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry asking2025help: Missing recommended field \"pages\"",
+      "entry": "asking2025help"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry asking2025help: Missing recommended field \"doi\"",
+      "entry": "asking2025help"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry multisource2026: Missing recommended field \"volume\"",
+      "entry": "multisource2026"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry multisource2026: Missing recommended field \"pages\"",
+      "entry": "multisource2026"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry multisource2026: Missing recommended field \"doi\"",
+      "entry": "multisource2026"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry onlinerlhf2025: Missing recommended field \"volume\"",
+      "entry": "onlinerlhf2025"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry onlinerlhf2025: Missing recommended field \"pages\"",
+      "entry": "onlinerlhf2025"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry onlinerlhf2025: Missing recommended field \"doi\"",
+      "entry": "onlinerlhf2025"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry kelly2019hgdagger: Missing recommended field \"pages\"",
+      "entry": "kelly2019hgdagger"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry menda2019ensembledagger: Missing recommended field \"pages\"",
+      "entry": "menda2019ensembledagger"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry hoque2021lazydagger: Missing recommended field \"pages\"",
+      "entry": "hoque2021lazydagger"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry mandlekar2021iwr: Missing recommended field \"volume\"",
+      "entry": "mandlekar2021iwr"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry mandlekar2021iwr: Missing recommended field \"pages\"",
+      "entry": "mandlekar2021iwr"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry mandlekar2021iwr: Missing recommended field \"doi\"",
+      "entry": "mandlekar2021iwr"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry janner2019mbpo: Missing recommended field \"pages\"",
+      "entry": "janner2019mbpo"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry christiano2017preferences: Missing recommended field \"pages\"",
+      "entry": "christiano2017preferences"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry lee2021pebble: Missing recommended field \"pages\"",
+      "entry": "lee2021pebble"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry rafailov2023dpo: Missing recommended field \"pages\"",
+      "entry": "rafailov2023dpo"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry gupta2021resetfree: Missing recommended field \"pages\"",
+      "entry": "gupta2021resetfree"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry sharma2022earl: Missing recommended field \"pages\"",
+      "entry": "sharma2022earl"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry smith2022walk: Missing recommended field \"pages\"",
+      "entry": "smith2022walk"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry grimm2020valueequiv: Missing recommended field \"pages\"",
+      "entry": "grimm2020valueequiv"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry asadi2018wasserstein: Missing recommended field \"volume\"",
+      "entry": "asadi2018wasserstein"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry asadi2018wasserstein: Missing recommended field \"pages\"",
+      "entry": "asadi2018wasserstein"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry asadi2018wasserstein: Missing recommended field \"doi\"",
+      "entry": "asadi2018wasserstein"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry modhe2021modeladvantage: Missing recommended field \"volume\"",
+      "entry": "modhe2021modeladvantage"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry modhe2021modeladvantage: Missing recommended field \"pages\"",
+      "entry": "modhe2021modeladvantage"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry modhe2021modeladvantage: Missing recommended field \"doi\"",
+      "entry": "modhe2021modeladvantage"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry voelcker2023lambda: Missing recommended field \"volume\"",
+      "entry": "voelcker2023lambda"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry voelcker2023lambda: Missing recommended field \"pages\"",
+      "entry": "voelcker2023lambda"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry voelcker2023lambda: Missing recommended field \"doi\"",
+      "entry": "voelcker2023lambda"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry hansen2024tdmpc2: Missing recommended field \"pages\"",
+      "entry": "hansen2024tdmpc2"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry schrittwieser2020muzero: Missing recommended field \"volume\"",
+      "entry": "schrittwieser2020muzero"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry schrittwieser2020muzero: Missing recommended field \"pages\"",
+      "entry": "schrittwieser2020muzero"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry micheli2023iris: Missing recommended field \"pages\"",
+      "entry": "micheli2023iris"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry robine2023twm: Missing recommended field \"pages\"",
+      "entry": "robine2023twm"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry zhang2023storm: Missing recommended field \"pages\"",
+      "entry": "zhang2023storm"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry alonso2024diamond: Missing recommended field \"pages\"",
+      "entry": "alonso2024diamond"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry nikishin2022primacy: Missing recommended field \"pages\"",
+      "entry": "nikishin2022primacy"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry sokar2023redo: Missing recommended field \"pages\"",
+      "entry": "sokar2023redo"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry schwarzer2023bbf: Missing recommended field \"pages\"",
+      "entry": "schwarzer2023bbf"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry lyle2023plasticity: Missing recommended field \"pages\"",
+      "entry": "lyle2023plasticity"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry dohare2024plasticity: Missing recommended field \"volume\"",
+      "entry": "dohare2024plasticity"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry dohare2024plasticity: Missing recommended field \"pages\"",
+      "entry": "dohare2024plasticity"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry dohare2024plasticity: Missing recommended field \"doi\"",
+      "entry": "dohare2024plasticity"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry chen2021redq: Missing recommended field \"pages\"",
+      "entry": "chen2021redq"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry nakamoto2023calql: Missing recommended field \"pages\"",
+      "entry": "nakamoto2023calql"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry guo2017calibration: Missing recommended field \"pages\"",
+      "entry": "guo2017calibration"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry gal2017activelearning: Missing recommended field \"volume\"",
+      "entry": "gal2017activelearning"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry gal2017activelearning: Missing recommended field \"pages\"",
+      "entry": "gal2017activelearning"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry gal2017activelearning: Missing recommended field \"doi\"",
+      "entry": "gal2017activelearning"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry park2022surf: Missing recommended field \"pages\"",
+      "entry": "park2022surf"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry lee2021bpref: Missing recommended field \"pages\"",
+      "entry": "lee2021bpref"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry liu2023sirius: Missing recommended field \"pages\"",
+      "entry": "liu2023sirius"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry eysenbach2018leavenotrace: Missing recommended field \"pages\"",
+      "entry": "eysenbach2018leavenotrace"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry cen2025worldvla: Missing recommended field \"volume\"",
+      "entry": "cen2025worldvla"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry cen2025worldvla: Missing recommended field \"pages\"",
+      "entry": "cen2025worldvla"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry cen2025worldvla: Missing recommended field \"doi\"",
+      "entry": "cen2025worldvla"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry cen2025rynnvla2: Missing recommended field \"volume\"",
+      "entry": "cen2025rynnvla2"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry cen2025rynnvla2: Missing recommended field \"pages\"",
+      "entry": "cen2025rynnvla2"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry cen2025rynnvla2: Missing recommended field \"doi\"",
+      "entry": "cen2025rynnvla2"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry mandlekar2021robomimic: Missing recommended field \"pages\"",
+      "entry": "mandlekar2021robomimic"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry tao2025maniskill3: Missing recommended field \"volume\"",
+      "entry": "tao2025maniskill3"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry tao2025maniskill3: Missing recommended field \"pages\"",
+      "entry": "tao2025maniskill3"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry tao2025maniskill3: Missing recommended field \"doi\"",
+      "entry": "tao2025maniskill3"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry pineda2021mbrllib: Missing recommended field \"volume\"",
+      "entry": "pineda2021mbrllib"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry pineda2021mbrllib: Missing recommended field \"pages\"",
+      "entry": "pineda2021mbrllib"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry pineda2021mbrllib: Missing recommended field \"doi\"",
+      "entry": "pineda2021mbrllib"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry huang2022cleanrl: Missing recommended field \"volume\"",
+      "entry": "huang2022cleanrl"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry huang2022cleanrl: Missing recommended field \"pages\"",
+      "entry": "huang2022cleanrl"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry huang2022cleanrl: Missing recommended field \"doi\"",
+      "entry": "huang2022cleanrl"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry seno2022d3rlpy: Missing recommended field \"doi\"",
+      "entry": "seno2022d3rlpy"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry cadene2026lerobot: Missing recommended field \"volume\"",
+      "entry": "cadene2026lerobot"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry cadene2026lerobot: Missing recommended field \"pages\"",
+      "entry": "cadene2026lerobot"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "doi",
+      "severity": "medium",
+      "message": "Entry cadene2026lerobot: Missing recommended field \"doi\"",
+      "entry": "cadene2026lerobot"
+    }
+  ],
+  "duplicates": [],
+  "venue_standard_checked": "neurips",
+  "min_count_checked": null,
+  "manuscript_results": {
+    "checked": false,
+    "manuscript_filepath": null,
+    "cited_keys": [],
+    "missing_keys": [],
+    "unused_keys": []
+  }
+}

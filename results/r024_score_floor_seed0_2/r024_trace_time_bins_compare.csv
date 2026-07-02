@@ -1,0 +1,16 @@
+strategy,bin,starts,fraction
+random_b350,0-2000,15,0.272727
+random_b350,2000-4000,10,0.181818
+random_b350,4000-6000,9,0.163636
+random_b350,6000-8000,11,0.200000
+random_b350,8000-10000,10,0.181818
+lv_voi_scale3,0-2000,12,0.125000
+lv_voi_scale3,2000-4000,0,0.000000
+lv_voi_scale3,4000-6000,48,0.500000
+lv_voi_scale3,6000-8000,18,0.187500
+lv_voi_scale3,8000-10000,18,0.187500
+score_floor_vlv3_after4000_floor0p05,0-2000,12,0.127660
+score_floor_vlv3_after4000_floor0p05,2000-4000,0,0.000000
+score_floor_vlv3_after4000_floor0p05,4000-6000,46,0.489362
+score_floor_vlv3_after4000_floor0p05,6000-8000,18,0.191489
+score_floor_vlv3_after4000_floor0p05,8000-10000,18,0.191489
