@@ -1,6 +1,6 @@
 # Experiment Evidence Registry
 
-This registry is the single entry point for paper-facing R020-R051 evidence.
+This registry is the single entry point for paper-facing R020-R052 evidence.
 Use `results/EXPERIMENT_EVIDENCE_REGISTRY.csv` as the machine-readable source
 when drafting claims, tables, captions, or rebuttal text.
 
@@ -20,7 +20,7 @@ when drafting claims, tables, captions, or rebuttal text.
 - Treat R023 as a trace diagnostic, not as the main success-rate evidence.
 - Treat R025/R026/R028/R029 as paper-preparation artifacts, not new experimental
   results.
-- Treat R030-R051 as structure, manuscript-theme, citation-audit, and evidence-discipline artifacts, not new
+- Treat R030-R052 as structure, manuscript-theme, citation-audit, paper-claim-audit, and evidence-discipline artifacts, not new
   experimental results.
 
 ## Current Verdict
@@ -81,3 +81,6 @@ The registry supports the diagnostic-benchmark paper route:
   LV-VoI claim.
 - R051 reruns citation-context audit after R050, confirming that all 15 current
   citation keys still support their manuscript contexts.
+- R052 audits current manuscript numerical, comparison, and scope claims against
+  the registry and primary sources, repairing one stale Git-provenance wording
+  issue while preserving the negative LV-VoI boundary.

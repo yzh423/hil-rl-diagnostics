@@ -18,6 +18,7 @@ Before making paper-facing changes, read:
 6. `PAPER_PLAN.md`
 7. `results/r047_evidence_provenance_package/EVIDENCE_PROVENANCE_AUDIT.md`
 8. `results/r048_version_command_provenance/VERSION_PROVENANCE_REPAIR.md`
+9. `paper/PAPER_CLAIM_AUDIT.md`
 
 ## Current Scientific Position
 
@@ -53,6 +54,8 @@ Protected claim:
 - Do not add citations from memory.
 - Use `paper/CITATION_AUDIT.md` for the current citation-context audit state;
   rerun the audit if citation contexts or bibliography entries change.
+- Use `paper/PAPER_CLAIM_AUDIT.md` for the current manuscript claim-audit
+  state; rerun or update it if numerical, comparison, or scope claims change.
 - Be explicit that the current experiments use a scripted privileged-state
   oracle, not a real teleoperator.
 
@@ -100,6 +103,8 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
   in addition to the public Git repository and R048 source snapshot.
 - Use R047 as the current source/hash/compute/command provenance package before
   making paper-facing evidence claims.
+- Keep the R052 paper-claim audit current if manuscript numerical, comparison,
+  or scope claims change.
 - Keep the R051 citation-context audit current if citation contexts or
   bibliography entries change again.
 - Decide whether to add small robotics breadth evidence before submission:

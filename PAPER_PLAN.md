@@ -66,6 +66,12 @@ R051 reruns citation-context audit after the R050 theme update. It finds that
 all 15 current citation keys still support their manuscript contexts and makes
 no bibliography changes.
 
+R052 audits current manuscript numerical, comparison, and scope claims against
+the registry and primary sources. It passes after one minor wording repair that
+updates the reproducibility appendix to treat R048 as the historical invalid-Git
+repair record while the current source state is tracked in the public Git
+repository.
+
 ## Claims-Evidence Matrix
 
 | Claim | Evidence | Status | Section |
@@ -198,6 +204,10 @@ theme update. All 15 current citation keys support their manuscript contexts,
 with no additional bibliography changes after the R042 metadata fixes. See
 `paper/CITATION_AUDIT.md` and `results/r051_citation_context_audit/`.
 
+R052 completed the current manuscript paper-claim audit after R050/R051. Use
+`paper/PAPER_CLAIM_AUDIT.md` before revising numerical, comparison, or scope
+claims.
+
 - Intro: HIL-RL, intervention learning, robot manipulation with human corrections. `[AUDITED R042]`
 - Related work: HIL-SERL-style systems, learning from interventions, active learning / VoI, uncertainty in model-based RL, negative results / reproducibility in RL. `[AUDITED R042]`
 - Method/setup: SAC, robosuite, demonstration replay / RLPD, and oracle/simulator context citations passed current context audit. `[AUDITED R042]`
@@ -279,5 +289,6 @@ Secondary reviewer-agent feedback was not run in this turn because sub-agent spa
 - [x] Initialize and publish a valid GitHub repository for the current source state.
 - [x] Deepen the paper spine around human-attention allocation diagnostics (`results/r050_theme_deepening/`).
 - [x] Rerun citation-context audit after the R050 theme update (`results/r051_citation_context_audit/`).
+- [x] Audit current manuscript numerical, comparison, and scope claims after R050/R051 (`results/r052_paper_claim_audit/`).
 - [ ] Decide whether submission packaging also needs an institutional source archive.
 - [ ] Decide whether to add a small robotics breadth package before submission.

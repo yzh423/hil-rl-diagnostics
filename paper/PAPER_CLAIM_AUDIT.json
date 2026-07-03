@@ -1,0 +1,86 @@
+{
+  "audit_id": "R052",
+  "date": "2026-07-03",
+  "verdict": "pass_after_minor_wording_repair",
+  "execution_note": "Direct file-driven audit. Sub-agent spawning requires explicit user authorization in the current environment.",
+  "protected_position": [
+    "R021 random_b350 dominates LV-VoI scale3 under cost matching.",
+    "R022 and R024 lightweight trigger repairs remain dominated by same-seed random_b350.",
+    "R023/R024 traces diagnose intervention-spending patterns and do not overturn R021."
+  ],
+  "issues": [
+    {
+      "id": "R052-I1",
+      "severity": "low",
+      "finding": "The reproducibility appendix described invalid local git metadata as the current version-provenance state after the repository had been published to GitHub.",
+      "action": "Updated paper/sections/07_reproducibility_inventory.tex to distinguish current public Git source tracking from the R048 historical invalid-Git repair."
+    }
+  ],
+  "claim_checks": [
+    {
+      "claim_family": "cost_matched_reversal",
+      "status": "pass",
+      "manuscript_locations": ["paper/main.tex:21", "paper/sections/01_introduction.tex:7", "paper/sections/04_results.tex:3"],
+      "sources": ["results/EXPERIMENT_EVIDENCE_REGISTRY.csv", "results/r021_random_costmatch/r021_costmatch_aggregate.csv"],
+      "checked_values": {
+        "random_b350": {"successes": 439, "episodes": 500, "success_rate": 0.878, "ci_low": 0.8464, "ci_high": 0.9038, "human_steps": 177.0},
+        "lv_voi_scale3": {"successes": 416, "episodes": 500, "success_rate": 0.832, "ci_low": 0.7967, "ci_high": 0.8622, "human_steps": 202.0}
+      }
+    },
+    {
+      "claim_family": "negative_trigger_repairs",
+      "status": "pass",
+      "manuscript_locations": ["paper/sections/04_results.tex:16", "paper/sections/06_conclusion.tex:3"],
+      "sources": ["results/r022_lift_min_disagree_seed0_2/r022_min_disagree_aggregate.csv", "results/r024_score_floor_seed0_2/r024_score_floor_aggregate.csv"],
+      "checked_values": {
+        "random_b350_same_seed": {"successes": 259, "episodes": 300, "success_rate": 0.8633, "human_steps": 95.0},
+        "min_disagree": {"successes": 226, "episodes": 300, "success_rate": 0.7533, "human_steps": 211.6667},
+        "score_floor": {"successes": 233, "episodes": 300, "success_rate": 0.7767, "human_steps": 253.3333}
+      }
+    },
+    {
+      "claim_family": "trace_mechanism",
+      "status": "pass",
+      "manuscript_locations": ["paper/sections/03_protocol_setup.tex:9", "paper/sections/04_results.tex:20", "paper/sections/04_results.tex:22"],
+      "sources": ["results/r023_real_trace_seed0_2/r023_trace_strategy_diagnostics.csv", "results/r024_score_floor_seed0_2/r024_trace_strategy_compare.csv"],
+      "checked_values": {
+        "random_starts": 55,
+        "lv_voi_starts": 96,
+        "score_floor_starts": 94,
+        "lv_voi_mean_g2c_norm": 0.217166,
+        "random_mean_g2c_norm": 0.284851,
+        "after_floor_low_score_starts": 0,
+        "score_floor_median_score": 0.067165
+      }
+    },
+    {
+      "claim_family": "stack_boundary_evidence",
+      "status": "pass",
+      "manuscript_locations": ["paper/sections/03_protocol_setup.tex:11", "paper/sections/04_results.tex:24", "paper/sections/05_discussion.tex:11"],
+      "sources": ["results/r018_stack_multiseed_alignment/r018_stack_multiseed_aggregate.csv", "results/r019_stack_mechanism_redesign/r019_stack_seed0_mechanism_summary.csv"],
+      "checked_values": {
+        "none_matched_bc": {"successes": 131, "episodes": 180, "success_rate": 0.7278, "human_steps": 0.0},
+        "random_matched_bc": {"successes": 107, "episodes": 180, "success_rate": 0.5944, "human_steps": 478.0},
+        "voi_stack_tuned": {"successes": 107, "episodes": 180, "success_rate": 0.5944, "human_steps": 433.3}
+      }
+    },
+    {
+      "claim_family": "provenance_language",
+      "status": "pass_after_repair",
+      "manuscript_locations": ["paper/sections/07_reproducibility_inventory.tex:24", "paper/sections/07_reproducibility_inventory.tex:44", "paper/sections/07_reproducibility_inventory.tex:49"],
+      "sources": ["results/r047_evidence_provenance_package/EVIDENCE_PROVENANCE_AUDIT.md", "results/r048_version_command_provenance/VERSION_PROVENANCE_REPAIR.md", "git rev-parse HEAD"],
+      "checked_values": {
+        "current_head_before_r052": "d209cc15e7da8ec9a38b1a2c6cc8a557f43da5fb",
+        "remote": "https://github.com/yzh423/hil-rl-diagnostics.git",
+        "branch": "main"
+      }
+    }
+  ],
+  "boundaries_to_preserve": [
+    "No LV-VoI superiority claim.",
+    "No real-human or real-robot validation claim.",
+    "No complete historical wall-clock accounting claim.",
+    "No complete original R020/R021 launch-log claim.",
+    "Stack remains boundary evidence rather than positive transfer."
+  ]
+}

@@ -25,6 +25,7 @@ project stays readable as results accumulate.
 | Provenance validation gate | `results/r049_provenance_validation/PROVENANCE_VALIDATION_MODULE.md` |
 | Theme deepening package | `results/r050_theme_deepening/THEME_DEEPENING.md` |
 | Post-R050 citation audit | `results/r051_citation_context_audit/CITATION_CONTEXT_AUDIT.md` |
+| Paper-claim audit | `paper/PAPER_CLAIM_AUDIT.md` and `results/r052_paper_claim_audit/PAPER_CLAIM_AUDIT.md` |
 | Current manuscript skeleton | `paper/main.tex` |
 | Human-readable result map | `results/RESULTS_INDEX.md` |
 | Figure and table asset map | `figures/FIGURE_ASSET_INDEX.md` |
@@ -55,16 +56,17 @@ manifests, and audit packages for public-facing provenance.
 2. Paper-claim rows are curated in `results/EXPERIMENT_EVIDENCE_REGISTRY.csv`.
 3. R047 records source hashes, environment state, partial compute accounting,
    command inventory, and known provenance gaps.
-4. R048 provides the current source snapshot and R020/R021 command-provenance
-   boundary note when Git commit provenance is unavailable.
+4. R048 provides the historical source snapshot and R020/R021 command-provenance
+   boundary note for the earlier invalid-Git workspace state.
 5. R049 validates provenance package self-consistency and optional current-file
    drift through `python scripts/validate_provenance_package.py`.
 6. R050 records the current theme deepening from trigger diagnostics to
    human-attention allocation diagnostics.
 7. R051 records the citation-context audit after the R050 theme update.
-8. Manuscript logic is maintained in `PAPER_PLAN.md`.
-9. Derived figure/table assets are generated into `figures/`.
-10. Figure/table provenance is tracked in `figures/FIGURE_ASSET_INDEX.md`.
+8. R052 records the current manuscript paper-claim audit after R050/R051.
+9. Manuscript logic is maintained in `PAPER_PLAN.md`.
+10. Derived figure/table assets are generated into `figures/`.
+11. Figure/table provenance is tracked in `figures/FIGURE_ASSET_INDEX.md`.
 
 The registry is the narrow interface for paper claims. Raw directories remain
 the implementation detail behind that interface.
@@ -104,6 +106,7 @@ the implementation detail behind that interface.
 | R049 | Provenance validation gate: tested validator and CLI for package self-consistency and optional drift diagnosis. |
 | R050 | Theme deepening: reframes the paper spine around human-attention allocation diagnostics without changing evidence boundaries. |
 | R051 | Post-R050 citation audit: verifies that all current citation contexts remain supported after the theme update. |
+| R052 | Paper-claim audit: verifies current manuscript numerical, comparison, and scope claims after R050/R051 and repairs stale provenance wording. |
 
 ## Module Deepening Candidates
 
@@ -132,6 +135,7 @@ These are the current code-structure targets after R030.
 | Provenance validation | R049 adds a tested validator for R047/R048 self-consistency and current-file drift diagnosis. | `foresight_hil/evaluation/provenance_validation.py`, `scripts/validate_provenance_package.py`, and `results/r049_provenance_validation/`. | Done first pass |
 | Theme deepening | R050 deepens the manuscript and public project framing around human-attention allocation without adding evidence or citations. | `results/r050_theme_deepening/`, `PAPER_PLAN.md`, `paper/`, `README.md`, and project indexes. | Done first pass |
 | Post-R050 citation audit | R051 audits current citation contexts after the human-attention theme update. | `paper/CITATION_AUDIT.md`, `paper/CITATION_AUDIT.json`, and `results/r051_citation_context_audit/`. | Done first pass |
+| Paper-claim audit | R052 audits current manuscript numerical, comparison, and scope claims after the R050/R051 updates. | `paper/PAPER_CLAIM_AUDIT.md`, `paper/PAPER_CLAIM_AUDIT.json`, and `results/r052_paper_claim_audit/`. | Done first pass |
 
 ## Editing Rules
 

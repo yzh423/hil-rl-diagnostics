@@ -44,6 +44,7 @@ cost.
 | Provenance validation gate | `results/r049_provenance_validation/PROVENANCE_VALIDATION_MODULE.md` |
 | Theme deepening package | `results/r050_theme_deepening/THEME_DEEPENING.md` |
 | Post-R050 citation audit | `results/r051_citation_context_audit/CITATION_CONTEXT_AUDIT.md` |
+| Paper-claim audit | `paper/PAPER_CLAIM_AUDIT.md` and `results/r052_paper_claim_audit/PAPER_CLAIM_AUDIT.md` |
 | Future agent rules | `AGENTS.md` |
 
 ## Evidence Chain
@@ -54,8 +55,9 @@ cost.
 | Claim index | `results/EXPERIMENT_EVIDENCE_REGISTRY.csv` | Every paper number must trace to a registry row. |
 | Numeric audit | `python scripts/audit_registry_numbers.py` | Run before copying numbers into prose, tables, or captions. |
 | Source audit | `python scripts/validate_evidence_registry.py` | Run after changing registry rows or cited sources. |
+| Paper-claim audit | `paper/PAPER_CLAIM_AUDIT.md` | Check manuscript numerical, comparison, and scope claims against registry-backed evidence. |
 | Provenance package | `results/r047_evidence_provenance_package/` | Use for source hashes, partial compute accounting, command inventory, and known provenance gaps. |
-| Source snapshot | `results/r048_version_command_provenance/` | Use when a valid Git commit hash is unavailable; cites deterministic source archive and R020/R021 command provenance boundaries. |
+| Source snapshot | `results/r048_version_command_provenance/` | Use as the historical repair record for the earlier invalid-Git source snapshot and R020/R021 command provenance boundaries. |
 | Provenance validation | `python scripts/validate_provenance_package.py` | Run after evidence/provenance package changes; use `--compare-current-files` only for drift diagnosis. |
 | Display assets | `figures/` | Prefer R029/R036 assets for the current route. |
 | Manuscript | `paper/` | Keep current-route writing separate from historical `proposal/`. |
@@ -100,6 +102,7 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
 | Provenance validation gate | `results/r049_provenance_validation/` |
 | Theme deepening package | `results/r050_theme_deepening/` |
 | Post-R050 citation audit | `results/r051_citation_context_audit/` |
+| Paper-claim audit | `paper/PAPER_CLAIM_AUDIT.md`, `paper/PAPER_CLAIM_AUDIT.json`, and `results/r052_paper_claim_audit/` |
 
 Current compile caveat: PDF compilation is blocked by the local LaTeX runtime or
 Tectonic cache availability. This is not currently a verified source-file
@@ -125,7 +128,9 @@ ledgers and the current working tree.
 
 Current manuscript caveat: R050 deepens the manuscript theme from trigger
 diagnostics to human-attention allocation diagnostics. It does not add new
-citations, experiments, or a positive LV-VoI method claim.
+citations, experiments, or a positive LV-VoI method claim. R052 audits the
+current manuscript claims and repairs stale provenance wording; rerun it after
+numeric, comparison, or scope claims change.
 
 ## Code Map
 
@@ -158,7 +163,8 @@ citations, experiments, or a positive LV-VoI method claim.
 3. Decide whether to install/fix a local LaTeX runtime or keep drafting in TeX
    without compiling PDF locally.
 4. Keep `paper/CITATION_AUDIT.md` current if citation contexts or bibliography
-   entries change again.
+   entries change again, and keep `paper/PAPER_CLAIM_AUDIT.md` current if
+   numerical, comparison, or scope claims change.
 5. Only after the diagnostic paper spine is stable, decide whether a future
    method should be phase-aware, contact-aware, or a separate benchmark-only
    extension.

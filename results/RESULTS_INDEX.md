@@ -47,6 +47,7 @@ source is `results/EXPERIMENT_EVIDENCE_REGISTRY.csv`.
 | R049 | `results/r049_provenance_validation/` | Provenance-validation support | Tested validator and CLI for R047/R048 package self-consistency plus optional current-file drift diagnosis. |
 | R050 | `results/r050_theme_deepening/` | Manuscript/theme support | Deepens the paper spine around human-attention allocation diagnostics without adding experiments, citations, or positive LV-VoI claims. |
 | R051 | `results/r051_citation_context_audit/` | Citation support | Audits all 15 current citation contexts after the R050 theme update and finds no wrong-context citations. |
+| R052 | `results/r052_paper_claim_audit/` | Paper-claim audit support | Audits current manuscript numerical, comparison, and scope claims after R050/R051 and repairs stale provenance wording. |
 
 ## Baseline And Historical Runs
 
@@ -77,7 +78,7 @@ evidence unless promoted through a new registry row with a clear primary source.
 
 ## Current Registry Rows
 
-The registry currently covers R020-R051, excluding voided R046. Add new rows when:
+The registry currently covers R020-R052, excluding voided R046. Add new rows when:
 
 - a result supports or rejects a paper claim;
 - a derived paper artifact is created;

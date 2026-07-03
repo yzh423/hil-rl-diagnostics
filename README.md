@@ -18,6 +18,7 @@ Start with:
 - [results/EXPERIMENT_EVIDENCE_REGISTRY.csv](results/EXPERIMENT_EVIDENCE_REGISTRY.csv)
 - [results/RESULTS_INDEX.md](results/RESULTS_INDEX.md)
 - [figures/FIGURE_ASSET_INDEX.md](figures/FIGURE_ASSET_INDEX.md)
+- [paper/PAPER_CLAIM_AUDIT.md](paper/PAPER_CLAIM_AUDIT.md)
 
 ## Visual Summary
 
@@ -128,7 +129,8 @@ unless a new source has been verified. Use
 status.
 
 For numeric claims, use the evidence registry and the generated claim tables
-rather than copying numbers by hand:
+rather than copying numbers by hand. The current manuscript-level claim audit is
+[paper/PAPER_CLAIM_AUDIT.md](paper/PAPER_CLAIM_AUDIT.md).
 
 - [results/EXPERIMENT_EVIDENCE_REGISTRY.csv](results/EXPERIMENT_EVIDENCE_REGISTRY.csv)
 - [figures/TABLE_registry_costmatched_results_r036.tex](figures/TABLE_registry_costmatched_results_r036.tex)

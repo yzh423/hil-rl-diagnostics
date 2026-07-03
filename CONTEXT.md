@@ -117,4 +117,7 @@ workspace state. R050 deepens the current paper spine from trigger diagnostics
 to human-attention allocation diagnostics, updating the manuscript, plan, and
 public project framing without changing evidence boundaries, citations, or raw
 results. R051 reruns the citation-context audit after R050 and finds no
-wrong-context citation in the current 15-key manuscript bibliography.
+wrong-context citation in the current 15-key manuscript bibliography. R052
+audits current manuscript numerical, comparison, and scope claims against the
+registry and primary sources, repairing one stale provenance wording issue while
+preserving the negative LV-VoI boundary.

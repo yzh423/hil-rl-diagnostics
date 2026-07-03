@@ -21,6 +21,7 @@ Paper-core runs & R020--R024 result directories & Store the Lift cost-matched re
 Trace schema & \texttt{foresight\_hil/experiments/trace.py} and R023/R024 trace CSVs & Define and record intervention-start timing, budget fraction, geometry, score, and predicted failure diagnostics. \\
 Reproduction commands & \texttt{results/r044\_environment\_reproducibility\_audit/REPRODUCTION\_COMMANDS.md} & Central command sheet for smoke checks, verification, and future paper-core rerun planning. \\
 Citation contexts & \texttt{paper/CITATION\_AUDIT.md} & Current ledger showing that the manuscript citation contexts were audited without adding unsupported citation keys. \\
+Paper-claim audit & \texttt{paper/PAPER\_CLAIM\_AUDIT.md} and R052 & Current ledger checking manuscript numerical, comparison, and scope claims against the registry and primary sources. \\
 \bottomrule
 \end{tabular}
 \end{table*}
@@ -40,7 +41,7 @@ Lift main comparison & Seeds, repeated success counts, Wilson intervals, and rea
 Repair gates & Same-seed seeds 0--2 success, cost, and confidence intervals are registered for R022 and R024. & Keep the negative gate interpretation unless a substantially different mechanism is tested under a new result ID. \\
 Trace diagnostics & Intervention-start counts, timing, budget fraction, geometry, score, and predicted failure fields are archived for R023/R024. & Use trace summaries to motivate future methods, but do not treat traces as the primary success-rate evidence. \\
 Runtime environment & R044 records package versions, CUDA availability, CLI help checks, and smoke-run outputs. & Add a reviewer-facing environment export or container specification before submission. \\
-Version provenance & Project files are organized and audited, but local \texttt{.git} metadata is not recognized as a valid repository. & Repair the repository metadata or create a dated source snapshot before external release. \\
+Version provenance & The current source state is tracked in the public Git repository, while R048 preserves the earlier invalid-Git source snapshot and command-provenance boundary. & Archive the final submission commit or a fresh dated source snapshot before external release. \\
 \bottomrule
 \end{tabular}
 \end{table*}
