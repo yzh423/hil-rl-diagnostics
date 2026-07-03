@@ -49,7 +49,7 @@ R053, R054, and R056.
 | `gen_r026_paper_figures.py` | R026 figures, R026 tables, R026 include snippets. |
 | `gen_r029_protocol_assets.py` | R029 protocol hero, checklist table, and R029 include snippets. |
 | `gen_r054_attention_allocation_diagnostics.py` | R054 attention-allocation diagnostic composite, PNG/grayscale previews, and trace profile CSV. |
-| `foresight_hil/evaluation/attention_diagnostics.py` | R055-tested trace-row collection and profile generation used by the R054 figure script. |
+| `foresight_hil/evaluation/attention_diagnostics.py` | R055/R057-tested trace-row collection and profile generation used by the R054 figure script. |
 | `gen_r056_methodology_figure.py` | R056 methodology figure, PNG preview, and grayscale preview. |
 | `scripts/generate_methodology_extension.py` | R056 protocol gate matrix, failure taxonomy, stop-rule metrics, and LaTeX tables. |
 | `foresight_hil/evaluation/protocol_diagnostics.py` | R056-tested derived protocol diagnostics used by the methodology extension script. |

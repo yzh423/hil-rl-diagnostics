@@ -94,6 +94,11 @@ metrics, and methodology-first Fig. 1 candidate generated from registered
 R021/R023/R024 evidence. It strengthens the paper's innovation as an evaluation
 protocol without adding experiments, citations, or a positive LV-VoI claim.
 
+R057 records a document/code-quality follow-up. It adds repeatable Markdown
+local-link validation and repairs row-aligned attention-profile gap handling
+without changing experiments, citations, manuscript claims, or the protected
+negative LV-VoI boundary.
+
 ## Claims-Evidence Matrix
 
 | Claim | Evidence | Status | Section |
@@ -321,5 +326,6 @@ Secondary reviewer-agent feedback was not run in this turn because sub-agent spa
 - [x] Optimize the main attention-allocation diagnostic figure with scipilot-style data profiling and visual QA (`results/r054_attention_allocation_figure_optimization/`).
 - [x] Integrate the R054 diagnostic figure into Results and extract its trace-profile logic into a tested evaluation helper (`results/r055_project_quality_pass/`).
 - [x] Extend the methodology with a derived protocol gate matrix, failure taxonomy, stop-rule metrics, and methodology-first Fig. 1 candidate (`results/r056_methodology_extension/`).
+- [x] Add repeatable Markdown local-link validation and repair row-aligned attention-profile gap handling (`results/r057_document_code_quality_pass/`).
 - [ ] Decide whether submission packaging also needs an institutional source archive.
 - [ ] Decide whether any robotics breadth beyond the cleaned Stack appendix is worth adding before submission.

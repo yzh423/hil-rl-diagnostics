@@ -21,6 +21,7 @@ Before making paper-facing changes, read:
 9. `paper/PAPER_CLAIM_AUDIT.md`
 10. `results/r055_project_quality_pass/PROJECT_QUALITY_REVIEW.md`
 11. `results/r056_methodology_extension/MANIFEST.md`
+12. `results/r057_document_code_quality_pass/MANIFEST.md`
 
 ## Current Scientific Position
 
@@ -83,6 +84,7 @@ python scripts\generate_claim_tables.py
 python scripts\generate_methodology_extension.py
 python scripts\generate_stack_boundary_appendix.py
 python scripts\validate_provenance_package.py
+python scripts\validate_document_links.py
 python -m unittest discover -s tests
 ```
 
@@ -120,6 +122,8 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
 - Use R056 as the current methodology-extension package before changing the
   protocol gate matrix, failure taxonomy, stop-rule metrics, or Fig. 1
   methodology asset.
+- Use R057 as the current document/code-quality pass before changing document
+  validation or attention-profile helper behavior again.
 - Resolve local LaTeX compile environment if PDF iteration becomes necessary.
 - If future methods are considered later, design them from the R023/R024
   trace diagnosis rather than from the earlier unsupported LV-VoI superiority

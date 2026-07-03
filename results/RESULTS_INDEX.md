@@ -53,6 +53,7 @@ source is `results/EXPERIMENT_EVIDENCE_REGISTRY.csv`.
 | R054 | `results/r054_attention_allocation_figure_optimization/` | Paper artifact support | Adds a scipilot-guided multi-panel attention-allocation diagnostic figure, trace profile, and visual QA from R021/R023/R024. |
 | R055 | `results/r055_project_quality_pass/` | Project-quality support | Reviews documentation/code consistency after R054, extracts tested attention-diagnostic profiling helpers, and integrates the R054 figure into the manuscript. |
 | R056 | `results/r056_methodology_extension/` | Paper artifact support | Derives a protocol gate matrix, failure taxonomy, stop-rule metrics, and methodology-first Fig. 1 candidate from registered R021/R023/R024 evidence. |
+| R057 | `results/r057_document_code_quality_pass/` | Project-quality support | Adds repeatable Markdown local-link validation and repairs row-aligned attention-profile gap handling without changing experimental claims. |
 
 ## Baseline And Historical Runs
 
@@ -83,7 +84,7 @@ evidence unless promoted through a new registry row with a clear primary source.
 
 ## Current Registry Rows
 
-The registry currently covers R018 and R020-R056, excluding voided R046. Add new rows when:
+The registry currently covers R018 and R020-R057, excluding voided R046. Add new rows when:
 
 - a result supports or rejects a paper claim;
 - a derived paper artifact is created;

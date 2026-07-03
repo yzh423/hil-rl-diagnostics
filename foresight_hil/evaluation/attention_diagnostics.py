@@ -65,7 +65,9 @@ def read_csv_rows(path):
 def write_profile_csv(path, rows):
     if not rows:
         raise ValueError("cannot write an empty attention trace profile")
-    with Path(path).open("w", newline="", encoding="utf-8") as f:
+    output = Path(path)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    with output.open("w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=list(rows[0].keys()))
         writer.writeheader()
         writer.writerows(rows)
@@ -84,6 +86,16 @@ def as_float(value):
 def finite_numeric_values(rows, column):
     values = [as_float(row.get(column, "")) for row in rows]
     return np.asarray([value for value in values if np.isfinite(value)], dtype=float)
+
+
+def finite_numeric_differences(rows, left_column, right_column):
+    values = []
+    for row in rows:
+        left = as_float(row.get(left_column, ""))
+        right = as_float(row.get(right_column, ""))
+        if np.isfinite(left) and np.isfinite(right):
+            values.append(left - right)
+    return np.asarray(values, dtype=float)
 
 
 def rows_for_strategy(rows, strategy):
@@ -138,7 +150,7 @@ def build_attention_trace_profile(
         cube_z = finite_numeric_values(group, "cube_z")
         score = finite_numeric_values(group, "score")
         p_fail = finite_numeric_values(group, "p_fail")
-        eef_gap = eef_z - cube_z if len(eef_z) == len(cube_z) else np.asarray([])
+        eef_gap = finite_numeric_differences(group, "eef_z", "cube_z")
 
         profile_rows.append({
             "strategy": strategy,

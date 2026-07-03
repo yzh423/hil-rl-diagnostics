@@ -20,6 +20,7 @@ Start with:
 - [figures/FIGURE_ASSET_INDEX.md](figures/FIGURE_ASSET_INDEX.md)
 - [paper/PAPER_CLAIM_AUDIT.md](paper/PAPER_CLAIM_AUDIT.md)
 - [results/r056_methodology_extension/MANIFEST.md](results/r056_methodology_extension/MANIFEST.md)
+- [results/r057_document_code_quality_pass/MANIFEST.md](results/r057_document_code_quality_pass/MANIFEST.md)
 
 ## Visual Summary
 
@@ -98,12 +99,14 @@ python scripts\generate_claim_tables.py
 python scripts\generate_methodology_extension.py
 python scripts\generate_stack_boundary_appendix.py
 python scripts\validate_provenance_package.py
+python scripts\validate_document_links.py
 python -m unittest discover -s tests
 ```
 
 Expected current status: registry validation passes, numeric audit passes,
-provenance validation passes, and the unit test suite passes. A Gym deprecation
-warning may appear; it does not affect the current test result.
+provenance validation passes, document-link validation passes, and the unit test
+suite passes. A Gym deprecation warning may appear; it does not affect the
+current test result.
 
 ## Minimal Usage
 
@@ -131,6 +134,12 @@ Validate that the evidence registry still points to readable sources:
 
 ```powershell
 python scripts\validate_evidence_registry.py
+```
+
+Validate local Markdown links in the project documentation:
+
+```powershell
+python scripts\validate_document_links.py
 ```
 
 ## Citation And Claim Discipline

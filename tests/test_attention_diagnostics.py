@@ -78,6 +78,26 @@ class AttentionDiagnosticsTest(unittest.TestCase):
         self.assertEqual(profile[1]["score_ge_9p9_frac"], "0.500000")
         self.assertEqual(profile[1]["p_fail_ge_0p99_frac"], "0.500000")
 
+    def test_eef_minus_cube_gap_uses_only_row_aligned_finite_pairs(self):
+        traces = []
+        for row in [
+            trace_row(1000, 0.1, 0.1, 0.05, 1.2, 0.8),
+            trace_row(2000, 0.2, 0.2, 0.10, 1.0, ""),
+            trace_row(3000, 0.3, 0.3, 0.15, "", 0.3),
+        ]:
+            row["diagnostic_strategy"] = "random_b350"
+            traces.append(row)
+
+        profile = build_attention_trace_profile(
+            traces,
+            strategy_order=("random_b350",),
+        )
+
+        self.assertEqual(
+            profile[0]["eef_minus_cube_z_median_iqr"],
+            "0.4000 [0.4000, 0.4000]",
+        )
+
     def test_collects_trace_rows_from_sources_and_writes_profile_csv(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
@@ -99,7 +119,7 @@ class AttentionDiagnosticsTest(unittest.TestCase):
                 traces,
                 strategy_order=("random_b350", "lv_voi_scale3"),
             )
-            output = root / "profile.csv"
+            output = root / "profiles" / "profile.csv"
             write_profile_csv(output, profile)
 
             self.assertEqual(len(traces), 2)

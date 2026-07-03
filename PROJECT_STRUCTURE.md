@@ -16,6 +16,7 @@ project stays readable as results accumulate.
 | Evidence rows for paper claims | `results/EXPERIMENT_EVIDENCE_REGISTRY.csv` |
 | Evidence registry validation | `python scripts/validate_evidence_registry.py` |
 | Evidence numeric audit | `python scripts/audit_registry_numbers.py` |
+| Documentation link validation | `python scripts/validate_document_links.py` |
 | Registry claim table generation | `python scripts/generate_claim_tables.py` |
 | Methodology extension generation | `python scripts/generate_methodology_extension.py` |
 | Citation audit ledgers | `results/r037_citation_audit_batch1/CITATION_METADATA_CONTEXT_AUDIT.md` and `paper/CITATION_AUDIT.md` |
@@ -31,6 +32,7 @@ project stays readable as results accumulate.
 | Attention-allocation diagnostic figure | `results/r054_attention_allocation_figure_optimization/MANIFEST.md` |
 | Project quality pass | `results/r055_project_quality_pass/MANIFEST.md` |
 | Methodology extension | `results/r056_methodology_extension/MANIFEST.md` |
+| Document/code quality follow-up | `results/r057_document_code_quality_pass/MANIFEST.md` |
 | Current manuscript skeleton | `paper/main.tex` |
 | Human-readable result map | `results/RESULTS_INDEX.md` |
 | Figure and table asset map | `figures/FIGURE_ASSET_INDEX.md` |
@@ -75,9 +77,11 @@ manifests, and audit packages for public-facing provenance.
     extraction.
 12. R056 records the derived methodology extension: protocol gate matrix,
     failure taxonomy, stop-rule metrics, and methodology-first Fig. 1 candidate.
-13. Manuscript logic is maintained in `PAPER_PLAN.md`.
-14. Derived figure/table assets are generated into `figures/`.
-15. Figure/table provenance is tracked in `figures/FIGURE_ASSET_INDEX.md`.
+13. R057 records the document/code-quality follow-up: repeatable Markdown
+    local-link validation and row-aligned attention-profile gap handling.
+14. Manuscript logic is maintained in `PAPER_PLAN.md`.
+15. Derived figure/table assets are generated into `figures/`.
+16. Figure/table provenance is tracked in `figures/FIGURE_ASSET_INDEX.md`.
 
 The registry is the narrow interface for paper claims. Raw directories remain
 the implementation detail behind that interface.
@@ -123,6 +127,7 @@ the implementation detail behind that interface.
 | R054 | Attention-allocation figure optimization: packages a scipilot-guided diagnostic composite, trace profile, and visual QA from R021/R023/R024. |
 | R055 | Project quality pass: synchronizes documentation/code consistency after R054, extracts tested attention-diagnostic profiling helpers, and integrates the R054 figure into Results. |
 | R056 | Methodology extension: derives a protocol gate matrix, failure taxonomy, stop-rule metrics, and methodology-first Fig. 1 candidate from registered R021/R023/R024 evidence. |
+| R057 | Document/code quality pass: adds repeatable Markdown local-link validation and repairs row-aligned attention-profile gap handling without changing experimental claims. |
 
 ## Module Deepening Candidates
 
@@ -156,6 +161,7 @@ These are the current code-structure targets after R030.
 | Attention-allocation diagnostic figure | R054 replaces compressed/dual-axis-style diagnostics with a multi-panel figure and visual QA record. | `figures/gen_r054_attention_allocation_diagnostics.py`, `figures/fig_attention_allocation_diagnostics_r054.pdf`, and `results/r054_attention_allocation_figure_optimization/`. | Done first pass |
 | Attention-diagnostic helper extraction | R055 moves R054 trace-profile collection and summarization out of the plotting script. | `foresight_hil/evaluation/attention_diagnostics.py`, `tests/test_attention_diagnostics.py`, and `results/r055_project_quality_pass/`. | Done first pass |
 | Methodology diagnostic extension | R056 moves gate/taxonomy/stop-rule derivation behind a tested helper and uses it for table and Fig. 1 generation. | `foresight_hil/evaluation/protocol_diagnostics.py`, `tests/test_protocol_diagnostics.py`, `scripts/generate_methodology_extension.py`, and `figures/gen_r056_methodology_figure.py`. | Done first pass |
+| Document link validation and attention-profile robustness | R057 adds a tested documentation-link validator and tightens the R054 trace-profile helper. | `foresight_hil/evaluation/document_links.py`, `scripts/validate_document_links.py`, `tests/test_document_links.py`, and `foresight_hil/evaluation/attention_diagnostics.py`. | Done first pass |
 
 ## Editing Rules
 

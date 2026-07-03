@@ -38,6 +38,12 @@ from .provenance_validation import (
     format_provenance_report,
     validate_current_provenance,
 )
+from .document_links import (
+    DocumentLinkIssue,
+    DocumentLinkReport,
+    find_local_markdown_link_issues,
+    format_document_link_report,
+)
 from .protocol_diagnostics import (
     build_derived_metric_rows,
     build_failure_taxonomy_rows,
@@ -51,6 +57,8 @@ __all__ = [
     "ClaimTableManifest",
     "ClaimTableRow",
     "AttentionTraceSource",
+    "DocumentLinkIssue",
+    "DocumentLinkReport",
     "NumericAuditIssue",
     "NumericAuditReport",
     "ProvenanceIssue",
@@ -66,7 +74,9 @@ __all__ = [
     "build_stack_boundary_claims",
     "build_trigger_repair_claims",
     "collect_attention_trace_rows",
+    "find_local_markdown_link_issues",
     "finite_numeric_values",
+    "format_document_link_report",
     "format_registry_report",
     "format_numeric_audit_report",
     "format_provenance_report",
