@@ -155,5 +155,8 @@ over-optimistic relative to the actual R024 score-floor follow-up, so R060 does
 not support online trigger-superiority claims.
 R061 adds the missing candidate-state logging interface: future VoI runs can
 archive accepted and rejected gate-evaluation states via `--trace_candidates`.
-It is instrumentation only; future R062+ online repairs still need cost-matched
-random comparison before any positive method claim.
+It is instrumentation only; future formal online repairs still need
+cost-matched random comparison before any positive method claim.
+R062 records the pre-registration and candidate-logging smoke gate before such
+repair compute: it does not run a new experiment, but it makes R063+ the proper
+location for any future cost-matched online repair result.

@@ -99,6 +99,11 @@ local-link validation and repairs row-aligned attention-profile gap handling
 without changing experiments, citations, manuscript claims, or the protected
 negative LV-VoI boundary.
 
+R062 records the repair pre-registration and candidate-logging smoke gate that
+must precede any formal online trigger repair. It does not run a new experiment
+or change the empirical boundary; future formal repair evidence should start as
+R063+ after the smoke passes and after the trigger rule is frozen.
+
 ## Claims-Evidence Matrix
 
 | Claim | Evidence | Status | Section |
@@ -295,9 +300,10 @@ the final verified submission tag.
 R059 records the evidence and experiment optimization route. Resolve packaging
 and audit gates first, then use cheap R023/R024 trace/offline diagnostics before
 launching any new training. R060 executes that first offline trace audit, and
-R061 adds candidate-state logging. Any future R062+ online method run must be
-cost-matched against the random-family baseline before it can support a
-positive method claim.
+R061 adds candidate-state logging. R062 now pre-registers the smoke and
+formal-run gate. Any future R063+ online method run must be cost-matched
+against the random-family baseline before it can support a positive method
+claim.
 
 R060 shows that post-hoc accepted-start filtering can look much more selective
 than the actual R024 score-floor online follow-up, so it should be used to
@@ -305,7 +311,8 @@ screen or reject repair ideas, not to support online method-superiority prose.
 
 R061 adds the candidate-state logging interface required before a future online
 repair: `--trace_candidates` records accepted and rejected VoI gate evaluations.
-Any future R062+ online method run must still be cost-matched against the
+R062 records the smoke and pre-registration requirements. Any future R063+
+online method run must still be cost-matched against the
 random-family baseline before it can support a positive method claim.
 
 ## Reviewer Feedback
@@ -353,10 +360,11 @@ Secondary reviewer-agent feedback was not run in this turn because sub-agent spa
 - [x] Extend the methodology with a derived protocol gate matrix, failure taxonomy, stop-rule metrics, and methodology-first Fig. 1 candidate (`results/r056_methodology_extension/`).
 - [x] Add repeatable Markdown local-link validation and repair row-aligned attention-profile gap handling (`results/r057_document_code_quality_pass/`).
 - [x] Record submission-packaging readiness, PDF compile/visual-QA pass, and final source-archive decision (`results/r058_submission_packaging_readiness/`).
-- [x] Record the evidence-first experiment optimization route and R062+ stop gates (`results/r059_evidence_experiment_optimization/`).
+- [x] Record the evidence-first experiment optimization route and future-repair stop gates (`results/r059_evidence_experiment_optimization/`).
 - [x] Resolve current-draft PDF compilation and complete first visual QA.
 - [x] Execute the R059 offline trace audit from R023/R024 accepted-start traces (`results/r060_offline_trace_trigger_audit/`).
 - [ ] Rerun PDF compile and visual QA after venue-template integration or major layout changes.
 - [ ] Run a final paper-claim audit if manuscript captions, numerical claims, comparison claims, or scope claims change.
 - [x] Add candidate-state logging so future online repairs can archive accepted and rejected gate-evaluation states (`results/r061_candidate_state_logging/`).
-- [ ] Decide whether a future R062+ online repair is necessary; if so, pre-register the trigger rule, candidate-state logging, and cost-matched random comparison first.
+- [x] Pre-register the candidate-logging smoke and formal online-repair gate (`results/r062_repair_preregistration/`).
+- [ ] Run only the R062 candidate-logging smoke before deciding whether a future R063+ online repair is necessary.

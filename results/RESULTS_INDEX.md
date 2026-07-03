@@ -57,7 +57,8 @@ source is `results/EXPERIMENT_EVIDENCE_REGISTRY.csv`.
 | R058 | `results/r058_submission_packaging_readiness/` | Submission-packaging support | Records Tectonic cache repair, current PDF compilation, visual QA, public Git source-state tracking, and final source-archive decision. |
 | R059 | `results/r059_evidence_experiment_optimization/` | Experiment-planning support | Defines an evidence-first optimization route with trace/offline gates and cost-matched stop rules for any future experiment. |
 | R060 | `results/r060_offline_trace_trigger_audit/` | Trace/offline diagnostic support | Audits R023/R024 accepted-start traces with phase summaries and post-hoc gates; useful as a design screen, not online method evidence. |
-| R061 | `results/r061_candidate_state_logging/` | Experiment-instrumentation support | Adds tested candidate-state logging for accepted and rejected VoI gate evaluations before any future R062+ online repair. |
+| R061 | `results/r061_candidate_state_logging/` | Experiment-instrumentation support | Adds tested candidate-state logging for accepted and rejected VoI gate evaluations before any future online repair. |
+| R062 | `results/r062_repair_preregistration/` | Experiment-planning support | Pre-registers the candidate-logging smoke gate, required artifacts, and R063+ formal online-repair criteria without adding empirical results. |
 
 ## Baseline And Historical Runs
 
@@ -88,7 +89,7 @@ evidence unless promoted through a new registry row with a clear primary source.
 
 ## Current Registry Rows
 
-The registry currently covers R018 and R020-R061, excluding voided R046. Add new rows when:
+The registry currently covers R018 and R020-R062, excluding voided R046. Add new rows when:
 
 - a result supports or rejects a paper claim;
 - a derived paper artifact is created;

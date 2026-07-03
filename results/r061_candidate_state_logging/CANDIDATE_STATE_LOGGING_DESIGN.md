@@ -55,7 +55,7 @@ steps are not candidate rows because the VoI gate is not evaluated there.
 
 ## Use In Future Experiments
 
-For any R062+ online repair:
+For any R063+ online repair after the R062 smoke/pre-registration gate:
 
 1. Pre-register the trigger rule and expected stop gate.
 2. Run with `--trace_candidates` and `--trace_interventions`.
@@ -69,4 +69,3 @@ For any R062+ online repair:
 
 R061 does not run a new experiment and does not change any historical result.
 It only makes future experiments auditable enough to test trace-derived repairs.
-

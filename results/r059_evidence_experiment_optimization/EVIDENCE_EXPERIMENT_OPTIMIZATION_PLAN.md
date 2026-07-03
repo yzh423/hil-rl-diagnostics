@@ -88,9 +88,9 @@ If the user wants one experiment next, choose the cheapest claim-relevant path:
 1. Use R060 as the offline R023/R024 counterfactual trigger audit from existing
    accepted-start traces.
 2. Use R061 candidate-state logging for any future gate worth testing.
-3. If a future gate is still worth testing, run one cost-matched online trigger
-   repair in a fresh `results/r062_*` directory with accepted and rejected
-   candidate-state logging.
+3. If a future gate is still worth testing, first pass the R062 candidate
+   logging smoke, then run one cost-matched online trigger repair in a fresh
+   R063+ result directory with accepted and rejected candidate-state logging.
 4. Compare against `random_b350` and LV-VoI scale3 using registry-driven tables.
 5. Register the row before changing manuscript prose.
 
@@ -99,7 +99,7 @@ becoming an unsupported paper claim.
 
 ## Must-Have Logging For Any New Run
 
-Every future R062+ online experiment should archive:
+Every future R063+ online experiment should archive:
 
 - exact command line;
 - stdout/stderr log;

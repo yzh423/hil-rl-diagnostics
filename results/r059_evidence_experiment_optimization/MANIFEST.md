@@ -48,8 +48,9 @@ The default near-term recommendation is not to add robotics breadth before
 submission unless the target venue, advisor, or reviewer feedback explicitly
 requires it. The current Stack appendix is enough as boundary evidence for the
 diagnostic-protocol paper route. R061 now adds accepted/rejected candidate-state
-logging. Any new R062+ online repair should use that logging and remain
-cost-matched against the random family before it can change manuscript claims.
+logging, and R062 records the candidate-logging smoke/pre-registration gate.
+Any new R063+ online repair should use that logging and remain cost-matched
+against the random family before it can change manuscript claims.
 
 ## Claim Boundary
 
