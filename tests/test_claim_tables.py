@@ -5,6 +5,7 @@ from pathlib import Path
 
 from foresight_hil.evaluation.claim_tables import (
     build_main_costmatched_claims,
+    build_stack_boundary_claims,
     build_trigger_repair_claims,
     read_registry_rows,
     render_claims_latex_table,
@@ -86,6 +87,24 @@ class ClaimTablesTest(unittest.TestCase):
         self.assertEqual(claims[0].success_text, "259/300 = 86.3%")
         self.assertEqual(claims[1].delta_text, "-11.0 pp")
         self.assertEqual(claims[2].delta_text, "-8.7 pp")
+
+    def test_builds_stack_boundary_rows_from_registered_stack_evidence(self):
+        rows = [
+            registry_row("R018", "none_matched_bc", 131, 180, "0.7278", "0.0"),
+            registry_row("R018", "random_matched_bc", 107, 180, "0.5944", "478.0"),
+            registry_row("R018", "voi_stack_tuned", 107, 180, "0.5944", "433.3"),
+        ]
+
+        claims = build_stack_boundary_claims(rows)
+
+        self.assertEqual(
+            [row.configuration for row in claims],
+            ["none_matched_bc", "random_matched_bc", "voi_stack_tuned"],
+        )
+        self.assertEqual(claims[0].label, "No-online matched BC")
+        self.assertEqual(claims[0].success_text, "131/180 = 72.8%")
+        self.assertEqual(claims[1].delta_text, "-13.3 pp")
+        self.assertEqual(claims[2].cost_text, "433.3")
 
     def test_renders_markdown_and_latex_with_traceable_sources(self):
         rows = [

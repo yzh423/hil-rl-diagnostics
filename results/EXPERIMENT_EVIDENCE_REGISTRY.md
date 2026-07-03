@@ -1,6 +1,7 @@
 # Experiment Evidence Registry
 
-This registry is the single entry point for paper-facing R020-R052 evidence.
+This registry is the single entry point for paper-facing R018 and R020-R053
+evidence.
 Use `results/EXPERIMENT_EVIDENCE_REGISTRY.csv` as the machine-readable source
 when drafting claims, tables, captions, or rebuttal text.
 
@@ -14,13 +15,17 @@ when drafting claims, tables, captions, or rebuttal text.
   numbers into prose, tables, captions, or rebuttal text.
 - Run `python scripts/generate_claim_tables.py` to regenerate
   registry-derived Markdown and LaTeX claim tables.
+- Run `python scripts/generate_stack_boundary_appendix.py` to regenerate the
+  R053 Stack appendix table.
+- Treat R018 Stack rows as registered boundary evidence only; do not use them
+  to claim positive robotics transfer.
 - Treat R021 `random_b350` as the decisive cost-matched check for Lift.
 - Treat R022 and R024 as negative trigger-repair gates; do not expand either
   without a substantially different mechanism.
 - Treat R023 as a trace diagnostic, not as the main success-rate evidence.
 - Treat R025/R026/R028/R029 as paper-preparation artifacts, not new experimental
   results.
-- Treat R030-R052 as structure, manuscript-theme, citation-audit, paper-claim-audit, and evidence-discipline artifacts, not new
+- Treat R030-R053 as structure, manuscript-theme, citation-audit, paper-claim-audit, paper-artifact, and evidence-discipline artifacts, not new
   experimental results.
 
 ## Current Verdict
@@ -28,6 +33,8 @@ when drafting claims, tables, captions, or rebuttal text.
 The registry supports the diagnostic-benchmark paper route:
 
 - R021 rejects the current LV-VoI superiority claim after cost matching.
+- R018 registers Stack as boundary evidence: no-online matched BC beats the
+  current online-intervention variants under the matched Stack setup.
 - R022 and R024 show that two simple trigger repairs remain dominated.
 - R023 explains the failure as over-triggering and score/timing mismatch rather
   than a simple far-from-cube geometry issue.
@@ -84,3 +91,5 @@ The registry supports the diagnostic-benchmark paper route:
 - R052 audits current manuscript numerical, comparison, and scope claims against
   the registry and primary sources, repairing one stale Git-provenance wording
   issue while preserving the negative LV-VoI boundary.
+- R053 packages the Stack boundary evidence into a registry-driven appendix
+  table and keeps the interpretation negative.

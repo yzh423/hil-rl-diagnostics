@@ -1,8 +1,9 @@
 # Figure Asset Index
 
-Last updated: 2026-07-02
+Last updated: 2026-07-03
 
-This file consolidates paper figure and table assets across R026 and R029.
+This file consolidates paper figure and table assets across R026, R029, R036,
+and R053.
 
 ## Preferred Current Assets
 
@@ -20,6 +21,7 @@ This file consolidates paper figure and table assets across R026 and R029.
 | `TABLE_trace_diagnostics.tex` | R026 | Paper-ready draft | Compact trace diagnostic table. |
 | `TABLE_registry_costmatched_results_r036.tex` | R036 | Preferred registry-generated table | Main cost-matched result table generated directly from audited registry rows. |
 | `TABLE_registry_trigger_repairs_r036.tex` | R036 | Preferred registry-generated table | Trigger-repair result table generated directly from audited registry rows. |
+| `TABLE_stack_boundary_appendix_r053.tex` | R053 | Appendix-ready registry-generated table | Stack boundary evidence table; use only as negative robotics breadth evidence. |
 | `latex_includes_r036.tex` | R036 | Include snippets | LaTeX `\input{}` snippets for R036 tables. |
 
 ## Older Or Secondary Assets
@@ -38,6 +40,7 @@ This file consolidates paper figure and table assets across R026 and R029.
 | `gen_r026_paper_figures.py` | R026 figures, R026 tables, R026 include snippets. |
 | `gen_r029_protocol_assets.py` | R029 protocol hero, checklist table, and R029 include snippets. |
 | `scripts/generate_claim_tables.py` | R036 registry-generated Markdown and LaTeX claim tables. |
+| `scripts/generate_stack_boundary_appendix.py` | R053 Stack boundary appendix Markdown and LaTeX table. |
 | `paper_plot_style.py` | Shared plotting style used by figure scripts. |
 
 Before using a figure in the manuscript, verify that its source result is also

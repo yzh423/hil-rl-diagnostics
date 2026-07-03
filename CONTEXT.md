@@ -34,7 +34,7 @@ The paper contribution is therefore:
 | Cost matching | Comparing strategies at similar realized human-step cost, not only at nominal budget. |
 | Repeated checkpoint evaluation | Re-evaluating selected checkpoints across repeated episodes, e.g. `5 x 20`, to reduce checkpoint noise. |
 | Intervention trace | Per-intervention-start diagnostics such as training step, budget fraction, geometry, score, and `p_fail`. |
-| Paper-core result | Evidence that can support the current manuscript route. R020-R029 are paper-core unless later superseded. |
+| Paper-core result | Evidence that can support the current manuscript route. R018 is registered boundary evidence; R020-R029 are paper-core unless later superseded. |
 | Smoke result | A short execution or plumbing check. It proves code paths, not scientific claims. |
 | Superseded result | A result kept for history but not used to support the current claim. |
 
@@ -120,4 +120,6 @@ results. R051 reruns the citation-context audit after R050 and finds no
 wrong-context citation in the current 15-key manuscript bibliography. R052
 audits current manuscript numerical, comparison, and scope claims against the
 registry and primary sources, repairing one stale provenance wording issue while
-preserving the negative LV-VoI boundary.
+preserving the negative LV-VoI boundary. R053 registers the Stack boundary rows
+and generates a ready-to-include appendix table from the registry, keeping Stack
+as negative robotics breadth rather than positive transfer evidence.

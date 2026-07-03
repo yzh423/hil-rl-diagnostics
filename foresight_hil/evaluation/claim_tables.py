@@ -16,6 +16,9 @@ DISPLAY_LABELS = {
     "lv_voi_scale3": "LV-VoI scale3",
     "min_disagree_vlv0p25": "Min-disagree LV-VoI",
     "score_floor_vlv3_after4000_floor0p05": "Score-floor LV-VoI",
+    "none_matched_bc": "No-online matched BC",
+    "random_matched_bc": "Random matched BC",
+    "voi_stack_tuned": "Stack-tuned LV-VoI",
 }
 
 MAIN_COSTMATCHED_ORDER = (
@@ -30,6 +33,12 @@ TRIGGER_REPAIR_ORDER = (
     ("R024", "random_b350"),
     ("R022", "min_disagree_vlv0p25"),
     ("R024", "score_floor_vlv3_after4000_floor0p05"),
+)
+
+STACK_BOUNDARY_ORDER = (
+    ("R018", "none_matched_bc"),
+    ("R018", "random_matched_bc"),
+    ("R018", "voi_stack_tuned"),
 )
 
 
@@ -136,6 +145,15 @@ def build_trigger_repair_claims(registry_rows):
         registry_rows,
         TRIGGER_REPAIR_ORDER,
         reference=("R024", "random_b350"),
+    )
+
+
+def build_stack_boundary_claims(registry_rows):
+    """Return paper-ordered rows for the Stack boundary-evidence table."""
+    return _build_claims(
+        registry_rows,
+        STACK_BOUNDARY_ORDER,
+        reference=("R018", "none_matched_bc"),
     )
 
 

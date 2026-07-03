@@ -17,6 +17,7 @@ source is `results/EXPERIMENT_EVIDENCE_REGISTRY.csv`.
 
 | Run | Directory / source | Status | Use |
 |---|---|---|---|
+| R018 | `results/r018_stack_multiseed_alignment/` | Registered boundary evidence | Stack multiseed boundary comparison; no-online matched BC dominates online intervention variants. |
 | R020 | `results/r020_lift_highn_reliability/` | Paper-core, superseded in interpretation by R021 | Shows the initially plausible LV-VoI result before stricter cost matching. |
 | R021 | `results/r021_random_costmatch/` | Paper-core | Main cost-matched reversal: `random_b350` dominates LV-VoI scale3. |
 | R022 | `results/r022_lift_min_disagree_seed0_2/` | Paper-core | Negative repair result for minimum-disagreement LV-VoI. |
@@ -48,6 +49,7 @@ source is `results/EXPERIMENT_EVIDENCE_REGISTRY.csv`.
 | R050 | `results/r050_theme_deepening/` | Manuscript/theme support | Deepens the paper spine around human-attention allocation diagnostics without adding experiments, citations, or positive LV-VoI claims. |
 | R051 | `results/r051_citation_context_audit/` | Citation support | Audits all 15 current citation contexts after the R050 theme update and finds no wrong-context citations. |
 | R052 | `results/r052_paper_claim_audit/` | Paper-claim audit support | Audits current manuscript numerical, comparison, and scope claims after R050/R051 and repairs stale provenance wording. |
+| R053 | `results/r053_stack_boundary_appendix/` | Paper artifact support | Packages registered Stack boundary evidence into an appendix-ready table without changing the negative transfer interpretation. |
 
 ## Baseline And Historical Runs
 
@@ -58,8 +60,8 @@ development history or limitations.
 
 Examples:
 
-- `results/r018_stack_multiseed_alignment/`: Stack boundary evidence; current
-  Stack online-intervention claim is negative.
+- `results/r018_stack_multiseed_alignment/`: registered Stack boundary
+  evidence; current Stack online-intervention claim is negative.
 - `results/r019_stack_mechanism_redesign/`: rejected Stack mechanism variants.
 - `results/r011_*` and `results/r012_*`: earlier Lift LV-VoI candidate
   development, superseded by R020-R021.
@@ -78,7 +80,7 @@ evidence unless promoted through a new registry row with a clear primary source.
 
 ## Current Registry Rows
 
-The registry currently covers R020-R052, excluding voided R046. Add new rows when:
+The registry currently covers R018 and R020-R053, excluding voided R046. Add new rows when:
 
 - a result supports or rejects a paper claim;
 - a derived paper artifact is created;

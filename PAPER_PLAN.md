@@ -72,6 +72,11 @@ updates the reproducibility appendix to treat R048 as the historical invalid-Git
 repair record while the current source state is tracked in the public Git
 repository.
 
+R053 packages Stack as cleaned robotics-breadth boundary evidence. It registers
+R018 Stack rows, generates an appendix-ready table from the registry, and keeps
+R019 as supporting mechanism-probe context rather than a multiseed method
+claim.
+
 ## Claims-Evidence Matrix
 
 | Claim | Evidence | Status | Section |
@@ -80,7 +85,7 @@ repository.
 | Repeated checkpoint evaluation is required for reliable HIL-RL attention-allocation claims. | R020-R024 use `5 x 20` checkpoint reevaluation; R024 seed results vary from 61% to 94%. | Supported | Section 3, Section 4 |
 | Simple trigger repairs do not fix random dominance. | R022 min-disagree: `226/300 = 75.3%`, cost 211.7. R024 score-floor: `233/300 = 77.7%`, cost 253.3. Both lose to same-seed `random_b350`: `259/300 = 86.3%`, cost 95.0. | Supported | Section 5 |
 | Trace diagnostics reveal over-triggering and score calibration issues. | R023: LV-VoI starts closer to cube than random but starts 96 times vs random 55. R024: floor blocks low-score starts but still starts 94 times. | Supported | Section 5 |
-| Current method does not yet generalize to Stack. | R018/R019 Stack variants are dominated by strong no-online matched BC. | Supported limitation | Section 6 / Appendix |
+| Current method does not yet generalize to Stack. | R018 registered Stack rows and R053 appendix table show no-online matched BC at `131/180 = 72.8%`, while random and Stack-tuned LV-VoI are `107/180 = 59.4%`; R019 remains supporting seed-0 mechanism-probe context. | Supported limitation | Section 6 / Appendix |
 
 ## Structure
 
@@ -182,6 +187,7 @@ diagnostics.
 | Table 1 | Registry-generated cost-matched Lift claims. | `figures/TABLE_registry_costmatched_results_r036.tex` |
 | Table 2 | Registry-generated trigger-repair comparison. | `figures/TABLE_registry_trigger_repairs_r036.tex` |
 | Table 4 | Diagnostic protocol checklist. | `figures/TABLE_protocol_checklist.tex` |
+| Appendix Table A1 | Registry-generated Stack boundary evidence. | `figures/TABLE_stack_boundary_appendix_r053.tex` |
 
 ## Citation Plan
 
@@ -290,5 +296,6 @@ Secondary reviewer-agent feedback was not run in this turn because sub-agent spa
 - [x] Deepen the paper spine around human-attention allocation diagnostics (`results/r050_theme_deepening/`).
 - [x] Rerun citation-context audit after the R050 theme update (`results/r051_citation_context_audit/`).
 - [x] Audit current manuscript numerical, comparison, and scope claims after R050/R051 (`results/r052_paper_claim_audit/`).
+- [x] Package cleaned Stack boundary evidence as an appendix-ready robotics breadth table (`results/r053_stack_boundary_appendix/`).
 - [ ] Decide whether submission packaging also needs an institutional source archive.
-- [ ] Decide whether to add a small robotics breadth package before submission.
+- [ ] Decide whether any robotics breadth beyond the cleaned Stack appendix is worth adding before submission.

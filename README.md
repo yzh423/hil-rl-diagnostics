@@ -38,6 +38,7 @@ README images:
 - [score-over-time diagnostic](figures/qa_rendered/fig5_score_over_time.png)
 - [trace geometry boxplots](results/r023_real_trace_seed0_2/r023_intervention_geometry_boxplots.png)
 - [R024 repair comparison](results/r024_score_floor_seed0_2/r024_success_cost_compare.png)
+- [Stack boundary appendix table](figures/TABLE_stack_boundary_appendix_r053.tex)
 - [full figure and table asset index](figures/FIGURE_ASSET_INDEX.md)
 
 ## Current Evidence Boundary
@@ -52,6 +53,7 @@ superior.
 | Repeated checkpoint evaluation is required. | R020-R024 use repeated autonomous checkpoint evaluation rather than one final checkpoint. |
 | Lightweight trigger repairs do not recover the claim. | R022 and R024 remain dominated by same-seed `random_b350`. |
 | Trace diagnostics are useful for redesign. | R023/R024 show over-triggering and score/timing mismatch rather than a simple "too far from the cube" failure mode. |
+| Stack remains boundary evidence. | R018/R053 show no-online matched BC outperforming current online intervention variants on Stack; this is robotics breadth as a limitation, not positive transfer. |
 
 Important limitations:
 
@@ -87,6 +89,7 @@ figures, or evidence rows:
 python scripts\validate_evidence_registry.py
 python scripts\audit_registry_numbers.py
 python scripts\generate_claim_tables.py
+python scripts\generate_stack_boundary_appendix.py
 python scripts\validate_provenance_package.py
 python -m unittest discover -s tests
 ```
@@ -113,6 +116,7 @@ Regenerate registry-driven paper tables:
 
 ```powershell
 python scripts\generate_claim_tables.py
+python scripts\generate_stack_boundary_appendix.py
 ```
 
 Validate that the evidence registry still points to readable sources:
@@ -135,6 +139,7 @@ rather than copying numbers by hand. The current manuscript-level claim audit is
 - [results/EXPERIMENT_EVIDENCE_REGISTRY.csv](results/EXPERIMENT_EVIDENCE_REGISTRY.csv)
 - [figures/TABLE_registry_costmatched_results_r036.tex](figures/TABLE_registry_costmatched_results_r036.tex)
 - [figures/TABLE_registry_trigger_repairs_r036.tex](figures/TABLE_registry_trigger_repairs_r036.tex)
+- [figures/TABLE_stack_boundary_appendix_r053.tex](figures/TABLE_stack_boundary_appendix_r053.tex)
 
 ## Public Repository Notes
 

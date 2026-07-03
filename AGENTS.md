@@ -78,6 +78,7 @@ paper-facing organization or code change is complete:
 python scripts\validate_evidence_registry.py
 python scripts\audit_registry_numbers.py
 python scripts\generate_claim_tables.py
+python scripts\generate_stack_boundary_appendix.py
 python scripts\validate_provenance_package.py
 python -m unittest discover -s tests
 ```
@@ -107,9 +108,8 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
   or scope claims change.
 - Keep the R051 citation-context audit current if citation contexts or
   bibliography entries change again.
-- Decide whether to add small robotics breadth evidence before submission:
-  cleaned Stack appendix, an explicitly scoped new in-project pilot, or no new
-  runs.
+- Decide whether any robotics breadth beyond the cleaned R053 Stack appendix is
+  worth adding before submission.
 - Resolve local LaTeX compile environment if PDF iteration becomes necessary.
 - If future methods are considered later, design them from the R023/R024
   trace diagnosis rather than from the earlier unsupported LV-VoI superiority

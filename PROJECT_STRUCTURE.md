@@ -26,6 +26,7 @@ project stays readable as results accumulate.
 | Theme deepening package | `results/r050_theme_deepening/THEME_DEEPENING.md` |
 | Post-R050 citation audit | `results/r051_citation_context_audit/CITATION_CONTEXT_AUDIT.md` |
 | Paper-claim audit | `paper/PAPER_CLAIM_AUDIT.md` and `results/r052_paper_claim_audit/PAPER_CLAIM_AUDIT.md` |
+| Stack boundary appendix | `results/r053_stack_boundary_appendix/STACK_BOUNDARY_APPENDIX.md` |
 | Current manuscript skeleton | `paper/main.tex` |
 | Human-readable result map | `results/RESULTS_INDEX.md` |
 | Figure and table asset map | `figures/FIGURE_ASSET_INDEX.md` |
@@ -64,9 +65,10 @@ manifests, and audit packages for public-facing provenance.
    human-attention allocation diagnostics.
 7. R051 records the citation-context audit after the R050 theme update.
 8. R052 records the current manuscript paper-claim audit after R050/R051.
-9. Manuscript logic is maintained in `PAPER_PLAN.md`.
-10. Derived figure/table assets are generated into `figures/`.
-11. Figure/table provenance is tracked in `figures/FIGURE_ASSET_INDEX.md`.
+9. R053 records the cleaned Stack boundary-evidence appendix package.
+10. Manuscript logic is maintained in `PAPER_PLAN.md`.
+11. Derived figure/table assets are generated into `figures/`.
+12. Figure/table provenance is tracked in `figures/FIGURE_ASSET_INDEX.md`.
 
 The registry is the narrow interface for paper claims. Raw directories remain
 the implementation detail behind that interface.
@@ -75,6 +77,7 @@ the implementation detail behind that interface.
 
 | Run | Role |
 |---|---|
+| R018 | Registered Stack boundary evidence: no-online matched BC dominates online Stack intervention variants. |
 | R020 | Five-seed Lift reliability check before cost matching. |
 | R021 | Cost-matched random-family check that rejects current trigger superiority. |
 | R022 | Minimum-disagreement trigger repair, negative. |
@@ -107,6 +110,7 @@ the implementation detail behind that interface.
 | R050 | Theme deepening: reframes the paper spine around human-attention allocation diagnostics without changing evidence boundaries. |
 | R051 | Post-R050 citation audit: verifies that all current citation contexts remain supported after the theme update. |
 | R052 | Paper-claim audit: verifies current manuscript numerical, comparison, and scope claims after R050/R051 and repairs stale provenance wording. |
+| R053 | Stack boundary appendix: packages registered Stack boundary evidence as an appendix-ready table without positive-transfer overclaiming. |
 
 ## Module Deepening Candidates
 
@@ -136,6 +140,7 @@ These are the current code-structure targets after R030.
 | Theme deepening | R050 deepens the manuscript and public project framing around human-attention allocation without adding evidence or citations. | `results/r050_theme_deepening/`, `PAPER_PLAN.md`, `paper/`, `README.md`, and project indexes. | Done first pass |
 | Post-R050 citation audit | R051 audits current citation contexts after the human-attention theme update. | `paper/CITATION_AUDIT.md`, `paper/CITATION_AUDIT.json`, and `results/r051_citation_context_audit/`. | Done first pass |
 | Paper-claim audit | R052 audits current manuscript numerical, comparison, and scope claims after the R050/R051 updates. | `paper/PAPER_CLAIM_AUDIT.md`, `paper/PAPER_CLAIM_AUDIT.json`, and `results/r052_paper_claim_audit/`. | Done first pass |
+| Stack boundary appendix | R053 registers Stack boundary rows and generates an appendix-ready table from the registry. | `scripts/generate_stack_boundary_appendix.py`, `figures/TABLE_stack_boundary_appendix_r053.tex`, and `results/r053_stack_boundary_appendix/`. | Done first pass |
 
 ## Editing Rules
 

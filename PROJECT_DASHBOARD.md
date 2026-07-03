@@ -45,6 +45,7 @@ cost.
 | Theme deepening package | `results/r050_theme_deepening/THEME_DEEPENING.md` |
 | Post-R050 citation audit | `results/r051_citation_context_audit/CITATION_CONTEXT_AUDIT.md` |
 | Paper-claim audit | `paper/PAPER_CLAIM_AUDIT.md` and `results/r052_paper_claim_audit/PAPER_CLAIM_AUDIT.md` |
+| Stack boundary appendix | `results/r053_stack_boundary_appendix/STACK_BOUNDARY_APPENDIX.md` |
 | Future agent rules | `AGENTS.md` |
 
 ## Evidence Chain
@@ -56,6 +57,7 @@ cost.
 | Numeric audit | `python scripts/audit_registry_numbers.py` | Run before copying numbers into prose, tables, or captions. |
 | Source audit | `python scripts/validate_evidence_registry.py` | Run after changing registry rows or cited sources. |
 | Paper-claim audit | `paper/PAPER_CLAIM_AUDIT.md` | Check manuscript numerical, comparison, and scope claims against registry-backed evidence. |
+| Stack appendix table | `python scripts/generate_stack_boundary_appendix.py` | Regenerate the R053 Stack boundary appendix table from registry rows. |
 | Provenance package | `results/r047_evidence_provenance_package/` | Use for source hashes, partial compute accounting, command inventory, and known provenance gaps. |
 | Source snapshot | `results/r048_version_command_provenance/` | Use as the historical repair record for the earlier invalid-Git source snapshot and R020/R021 command provenance boundaries. |
 | Provenance validation | `python scripts/validate_provenance_package.py` | Run after evidence/provenance package changes; use `--compare-current-files` only for drift diagnosis. |
@@ -71,6 +73,7 @@ evaluation code:
 python scripts\validate_evidence_registry.py
 python scripts\audit_registry_numbers.py
 python scripts\generate_claim_tables.py
+python scripts\generate_stack_boundary_appendix.py
 python scripts\validate_provenance_package.py
 python -m unittest discover -s tests
 ```
@@ -103,6 +106,7 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
 | Theme deepening package | `results/r050_theme_deepening/` |
 | Post-R050 citation audit | `results/r051_citation_context_audit/` |
 | Paper-claim audit | `paper/PAPER_CLAIM_AUDIT.md`, `paper/PAPER_CLAIM_AUDIT.json`, and `results/r052_paper_claim_audit/` |
+| Stack boundary appendix | `figures/TABLE_stack_boundary_appendix_r053.tex` and `results/r053_stack_boundary_appendix/` |
 
 Current compile caveat: PDF compilation is blocked by the local LaTeX runtime or
 Tectonic cache availability. This is not currently a verified source-file
@@ -158,8 +162,8 @@ numeric, comparison, or scope claims change.
 1. Keep the public GitHub package clean: source, registry-backed evidence,
    figures, tables, and audits should stay tracked, while local process notes,
    checkpoints, caches, and third-party PDFs should stay untracked.
-2. Decide whether to add a small robotics breadth package: cleaned Stack
-   appendix or no new runs.
+2. Decide whether any robotics breadth beyond the cleaned Stack appendix is
+   worth adding before submission.
 3. Decide whether to install/fix a local LaTeX runtime or keep drafting in TeX
    without compiling PDF locally.
 4. Keep `paper/CITATION_AUDIT.md` current if citation contexts or bibliography
