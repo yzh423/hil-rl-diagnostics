@@ -58,7 +58,7 @@ source is `results/EXPERIMENT_EVIDENCE_REGISTRY.csv`.
 | R059 | `results/r059_evidence_experiment_optimization/` | Experiment-planning support | Defines an evidence-first optimization route with trace/offline gates and cost-matched stop rules for any future experiment. |
 | R060 | `results/r060_offline_trace_trigger_audit/` | Trace/offline diagnostic support | Audits R023/R024 accepted-start traces with phase summaries and post-hoc gates; useful as a design screen, not online method evidence. |
 | R061 | `results/r061_candidate_state_logging/` | Experiment-instrumentation support | Adds tested candidate-state logging for accepted and rejected VoI gate evaluations before any future online repair. |
-| R062 | `results/r062_repair_preregistration/` | Experiment-planning support | Pre-registers the candidate-logging smoke gate, required artifacts, and R063+ formal online-repair criteria without adding empirical results. |
+| R062 | `results/r062_repair_preregistration/` | Experiment-planning support | Pre-registers the candidate-logging smoke gate and records a tiny logging smoke with accepted/rejected gate rows; not formal empirical evidence. |
 
 ## Baseline And Historical Runs
 

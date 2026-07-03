@@ -158,5 +158,6 @@ archive accepted and rejected gate-evaluation states via `--trace_candidates`.
 It is instrumentation only; future formal online repairs still need
 cost-matched random comparison before any positive method claim.
 R062 records the pre-registration and candidate-logging smoke gate before such
-repair compute: it does not run a new experiment, but it makes R063+ the proper
-location for any future cost-matched online repair result.
+repair compute. Its tiny logging smoke passed with accepted and rejected
+gate-evaluation rows, but it is not a formal experiment; R063+ remains the
+proper location for any future cost-matched online repair result.

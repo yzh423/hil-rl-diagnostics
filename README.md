@@ -72,7 +72,7 @@ superior.
 | Trace diagnostics are useful for redesign. | R023/R024 show over-triggering and score/timing mismatch rather than a simple "too far from the cube" failure mode. |
 | Offline trace filtering is only a design screen. | R060 shows post-hoc accepted-start gates can look selective while the actual R024 score-floor follow-up still spends nearly as many starts. |
 | Future repairs need rejected-state logs. | R061 adds `--trace_candidates` so formal repairs can archive accepted and rejected VoI gate evaluations before any method claim. |
-| Formal repair experiments need a pre-registered smoke gate. | R062 records the candidate-logging smoke, required artifacts, and R063+ formal online-repair criteria without adding empirical results. |
+| Formal repair experiments need a pre-registered smoke gate. | R062 records the candidate-logging smoke pass, required artifacts, and R063+ formal online-repair criteria without adding formal empirical results. |
 | Stack remains boundary evidence. | R018/R053 show no-online matched BC outperforming current online intervention variants on Stack; this is robotics breadth as a limitation, not positive transfer. |
 
 Important limitations:

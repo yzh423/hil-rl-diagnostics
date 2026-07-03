@@ -10,7 +10,7 @@ experiment has a frozen rule, cost-matched comparison, and stop criteria before
 spending compute.
 
 Formal online repair evidence, if still needed, should start as R063+ after the
-R062 smoke passes and after any new trigger rule is implemented in a separate
+R062 smoke pass and after any new trigger rule is implemented in a separate
 tested change.
 
 ## Frozen Context
@@ -28,7 +28,7 @@ tested change.
 
 | Claim | Minimum convincing evidence | Status after R062 |
 |---|---|---|
-| Candidate-state logging is ready for a formal repair run. | A smoke run writes a candidate trace with the R061 schema, nonempty gate-evaluation rows, and interpretable accepted/rejected or score-floor decision fields. | Planned only; not yet run in this package. |
+| Candidate-state logging is ready for a formal repair run. | A smoke run writes a candidate trace with the R061 schema, nonempty gate-evaluation rows, and interpretable accepted/rejected or score-floor decision fields. | R062-S0 smoke passed: 14 candidate rows, 8 accepted and 6 `gate_not_candidate` rejected. |
 | A future repair improves attention allocation. | Fresh online result directory, exact commands/logs, repeated checkpoint evaluation, candidate trace, intervention trace, registry row, and cost-matched comparison to `random_b350`. | Not tested by R062. |
 | The current diagnostic paper can remain evidence-first without new training. | R021/R022/R024 remain negative and R060/R061 only affect design readiness. | Supported as a process boundary. |
 
@@ -54,8 +54,8 @@ is to verify logging, not learning:
   rows, and at least one rejected-state reason when available;
 - do not copy smoke success rates into the manuscript or claim tables.
 
-If the smoke produces no candidate rows, the correct action is to debug or tune
-the smoke configuration, not to launch a formal experiment.
+R062-S0 produced candidate rows and rejected-state coverage. The optional
+score-floor smoke is therefore not needed.
 
 ## R063+ Formal-Run Gate
 

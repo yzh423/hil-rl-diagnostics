@@ -100,9 +100,9 @@ without changing experiments, citations, manuscript claims, or the protected
 negative LV-VoI boundary.
 
 R062 records the repair pre-registration and candidate-logging smoke gate that
-must precede any formal online trigger repair. It does not run a new experiment
-or change the empirical boundary; future formal repair evidence should start as
-R063+ after the smoke passes and after the trigger rule is frozen.
+must precede any formal online trigger repair. Its tiny logging smoke passed,
+but it does not change the empirical boundary; future formal repair evidence
+should start as R063+ after the trigger rule is frozen.
 
 ## Claims-Evidence Matrix
 
@@ -300,8 +300,8 @@ the final verified submission tag.
 R059 records the evidence and experiment optimization route. Resolve packaging
 and audit gates first, then use cheap R023/R024 trace/offline diagnostics before
 launching any new training. R060 executes that first offline trace audit, and
-R061 adds candidate-state logging. R062 now pre-registers the smoke and
-formal-run gate. Any future R063+ online method run must be cost-matched
+R061 adds candidate-state logging. R062 now records the passed logging smoke
+and formal-run gate. Any future R063+ online method run must be cost-matched
 against the random-family baseline before it can support a positive method
 claim.
 
@@ -311,8 +311,8 @@ screen or reject repair ideas, not to support online method-superiority prose.
 
 R061 adds the candidate-state logging interface required before a future online
 repair: `--trace_candidates` records accepted and rejected VoI gate evaluations.
-R062 records the smoke and pre-registration requirements. Any future R063+
-online method run must still be cost-matched against the
+R062 records the passed smoke and pre-registration requirements. Any future
+R063+ online method run must still be cost-matched against the
 random-family baseline before it can support a positive method claim.
 
 ## Reviewer Feedback
@@ -367,4 +367,5 @@ Secondary reviewer-agent feedback was not run in this turn because sub-agent spa
 - [ ] Run a final paper-claim audit if manuscript captions, numerical claims, comparison claims, or scope claims change.
 - [x] Add candidate-state logging so future online repairs can archive accepted and rejected gate-evaluation states (`results/r061_candidate_state_logging/`).
 - [x] Pre-register the candidate-logging smoke and formal online-repair gate (`results/r062_repair_preregistration/`).
-- [ ] Run only the R062 candidate-logging smoke before deciding whether a future R063+ online repair is necessary.
+- [x] Run only the R062 candidate-logging smoke before deciding whether a future R063+ online repair is necessary.
+- [ ] Decide whether a future R063+ online repair is manuscript-critical; if so, freeze the trigger rule before training.

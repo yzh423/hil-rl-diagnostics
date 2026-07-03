@@ -74,3 +74,9 @@ This optional run is still a logging smoke, not a repair experiment.
 Smoke output should remain local plumbing evidence. It should not receive a
 success-rate registry row, should not enter manuscript tables, and should not
 be used to update the protected R021/R022/R024 result boundary.
+
+## Execution Status
+
+R062-S0 was executed on 2026-07-03. See `SMOKE_RESULT.md` for the artifact
+inventory and gate checks. The optional score-floor smoke is not needed because
+the first smoke already produced rejected candidate rows.

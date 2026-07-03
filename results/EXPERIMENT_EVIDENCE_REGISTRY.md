@@ -128,6 +128,6 @@ The registry supports the diagnostic-benchmark paper route:
 - R061 adds tested candidate-state logging for future VoI gate evaluations,
   including accepted and rejected states. It is instrumentation for future
   online experiments, not online performance evidence.
-- R062 pre-registers the candidate-logging smoke gate and the R063+ formal
-  online-repair criteria. It is a planning/readiness artifact, not a new
-  empirical result.
+- R062 pre-registers the candidate-logging smoke gate and records a tiny
+  logging smoke that wrote accepted and rejected gate-evaluation rows. It is a
+  planning/readiness artifact, not a formal online-repair result.

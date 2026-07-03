@@ -94,8 +94,8 @@ manifests, and audit packages for public-facing provenance.
     keeps post-hoc gate filtering separate from online performance evidence.
 17. R061 records candidate-state logging instrumentation for accepted and
     rejected VoI gate-evaluation states before any future online repair.
-18. R062 records the pre-registration and candidate-logging smoke gate before
-    any formal R063+ online repair.
+18. R062 records the pre-registration and passed candidate-logging smoke gate
+    before any formal R063+ online repair.
 19. Manuscript logic is maintained in `PAPER_PLAN.md`.
 20. Derived figure/table assets are generated into `figures/`.
 21. Figure/table provenance is tracked in `figures/FIGURE_ASSET_INDEX.md`.
@@ -149,7 +149,7 @@ the implementation detail behind that interface.
 | R059 | Evidence/experiment optimization plan: prioritizes packaging, evidence hardening, R023/R024 trace/offline gates, and cost-matched stop rules before future experiments. |
 | R060 | Offline trace trigger audit: audits R023/R024 accepted-start traces with phase summaries and post-hoc gates, preserving the no-online-claim boundary. |
 | R061 | Candidate-state logging interface: adds tested logging for accepted and rejected VoI gate-evaluation states before future online repairs. |
-| R062 | Repair pre-registration and smoke plan: records the candidate-logging smoke gate and R063+ formal-run criteria without adding empirical results. |
+| R062 | Repair pre-registration and smoke result: records the candidate-logging smoke gate, a tiny passed logging smoke, and R063+ formal-run criteria without adding formal empirical results. |
 
 ## Module Deepening Candidates
 
@@ -188,7 +188,7 @@ These are the current code-structure targets after R030.
 | Evidence and experiment optimization | R059 records the evidence-first optimization route and future-repair experiment stop gates. | `results/r059_evidence_experiment_optimization/`. | Done first pass |
 | Offline trace trigger audit | R060 moves accepted-start gate auditing behind a tested helper and records why post-hoc filtering is only a design screen. | `foresight_hil/evaluation/offline_trace_audit.py`, `scripts/generate_offline_trace_audit.py`, and `results/r060_offline_trace_trigger_audit/`. | Done first pass |
 | Candidate-state logging | R061 adds accepted/rejected VoI gate-evaluation logging behind the trace module interface and training CLI flags. | `foresight_hil/experiments/trace.py`, `foresight_hil/hil/intervention.py`, `scripts/train_robosuite_hil.py`, and `results/r061_candidate_state_logging/`. | Done first pass |
-| Repair pre-registration | R062 records the candidate-logging smoke, required artifacts, and R063+ formal online-repair gate. | `results/r062_repair_preregistration/`. | Done first pass |
+| Repair pre-registration | R062 records the candidate-logging smoke, required artifacts, passed smoke result, and R063+ formal online-repair gate. | `results/r062_repair_preregistration/`. | Done first pass |
 
 ## Editing Rules
 

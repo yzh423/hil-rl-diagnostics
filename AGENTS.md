@@ -143,9 +143,10 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
   screen and cannot support online method superiority.
 - Use R061 as the current candidate-state logging interface before running any
   new online trigger repair.
-- Use R062 as the current pre-registration and candidate-logging smoke plan
-  before launching any formal online repair. Future R063+ runs should archive
-  both accepted and rejected gate-evaluation states and remain cost matched.
+- Use R062 as the current pre-registration and candidate-logging smoke record
+  before launching any formal online repair. R062-S0 passed as logging smoke
+  only. Future R063+ runs should archive both accepted and rejected
+  gate-evaluation states and remain cost matched.
 - Rerun PDF compile and visual QA after venue-template integration or major
   layout changes before claiming final submission packaging is ready.
 - Create a final institutional/source archive only from a clean verified

@@ -1,0 +1,9 @@
+env_step,episode,episode_step,task,strategy,seed,human_steps,budget_used_frac,engagements,candidate,score,p_fail,eef_z,cube_z,gripper_to_cube_norm,gripper_to_cube_xy,cubeA_z,cubeB_z,gripper_to_cubeA_norm,gripper_to_cubeB_norm,stack_cubeA_lifted
+1,0,0,Lift,voi,0,1,0.0250,1,1,10.000000,1.000000,1.000959,0.830658,0.201603,0.107894,nan,nan,nan,nan,
+7,0,6,Lift,voi,0,6,0.1500,2,1,10.000000,1.000000,0.936480,0.820314,0.124166,0.043848,nan,nan,nan,nan,
+13,0,12,Lift,voi,0,11,0.2750,3,1,10.000000,1.000000,0.904178,0.820440,0.087115,0.024020,nan,nan,nan,nan,
+19,0,18,Lift,voi,0,16,0.4000,4,1,10.000000,1.000000,0.843480,0.820442,0.023256,0.003179,nan,nan,nan,nan,
+24,0,23,Lift,voi,0,21,0.5250,5,1,10.000000,1.000000,0.830359,0.820442,0.014201,0.010165,nan,nan,nan,nan,
+32,0,31,Lift,voi,0,26,0.6500,6,1,10.000000,1.000000,0.859664,0.851641,0.009187,0.004475,nan,nan,nan,nan,
+37,0,36,Lift,voi,0,31,0.7750,7,1,10.000000,1.000000,0.911386,0.903474,0.008969,0.004224,nan,nan,nan,nan,
+42,0,41,Lift,voi,0,36,0.9000,8,1,10.000000,1.000000,0.973953,0.966094,0.008759,0.003868,nan,nan,nan,nan,
