@@ -47,6 +47,7 @@ cost.
 | Paper-claim audit | `paper/PAPER_CLAIM_AUDIT.md` and `results/r052_paper_claim_audit/PAPER_CLAIM_AUDIT.md` |
 | Stack boundary appendix | `results/r053_stack_boundary_appendix/STACK_BOUNDARY_APPENDIX.md` |
 | Attention-allocation diagnostic figure | `results/r054_attention_allocation_figure_optimization/MANIFEST.md` |
+| Project quality pass | `results/r055_project_quality_pass/MANIFEST.md` |
 | Future agent rules | `AGENTS.md` |
 
 ## Evidence Chain
@@ -63,6 +64,7 @@ cost.
 | Source snapshot | `results/r048_version_command_provenance/` | Use as the historical repair record for the earlier invalid-Git source snapshot and R020/R021 command provenance boundaries. |
 | Provenance validation | `python scripts/validate_provenance_package.py` | Run after evidence/provenance package changes; use `--compare-current-files` only for drift diagnosis. |
 | Display assets | `figures/` | Prefer R029/R036/R054 assets for the current route. |
+| Project-quality pass | `results/r055_project_quality_pass/` | Records documentation/code consistency checks and tested attention-diagnostic helper extraction. |
 | Manuscript | `paper/` | Keep current-route writing separate from historical `proposal/`. |
 
 ## Canonical Commands
@@ -110,6 +112,7 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
 | Paper-claim audit | `paper/PAPER_CLAIM_AUDIT.md`, `paper/PAPER_CLAIM_AUDIT.json`, and `results/r052_paper_claim_audit/` |
 | Stack boundary appendix | `figures/TABLE_stack_boundary_appendix_r053.tex` and `results/r053_stack_boundary_appendix/` |
 | Figure optimization package | `figures/fig_attention_allocation_diagnostics_r054.pdf`, `figures/fig_attention_allocation_diagnostics_r054_grayscale.png`, and `results/r054_attention_allocation_figure_optimization/` |
+| Project quality pass | `results/r055_project_quality_pass/` and `foresight_hil/evaluation/attention_diagnostics.py` |
 
 Current compile caveat: PDF compilation is blocked by the local LaTeX runtime or
 Tectonic cache availability. This is not currently a verified source-file
@@ -136,8 +139,10 @@ ledgers and the current working tree.
 Current manuscript caveat: R050 deepens the manuscript theme from trigger
 diagnostics to human-attention allocation diagnostics. It does not add new
 citations, experiments, or a positive LV-VoI method claim. R052 audits the
-current manuscript claims and repairs stale provenance wording; rerun it after
-numeric, comparison, or scope claims change.
+current manuscript claims and repairs stale provenance wording; R055 adds the
+R054 diagnostic composite to Results and records the no-new-claim boundary.
+Rerun or update the claim audit after numeric, comparison, or scope claims
+change.
 
 ## Code Map
 
@@ -147,6 +152,7 @@ numeric, comparison, or scope claims change.
 | `foresight_hil/experiments/trace.py` | Stable intervention-trace schema and row construction. |
 | `foresight_hil/experiments/strategy_specs.py` | Comparison strategy identity and CLI construction. |
 | `foresight_hil/evaluation/protocol.py` | Repeated checkpoint summary aggregation. |
+| `foresight_hil/evaluation/attention_diagnostics.py` | Trace-row collection and profile generation for attention-allocation diagnostic figures. |
 | `foresight_hil/evaluation/registry_validation.py` | Registry source existence and CSV readability checks. |
 | `foresight_hil/evaluation/registry_numeric_audit.py` | Registry numeric checks against primary CSV rows. |
 | `foresight_hil/evaluation/claim_tables.py` | Registry-driven Markdown and LaTeX claim tables. |

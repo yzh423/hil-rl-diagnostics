@@ -51,6 +51,7 @@ source is `results/EXPERIMENT_EVIDENCE_REGISTRY.csv`.
 | R052 | `results/r052_paper_claim_audit/` | Paper-claim audit support | Audits current manuscript numerical, comparison, and scope claims after R050/R051 and repairs stale provenance wording. |
 | R053 | `results/r053_stack_boundary_appendix/` | Paper artifact support | Packages registered Stack boundary evidence into an appendix-ready table without changing the negative transfer interpretation. |
 | R054 | `results/r054_attention_allocation_figure_optimization/` | Paper artifact support | Adds a scipilot-guided multi-panel attention-allocation diagnostic figure, trace profile, and visual QA from R021/R023/R024. |
+| R055 | `results/r055_project_quality_pass/` | Project-quality support | Reviews documentation/code consistency after R054, extracts tested attention-diagnostic profiling helpers, and integrates the R054 figure into the manuscript. |
 
 ## Baseline And Historical Runs
 
@@ -81,7 +82,7 @@ evidence unless promoted through a new registry row with a clear primary source.
 
 ## Current Registry Rows
 
-The registry currently covers R018 and R020-R054, excluding voided R046. Add new rows when:
+The registry currently covers R018 and R020-R055, excluding voided R046. Add new rows when:
 
 - a result supports or rejects a paper claim;
 - a derived paper artifact is created;

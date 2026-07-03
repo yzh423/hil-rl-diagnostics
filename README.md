@@ -19,6 +19,7 @@ Start with:
 - [results/RESULTS_INDEX.md](results/RESULTS_INDEX.md)
 - [figures/FIGURE_ASSET_INDEX.md](figures/FIGURE_ASSET_INDEX.md)
 - [paper/PAPER_CLAIM_AUDIT.md](paper/PAPER_CLAIM_AUDIT.md)
+- [results/r055_project_quality_pass/MANIFEST.md](results/r055_project_quality_pass/MANIFEST.md)
 
 ## Visual Summary
 
@@ -72,7 +73,7 @@ Important limitations:
 |---|---|
 | `foresight_hil/` | Reusable HIL-RL modules: environments, intervention control, VoI gating, oracle logic, metrics, and evaluation helpers. |
 | `scripts/` | Training, plotting, checkpoint evaluation, evidence validation, and table-generation entry points. |
-| `tests/` | Regression tests for bookkeeping, trace schema, evaluation protocol, registry checks, and robosuite startup logic. |
+| `tests/` | Regression tests for bookkeeping, trace schema, attention diagnostics, evaluation protocol, registry checks, and robosuite startup logic. |
 | `results/` | Raw and derived evidence archives. Use the registry before citing numbers. |
 | `figures/` | Paper figures, PNG previews, and LaTeX-ready tables. |
 | `paper/` | Current manuscript skeleton and audited bibliography. |

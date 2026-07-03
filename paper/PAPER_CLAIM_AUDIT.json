@@ -1,7 +1,7 @@
 {
-  "audit_id": "R052",
+  "audit_id": "R055",
   "date": "2026-07-03",
-  "verdict": "pass_after_minor_wording_repair",
+  "verdict": "pass_after_r055_figure_integration_and_project_quality_review",
   "execution_note": "Direct file-driven audit. Sub-agent spawning requires explicit user authorization in the current environment.",
   "protected_position": [
     "R021 random_b350 dominates LV-VoI scale3 under cost matching.",
@@ -14,6 +14,12 @@
       "severity": "low",
       "finding": "The reproducibility appendix described invalid local git metadata as the current version-provenance state after the repository had been published to GitHub.",
       "action": "Updated paper/sections/07_reproducibility_inventory.tex to distinguish current public Git source tracking from the R048 historical invalid-Git repair."
+    },
+    {
+      "id": "R055-I1",
+      "severity": "low",
+      "finding": "The optimized R054 diagnostic composite existed as a paper artifact but was not yet connected to the Results narrative or current claim-audit state.",
+      "action": "Included the figure in paper/sections/04_results.tex, added an explicit no-new-claim caption, and updated the current audit scope."
     }
   ],
   "claim_checks": [
@@ -41,7 +47,7 @@
     {
       "claim_family": "trace_mechanism",
       "status": "pass",
-      "manuscript_locations": ["paper/sections/03_protocol_setup.tex:9", "paper/sections/04_results.tex:20", "paper/sections/04_results.tex:22"],
+      "manuscript_locations": ["paper/sections/03_protocol_setup.tex:9", "paper/sections/04_results.tex:27", "paper/sections/04_results.tex:29"],
       "sources": ["results/r023_real_trace_seed0_2/r023_trace_strategy_diagnostics.csv", "results/r024_score_floor_seed0_2/r024_trace_strategy_compare.csv"],
       "checked_values": {
         "random_starts": 55,
@@ -54,9 +60,19 @@
       }
     },
     {
+      "claim_family": "r054_diagnostic_figure_boundary",
+      "status": "pass",
+      "manuscript_locations": ["paper/sections/04_results.tex:20"],
+      "sources": ["results/r054_attention_allocation_figure_optimization/MANIFEST.md", "results/r054_attention_allocation_figure_optimization/attention_allocation_trace_profile.csv", "foresight_hil/evaluation/attention_diagnostics.py"],
+      "checked_values": {
+        "derived_from_registered_sources": "R021;R023;R024",
+        "new_empirical_claim": false
+      }
+    },
+    {
       "claim_family": "stack_boundary_evidence",
       "status": "pass",
-      "manuscript_locations": ["paper/sections/03_protocol_setup.tex:11", "paper/sections/04_results.tex:24", "paper/sections/05_discussion.tex:11"],
+      "manuscript_locations": ["paper/sections/03_protocol_setup.tex:11", "paper/sections/04_results.tex:31", "paper/sections/05_discussion.tex:11"],
       "sources": ["results/r018_stack_multiseed_alignment/r018_stack_multiseed_aggregate.csv", "results/r019_stack_mechanism_redesign/r019_stack_seed0_mechanism_summary.csv"],
       "checked_values": {
         "none_matched_bc": {"successes": 131, "episodes": 180, "success_rate": 0.7278, "human_steps": 0.0},
@@ -70,7 +86,7 @@
       "manuscript_locations": ["paper/sections/07_reproducibility_inventory.tex:24", "paper/sections/07_reproducibility_inventory.tex:44", "paper/sections/07_reproducibility_inventory.tex:49"],
       "sources": ["results/r047_evidence_provenance_package/EVIDENCE_PROVENANCE_AUDIT.md", "results/r048_version_command_provenance/VERSION_PROVENANCE_REPAIR.md", "git rev-parse HEAD"],
       "checked_values": {
-        "current_head_before_r052": "d209cc15e7da8ec9a38b1a2c6cc8a557f43da5fb",
+        "current_head_before_r055": "c6d7e79f2abefdbe762ba2cd798a42ff4e4e159a",
         "remote": "https://github.com/yzh423/hil-rl-diagnostics.git",
         "branch": "main"
       }

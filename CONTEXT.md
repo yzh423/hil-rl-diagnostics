@@ -125,4 +125,9 @@ and generates a ready-to-include appendix table from the registry, keeping Stack
 as negative robotics breadth rather than positive transfer evidence. R054 adds
 a scipilot-guided attention-allocation diagnostic figure package from
 R021/R023/R024, replacing compressed or dual-axis-style presentation with
-separate decision-gate, timing, budget, geometry, and score diagnostics.
+separate decision-gate, timing, budget, geometry, and score diagnostics. R055
+records the follow-up project-quality pass: the R054 trace-profile logic now
+lives in `foresight_hil/evaluation/attention_diagnostics.py`, is covered by
+`tests/test_attention_diagnostics.py`, and the optimized diagnostic figure is
+included in the Results narrative as visualization of registered evidence
+rather than a new empirical claim.

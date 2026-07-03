@@ -1,92 +1,41 @@
 from __future__ import annotations
 
-import csv
-import math
 from pathlib import Path
+import sys
 
 import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 import numpy as np
 
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from foresight_hil.evaluation.attention_diagnostics import (
+    DISPLAY_LABELS as STRATEGY_LABELS,
+    TRACE_STRATEGY_ORDER as ORDER_TRACE,
+    as_float,
+    build_attention_trace_profile,
+    collect_attention_trace_rows,
+    finite_numeric_values as values,
+    read_csv_rows as read_csv,
+    rows_for_strategy as rows_for,
+    write_profile_csv,
+)
 from paper_plot_style import COLORS, FIG_DIR
 
 
-ROOT = Path(__file__).resolve().parents[1]
 R021 = ROOT / "results" / "r021_random_costmatch"
-R023 = ROOT / "results" / "r023_real_trace_seed0_2"
 R024 = ROOT / "results" / "r024_score_floor_seed0_2"
 R054 = ROOT / "results" / "r054_attention_allocation_figure_optimization"
 
 FIG_STEM = "fig_attention_allocation_diagnostics_r054"
-
-STRATEGY_LABELS = {
-    "none": "No intervention",
-    "random_b350": "Random b350",
-    "random_b450": "Random b450",
-    "random_b600": "Random b600",
-    "lv_voi_scale3": "LV-VoI scale3",
-    "min_disagree_vlv0p25": "Min-disagree LV-VoI",
-    "score_floor_vlv3_after4000_floor0p05": "Score-floor LV-VoI",
-}
 
 SHORT_LABELS = {
     "random_b350": "Random\nb350",
     "lv_voi_scale3": "LV-VoI\nscale3",
     "score_floor_vlv3_after4000_floor0p05": "Score-floor\nLV-VoI",
 }
-
-TRACE_SPECS = (
-    (
-        "random_b350",
-        R023,
-        "trace_Lift_random_b350_seed*.csv",
-        "R023 random_b350 traces",
-    ),
-    (
-        "lv_voi_scale3",
-        R023,
-        "trace_Lift_voi_b600_seed*.csv",
-        "R023 LV-VoI scale3 traces",
-    ),
-    (
-        "score_floor_vlv3_after4000_floor0p05",
-        R024,
-        "trace_Lift_voi_b600_seed*.csv",
-        "R024 score-floor LV-VoI traces",
-    ),
-)
-
-ORDER_TRACE = [
-    "random_b350",
-    "lv_voi_scale3",
-    "score_floor_vlv3_after4000_floor0p05",
-]
-
-
-def read_csv(path):
-    with Path(path).open(newline="", encoding="utf-8-sig") as f:
-        return list(csv.DictReader(f))
-
-
-def write_csv(path, fieldnames, rows):
-    with Path(path).open("w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(rows)
-
-
-def as_float(value):
-    text = str(value).strip()
-    if text == "" or text.lower() == "nan":
-        return math.nan
-    try:
-        return float(text)
-    except ValueError:
-        return math.nan
-
-
-def finite(values):
-    return np.asarray([v for v in values if np.isfinite(v)], dtype=float)
 
 
 def pct(value):
@@ -121,82 +70,6 @@ def panel_label(ax, label):
         ha="left",
         va="bottom",
     )
-
-
-def collect_trace_rows():
-    traces = []
-    for strategy, root, pattern, source_label in TRACE_SPECS:
-        files = sorted(root.glob(pattern))
-        if not files:
-            raise FileNotFoundError(f"no trace files for {strategy}: {root / pattern}")
-        for path in files:
-            for row in read_csv(path):
-                trace_row = dict(row)
-                trace_row["diagnostic_strategy"] = strategy
-                trace_row["source_label"] = source_label
-                traces.append(trace_row)
-    return traces
-
-
-def rows_for(traces, strategy):
-    return [row for row in traces if row["diagnostic_strategy"] == strategy]
-
-
-def values(rows, column):
-    return finite(as_float(row.get(column, "")) for row in rows)
-
-
-def quantile_text(vals):
-    if len(vals) == 0:
-        return ""
-    q1, med, q3 = np.percentile(vals, [25, 50, 75])
-    return f"{med:.4f} [{q1:.4f}, {q3:.4f}]"
-
-
-def trace_profile_rows(traces):
-    profile_rows = []
-    for strategy in ORDER_TRACE:
-        group = rows_for(traces, strategy)
-        steps = values(group, "env_step")
-        budgets = values(group, "budget_used_frac")
-        norm = values(group, "gripper_to_cube_norm")
-        xy = values(group, "gripper_to_cube_xy")
-        eef_z = values(group, "eef_z")
-        cube_z = values(group, "cube_z")
-        score = values(group, "score")
-        p_fail = values(group, "p_fail")
-        eef_gap = eef_z - cube_z if len(eef_z) == len(cube_z) else np.asarray([])
-
-        n = len(group)
-        early = float(np.mean(steps < 2000)) if len(steps) else math.nan
-        mid = float(np.mean((steps >= 2000) & (steps < 6000))) if len(steps) else math.nan
-        late = float(np.mean(steps >= 6000)) if len(steps) else math.nan
-
-        profile_rows.append({
-            "strategy": strategy,
-            "display_label": STRATEGY_LABELS[strategy],
-            "n_trace_starts": n,
-            "mean_start_step": f"{np.mean(steps):.3f}" if len(steps) else "",
-            "median_start_step": f"{np.median(steps):.3f}" if len(steps) else "",
-            "early_0_2k_frac": f"{early:.6f}" if np.isfinite(early) else "",
-            "mid_2_6k_frac": f"{mid:.6f}" if np.isfinite(mid) else "",
-            "late_6_10k_frac": f"{late:.6f}" if np.isfinite(late) else "",
-            "budget_used_frac_median_iqr": quantile_text(budgets),
-            "g2c_norm_median_iqr": quantile_text(norm),
-            "g2c_xy_median_iqr": quantile_text(xy),
-            "eef_z_median_iqr": quantile_text(eef_z),
-            "cube_z_median_iqr": quantile_text(cube_z),
-            "eef_minus_cube_z_median_iqr": quantile_text(eef_gap),
-            "score_median_iqr": quantile_text(score),
-            "score_ge_9p9_frac": (
-                f"{float(np.mean(score >= 9.9)):.6f}" if len(score) else ""
-            ),
-            "p_fail_median_iqr": quantile_text(p_fail),
-            "p_fail_ge_0p99_frac": (
-                f"{float(np.mean(p_fail >= 0.99)):.6f}" if len(p_fail) else ""
-            ),
-        })
-    return profile_rows
 
 
 def plot_relative_costmatch(ax):
@@ -538,11 +411,11 @@ def build_figure(traces):
 
 def main():
     R054.mkdir(parents=True, exist_ok=True)
-    traces = collect_trace_rows()
+    traces = collect_attention_trace_rows(ROOT)
 
     profile_path = R054 / "attention_allocation_trace_profile.csv"
-    profile_rows = trace_profile_rows(traces)
-    write_csv(profile_path, list(profile_rows[0].keys()), profile_rows)
+    profile_rows = build_attention_trace_profile(traces)
+    write_profile_csv(profile_path, profile_rows)
     print(f"saved {profile_path}")
 
     fig = build_figure(traces)

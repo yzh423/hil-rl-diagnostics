@@ -23,6 +23,8 @@ evidence easier to inspect without overstating LV-VoI performance.
 
 | Artifact | Purpose |
 |---|---|
+| `foresight_hil/evaluation/attention_diagnostics.py` | Reusable trace-row collection and profile-building helpers used by the figure script. |
+| `tests/test_attention_diagnostics.py` | Unit tests for trace profile generation and source collection. |
 | `figures/gen_r054_attention_allocation_diagnostics.py` | Reproducible generation script. |
 | `figures/fig_attention_allocation_diagnostics_r054.pdf` | Vector publication figure. |
 | `figures/fig_attention_allocation_diagnostics_r054.png` | Raster preview for visual QA. |

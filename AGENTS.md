@@ -19,6 +19,7 @@ Before making paper-facing changes, read:
 7. `results/r047_evidence_provenance_package/EVIDENCE_PROVENANCE_AUDIT.md`
 8. `results/r048_version_command_provenance/VERSION_PROVENANCE_REPAIR.md`
 9. `paper/PAPER_CLAIM_AUDIT.md`
+10. `results/r055_project_quality_pass/PROJECT_QUALITY_REVIEW.md`
 
 ## Current Scientific Position
 
@@ -98,8 +99,8 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
   repository initialization, while keeping R048 as the historical record of the
   earlier invalid-Git/source-snapshot repair and R020/R021 command-provenance
   boundaries.
-- Use R049 to validate R047/R048 provenance package self-consistency before
-  claiming the provenance layer is ready.
+- Keep R049 provenance validation in the verification menu before claiming the
+  provenance layer is ready.
 - Decide whether submission packaging also needs an institutional source archive
   in addition to the public Git repository and R048 source snapshot.
 - Use R047 as the current source/hash/compute/command provenance package before
@@ -112,6 +113,8 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
   worth adding before submission.
 - Use R054 as the optimized attention-allocation diagnostic figure candidate
   when a compact R021/R023/R024 visual summary is needed.
+- Use R055 as the current documentation/code-quality pass before changing the
+  attention-diagnostic figure pipeline or manuscript integration again.
 - Resolve local LaTeX compile environment if PDF iteration becomes necessary.
 - If future methods are considered later, design them from the R023/R024
   trace diagnosis rather than from the earlier unsupported LV-VoI superiority

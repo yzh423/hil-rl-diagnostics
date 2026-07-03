@@ -44,6 +44,7 @@ R053, and R054.
 | `gen_r026_paper_figures.py` | R026 figures, R026 tables, R026 include snippets. |
 | `gen_r029_protocol_assets.py` | R029 protocol hero, checklist table, and R029 include snippets. |
 | `gen_r054_attention_allocation_diagnostics.py` | R054 attention-allocation diagnostic composite, PNG/grayscale previews, and trace profile CSV. |
+| `foresight_hil/evaluation/attention_diagnostics.py` | R055-tested trace-row collection and profile generation used by the R054 figure script. |
 | `scripts/generate_claim_tables.py` | R036 registry-generated Markdown and LaTeX claim tables. |
 | `scripts/generate_stack_boundary_appendix.py` | R053 Stack boundary appendix Markdown and LaTeX table. |
 | `paper_plot_style.py` | Shared plotting style used by figure scripts. |

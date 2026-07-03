@@ -1,5 +1,13 @@
 """Evaluation protocol helpers for paper-facing experiment claims."""
 
+from .attention_diagnostics import (
+    AttentionTraceSource,
+    build_attention_trace_profile,
+    collect_attention_trace_rows,
+    finite_numeric_values,
+    rows_for_strategy,
+    write_profile_csv,
+)
 from .claim_tables import (
     ClaimTableManifest,
     ClaimTableRow,
@@ -34,6 +42,7 @@ from .provenance_validation import (
 __all__ = [
     "ClaimTableManifest",
     "ClaimTableRow",
+    "AttentionTraceSource",
     "NumericAuditIssue",
     "NumericAuditReport",
     "ProvenanceIssue",
@@ -41,9 +50,12 @@ __all__ = [
     "RegistryIssue",
     "RegistryValidationReport",
     "audit_registry_numbers",
+    "build_attention_trace_profile",
     "build_main_costmatched_claims",
     "build_stack_boundary_claims",
     "build_trigger_repair_claims",
+    "collect_attention_trace_rows",
+    "finite_numeric_values",
     "format_registry_report",
     "format_numeric_audit_report",
     "format_provenance_report",
@@ -51,8 +63,10 @@ __all__ = [
     "render_claims_latex_table",
     "render_claims_markdown_table",
     "repeat_summary_row",
+    "rows_for_strategy",
     "summarize_repeats",
     "validate_current_provenance",
     "validate_evidence_registry",
     "write_claim_table_assets",
+    "write_profile_csv",
 ]

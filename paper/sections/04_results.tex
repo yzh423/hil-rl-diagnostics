@@ -17,7 +17,14 @@ Two lightweight trigger repairs remain negative under the same discipline. The m
 
 \input{figures/TABLE_registry_trigger_repairs_r036.tex}
 
-The trace results sharpen the mechanism claim. LV-VoI does not fail merely because it requests interventions far from the cube. In the R023 traces, LV-VoI starts were closer to the cube than random on average, with mean gripper-to-cube norm 0.217 for LV-VoI versus 0.285 for random b350, and mean gripper-to-cube planar distance 0.152 versus 0.235. However, LV-VoI used 96 intervention starts across seeds 0--2 compared with 55 starts for random b350. The trigger therefore appears to spend more budget despite querying in geometrically plausible states, which points away from a simple distance-threshold repair.
+\begin{figure*}[t]
+    \centering
+    \includegraphics[width=0.95\textwidth]{fig_attention_allocation_diagnostics_r054.pdf}
+    \caption{Attention-allocation diagnostics for the current negative trigger result. The panels combine the R021 cost-matched reversal, the R024 repair stop gate, and R023/R024 intervention-start traces to show when budget is spent, how much budget has already been used, where the gripper is relative to the cube, and whether LV-VoI scores or failure probabilities saturate. The figure is diagnostic: it visualizes the registered R021/R023/R024 evidence and does not introduce a new positive method claim.}
+    \label{fig:attention_allocation_diagnostics_r054}
+\end{figure*}
+
+The trace results sharpen the mechanism claim. Figure~\ref{fig:attention_allocation_diagnostics_r054} summarizes the trace-level evidence without treating it as a new success metric. LV-VoI does not fail merely because it requests interventions far from the cube. In the R023 traces, LV-VoI starts were closer to the cube than random on average, with mean gripper-to-cube norm 0.217 for LV-VoI versus 0.285 for random b350, and mean gripper-to-cube planar distance 0.152 versus 0.235. However, LV-VoI used 96 intervention starts across seeds 0--2 compared with 55 starts for random b350. The trigger therefore appears to spend more budget despite querying in geometrically plausible states, which points away from a simple distance-threshold repair.
 
 The score-floor repair confirms this interpretation. R024 mechanically removed low-score starts after step 4000: the trace table records zero post-floor starts below the 0.05 threshold. Nevertheless, the repair still produced 94 intervention starts, almost the same as the original LV-VoI count of 96 and far above the random b350 count of 55. Its median accepted score was only 0.067, indicating that the floor was too weak to create random-level selectivity. Together, the repair and trace results support a narrower conclusion: the current trigger suffers from budget-control and score-timing mismatch, and any new trigger should be evaluated through the same cost-matched and trace-level protocol before being expanded.
 
