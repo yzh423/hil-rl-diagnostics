@@ -110,6 +110,8 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
   bibliography entries change again.
 - Decide whether any robotics breadth beyond the cleaned R053 Stack appendix is
   worth adding before submission.
+- Use R054 as the optimized attention-allocation diagnostic figure candidate
+  when a compact R021/R023/R024 visual summary is needed.
 - Resolve local LaTeX compile environment if PDF iteration becomes necessary.
 - If future methods are considered later, design them from the R023/R024
   trace diagnosis rather than from the earlier unsupported LV-VoI superiority

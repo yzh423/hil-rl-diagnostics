@@ -46,6 +46,7 @@ cost.
 | Post-R050 citation audit | `results/r051_citation_context_audit/CITATION_CONTEXT_AUDIT.md` |
 | Paper-claim audit | `paper/PAPER_CLAIM_AUDIT.md` and `results/r052_paper_claim_audit/PAPER_CLAIM_AUDIT.md` |
 | Stack boundary appendix | `results/r053_stack_boundary_appendix/STACK_BOUNDARY_APPENDIX.md` |
+| Attention-allocation diagnostic figure | `results/r054_attention_allocation_figure_optimization/MANIFEST.md` |
 | Future agent rules | `AGENTS.md` |
 
 ## Evidence Chain
@@ -61,7 +62,7 @@ cost.
 | Provenance package | `results/r047_evidence_provenance_package/` | Use for source hashes, partial compute accounting, command inventory, and known provenance gaps. |
 | Source snapshot | `results/r048_version_command_provenance/` | Use as the historical repair record for the earlier invalid-Git source snapshot and R020/R021 command provenance boundaries. |
 | Provenance validation | `python scripts/validate_provenance_package.py` | Run after evidence/provenance package changes; use `--compare-current-files` only for drift diagnosis. |
-| Display assets | `figures/` | Prefer R029/R036 assets for the current route. |
+| Display assets | `figures/` | Prefer R029/R036/R054 assets for the current route. |
 | Manuscript | `paper/` | Keep current-route writing separate from historical `proposal/`. |
 
 ## Canonical Commands
@@ -89,6 +90,7 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
 | Asset | Preferred source |
 |---|---|
 | Fig. 1 protocol hero | `figures/fig1_protocol_hero_r029.pdf` |
+| Attention-allocation diagnostic composite | `figures/fig_attention_allocation_diagnostics_r054.pdf` and `results/r054_attention_allocation_figure_optimization/` |
 | Main cost-matched table | `figures/TABLE_registry_costmatched_results_r036.tex` |
 | Trigger-repair table | `figures/TABLE_registry_trigger_repairs_r036.tex` |
 | Protocol checklist | `figures/TABLE_protocol_checklist.tex` |
@@ -107,6 +109,7 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
 | Post-R050 citation audit | `results/r051_citation_context_audit/` |
 | Paper-claim audit | `paper/PAPER_CLAIM_AUDIT.md`, `paper/PAPER_CLAIM_AUDIT.json`, and `results/r052_paper_claim_audit/` |
 | Stack boundary appendix | `figures/TABLE_stack_boundary_appendix_r053.tex` and `results/r053_stack_boundary_appendix/` |
+| Figure optimization package | `figures/fig_attention_allocation_diagnostics_r054.pdf`, `figures/fig_attention_allocation_diagnostics_r054_grayscale.png`, and `results/r054_attention_allocation_figure_optimization/` |
 
 Current compile caveat: PDF compilation is blocked by the local LaTeX runtime or
 Tectonic cache availability. This is not currently a verified source-file

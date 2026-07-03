@@ -27,7 +27,7 @@ Start with:
 </p>
 
 <p align="center">
-  <img src="figures/qa_rendered/fig2_cost_matched_frontier.png" alt="Cost-matched success-cost frontier" width="620">
+  <img src="figures/fig_attention_allocation_diagnostics_r054.png" alt="Attention-allocation diagnostic composite" width="760">
 </p>
 
 Additional diagnostics are available as linked artifacts rather than inline
@@ -36,6 +36,8 @@ README images:
 - [trigger repair comparison](figures/qa_rendered/fig3_trigger_repairs.png)
 - [intervention timing distribution](figures/qa_rendered/fig4_intervention_timing.png)
 - [score-over-time diagnostic](figures/qa_rendered/fig5_score_over_time.png)
+- [R054 attention-allocation diagnostic PDF](figures/fig_attention_allocation_diagnostics_r054.pdf)
+- [R054 data profile and visual QA](results/r054_attention_allocation_figure_optimization/MANIFEST.md)
 - [trace geometry boxplots](results/r023_real_trace_seed0_2/r023_intervention_geometry_boxplots.png)
 - [R024 repair comparison](results/r024_score_floor_seed0_2/r024_success_cost_compare.png)
 - [Stack boundary appendix table](figures/TABLE_stack_boundary_appendix_r053.tex)

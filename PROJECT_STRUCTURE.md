@@ -27,6 +27,7 @@ project stays readable as results accumulate.
 | Post-R050 citation audit | `results/r051_citation_context_audit/CITATION_CONTEXT_AUDIT.md` |
 | Paper-claim audit | `paper/PAPER_CLAIM_AUDIT.md` and `results/r052_paper_claim_audit/PAPER_CLAIM_AUDIT.md` |
 | Stack boundary appendix | `results/r053_stack_boundary_appendix/STACK_BOUNDARY_APPENDIX.md` |
+| Attention-allocation diagnostic figure | `results/r054_attention_allocation_figure_optimization/MANIFEST.md` |
 | Current manuscript skeleton | `paper/main.tex` |
 | Human-readable result map | `results/RESULTS_INDEX.md` |
 | Figure and table asset map | `figures/FIGURE_ASSET_INDEX.md` |
@@ -66,9 +67,10 @@ manifests, and audit packages for public-facing provenance.
 7. R051 records the citation-context audit after the R050 theme update.
 8. R052 records the current manuscript paper-claim audit after R050/R051.
 9. R053 records the cleaned Stack boundary-evidence appendix package.
-10. Manuscript logic is maintained in `PAPER_PLAN.md`.
-11. Derived figure/table assets are generated into `figures/`.
-12. Figure/table provenance is tracked in `figures/FIGURE_ASSET_INDEX.md`.
+10. R054 records the optimized attention-allocation diagnostic figure package.
+11. Manuscript logic is maintained in `PAPER_PLAN.md`.
+12. Derived figure/table assets are generated into `figures/`.
+13. Figure/table provenance is tracked in `figures/FIGURE_ASSET_INDEX.md`.
 
 The registry is the narrow interface for paper claims. Raw directories remain
 the implementation detail behind that interface.
@@ -111,6 +113,7 @@ the implementation detail behind that interface.
 | R051 | Post-R050 citation audit: verifies that all current citation contexts remain supported after the theme update. |
 | R052 | Paper-claim audit: verifies current manuscript numerical, comparison, and scope claims after R050/R051 and repairs stale provenance wording. |
 | R053 | Stack boundary appendix: packages registered Stack boundary evidence as an appendix-ready table without positive-transfer overclaiming. |
+| R054 | Attention-allocation figure optimization: packages a scipilot-guided diagnostic composite, trace profile, and visual QA from R021/R023/R024. |
 
 ## Module Deepening Candidates
 
@@ -141,6 +144,7 @@ These are the current code-structure targets after R030.
 | Post-R050 citation audit | R051 audits current citation contexts after the human-attention theme update. | `paper/CITATION_AUDIT.md`, `paper/CITATION_AUDIT.json`, and `results/r051_citation_context_audit/`. | Done first pass |
 | Paper-claim audit | R052 audits current manuscript numerical, comparison, and scope claims after the R050/R051 updates. | `paper/PAPER_CLAIM_AUDIT.md`, `paper/PAPER_CLAIM_AUDIT.json`, and `results/r052_paper_claim_audit/`. | Done first pass |
 | Stack boundary appendix | R053 registers Stack boundary rows and generates an appendix-ready table from the registry. | `scripts/generate_stack_boundary_appendix.py`, `figures/TABLE_stack_boundary_appendix_r053.tex`, and `results/r053_stack_boundary_appendix/`. | Done first pass |
+| Attention-allocation diagnostic figure | R054 replaces compressed/dual-axis-style diagnostics with a multi-panel figure and visual QA record. | `figures/gen_r054_attention_allocation_diagnostics.py`, `figures/fig_attention_allocation_diagnostics_r054.pdf`, and `results/r054_attention_allocation_figure_optimization/`. | Done first pass |
 
 ## Editing Rules
 

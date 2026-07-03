@@ -77,6 +77,11 @@ R018 Stack rows, generates an appendix-ready table from the registry, and keeps
 R019 as supporting mechanism-probe context rather than a multiseed method
 claim.
 
+R054 adds the current optimized attention-allocation diagnostic composite. Use
+it when the manuscript needs a single evidence figure that connects the R021
+cost-matched reversal, R024 stop gate, and R023/R024 trace diagnostics without
+using dual axes or over-compressed timing bars.
+
 ## Claims-Evidence Matrix
 
 | Claim | Evidence | Status | Section |
@@ -180,6 +185,7 @@ diagnostics.
 |---|---|---|
 | Fig. 1 | Hero diagnostic summary: HIL-RL pipeline, cost-matched reversal, intervention start counts. | R021/R023/R024 |
 | Fig. 1b | Protocol-centered hero candidate: checklist gates, cost-matched reversal, trace diagnosis. | `figures/fig1_protocol_hero_r029.pdf` |
+| Fig. 2 candidate | Attention-allocation diagnostic composite: reversal, repair stop gate, timing raster, budget fraction, geometry, score/`p_fail`. | `figures/fig_attention_allocation_diagnostics_r054.pdf` |
 | Fig. 2 | Success-cost frontier for five-seed Lift. | `results/r021_random_costmatch/r021_costmatch_aggregate.csv` |
 | Fig. 3 | R022/R024 negative trigger repairs vs random_b350. | `results/r024_score_floor_seed0_2/r024_score_floor_aggregate.csv` |
 | Fig. 4 | Intervention timing distribution. | `results/r024_score_floor_seed0_2/r024_intervention_timing_bins_compare.png` |
@@ -297,5 +303,6 @@ Secondary reviewer-agent feedback was not run in this turn because sub-agent spa
 - [x] Rerun citation-context audit after the R050 theme update (`results/r051_citation_context_audit/`).
 - [x] Audit current manuscript numerical, comparison, and scope claims after R050/R051 (`results/r052_paper_claim_audit/`).
 - [x] Package cleaned Stack boundary evidence as an appendix-ready robotics breadth table (`results/r053_stack_boundary_appendix/`).
+- [x] Optimize the main attention-allocation diagnostic figure with scipilot-style data profiling and visual QA (`results/r054_attention_allocation_figure_optimization/`).
 - [ ] Decide whether submission packaging also needs an institutional source archive.
 - [ ] Decide whether any robotics breadth beyond the cleaned Stack appendix is worth adding before submission.

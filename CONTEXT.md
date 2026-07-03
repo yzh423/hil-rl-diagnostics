@@ -122,4 +122,7 @@ audits current manuscript numerical, comparison, and scope claims against the
 registry and primary sources, repairing one stale provenance wording issue while
 preserving the negative LV-VoI boundary. R053 registers the Stack boundary rows
 and generates a ready-to-include appendix table from the registry, keeping Stack
-as negative robotics breadth rather than positive transfer evidence.
+as negative robotics breadth rather than positive transfer evidence. R054 adds
+a scipilot-guided attention-allocation diagnostic figure package from
+R021/R023/R024, replacing compressed or dual-axis-style presentation with
+separate decision-gate, timing, budget, geometry, and score diagnostics.
