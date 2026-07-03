@@ -88,6 +88,12 @@ composite into the Results section, extracts trace-profile logic into
 framed as visualization of registered evidence rather than a new empirical
 claim.
 
+R056 extends the methodology layer from a narrative checklist to auditable
+derived artifacts: a protocol gate matrix, failure-mode taxonomy, stop-rule
+metrics, and methodology-first Fig. 1 candidate generated from registered
+R021/R023/R024 evidence. It strengthens the paper's innovation as an evaluation
+protocol without adding experiments, citations, or a positive LV-VoI claim.
+
 ## Claims-Evidence Matrix
 
 | Claim | Evidence | Status | Section |
@@ -96,6 +102,7 @@ claim.
 | Repeated checkpoint evaluation is required for reliable HIL-RL attention-allocation claims. | R020-R024 use `5 x 20` checkpoint reevaluation; R024 seed results vary from 61% to 94%. | Supported | Section 3, Section 4 |
 | Simple trigger repairs do not fix random dominance. | R022 min-disagree: `226/300 = 75.3%`, cost 211.7. R024 score-floor: `233/300 = 77.7%`, cost 253.3. Both lose to same-seed `random_b350`: `259/300 = 86.3%`, cost 95.0. | Supported | Section 5 |
 | Trace diagnostics reveal over-triggering and score calibration issues. | R023: LV-VoI starts closer to cube than random but starts 96 times vs random 55. R024: floor blocks low-score starts but still starts 94 times. | Supported | Section 5 |
+| The paper contributes an explicit gate-and-stop diagnostic protocol rather than only a post-hoc narrative. | R056 gate matrix formalizes cost matching, repeated evaluation, trace diagnosis, and same-seed repair stop gates; R056 taxonomy maps each observed failure mode to a protocol response. | Supported | Section 3, Section 5 |
 | Current method does not yet generalize to Stack. | R018 registered Stack rows and R053 appendix table show no-online matched BC at `131/180 = 72.8%`, while random and Stack-tuned LV-VoI are `107/180 = 59.4%`; R019 remains supporting seed-0 mechanism-probe context. | Supported limitation | Section 6 / Appendix |
 
 ## Structure
@@ -189,8 +196,8 @@ diagnostics.
 
 | ID | Description | Source |
 |---|---|---|
-| Fig. 1 | Hero diagnostic summary: HIL-RL pipeline, cost-matched reversal, intervention start counts. | R021/R023/R024 |
-| Fig. 1b | Protocol-centered hero candidate: checklist gates, cost-matched reversal, trace diagnosis. | `figures/fig1_protocol_hero_r029.pdf` |
+| Fig. 1 | Methodology-first protocol figure: gate sequence, case-study verdicts, and derived stop-rule metrics. | `figures/fig1_methodology_protocol_r056.pdf` |
+| Fig. 1b | Secondary protocol-centered hero candidate retained for comparison. | `figures/fig1_protocol_hero_r029.pdf` |
 | Fig. 2 | Attention-allocation diagnostic composite: reversal, repair stop gate, timing raster, budget fraction, geometry, score/`p_fail`. | `figures/fig_attention_allocation_diagnostics_r054.pdf` |
 | Fig. 2 | Success-cost frontier for five-seed Lift. | `results/r021_random_costmatch/r021_costmatch_aggregate.csv` |
 | Fig. 3 | R022/R024 negative trigger repairs vs random_b350. | `results/r024_score_floor_seed0_2/r024_score_floor_aggregate.csv` |
@@ -199,6 +206,8 @@ diagnostics.
 | Table 1 | Registry-generated cost-matched Lift claims. | `figures/TABLE_registry_costmatched_results_r036.tex` |
 | Table 2 | Registry-generated trigger-repair comparison. | `figures/TABLE_registry_trigger_repairs_r036.tex` |
 | Table 4 | Diagnostic protocol checklist. | `figures/TABLE_protocol_checklist.tex` |
+| Table 5 | R056 protocol gate matrix. | `figures/TABLE_protocol_gate_matrix_r056.tex` |
+| Table 6 | R056 failure-mode taxonomy. | `figures/TABLE_failure_taxonomy_r056.tex` |
 | Appendix Table A1 | Registry-generated Stack boundary evidence. | `figures/TABLE_stack_boundary_appendix_r053.tex` |
 
 ## Citation Plan
@@ -311,5 +320,6 @@ Secondary reviewer-agent feedback was not run in this turn because sub-agent spa
 - [x] Package cleaned Stack boundary evidence as an appendix-ready robotics breadth table (`results/r053_stack_boundary_appendix/`).
 - [x] Optimize the main attention-allocation diagnostic figure with scipilot-style data profiling and visual QA (`results/r054_attention_allocation_figure_optimization/`).
 - [x] Integrate the R054 diagnostic figure into Results and extract its trace-profile logic into a tested evaluation helper (`results/r055_project_quality_pass/`).
+- [x] Extend the methodology with a derived protocol gate matrix, failure taxonomy, stop-rule metrics, and methodology-first Fig. 1 candidate (`results/r056_methodology_extension/`).
 - [ ] Decide whether submission packaging also needs an institutional source archive.
 - [ ] Decide whether any robotics breadth beyond the cleaned Stack appendix is worth adding before submission.

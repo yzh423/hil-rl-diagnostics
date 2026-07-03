@@ -130,4 +130,7 @@ records the follow-up project-quality pass: the R054 trace-profile logic now
 lives in `foresight_hil/evaluation/attention_diagnostics.py`, is covered by
 `tests/test_attention_diagnostics.py`, and the optimized diagnostic figure is
 included in the Results narrative as visualization of registered evidence
-rather than a new empirical claim.
+rather than a new empirical claim. R056 extends the methodology layer by
+deriving a protocol gate matrix, failure-mode taxonomy, stop-rule metrics, and
+methodology-first Fig. 1 candidate from registered R021/R023/R024 evidence,
+without adding experiments or changing the negative LV-VoI claim boundary.

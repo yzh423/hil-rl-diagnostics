@@ -52,6 +52,7 @@ results/**/checkpoints/
 results/**/source_snapshot*.zip
 
 # Local planning and process notes stay out of the public repository.
+docs/superpowers/
 refine-logs/
 results/**/r*_decision_note.md
 results/**/r*_start_note.md

@@ -1,0 +1,5 @@
+failure_mode,diagnostic_observation,evidence,protocol_response
+cost_matched_reversal,random_b350 dominates LV-VoI by +4.6 pp and 25.0 fewer human steps,R021,Reject trigger-superiority claims before redesign.
+over_triggering_despite_plausible_geometry,LV-VoI starts 1.75x as often as random while mean 3D gripper-cube distance is lower (0.217 vs 0.285),R023,Do not explain the failure as a simple far-from-object threshold issue.
+weak_score_floor_selectivity,Score-floor removes low-score post-floor starts but closes only 4.9% of the start-count gap to random,R024,Stop lightweight repair expansion under same-seed random dominance.
+repair_success_cost_dominance,Score-floor remains -8.7 pp below same-seed random and costs 158.3 more human steps,R024,Require a substantially different mechanism before new experiments.

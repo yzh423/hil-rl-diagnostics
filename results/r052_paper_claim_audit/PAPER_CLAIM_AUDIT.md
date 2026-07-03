@@ -1,6 +1,8 @@
 # R052 Paper Claim Audit
 
-R052 mirrors the current `paper/PAPER_CLAIM_AUDIT.md` report.
+R052 is the historical paper-claim audit package created before later R055/R056
+paper-facing updates. The current live audit is maintained in
+`paper/PAPER_CLAIM_AUDIT.md` and `paper/PAPER_CLAIM_AUDIT.json`.
 
 Verdict: PASS after one minor wording repair.
 
@@ -21,4 +23,4 @@ now distinguishes current public GitHub source tracking from the R048 historical
 invalid-Git/source-snapshot repair.
 
 See `paper/PAPER_CLAIM_AUDIT.md` and `paper/PAPER_CLAIM_AUDIT.json` for the
-claim table, issue log, and input hashes.
+current claim table, issue log, and input hashes.

@@ -19,12 +19,12 @@ Start with:
 - [results/RESULTS_INDEX.md](results/RESULTS_INDEX.md)
 - [figures/FIGURE_ASSET_INDEX.md](figures/FIGURE_ASSET_INDEX.md)
 - [paper/PAPER_CLAIM_AUDIT.md](paper/PAPER_CLAIM_AUDIT.md)
-- [results/r055_project_quality_pass/MANIFEST.md](results/r055_project_quality_pass/MANIFEST.md)
+- [results/r056_methodology_extension/MANIFEST.md](results/r056_methodology_extension/MANIFEST.md)
 
 ## Visual Summary
 
 <p align="center">
-  <img src="figures/fig1_protocol_hero_r029.png" alt="Protocol overview" width="760">
+  <img src="figures/fig1_methodology_protocol_r056.png" alt="Methodology-first protocol overview" width="760">
 </p>
 
 <p align="center">
@@ -39,6 +39,9 @@ README images:
 - [score-over-time diagnostic](figures/qa_rendered/fig5_score_over_time.png)
 - [R054 attention-allocation diagnostic PDF](figures/fig_attention_allocation_diagnostics_r054.pdf)
 - [R054 data profile and visual QA](results/r054_attention_allocation_figure_optimization/MANIFEST.md)
+- [R056 methodology extension manifest](results/r056_methodology_extension/MANIFEST.md)
+- [R056 protocol gate matrix table](figures/TABLE_protocol_gate_matrix_r056.tex)
+- [R056 failure taxonomy table](figures/TABLE_failure_taxonomy_r056.tex)
 - [trace geometry boxplots](results/r023_real_trace_seed0_2/r023_intervention_geometry_boxplots.png)
 - [R024 repair comparison](results/r024_score_floor_seed0_2/r024_success_cost_compare.png)
 - [Stack boundary appendix table](figures/TABLE_stack_boundary_appendix_r053.tex)
@@ -92,6 +95,7 @@ figures, or evidence rows:
 python scripts\validate_evidence_registry.py
 python scripts\audit_registry_numbers.py
 python scripts\generate_claim_tables.py
+python scripts\generate_methodology_extension.py
 python scripts\generate_stack_boundary_appendix.py
 python scripts\validate_provenance_package.py
 python -m unittest discover -s tests
@@ -119,6 +123,7 @@ Regenerate registry-driven paper tables:
 
 ```powershell
 python scripts\generate_claim_tables.py
+python scripts\generate_methodology_extension.py
 python scripts\generate_stack_boundary_appendix.py
 ```
 

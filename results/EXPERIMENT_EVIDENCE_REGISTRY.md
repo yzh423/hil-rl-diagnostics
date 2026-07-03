@@ -1,6 +1,6 @@
 # Experiment Evidence Registry
 
-This registry is the single entry point for paper-facing R018 and R020-R055
+This registry is the single entry point for paper-facing R018 and R020-R056
 evidence.
 Use `results/EXPERIMENT_EVIDENCE_REGISTRY.csv` as the machine-readable source
 when drafting claims, tables, captions, or rebuttal text.
@@ -15,6 +15,8 @@ when drafting claims, tables, captions, or rebuttal text.
   numbers into prose, tables, captions, or rebuttal text.
 - Run `python scripts/generate_claim_tables.py` to regenerate
   registry-derived Markdown and LaTeX claim tables.
+- Run `python scripts/generate_methodology_extension.py` to regenerate the R056
+  protocol gate matrix, failure taxonomy, stop-rule metrics, and LaTeX tables.
 - Run `python scripts/generate_stack_boundary_appendix.py` to regenerate the
   R053 Stack appendix table.
 - Treat R018 Stack rows as registered boundary evidence only; do not use them
@@ -25,7 +27,7 @@ when drafting claims, tables, captions, or rebuttal text.
 - Treat R023 as a trace diagnostic, not as the main success-rate evidence.
 - Treat R025/R026/R028/R029 as paper-preparation artifacts, not new experimental
   results.
-- Treat R030-R055 as structure, manuscript-theme, citation-audit, paper-claim-audit, paper-artifact, evidence-discipline, and project-quality artifacts, not new
+- Treat R030-R056 as structure, manuscript-theme, citation-audit, paper-claim-audit, paper-artifact, evidence-discipline, and project-quality artifacts, not new
   experimental results.
 
 ## Current Verdict
@@ -100,3 +102,7 @@ The registry supports the diagnostic-benchmark paper route:
   R054 trace-profile logic into a tested evaluation module, and integrates the
   R054 figure into the Results narrative without changing experimental result
   claims.
+- R056 derives a protocol gate matrix, failure-mode taxonomy, stop-rule metrics,
+  and methodology-first Fig. 1 candidate from registered R021/R023/R024
+  evidence, strengthening the method contribution without adding a new
+  experiment or positive LV-VoI claim.

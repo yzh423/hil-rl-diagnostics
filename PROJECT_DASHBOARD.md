@@ -48,6 +48,7 @@ cost.
 | Stack boundary appendix | `results/r053_stack_boundary_appendix/STACK_BOUNDARY_APPENDIX.md` |
 | Attention-allocation diagnostic figure | `results/r054_attention_allocation_figure_optimization/MANIFEST.md` |
 | Project quality pass | `results/r055_project_quality_pass/MANIFEST.md` |
+| Methodology extension | `results/r056_methodology_extension/MANIFEST.md` |
 | Future agent rules | `AGENTS.md` |
 
 ## Evidence Chain
@@ -63,7 +64,7 @@ cost.
 | Provenance package | `results/r047_evidence_provenance_package/` | Use for source hashes, partial compute accounting, command inventory, and known provenance gaps. |
 | Source snapshot | `results/r048_version_command_provenance/` | Use as the historical repair record for the earlier invalid-Git source snapshot and R020/R021 command provenance boundaries. |
 | Provenance validation | `python scripts/validate_provenance_package.py` | Run after evidence/provenance package changes; use `--compare-current-files` only for drift diagnosis. |
-| Display assets | `figures/` | Prefer R029/R036/R054 assets for the current route. |
+| Display assets | `figures/` | Prefer R056/R054/R036 assets for the current route. |
 | Project-quality pass | `results/r055_project_quality_pass/` | Records documentation/code consistency checks and tested attention-diagnostic helper extraction. |
 | Manuscript | `paper/` | Keep current-route writing separate from historical `proposal/`. |
 
@@ -76,6 +77,7 @@ evaluation code:
 python scripts\validate_evidence_registry.py
 python scripts\audit_registry_numbers.py
 python scripts\generate_claim_tables.py
+python scripts\generate_methodology_extension.py
 python scripts\generate_stack_boundary_appendix.py
 python scripts\validate_provenance_package.py
 python -m unittest discover -s tests
@@ -91,7 +93,8 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
 
 | Asset | Preferred source |
 |---|---|
-| Fig. 1 protocol hero | `figures/fig1_protocol_hero_r029.pdf` |
+| Fig. 1 methodology protocol | `figures/fig1_methodology_protocol_r056.pdf` |
+| Fig. 1 methodology preview | `figures/fig1_methodology_protocol_r056.png` and `figures/fig1_methodology_protocol_r056_grayscale.png` |
 | Attention-allocation diagnostic composite | `figures/fig_attention_allocation_diagnostics_r054.pdf` and `results/r054_attention_allocation_figure_optimization/` |
 | Main cost-matched table | `figures/TABLE_registry_costmatched_results_r036.tex` |
 | Trigger-repair table | `figures/TABLE_registry_trigger_repairs_r036.tex` |
@@ -113,6 +116,7 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
 | Stack boundary appendix | `figures/TABLE_stack_boundary_appendix_r053.tex` and `results/r053_stack_boundary_appendix/` |
 | Figure optimization package | `figures/fig_attention_allocation_diagnostics_r054.pdf`, `figures/fig_attention_allocation_diagnostics_r054_grayscale.png`, and `results/r054_attention_allocation_figure_optimization/` |
 | Project quality pass | `results/r055_project_quality_pass/` and `foresight_hil/evaluation/attention_diagnostics.py` |
+| Methodology extension | `figures/fig1_methodology_protocol_r056.pdf`, `figures/TABLE_protocol_gate_matrix_r056.tex`, `figures/TABLE_failure_taxonomy_r056.tex`, and `results/r056_methodology_extension/` |
 
 Current compile caveat: PDF compilation is blocked by the local LaTeX runtime or
 Tectonic cache availability. This is not currently a verified source-file
@@ -141,6 +145,10 @@ diagnostics to human-attention allocation diagnostics. It does not add new
 citations, experiments, or a positive LV-VoI method claim. R052 audits the
 current manuscript claims and repairs stale provenance wording; R055 adds the
 R054 diagnostic composite to Results and records the no-new-claim boundary.
+R056 strengthens the methodology presentation with a derived gate matrix,
+failure taxonomy, stop-rule metrics, and Fig. 1 candidate from registered
+R021/R023/R024 evidence. It does not add a new experiment or positive trigger
+claim.
 Rerun or update the claim audit after numeric, comparison, or scope claims
 change.
 
@@ -153,6 +161,7 @@ change.
 | `foresight_hil/experiments/strategy_specs.py` | Comparison strategy identity and CLI construction. |
 | `foresight_hil/evaluation/protocol.py` | Repeated checkpoint summary aggregation. |
 | `foresight_hil/evaluation/attention_diagnostics.py` | Trace-row collection and profile generation for attention-allocation diagnostic figures. |
+| `foresight_hil/evaluation/protocol_diagnostics.py` | Derived protocol gate matrix, failure taxonomy, and stop-rule metric generation for R056. |
 | `foresight_hil/evaluation/registry_validation.py` | Registry source existence and CSV readability checks. |
 | `foresight_hil/evaluation/registry_numeric_audit.py` | Registry numeric checks against primary CSV rows. |
 | `foresight_hil/evaluation/claim_tables.py` | Registry-driven Markdown and LaTeX claim tables. |

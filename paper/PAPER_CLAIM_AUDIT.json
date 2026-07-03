@@ -1,7 +1,7 @@
 {
-  "audit_id": "R055",
+  "audit_id": "R056",
   "date": "2026-07-03",
-  "verdict": "pass_after_r055_figure_integration_and_project_quality_review",
+  "verdict": "pass_after_r056_methodology_extension_integration_and_visual_qa",
   "execution_note": "Direct file-driven audit. Sub-agent spawning requires explicit user authorization in the current environment.",
   "protected_position": [
     "R021 random_b350 dominates LV-VoI scale3 under cost matching.",
@@ -20,6 +20,12 @@
       "severity": "low",
       "finding": "The optimized R054 diagnostic composite existed as a paper artifact but was not yet connected to the Results narrative or current claim-audit state.",
       "action": "Included the figure in paper/sections/04_results.tex, added an explicit no-new-claim caption, and updated the current audit scope."
+    },
+    {
+      "id": "R056-I1",
+      "severity": "low",
+      "finding": "The methodology contribution relied partly on narrative checklist wording and the older R029 hero, leaving the gate/stop protocol less auditable than the underlying evidence.",
+      "action": "Added R056 derived gate matrix, failure taxonomy, stop-rule metrics, and methodology-first Fig. 1; integrated them into Methods, Results, Discussion, and the asset indexes."
     }
   ],
   "claim_checks": [
@@ -47,7 +53,7 @@
     {
       "claim_family": "trace_mechanism",
       "status": "pass",
-      "manuscript_locations": ["paper/sections/03_protocol_setup.tex:9", "paper/sections/04_results.tex:27", "paper/sections/04_results.tex:29"],
+      "manuscript_locations": ["paper/sections/03_protocol_setup.tex:13", "paper/sections/04_results.tex:27", "paper/sections/05_discussion.tex:7"],
       "sources": ["results/r023_real_trace_seed0_2/r023_trace_strategy_diagnostics.csv", "results/r024_score_floor_seed0_2/r024_trace_strategy_compare.csv"],
       "checked_values": {
         "random_starts": 55,
@@ -70,9 +76,21 @@
       }
     },
     {
+      "claim_family": "r056_methodology_extension_boundary",
+      "status": "pass",
+      "manuscript_locations": ["paper/sections/03_protocol_setup.tex:5", "paper/sections/04_results.tex:5", "paper/sections/05_discussion.tex:11"],
+      "sources": ["results/r056_methodology_extension/MANIFEST.md", "results/r056_methodology_extension/protocol_gate_matrix.csv", "results/r056_methodology_extension/failure_taxonomy.csv", "results/r056_methodology_extension/derived_attention_metrics.csv", "foresight_hil/evaluation/protocol_diagnostics.py"],
+      "checked_values": {
+        "derived_from_registered_sources": "R021;R023;R024",
+        "new_experiment": false,
+        "new_positive_lv_voi_claim": false,
+        "visual_qa_grayscale_preview": true
+      }
+    },
+    {
       "claim_family": "stack_boundary_evidence",
       "status": "pass",
-      "manuscript_locations": ["paper/sections/03_protocol_setup.tex:11", "paper/sections/04_results.tex:31", "paper/sections/05_discussion.tex:11"],
+      "manuscript_locations": ["paper/sections/03_protocol_setup.tex:15", "paper/sections/04_results.tex:31", "paper/sections/05_discussion.tex:15"],
       "sources": ["results/r018_stack_multiseed_alignment/r018_stack_multiseed_aggregate.csv", "results/r019_stack_mechanism_redesign/r019_stack_seed0_mechanism_summary.csv"],
       "checked_values": {
         "none_matched_bc": {"successes": 131, "episodes": 180, "success_rate": 0.7278, "human_steps": 0.0},
@@ -86,7 +104,7 @@
       "manuscript_locations": ["paper/sections/07_reproducibility_inventory.tex:24", "paper/sections/07_reproducibility_inventory.tex:44", "paper/sections/07_reproducibility_inventory.tex:49"],
       "sources": ["results/r047_evidence_provenance_package/EVIDENCE_PROVENANCE_AUDIT.md", "results/r048_version_command_provenance/VERSION_PROVENANCE_REPAIR.md", "git rev-parse HEAD"],
       "checked_values": {
-        "current_head_before_r055": "c6d7e79f2abefdbe762ba2cd798a42ff4e4e159a",
+        "current_head_before_r056": "f9140eb",
         "remote": "https://github.com/yzh423/hil-rl-diagnostics.git",
         "branch": "main"
       }
@@ -97,6 +115,7 @@
     "No real-human or real-robot validation claim.",
     "No complete historical wall-clock accounting claim.",
     "No complete original R020/R021 launch-log claim.",
+    "R023/R024 traces remain diagnostic rather than primary success evidence.",
     "Stack remains boundary evidence rather than positive transfer."
   ]
 }

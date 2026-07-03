@@ -17,6 +17,7 @@ project stays readable as results accumulate.
 | Evidence registry validation | `python scripts/validate_evidence_registry.py` |
 | Evidence numeric audit | `python scripts/audit_registry_numbers.py` |
 | Registry claim table generation | `python scripts/generate_claim_tables.py` |
+| Methodology extension generation | `python scripts/generate_methodology_extension.py` |
 | Citation audit ledgers | `results/r037_citation_audit_batch1/CITATION_METADATA_CONTEXT_AUDIT.md` and `paper/CITATION_AUDIT.md` |
 | Target journal route | `results/r043_venue_targeting/VENUE_TARGET_MATRIX.md` |
 | Environment and reproducibility audit | `results/r044_environment_reproducibility_audit/PROJECT_ENVIRONMENT_REPRODUCIBILITY_AUDIT.md` |
@@ -29,6 +30,7 @@ project stays readable as results accumulate.
 | Stack boundary appendix | `results/r053_stack_boundary_appendix/STACK_BOUNDARY_APPENDIX.md` |
 | Attention-allocation diagnostic figure | `results/r054_attention_allocation_figure_optimization/MANIFEST.md` |
 | Project quality pass | `results/r055_project_quality_pass/MANIFEST.md` |
+| Methodology extension | `results/r056_methodology_extension/MANIFEST.md` |
 | Current manuscript skeleton | `paper/main.tex` |
 | Human-readable result map | `results/RESULTS_INDEX.md` |
 | Figure and table asset map | `figures/FIGURE_ASSET_INDEX.md` |
@@ -71,9 +73,11 @@ manifests, and audit packages for public-facing provenance.
 10. R054 records the optimized attention-allocation diagnostic figure package.
 11. R055 records the project-quality pass and tested attention-diagnostic helper
     extraction.
-12. Manuscript logic is maintained in `PAPER_PLAN.md`.
-13. Derived figure/table assets are generated into `figures/`.
-14. Figure/table provenance is tracked in `figures/FIGURE_ASSET_INDEX.md`.
+12. R056 records the derived methodology extension: protocol gate matrix,
+    failure taxonomy, stop-rule metrics, and methodology-first Fig. 1 candidate.
+13. Manuscript logic is maintained in `PAPER_PLAN.md`.
+14. Derived figure/table assets are generated into `figures/`.
+15. Figure/table provenance is tracked in `figures/FIGURE_ASSET_INDEX.md`.
 
 The registry is the narrow interface for paper claims. Raw directories remain
 the implementation detail behind that interface.
@@ -118,6 +122,7 @@ the implementation detail behind that interface.
 | R053 | Stack boundary appendix: packages registered Stack boundary evidence as an appendix-ready table without positive-transfer overclaiming. |
 | R054 | Attention-allocation figure optimization: packages a scipilot-guided diagnostic composite, trace profile, and visual QA from R021/R023/R024. |
 | R055 | Project quality pass: synchronizes documentation/code consistency after R054, extracts tested attention-diagnostic profiling helpers, and integrates the R054 figure into Results. |
+| R056 | Methodology extension: derives a protocol gate matrix, failure taxonomy, stop-rule metrics, and methodology-first Fig. 1 candidate from registered R021/R023/R024 evidence. |
 
 ## Module Deepening Candidates
 
@@ -150,6 +155,7 @@ These are the current code-structure targets after R030.
 | Stack boundary appendix | R053 registers Stack boundary rows and generates an appendix-ready table from the registry. | `scripts/generate_stack_boundary_appendix.py`, `figures/TABLE_stack_boundary_appendix_r053.tex`, and `results/r053_stack_boundary_appendix/`. | Done first pass |
 | Attention-allocation diagnostic figure | R054 replaces compressed/dual-axis-style diagnostics with a multi-panel figure and visual QA record. | `figures/gen_r054_attention_allocation_diagnostics.py`, `figures/fig_attention_allocation_diagnostics_r054.pdf`, and `results/r054_attention_allocation_figure_optimization/`. | Done first pass |
 | Attention-diagnostic helper extraction | R055 moves R054 trace-profile collection and summarization out of the plotting script. | `foresight_hil/evaluation/attention_diagnostics.py`, `tests/test_attention_diagnostics.py`, and `results/r055_project_quality_pass/`. | Done first pass |
+| Methodology diagnostic extension | R056 moves gate/taxonomy/stop-rule derivation behind a tested helper and uses it for table and Fig. 1 generation. | `foresight_hil/evaluation/protocol_diagnostics.py`, `tests/test_protocol_diagnostics.py`, `scripts/generate_methodology_extension.py`, and `figures/gen_r056_methodology_figure.py`. | Done first pass |
 
 ## Editing Rules
 

@@ -20,6 +20,7 @@ Before making paper-facing changes, read:
 8. `results/r048_version_command_provenance/VERSION_PROVENANCE_REPAIR.md`
 9. `paper/PAPER_CLAIM_AUDIT.md`
 10. `results/r055_project_quality_pass/PROJECT_QUALITY_REVIEW.md`
+11. `results/r056_methodology_extension/MANIFEST.md`
 
 ## Current Scientific Position
 
@@ -79,6 +80,7 @@ paper-facing organization or code change is complete:
 python scripts\validate_evidence_registry.py
 python scripts\audit_registry_numbers.py
 python scripts\generate_claim_tables.py
+python scripts\generate_methodology_extension.py
 python scripts\generate_stack_boundary_appendix.py
 python scripts\validate_provenance_package.py
 python -m unittest discover -s tests
@@ -115,6 +117,9 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
   when a compact R021/R023/R024 visual summary is needed.
 - Use R055 as the current documentation/code-quality pass before changing the
   attention-diagnostic figure pipeline or manuscript integration again.
+- Use R056 as the current methodology-extension package before changing the
+  protocol gate matrix, failure taxonomy, stop-rule metrics, or Fig. 1
+  methodology asset.
 - Resolve local LaTeX compile environment if PDF iteration becomes necessary.
 - If future methods are considered later, design them from the R023/R024
   trace diagnosis rather than from the earlier unsupported LV-VoI superiority

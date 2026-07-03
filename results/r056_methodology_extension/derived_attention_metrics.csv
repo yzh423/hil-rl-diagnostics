@@ -1,0 +1,7 @@
+metric,value,formula,source,interpretation
+random_b350_success_margin_vs_lv_voi_pp,4.600,100 * (random_b350_success - lv_voi_scale3_success),R021,Positive means random_b350 has higher repeated success.
+random_b350_human_step_saving_vs_lv_voi,25.000,lv_voi_scale3_cost - random_b350_cost,R021,Positive means random_b350 uses fewer human steps.
+lv_voi_start_inflation_vs_random,1.745,lv_voi_trace_starts / random_b350_trace_starts,R023,Values above 1 indicate more intervention starts than random.
+score_floor_start_reduction_vs_lv_voi,0.021,(lv_voi_trace_starts - score_floor_trace_starts) / lv_voi_trace_starts,R024,Fraction of original LV-VoI starts removed by the score floor.
+score_floor_gap_closure_vs_random,0.049,(lv_voi_trace_starts - score_floor_trace_starts) / (lv_voi_trace_starts - random_trace_starts),R024,Fraction of the LV-VoI-to-random start-count gap closed by the repair.
+score_floor_success_gap_vs_random_pp,-8.660,100 * (score_floor_success - same_seed_random_b350_success),R024,Negative means the repaired trigger remains below same-seed random.

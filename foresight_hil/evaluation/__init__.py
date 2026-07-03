@@ -38,6 +38,14 @@ from .provenance_validation import (
     format_provenance_report,
     validate_current_provenance,
 )
+from .protocol_diagnostics import (
+    build_derived_metric_rows,
+    build_failure_taxonomy_rows,
+    build_protocol_gate_matrix,
+    read_csv_rows as read_protocol_diagnostic_csv_rows,
+    render_latex_table,
+    write_csv_rows,
+)
 
 __all__ = [
     "ClaimTableManifest",
@@ -51,7 +59,10 @@ __all__ = [
     "RegistryValidationReport",
     "audit_registry_numbers",
     "build_attention_trace_profile",
+    "build_derived_metric_rows",
+    "build_failure_taxonomy_rows",
     "build_main_costmatched_claims",
+    "build_protocol_gate_matrix",
     "build_stack_boundary_claims",
     "build_trigger_repair_claims",
     "collect_attention_trace_rows",
@@ -60,13 +71,16 @@ __all__ = [
     "format_numeric_audit_report",
     "format_provenance_report",
     "read_registry_rows",
+    "read_protocol_diagnostic_csv_rows",
     "render_claims_latex_table",
     "render_claims_markdown_table",
+    "render_latex_table",
     "repeat_summary_row",
     "rows_for_strategy",
     "summarize_repeats",
     "validate_current_provenance",
     "validate_evidence_registry",
     "write_claim_table_assets",
+    "write_csv_rows",
     "write_profile_csv",
 ]

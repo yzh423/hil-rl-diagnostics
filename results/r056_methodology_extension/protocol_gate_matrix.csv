@@ -1,0 +1,5 @@
+gate_id,gate,question,case_result,verdict
+G1,Cost-matched random frontier,Does the trigger beat a random budget near its realized human cost?,random_b350 is +4.6 pp higher and uses 25.0 fewer human steps than LV-VoI scale3,reject_trigger_superiority
+G2,Repeated checkpoint evaluation,Is the ranking based on repeated rollouts rather than one checkpoint?,R021 reports 500 repeated Lift episodes per main strategy with Wilson intervals,ranking_auditable
+G3,Trace-level attention diagnosis,How is the intervention budget spent when the trigger fails?,LV-VoI starts 96/55 = 1.75x as often while starting closer to the cube,diagnose_budget_spending
+G4,Same-seed repair stop gate,Should a lightweight repair be expanded?,score-floor remains -8.7 pp below random b350 and uses 158.3 extra human steps,stop_repair_expansion
