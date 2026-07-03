@@ -19,6 +19,7 @@ project stays readable as results accumulate.
 | Documentation link validation | `python scripts/validate_document_links.py` |
 | Registry claim table generation | `python scripts/generate_claim_tables.py` |
 | Methodology extension generation | `python scripts/generate_methodology_extension.py` |
+| Offline trace audit generation | `python scripts/generate_offline_trace_audit.py` |
 | Citation audit ledgers | `results/r037_citation_audit_batch1/CITATION_METADATA_CONTEXT_AUDIT.md` and `paper/CITATION_AUDIT.md` |
 | Target journal route | `results/r043_venue_targeting/VENUE_TARGET_MATRIX.md` |
 | Environment and reproducibility audit | `results/r044_environment_reproducibility_audit/PROJECT_ENVIRONMENT_REPRODUCIBILITY_AUDIT.md` |
@@ -35,6 +36,7 @@ project stays readable as results accumulate.
 | Document/code quality follow-up | `results/r057_document_code_quality_pass/MANIFEST.md` |
 | Submission packaging readiness | `results/r058_submission_packaging_readiness/MANIFEST.md` |
 | Evidence/experiment optimization plan | `results/r059_evidence_experiment_optimization/MANIFEST.md` |
+| Offline trace trigger audit | `results/r060_offline_trace_trigger_audit/MANIFEST.md` |
 | Current manuscript skeleton | `paper/main.tex` |
 | Human-readable result map | `results/RESULTS_INDEX.md` |
 | Figure and table asset map | `figures/FIGURE_ASSET_INDEX.md` |
@@ -85,10 +87,12 @@ manifests, and audit packages for public-facing provenance.
     compile/visual-QA completion, public Git source-state tracking, and the
     final source-archive decision.
 15. R059 records the evidence-first experiment optimization route and
-    cost-matched stop gates for future R060+ work.
-16. Manuscript logic is maintained in `PAPER_PLAN.md`.
-17. Derived figure/table assets are generated into `figures/`.
-18. Figure/table provenance is tracked in `figures/FIGURE_ASSET_INDEX.md`.
+    cost-matched stop gates for future R061+ work.
+16. R060 records the offline trace-trigger audit from accepted-start traces and
+    keeps post-hoc gate filtering separate from online performance evidence.
+17. Manuscript logic is maintained in `PAPER_PLAN.md`.
+18. Derived figure/table assets are generated into `figures/`.
+19. Figure/table provenance is tracked in `figures/FIGURE_ASSET_INDEX.md`.
 
 The registry is the narrow interface for paper claims. Raw directories remain
 the implementation detail behind that interface.
@@ -137,6 +141,7 @@ the implementation detail behind that interface.
 | R057 | Document/code quality pass: adds repeatable Markdown local-link validation and repairs row-aligned attention-profile gap handling without changing experimental claims. |
 | R058 | Submission packaging readiness: records current-draft PDF compile/visual-QA completion, source-state tracking through public Git, and final source-archive decision. |
 | R059 | Evidence/experiment optimization plan: prioritizes packaging, evidence hardening, R023/R024 trace/offline gates, and cost-matched stop rules before future experiments. |
+| R060 | Offline trace trigger audit: audits R023/R024 accepted-start traces with phase summaries and post-hoc gates, preserving the no-online-claim boundary. |
 
 ## Module Deepening Candidates
 
@@ -172,7 +177,8 @@ These are the current code-structure targets after R030.
 | Methodology diagnostic extension | R056 moves gate/taxonomy/stop-rule derivation behind a tested helper and uses it for table and Fig. 1 generation. | `foresight_hil/evaluation/protocol_diagnostics.py`, `tests/test_protocol_diagnostics.py`, `scripts/generate_methodology_extension.py`, and `figures/gen_r056_methodology_figure.py`. | Done first pass |
 | Document link validation and attention-profile robustness | R057 adds a tested documentation-link validator and tightens the R054 trace-profile helper. | `foresight_hil/evaluation/document_links.py`, `scripts/validate_document_links.py`, `tests/test_document_links.py`, and `foresight_hil/evaluation/attention_diagnostics.py`. | Done first pass |
 | Submission packaging readiness | R058 records local PDF compile diagnosis, visual QA, source-state tracking, and source-archive decision. | `results/r058_submission_packaging_readiness/`. | Done first pass |
-| Evidence and experiment optimization | R059 records the evidence-first optimization route and R060+ experiment stop gates. | `results/r059_evidence_experiment_optimization/`. | Done first pass |
+| Evidence and experiment optimization | R059 records the evidence-first optimization route and R061+ experiment stop gates. | `results/r059_evidence_experiment_optimization/`. | Done first pass |
+| Offline trace trigger audit | R060 moves accepted-start gate auditing behind a tested helper and records why post-hoc filtering is only a design screen. | `foresight_hil/evaluation/offline_trace_audit.py`, `scripts/generate_offline_trace_audit.py`, and `results/r060_offline_trace_trigger_audit/`. | Done first pass |
 
 ## Editing Rules
 

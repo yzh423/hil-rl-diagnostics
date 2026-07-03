@@ -149,3 +149,7 @@ R059 records the evidence-first optimization route: finish
 packaging gates, harden existing audits, use R023/R024 trace/offline
 diagnostics before new training, and require cost-matched stop gates before any
 future positive method claim.
+R060 executes that first trace/offline diagnostic step: accepted-start filters
+can be useful design screens, but the R023 post-hoc score-floor result is
+over-optimistic relative to the actual R024 score-floor follow-up, so R060 does
+not support online trigger-superiority claims.

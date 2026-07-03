@@ -1,0 +1,13 @@
+strategy,phase,start_count,start_fraction,median_budget_used_frac,median_g2c_norm,median_g2c_xy,median_score,median_p_fail,post4k_low_score_starts
+random_b350,early_0_2k,15,0.272727,0.117100,0.265699,0.170652,,,0
+random_b350,quiet_2_4k,10,0.181818,0.345700,0.279062,0.269461,,,0
+random_b350,post_floor_4_6k,9,0.163636,0.517100,0.221201,0.221200,,,0
+random_b350,late_6_10k,21,0.381818,0.802900,0.300936,0.289573,,,0
+lv_voi_scale3,early_0_2k,12,0.125000,0.051650,0.104549,0.040025,10.000000,1.000000,0
+lv_voi_scale3,quiet_2_4k,0,0.000000,,,,,,0
+lv_voi_scale3,post_floor_4_6k,48,0.500000,0.385000,0.024873,0.024731,0.032892,0.014874,35
+lv_voi_scale3,late_6_10k,36,0.375000,0.808300,0.241375,0.201367,0.023983,0.008476,31
+score_floor_vlv3_after4000_floor0p05,early_0_2k,12,0.127660,0.051650,0.112602,0.027443,10.000000,1.000000,0
+score_floor_vlv3_after4000_floor0p05,quiet_2_4k,0,0.000000,,,,,,0
+score_floor_vlv3_after4000_floor0p05,post_floor_4_6k,46,0.489362,0.367500,0.201007,0.026444,0.064111,0.026230,0
+score_floor_vlv3_after4000_floor0p05,late_6_10k,36,0.382979,0.799150,0.279274,0.246841,0.061287,0.020339,0

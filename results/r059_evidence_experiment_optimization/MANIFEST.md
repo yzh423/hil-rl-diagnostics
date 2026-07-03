@@ -40,14 +40,16 @@ The next optimization should be evidence-first, not method-first:
 1. complete submission/runtime gates from R058;
 2. harden provenance and claim audits around existing evidence;
 3. run cheap trace/offline diagnostics from R023/R024 before launching new
-   training;
+   training; R060 now executes the first accepted-start offline audit;
 4. only run new training if it answers a manuscript-critical question under the
    cost-matched protocol.
 
 The default near-term recommendation is not to add robotics breadth before
 submission unless the target venue, advisor, or reviewer feedback explicitly
 requires it. The current Stack appendix is enough as boundary evidence for the
-diagnostic-protocol paper route.
+diagnostic-protocol paper route. After R060, any new online repair should add
+accepted and rejected candidate-state logging and remain cost-matched against
+the random family before it can change manuscript claims.
 
 ## Claim Boundary
 

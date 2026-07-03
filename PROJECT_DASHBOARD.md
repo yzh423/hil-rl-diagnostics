@@ -52,6 +52,7 @@ cost.
 | Document/code quality follow-up | `results/r057_document_code_quality_pass/MANIFEST.md` |
 | Submission packaging readiness | `results/r058_submission_packaging_readiness/MANIFEST.md` |
 | Evidence/experiment optimization plan | `results/r059_evidence_experiment_optimization/MANIFEST.md` |
+| Offline trace trigger audit | `results/r060_offline_trace_trigger_audit/MANIFEST.md` |
 | Future agent rules | `AGENTS.md` |
 
 ## Evidence Chain
@@ -72,6 +73,7 @@ cost.
 | Project-quality pass | `results/r055_project_quality_pass/` | Records documentation/code consistency checks and tested attention-diagnostic helper extraction. |
 | Submission packaging | `results/r058_submission_packaging_readiness/` | Records the current PDF compile path, visual QA, public Git source-state tracking, and final source-archive decision. |
 | Experiment optimization | `results/r059_evidence_experiment_optimization/` | Use trace/offline diagnostic gates and cost matching before any future method claim. |
+| Offline trace audit | `results/r060_offline_trace_trigger_audit/` | Treat accepted-start gate filtering as a design screen, not online trigger evidence. |
 | Manuscript | `paper/` | Keep current-route writing separate from historical `proposal/`. |
 
 ## Canonical Commands
@@ -84,6 +86,7 @@ python scripts\validate_evidence_registry.py
 python scripts\audit_registry_numbers.py
 python scripts\generate_claim_tables.py
 python scripts\generate_methodology_extension.py
+python scripts\generate_offline_trace_audit.py
 python scripts\generate_stack_boundary_appendix.py
 python scripts\validate_provenance_package.py
 python scripts\validate_document_links.py
@@ -127,6 +130,7 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
 | Document/code quality follow-up | `results/r057_document_code_quality_pass/` and `foresight_hil/evaluation/document_links.py` |
 | Submission packaging readiness | `results/r058_submission_packaging_readiness/` |
 | Evidence/experiment optimization plan | `results/r059_evidence_experiment_optimization/` |
+| Offline trace trigger audit | `results/r060_offline_trace_trigger_audit/` |
 
 Current compile caveat: R058 resolves the local PDF compile gate for the
 current draft by using bundled Tectonic 0.16.9 with a project-local
@@ -171,6 +175,11 @@ stop gates before future positive method claims.
 Rerun or update the claim audit after numeric, comparison, or scope claims
 change.
 
+Current trace/offline caveat: R060 shows that post-hoc filtering of accepted
+LV-VoI starts can look much more selective than the actual R024 score-floor
+follow-up. Use it to reject weak repair ideas or design logging requirements,
+not to claim online performance.
+
 ## Code Map
 
 | Area | Current role |
@@ -181,6 +190,7 @@ change.
 | `foresight_hil/evaluation/protocol.py` | Repeated checkpoint summary aggregation. |
 | `foresight_hil/evaluation/attention_diagnostics.py` | Trace-row collection and profile generation for attention-allocation diagnostic figures. |
 | `foresight_hil/evaluation/protocol_diagnostics.py` | Derived protocol gate matrix, failure taxonomy, and stop-rule metric generation for R056. |
+| `foresight_hil/evaluation/offline_trace_audit.py` | Phase summaries and post-hoc gate audits for R060 offline trace diagnostics. |
 | `foresight_hil/evaluation/document_links.py` | Local Markdown link validation for project-control documentation. |
 | `foresight_hil/evaluation/registry_validation.py` | Registry source existence and CSV readability checks. |
 | `foresight_hil/evaluation/registry_numeric_audit.py` | Registry numeric checks against primary CSV rows. |
@@ -204,9 +214,9 @@ change.
    checkpoints, caches, and third-party PDFs should stay untracked.
 3. Create a frozen institutional/source archive only from the final verified
    submission tag.
-4. Use R059 before spending compute on new experiments: first consider R023/R024
-   trace/offline diagnostics, then a cost-matched R060+ online run only if it
-   answers a manuscript-critical question.
+4. Use R060 before spending compute on new experiments: accepted-start filters
+   are only design screens, so any R061+ online repair needs candidate-state
+   logging and a cost-matched random comparison before it can affect claims.
 5. Keep `paper/CITATION_AUDIT.md` current if citation contexts or bibliography
    entries change again, and keep `paper/PAPER_CLAIM_AUDIT.md` current if
    numerical, comparison, or scope claims change.

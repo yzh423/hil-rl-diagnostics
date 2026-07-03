@@ -23,6 +23,7 @@ Start with:
 - [results/r057_document_code_quality_pass/MANIFEST.md](results/r057_document_code_quality_pass/MANIFEST.md)
 - [results/r058_submission_packaging_readiness/MANIFEST.md](results/r058_submission_packaging_readiness/MANIFEST.md)
 - [results/r059_evidence_experiment_optimization/MANIFEST.md](results/r059_evidence_experiment_optimization/MANIFEST.md)
+- [results/r060_offline_trace_trigger_audit/MANIFEST.md](results/r060_offline_trace_trigger_audit/MANIFEST.md)
 
 ## Visual Summary
 
@@ -47,6 +48,7 @@ README images:
 - [R056 failure taxonomy table](figures/TABLE_failure_taxonomy_r056.tex)
 - [R058 submission packaging readiness](results/r058_submission_packaging_readiness/MANIFEST.md)
 - [R059 evidence and experiment optimization plan](results/r059_evidence_experiment_optimization/MANIFEST.md)
+- [R060 offline trace trigger audit](results/r060_offline_trace_trigger_audit/TRACE_OFFLINE_AUDIT.md)
 - [trace geometry boxplots](results/r023_real_trace_seed0_2/r023_intervention_geometry_boxplots.png)
 - [R024 repair comparison](results/r024_score_floor_seed0_2/r024_success_cost_compare.png)
 - [Stack boundary appendix table](figures/TABLE_stack_boundary_appendix_r053.tex)
@@ -64,6 +66,7 @@ superior.
 | Repeated checkpoint evaluation is required. | R020-R024 use repeated autonomous checkpoint evaluation rather than one final checkpoint. |
 | Lightweight trigger repairs do not recover the claim. | R022 and R024 remain dominated by same-seed `random_b350`. |
 | Trace diagnostics are useful for redesign. | R023/R024 show over-triggering and score/timing mismatch rather than a simple "too far from the cube" failure mode. |
+| Offline trace filtering is only a design screen. | R060 shows post-hoc accepted-start gates can look selective while the actual R024 score-floor follow-up still spends nearly as many starts. |
 | Stack remains boundary evidence. | R018/R053 show no-online matched BC outperforming current online intervention variants on Stack; this is robotics breadth as a limitation, not positive transfer. |
 
 Important limitations:
@@ -101,6 +104,7 @@ python scripts\validate_evidence_registry.py
 python scripts\audit_registry_numbers.py
 python scripts\generate_claim_tables.py
 python scripts\generate_methodology_extension.py
+python scripts\generate_offline_trace_audit.py
 python scripts\generate_stack_boundary_appendix.py
 python scripts\validate_provenance_package.py
 python scripts\validate_document_links.py

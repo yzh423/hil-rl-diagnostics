@@ -1,6 +1,6 @@
 # Experiment Evidence Registry
 
-This registry is the single entry point for paper-facing R018 and R020-R057
+This registry is the single entry point for paper-facing R018 and R020-R060
 evidence.
 Use `results/EXPERIMENT_EVIDENCE_REGISTRY.csv` as the machine-readable source
 when drafting claims, tables, captions, or rebuttal text.
@@ -17,6 +17,8 @@ when drafting claims, tables, captions, or rebuttal text.
   registry-derived Markdown and LaTeX claim tables.
 - Run `python scripts/generate_methodology_extension.py` to regenerate the R056
   protocol gate matrix, failure taxonomy, stop-rule metrics, and LaTeX tables.
+- Run `python scripts/generate_offline_trace_audit.py` to regenerate the R060
+  offline trace audit tables and narrative.
 - Run `python scripts/generate_stack_boundary_appendix.py` to regenerate the
   R053 Stack appendix table.
 - Treat R018 Stack rows as registered boundary evidence only; do not use them
@@ -27,7 +29,9 @@ when drafting claims, tables, captions, or rebuttal text.
 - Treat R023 as a trace diagnostic, not as the main success-rate evidence.
 - Treat R025/R026/R028/R029 as paper-preparation artifacts, not new experimental
   results.
-- Treat R030-R057 as structure, manuscript-theme, citation-audit, paper-claim-audit, paper-artifact, evidence-discipline, and project-quality artifacts, not new
+- Treat R030-R060 as structure, manuscript-theme, citation-audit,
+  paper-claim-audit, paper-artifact, evidence-discipline,
+  experiment-planning, and trace-offline diagnostic artifacts, not new
   experimental results.
 
 ## Current Verdict
@@ -118,3 +122,6 @@ The registry supports the diagnostic-benchmark paper route:
   packaging gates, harden existing audits, use cheap R023/R024 trace/offline
   diagnostics before new training, and require cost-matched stop gates before
   any future positive method claim.
+- R060 executes the first R059 trace/offline diagnostic extension from R023/R024
+  accepted-start traces. It can support phase/count/gate-retention statements,
+  but it cannot support online success-rate or method-superiority claims.

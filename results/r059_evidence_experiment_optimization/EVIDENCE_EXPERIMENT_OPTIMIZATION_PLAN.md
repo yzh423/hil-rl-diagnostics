@@ -59,6 +59,11 @@ Stop gate: promote a derived analysis only if it clarifies the diagnostic
 protocol or directly reduces reviewer confusion. Register it under a new R060+
 directory before manuscript use.
 
+Execution note: R060 now executes the counterfactual/offline accepted-start
+trace audit. It finds that post-hoc filtering can look much more selective than
+the actual R024 score-floor follow-up, so accepted-start filters should remain
+design screens rather than online method evidence.
+
 ## Phase 3: Minimal New Training, Only If Needed
 
 Use new training only for one of these manuscript-critical questions:
@@ -80,9 +85,11 @@ diagnostic negative/repair result.
 
 If the user wants one experiment next, choose the cheapest claim-relevant path:
 
-1. Offline R023/R024 counterfactual trigger audit from existing traces.
-2. If the offline audit identifies a plausible gate, run one cost-matched online
-   trigger repair in a fresh `results/r060_*` directory.
+1. Use R060 as the offline R023/R024 counterfactual trigger audit from existing
+   accepted-start traces.
+2. If a future gate is still worth testing, run one cost-matched online trigger
+   repair in a fresh `results/r061_*` directory with accepted and rejected
+   candidate-state logging.
 3. Compare against `random_b350` and LV-VoI scale3 using registry-driven tables.
 4. Register the row before changing manuscript prose.
 

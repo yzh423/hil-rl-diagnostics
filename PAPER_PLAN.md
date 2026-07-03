@@ -294,9 +294,13 @@ the final verified submission tag.
 
 R059 records the evidence and experiment optimization route. Resolve packaging
 and audit gates first, then use cheap R023/R024 trace/offline diagnostics before
-launching any new training. Any future R060+ online method run must be
-cost-matched against the random-family baseline before it can support a
-positive method claim.
+launching any new training. R060 executes that first offline trace audit. Any
+future R061+ online method run must be cost-matched against the random-family
+baseline before it can support a positive method claim.
+
+R060 shows that post-hoc accepted-start filtering can look much more selective
+than the actual R024 score-floor online follow-up, so it should be used to
+screen or reject repair ideas, not to support online method-superiority prose.
 
 ## Reviewer Feedback
 
@@ -343,8 +347,9 @@ Secondary reviewer-agent feedback was not run in this turn because sub-agent spa
 - [x] Extend the methodology with a derived protocol gate matrix, failure taxonomy, stop-rule metrics, and methodology-first Fig. 1 candidate (`results/r056_methodology_extension/`).
 - [x] Add repeatable Markdown local-link validation and repair row-aligned attention-profile gap handling (`results/r057_document_code_quality_pass/`).
 - [x] Record submission-packaging readiness, PDF compile/visual-QA pass, and final source-archive decision (`results/r058_submission_packaging_readiness/`).
-- [x] Record the evidence-first experiment optimization route and R060+ stop gates (`results/r059_evidence_experiment_optimization/`).
+- [x] Record the evidence-first experiment optimization route and R061+ stop gates (`results/r059_evidence_experiment_optimization/`).
 - [x] Resolve current-draft PDF compilation and complete first visual QA.
+- [x] Execute the R059 offline trace audit from R023/R024 accepted-start traces (`results/r060_offline_trace_trigger_audit/`).
 - [ ] Rerun PDF compile and visual QA after venue-template integration or major layout changes.
 - [ ] Run a final paper-claim audit if manuscript captions, numerical claims, comparison claims, or scope claims change.
-- [ ] Decide whether to execute the R059 offline trace audit before any new online experiment.
+- [ ] Decide whether a future R061+ online repair is necessary; if so, pre-register candidate-state logging and cost-matched random comparison first.

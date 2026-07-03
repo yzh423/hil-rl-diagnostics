@@ -24,6 +24,7 @@ Before making paper-facing changes, read:
 12. `results/r057_document_code_quality_pass/MANIFEST.md`
 13. `results/r058_submission_packaging_readiness/MANIFEST.md`
 14. `results/r059_evidence_experiment_optimization/MANIFEST.md`
+15. `results/r060_offline_trace_trigger_audit/MANIFEST.md`
 
 ## Current Scientific Position
 
@@ -84,6 +85,7 @@ python scripts\validate_evidence_registry.py
 python scripts\audit_registry_numbers.py
 python scripts\generate_claim_tables.py
 python scripts\generate_methodology_extension.py
+python scripts\generate_offline_trace_audit.py
 python scripts\generate_stack_boundary_appendix.py
 python scripts\validate_provenance_package.py
 python scripts\validate_document_links.py
@@ -133,7 +135,10 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
   first visual QA are complete through bundled Tectonic with a project-local
   cache and `paper/figures/` snapshots.
 - Use R059 as the current evidence/experiment optimization plan before spending
-  compute on new R060+ work.
+  compute on new R061+ work.
+- Use R060 as the current offline trace-trigger audit before designing a new
+  trigger repair. It shows that accepted-start filtering is only a design
+  screen and cannot support online method superiority.
 - Rerun PDF compile and visual QA after venue-template integration or major
   layout changes before claiming final submission packaging is ready.
 - Create a final institutional/source archive only from a clean verified
