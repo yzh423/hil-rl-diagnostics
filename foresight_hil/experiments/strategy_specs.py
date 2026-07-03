@@ -111,4 +111,6 @@ def build_training_cli_args(args, seed, strategy, run_label=None):
         cmd.append("--restore_best_model_at_end")
     if args.trace_interventions:
         cmd.append("--trace_interventions")
+    if getattr(args, "trace_candidates", False):
+        cmd.append("--trace_candidates")
     return cmd

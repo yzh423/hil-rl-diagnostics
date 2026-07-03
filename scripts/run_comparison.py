@@ -38,7 +38,7 @@ from foresight_hil.experiments.strategy_specs import (
 )
 
 
-def main():
+def build_parser():
     p = argparse.ArgumentParser()
     p.add_argument("--task", type=str, default="Lift")
     p.add_argument("--seeds", type=int, nargs="+", default=[0, 1, 2])
@@ -76,12 +76,17 @@ def main():
     p.add_argument("--eval_at_start", action="store_true")
     p.add_argument("--restore_best_model_at_end", action="store_true")
     p.add_argument("--trace_interventions", action="store_true")
+    p.add_argument("--trace_candidates", action="store_true")
     p.add_argument("--force", action="store_true",
                    help="rerun even if the matching per-run CSV already exists")
     p.add_argument("--eval_every", type=int, default=10000)
     p.add_argument("--eval_episodes", type=int, default=20)
     p.add_argument("--out_dir", type=str, default="results/full")
-    args = p.parse_args()
+    return p
+
+
+def main():
+    args = build_parser().parse_args()
 
     os.makedirs(args.out_dir, exist_ok=True)
     t0 = time.time()

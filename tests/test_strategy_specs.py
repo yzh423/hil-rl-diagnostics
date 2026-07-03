@@ -43,6 +43,7 @@ def args_for(**overrides):
         eval_at_start=False,
         restore_best_model_at_end=True,
         trace_interventions=True,
+        trace_candidates=True,
         out_dir="results/r032_smoke",
     )
     base.update(overrides)
@@ -91,6 +92,7 @@ class StrategySpecsTest(unittest.TestCase):
         self.assertIn("linear", cli)
         self.assertIn("--restore_best_model_at_end", cli)
         self.assertIn("--trace_interventions", cli)
+        self.assertIn("--trace_candidates", cli)
         self.assertIn("--run_label", cli)
         self.assertEqual(cli[cli.index("--run_label") + 1], run_label)
         self.assertEqual(cli[cli.index("--strategy") + 1], "voi")

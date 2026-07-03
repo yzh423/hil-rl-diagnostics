@@ -153,3 +153,7 @@ R060 executes that first trace/offline diagnostic step: accepted-start filters
 can be useful design screens, but the R023 post-hoc score-floor result is
 over-optimistic relative to the actual R024 score-floor follow-up, so R060 does
 not support online trigger-superiority claims.
+R061 adds the missing candidate-state logging interface: future VoI runs can
+archive accepted and rejected gate-evaluation states via `--trace_candidates`.
+It is instrumentation only; future R062+ online repairs still need cost-matched
+random comparison before any positive method claim.

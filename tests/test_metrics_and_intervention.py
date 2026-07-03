@@ -83,8 +83,25 @@ class InterventionDiagnosticsTest(unittest.TestCase):
         self.assertTrue(controller.last_intervened)
         self.assertTrue(controller.last_started)
         self.assertTrue(controller.last_candidate)
+        self.assertTrue(controller.last_gate_evaluated)
+        self.assertEqual(controller.last_rejection_reason, "accepted")
         self.assertTrue(math.isclose(controller.last_score, 0.25))
         self.assertTrue(math.isclose(controller.last_p_fail, 0.75))
+
+    def test_voi_records_rejected_candidate_state_reason(self):
+        controller = InterventionController(
+            "voi", gate=StaticGate(False, 0.02, 0.25),
+            budget=10, total_steps=100, takeover_len=1,
+        )
+
+        acted = controller.step(np.array([1.0, 2.0]), zero_policy)
+
+        self.assertFalse(acted)
+        self.assertTrue(controller.last_gate_evaluated)
+        self.assertFalse(controller.last_candidate)
+        self.assertEqual(controller.last_rejection_reason, "gate_not_candidate")
+        self.assertTrue(math.isclose(controller.last_score, 0.02))
+        self.assertTrue(math.isclose(controller.last_p_fail, 0.25))
 
     def test_ongoing_takeover_is_not_a_new_gate_candidate(self):
         controller = InterventionController(
@@ -99,6 +116,7 @@ class InterventionDiagnosticsTest(unittest.TestCase):
         self.assertTrue(controller.last_intervened)
         self.assertFalse(controller.last_started)
         self.assertFalse(controller.last_candidate)
+        self.assertFalse(controller.last_gate_evaluated)
         self.assertTrue(math.isnan(controller.last_score))
 
     def test_score_floor_blocks_low_score_after_step(self):
@@ -117,6 +135,7 @@ class InterventionDiagnosticsTest(unittest.TestCase):
         self.assertTrue(controller.last_candidate)
         self.assertTrue(math.isclose(controller.last_score, 0.02))
         self.assertTrue(controller.last_score_floor_blocked)
+        self.assertEqual(controller.last_rejection_reason, "score_floor")
         self.assertEqual(controller.score_floor_blocks, 1)
         self.assertEqual(controller.spent, 1)
         self.assertEqual(controller.engagements, 1)

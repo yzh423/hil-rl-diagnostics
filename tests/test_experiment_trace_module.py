@@ -2,7 +2,9 @@ import unittest
 from types import SimpleNamespace
 
 from foresight_hil.experiments.trace import (
+    CANDIDATE_TRACE_FIELDS,
     INTERVENTION_TRACE_FIELDS,
+    candidate_trace_row,
     intervention_trace_row,
 )
 
@@ -16,6 +18,12 @@ class InterventionTraceModuleTest(unittest.TestCase):
         self.assertIn("cubeA_z", INTERVENTION_TRACE_FIELDS)
         self.assertIn("cubeB_z", INTERVENTION_TRACE_FIELDS)
         self.assertIn("stack_cubeA_lifted", INTERVENTION_TRACE_FIELDS)
+        self.assertEqual(CANDIDATE_TRACE_FIELDS[:6], [
+            "env_step", "episode", "episode_step", "task", "strategy", "seed",
+        ])
+        self.assertIn("gate_evaluated", CANDIDATE_TRACE_FIELDS)
+        self.assertIn("accepted", CANDIDATE_TRACE_FIELDS)
+        self.assertIn("rejection_reason", CANDIDATE_TRACE_FIELDS)
 
     def test_trace_row_records_stack_geometry(self):
         args = SimpleNamespace(task="Stack", strategy="voi", seed=1, budget=300)
@@ -49,6 +57,43 @@ class InterventionTraceModuleTest(unittest.TestCase):
         self.assertEqual(row["gripper_to_cubeA_norm"], "0.099499")
         self.assertEqual(row["gripper_to_cubeB_norm"], "0.160935")
         self.assertEqual(row["stack_cubeA_lifted"], 1)
+
+    def test_candidate_trace_row_records_rejected_voi_state(self):
+        args = SimpleNamespace(task="Lift", strategy="voi", seed=2, budget=600)
+        controller = SimpleNamespace(
+            spent=80,
+            engagements=4,
+            last_gate_evaluated=True,
+            last_intervened=False,
+            last_started=False,
+            last_candidate=True,
+            last_score=0.03125,
+            last_p_fail=0.125,
+            last_score_floor_blocked=True,
+            last_rejection_reason="score_floor",
+        )
+        priv = {
+            "task": "Lift",
+            "eef_pos": [0.1, 0.2, 0.9],
+            "cube_pos": [0.1, 0.25, 0.82],
+            "gripper_to_cube": [0.0, 0.05, -0.08],
+        }
+
+        row = candidate_trace_row(
+            step=1234, ep_idx=5, ep_len=67,
+            args=args, controller=controller, priv=priv)
+
+        self.assertEqual(row["env_step"], 1234)
+        self.assertEqual(row["gate_evaluated"], 1)
+        self.assertEqual(row["accepted"], 0)
+        self.assertEqual(row["intervened"], 0)
+        self.assertEqual(row["candidate"], 1)
+        self.assertEqual(row["score_floor_blocked"], 1)
+        self.assertEqual(row["rejection_reason"], "score_floor")
+        self.assertEqual(row["score"], "0.031250")
+        self.assertEqual(row["p_fail"], "0.125000")
+        self.assertEqual(row["budget_used_frac"], "0.1333")
+        self.assertEqual(row["gripper_to_cube_norm"], "0.094340")
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 # Experiment Evidence Registry
 
-This registry is the single entry point for paper-facing R018 and R020-R060
+This registry is the single entry point for paper-facing R018 and R020-R061
 evidence.
 Use `results/EXPERIMENT_EVIDENCE_REGISTRY.csv` as the machine-readable source
 when drafting claims, tables, captions, or rebuttal text.
@@ -29,10 +29,10 @@ when drafting claims, tables, captions, or rebuttal text.
 - Treat R023 as a trace diagnostic, not as the main success-rate evidence.
 - Treat R025/R026/R028/R029 as paper-preparation artifacts, not new experimental
   results.
-- Treat R030-R060 as structure, manuscript-theme, citation-audit,
+- Treat R030-R061 as structure, manuscript-theme, citation-audit,
   paper-claim-audit, paper-artifact, evidence-discipline,
-  experiment-planning, and trace-offline diagnostic artifacts, not new
-  experimental results.
+  experiment-planning, trace-offline diagnostic, and instrumentation
+  artifacts, not new experimental results.
 
 ## Current Verdict
 
@@ -125,3 +125,6 @@ The registry supports the diagnostic-benchmark paper route:
 - R060 executes the first R059 trace/offline diagnostic extension from R023/R024
   accepted-start traces. It can support phase/count/gate-retention statements,
   but it cannot support online success-rate or method-superiority claims.
+- R061 adds tested candidate-state logging for future VoI gate evaluations,
+  including accepted and rejected states. It is instrumentation for future
+  R062+ experiments, not online performance evidence.

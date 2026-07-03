@@ -12,7 +12,12 @@ from .bookkeeping import (
     should_add_intervention_demo,
     write_summary_row,
 )
-from .trace import INTERVENTION_TRACE_FIELDS, intervention_trace_row
+from .trace import (
+    CANDIDATE_TRACE_FIELDS,
+    INTERVENTION_TRACE_FIELDS,
+    candidate_trace_row,
+    intervention_trace_row,
+)
 from .strategy_specs import (
     DEFAULT_COMPARISON_STRATEGIES,
     build_driver_run_label,
@@ -23,12 +28,14 @@ from .strategy_specs import (
 
 __all__ = [
     "DEFAULT_COMPARISON_STRATEGIES",
+    "CANDIDATE_TRACE_FIELDS",
     "INTERVENTION_TRACE_FIELDS",
     "SUMMARY_RESULT_FIELDS",
     "best_eval_cost_metadata",
     "build_run_tag",
     "build_driver_run_label",
     "build_training_cli_args",
+    "candidate_trace_row",
     "choose_reported_final_eval",
     "comparison_run_identity",
     "config_run_label",

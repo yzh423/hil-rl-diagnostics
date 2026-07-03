@@ -47,9 +47,9 @@ The next optimization should be evidence-first, not method-first:
 The default near-term recommendation is not to add robotics breadth before
 submission unless the target venue, advisor, or reviewer feedback explicitly
 requires it. The current Stack appendix is enough as boundary evidence for the
-diagnostic-protocol paper route. After R060, any new online repair should add
-accepted and rejected candidate-state logging and remain cost-matched against
-the random family before it can change manuscript claims.
+diagnostic-protocol paper route. R061 now adds accepted/rejected candidate-state
+logging. Any new R062+ online repair should use that logging and remain
+cost-matched against the random family before it can change manuscript claims.
 
 ## Claim Boundary
 

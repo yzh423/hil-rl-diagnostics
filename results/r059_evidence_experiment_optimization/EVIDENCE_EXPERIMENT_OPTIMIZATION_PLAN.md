@@ -56,7 +56,7 @@ Candidate derived analyses:
 | Failure-taxonomy refinement | R056 plus R023/R024 | Tightens stop/redesign criteria. | No new method superiority claim. |
 
 Stop gate: promote a derived analysis only if it clarifies the diagnostic
-protocol or directly reduces reviewer confusion. Register it under a new R060+
+protocol or directly reduces reviewer confusion. Register it under a new result
 directory before manuscript use.
 
 Execution note: R060 now executes the counterfactual/offline accepted-start
@@ -87,24 +87,26 @@ If the user wants one experiment next, choose the cheapest claim-relevant path:
 
 1. Use R060 as the offline R023/R024 counterfactual trigger audit from existing
    accepted-start traces.
-2. If a future gate is still worth testing, run one cost-matched online trigger
-   repair in a fresh `results/r061_*` directory with accepted and rejected
+2. Use R061 candidate-state logging for any future gate worth testing.
+3. If a future gate is still worth testing, run one cost-matched online trigger
+   repair in a fresh `results/r062_*` directory with accepted and rejected
    candidate-state logging.
-3. Compare against `random_b350` and LV-VoI scale3 using registry-driven tables.
-4. Register the row before changing manuscript prose.
+4. Compare against `random_b350` and LV-VoI scale3 using registry-driven tables.
+5. Register the row before changing manuscript prose.
 
 This sequence keeps compute risk low and prevents a weak trigger idea from
 becoming an unsupported paper claim.
 
 ## Must-Have Logging For Any New Run
 
-Every future R060+ experiment should archive:
+Every future R062+ online experiment should archive:
 
 - exact command line;
 - stdout/stderr log;
 - Git commit hash or source snapshot ID;
 - environment summary;
 - raw result CSVs;
+- candidate-state trace CSVs when testing trigger repairs;
 - repeated checkpoint summaries when applicable;
 - manifest explaining claim boundary;
 - registry row before manuscript use.

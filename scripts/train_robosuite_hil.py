@@ -65,7 +65,9 @@ from foresight_hil.experiments.bookkeeping import (
     write_summary_row,
 )
 from foresight_hil.experiments.trace import (
+    CANDIDATE_TRACE_FIELDS,
     INTERVENTION_TRACE_FIELDS,
+    candidate_trace_row,
     intervention_trace_row,
 )
 
@@ -485,6 +487,11 @@ def main():
                          "for offline analysis only, not used by the policy"))
     p.add_argument("--trace_path", type=str, default="",
                    help="optional path for --trace_interventions CSV")
+    p.add_argument("--trace_candidates", action="store_true",
+                   help=("write one diagnostic CSV row per VoI gate evaluation, "
+                         "including rejected candidate states; offline analysis only"))
+    p.add_argument("--candidate_trace_path", type=str, default="",
+                   help="optional path for --trace_candidates CSV")
     p.add_argument("--out_dir", type=str, default="results")
     args = p.parse_args()
 
@@ -647,6 +654,10 @@ def main():
     run_tag, effective_run_label = build_run_tag(args)
     run_csv = os.path.join(args.out_dir, f"run_{run_tag}.csv")
     trace_csv = args.trace_path or os.path.join(args.out_dir, f"trace_{run_tag}.csv")
+    candidate_trace_csv = (
+        args.candidate_trace_path
+        or os.path.join(args.out_dir, f"candidate_trace_{run_tag}.csv")
+    )
     best_checkpoint_path = os.path.join(
         args.out_dir, "checkpoints", f"best_{run_tag}.zip")
     with open(run_csv, "w", newline="") as f:
@@ -660,6 +671,10 @@ def main():
         with open(trace_csv, "w", newline="") as f:
             csv.DictWriter(f, fieldnames=INTERVENTION_TRACE_FIELDS).writeheader()
         print(f"[trace] intervention starts -> {trace_csv}")
+    if args.trace_candidates:
+        with open(candidate_trace_csv, "w", newline="") as f:
+            csv.DictWriter(f, fieldnames=CANDIDATE_TRACE_FIELDS).writeheader()
+        print(f"[trace] candidate gate states -> {candidate_trace_csv}")
 
     # ---- HIL training loop ----
     obs, _ = env.reset()
@@ -728,6 +743,13 @@ def main():
             action = oracle.act(priv_now)
         else:
             action = learner_a
+        if args.trace_candidates and controller.last_gate_evaluated:
+            if priv_now is None:
+                priv_now = env.privileged_state()
+            with open(candidate_trace_csv, "a", newline="") as f:
+                csv.DictWriter(f, fieldnames=CANDIDATE_TRACE_FIELDS).writerow(
+                    candidate_trace_row(
+                        step, ep_idx, ep_len, args, controller, priv_now))
         if args.trace_interventions and controller.last_started:
             if priv_now is None:
                 priv_now = env.privileged_state()

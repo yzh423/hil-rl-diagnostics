@@ -13,6 +13,15 @@ INTERVENTION_TRACE_FIELDS = [
     "gripper_to_cubeB_norm", "stack_cubeA_lifted",
 ]
 
+CANDIDATE_TRACE_FIELDS = [
+    "env_step", "episode", "episode_step", "task", "strategy", "seed",
+    "human_steps", "budget_used_frac", "engagements", "gate_evaluated",
+    "intervened", "accepted", "candidate", "score", "p_fail",
+    "score_floor_blocked", "rejection_reason", "eef_z", "cube_z",
+    "gripper_to_cube_norm", "gripper_to_cube_xy", "cubeA_z", "cubeB_z",
+    "gripper_to_cubeA_norm", "gripper_to_cubeB_norm", "stack_cubeA_lifted",
+]
+
 
 def _trace_float(value):
     if value is None:
@@ -29,12 +38,7 @@ def _trace_vec(priv, key):
     return np.asarray(priv[key], dtype=np.float64).reshape(-1)
 
 
-def intervention_trace_row(step, ep_idx, ep_len, args, controller, priv):
-    """Build a CSV row for an intervention start.
-
-    The row is intentionally based on privileged simulator geometry because
-    trace diagnostics are offline analysis outputs, not online policy features.
-    """
+def _trace_geometry_fields(priv):
     priv = dict(priv or {})
     eef = _trace_vec(priv, "eef_pos")
     cube = _trace_vec(priv, "cube_pos")
@@ -57,18 +61,6 @@ def intervention_trace_row(step, ep_idx, ep_len, args, controller, priv):
         return np.linalg.norm(vec[:2]) if vec is not None and vec.size >= 2 else None
 
     return {
-        "env_step": int(step),
-        "episode": int(ep_idx),
-        "episode_step": int(ep_len),
-        "task": str(priv.get("task", getattr(args, "task", ""))),
-        "strategy": str(getattr(args, "strategy", "")),
-        "seed": int(getattr(args, "seed", 0)),
-        "human_steps": int(getattr(controller, "spent", 0)),
-        "budget_used_frac": f"{getattr(controller, 'spent', 0) / max(1, getattr(args, 'budget', 1)):.4f}",
-        "engagements": int(getattr(controller, "engagements", 0)),
-        "candidate": int(bool(getattr(controller, "last_candidate", False))),
-        "score": _trace_float(getattr(controller, "last_score", float("nan"))),
-        "p_fail": _trace_float(getattr(controller, "last_p_fail", float("nan"))),
         "eef_z": _trace_float(z(eef)),
         "cube_z": _trace_float(z(cube)),
         "gripper_to_cube_norm": _trace_float(norm(g2c)),
@@ -79,3 +71,56 @@ def intervention_trace_row(step, ep_idx, ep_len, args, controller, priv):
         "gripper_to_cubeB_norm": _trace_float(norm(g2c_b)),
         "stack_cubeA_lifted": cube_a_lifted,
     }
+
+
+def _trace_context_fields(step, ep_idx, ep_len, args, controller, priv):
+    priv = dict(priv or {})
+    return {
+        "env_step": int(step),
+        "episode": int(ep_idx),
+        "episode_step": int(ep_len),
+        "task": str(priv.get("task", getattr(args, "task", ""))),
+        "strategy": str(getattr(args, "strategy", "")),
+        "seed": int(getattr(args, "seed", 0)),
+        "human_steps": int(getattr(controller, "spent", 0)),
+        "budget_used_frac": f"{getattr(controller, 'spent', 0) / max(1, getattr(args, 'budget', 1)):.4f}",
+        "engagements": int(getattr(controller, "engagements", 0)),
+    }
+
+
+def intervention_trace_row(step, ep_idx, ep_len, args, controller, priv):
+    """Build a CSV row for an intervention start.
+
+    The row is intentionally based on privileged simulator geometry because
+    trace diagnostics are offline analysis outputs, not online policy features.
+    """
+    row = {
+        **_trace_context_fields(step, ep_idx, ep_len, args, controller, priv),
+        "candidate": int(bool(getattr(controller, "last_candidate", False))),
+        "score": _trace_float(getattr(controller, "last_score", float("nan"))),
+        "p_fail": _trace_float(getattr(controller, "last_p_fail", float("nan"))),
+    }
+    row.update(_trace_geometry_fields(priv))
+    return row
+
+
+def candidate_trace_row(step, ep_idx, ep_len, args, controller, priv):
+    """Build a CSV row for a gate-evaluated candidate state.
+
+    Unlike intervention traces, candidate traces include rejected states. They
+    are for offline trigger-design audits and should not be treated as online
+    success evidence.
+    """
+    row = {
+        **_trace_context_fields(step, ep_idx, ep_len, args, controller, priv),
+        "gate_evaluated": int(bool(getattr(controller, "last_gate_evaluated", False))),
+        "intervened": int(bool(getattr(controller, "last_intervened", False))),
+        "accepted": int(bool(getattr(controller, "last_started", False))),
+        "candidate": int(bool(getattr(controller, "last_candidate", False))),
+        "score": _trace_float(getattr(controller, "last_score", float("nan"))),
+        "p_fail": _trace_float(getattr(controller, "last_p_fail", float("nan"))),
+        "score_floor_blocked": int(bool(getattr(controller, "last_score_floor_blocked", False))),
+        "rejection_reason": str(getattr(controller, "last_rejection_reason", "")),
+    }
+    row.update(_trace_geometry_fields(priv))
+    return row

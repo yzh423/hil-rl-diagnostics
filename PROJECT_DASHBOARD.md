@@ -53,6 +53,7 @@ cost.
 | Submission packaging readiness | `results/r058_submission_packaging_readiness/MANIFEST.md` |
 | Evidence/experiment optimization plan | `results/r059_evidence_experiment_optimization/MANIFEST.md` |
 | Offline trace trigger audit | `results/r060_offline_trace_trigger_audit/MANIFEST.md` |
+| Candidate-state logging interface | `results/r061_candidate_state_logging/MANIFEST.md` |
 | Future agent rules | `AGENTS.md` |
 
 ## Evidence Chain
@@ -74,6 +75,7 @@ cost.
 | Submission packaging | `results/r058_submission_packaging_readiness/` | Records the current PDF compile path, visual QA, public Git source-state tracking, and final source-archive decision. |
 | Experiment optimization | `results/r059_evidence_experiment_optimization/` | Use trace/offline diagnostic gates and cost matching before any future method claim. |
 | Offline trace audit | `results/r060_offline_trace_trigger_audit/` | Treat accepted-start gate filtering as a design screen, not online trigger evidence. |
+| Candidate-state logging | `results/r061_candidate_state_logging/` | Use before any future online trigger repair; archive accepted and rejected gate-evaluation states. |
 | Manuscript | `paper/` | Keep current-route writing separate from historical `proposal/`. |
 
 ## Canonical Commands
@@ -131,6 +133,7 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
 | Submission packaging readiness | `results/r058_submission_packaging_readiness/` |
 | Evidence/experiment optimization plan | `results/r059_evidence_experiment_optimization/` |
 | Offline trace trigger audit | `results/r060_offline_trace_trigger_audit/` |
+| Candidate-state logging interface | `results/r061_candidate_state_logging/` |
 
 Current compile caveat: R058 resolves the local PDF compile gate for the
 current draft by using bundled Tectonic 0.16.9 with a project-local
@@ -180,12 +183,17 @@ LV-VoI starts can look much more selective than the actual R024 score-floor
 follow-up. Use it to reject weak repair ideas or design logging requirements,
 not to claim online performance.
 
+Current experiment-instrumentation caveat: R061 adds `--trace_candidates` for
+VoI gate-evaluated states, including accepted and rejected decisions. Future
+R062+ online repairs still need fresh result directories, repeated evaluation,
+and cost-matched random comparison before any method claim changes.
+
 ## Code Map
 
 | Area | Current role |
 |---|---|
 | `foresight_hil/experiments/bookkeeping.py` | Run labels, summaries, best checkpoints, and cost metadata. |
-| `foresight_hil/experiments/trace.py` | Stable intervention-trace schema and row construction. |
+| `foresight_hil/experiments/trace.py` | Stable intervention-start and candidate-state trace schemas and row construction. |
 | `foresight_hil/experiments/strategy_specs.py` | Comparison strategy identity and CLI construction. |
 | `foresight_hil/evaluation/protocol.py` | Repeated checkpoint summary aggregation. |
 | `foresight_hil/evaluation/attention_diagnostics.py` | Trace-row collection and profile generation for attention-allocation diagnostic figures. |
@@ -214,9 +222,9 @@ not to claim online performance.
    checkpoints, caches, and third-party PDFs should stay untracked.
 3. Create a frozen institutional/source archive only from the final verified
    submission tag.
-4. Use R060 before spending compute on new experiments: accepted-start filters
-   are only design screens, so any R061+ online repair needs candidate-state
-   logging and a cost-matched random comparison before it can affect claims.
+4. Use R061 before spending compute on new experiments: any R062+ online repair
+   needs candidate-state logging, repeated evaluation, and a cost-matched random
+   comparison before it can affect claims.
 5. Keep `paper/CITATION_AUDIT.md` current if citation contexts or bibliography
    entries change again, and keep `paper/PAPER_CLAIM_AUDIT.md` current if
    numerical, comparison, or scope claims change.

@@ -56,10 +56,12 @@ class InterventionController:
         self.t = 0  # global env-step counter (advances once per step() call)
         self.last_intervened = False
         self.last_started = False
+        self.last_gate_evaluated = False
         self.last_candidate = False
         self.last_score = float("nan")
         self.last_p_fail = float("nan")
         self.last_score_floor_blocked = False
+        self.last_rejection_reason = "not_evaluated"
 
     def reset_episode(self):
         self.timer = 0
@@ -67,10 +69,12 @@ class InterventionController:
     def _reset_last_decision(self):
         self.last_intervened = False
         self.last_started = False
+        self.last_gate_evaluated = False
         self.last_candidate = False
         self.last_score = float("nan")
         self.last_p_fail = float("nan")
         self.last_score_floor_blocked = False
+        self.last_rejection_reason = "not_evaluated"
 
     def remaining(self):
         return max(0, self.budget - self.spent)
@@ -99,10 +103,12 @@ class InterventionController:
         self.t += 1
         self._reset_last_decision()
         if self.strategy == "none":
+            self.last_rejection_reason = "strategy_none"
             return False
 
         budgeted = self.strategy in ("random", "voi")
         if budgeted and self.spent >= self.budget:
+            self.last_rejection_reason = "budget_exhausted"
             return False
 
         # continue an ongoing takeover (latch) -- exempt from the pacing ceiling
@@ -110,10 +116,12 @@ class InterventionController:
             self.timer -= 1
             self.spent += 1
             self.last_intervened = True
+            self.last_rejection_reason = "ongoing_takeover"
             return True
 
         # pacing ceiling only gates the START of a new engagement
         if budgeted and not self._pace_allows_new():
+            self.last_rejection_reason = "pace"
             return False
 
         fire = False
@@ -121,16 +129,22 @@ class InterventionController:
             fire = True
         elif self.strategy == "random":
             fire = self.rng.random() < self.p
+            if not fire:
+                self.last_rejection_reason = "random_not_selected"
         elif self.strategy == "voi":
             cand, _score, _pf = self.gate.candidates(np.atleast_2d(obs), policy)
+            self.last_gate_evaluated = True
             self.last_candidate = bool(np.asarray(cand).ravel()[0])
             self.last_score = float(np.asarray(_score).ravel()[0])
             self.last_p_fail = float(np.asarray(_pf).ravel()[0])
             fire = self.last_candidate
+            if not fire:
+                self.last_rejection_reason = "gate_not_candidate"
             if fire and not self._score_floor_allows_new():
                 fire = False
                 self.last_score_floor_blocked = True
                 self.score_floor_blocks += 1
+                self.last_rejection_reason = "score_floor"
 
         if fire:
             self.timer = max(0, self.takeover_len - 1)
@@ -138,5 +152,6 @@ class InterventionController:
             self.engagements += 1
             self.last_intervened = True
             self.last_started = True
+            self.last_rejection_reason = "accepted"
             return True
         return False
