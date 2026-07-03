@@ -22,6 +22,8 @@ Before making paper-facing changes, read:
 10. `results/r055_project_quality_pass/PROJECT_QUALITY_REVIEW.md`
 11. `results/r056_methodology_extension/MANIFEST.md`
 12. `results/r057_document_code_quality_pass/MANIFEST.md`
+13. `results/r058_submission_packaging_readiness/MANIFEST.md`
+14. `results/r059_evidence_experiment_optimization/MANIFEST.md`
 
 ## Current Scientific Position
 
@@ -105,16 +107,18 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
   boundaries.
 - Keep R049 provenance validation in the verification menu before claiming the
   provenance layer is ready.
-- Decide whether submission packaging also needs an institutional source archive
-  in addition to the public Git repository and R048 source snapshot.
+- Prepare an institutional/source archive only from a clean final submission tag;
+  use public Git for current source-state tracking and R048 for the historical
+  source-snapshot repair record.
 - Use R047 as the current source/hash/compute/command provenance package before
   making paper-facing evidence claims.
 - Keep the R052 paper-claim audit current if manuscript numerical, comparison,
   or scope claims change.
 - Keep the R051 citation-context audit current if citation contexts or
   bibliography entries change again.
-- Decide whether any robotics breadth beyond the cleaned R053 Stack appendix is
-  worth adding before submission.
+- Do not add robotics breadth beyond the cleaned R053 Stack appendix by default
+  before submission unless the target venue, advisor, or reviewer feedback
+  explicitly requires it.
 - Use R054 as the optimized attention-allocation diagnostic figure candidate
   when a compact R021/R023/R024 visual summary is needed.
 - Use R055 as the current documentation/code-quality pass before changing the
@@ -124,7 +128,16 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
   methodology asset.
 - Use R057 as the current document/code-quality pass before changing document
   validation or attention-profile helper behavior again.
-- Resolve local LaTeX compile environment if PDF iteration becomes necessary.
+- Use R058 as the current submission-packaging readiness record before changing
+  compile/visual-QA/source-archive packaging. Current-draft PDF compilation and
+  first visual QA are complete through bundled Tectonic with a project-local
+  cache and `paper/figures/` snapshots.
+- Use R059 as the current evidence/experiment optimization plan before spending
+  compute on new R060+ work.
+- Rerun PDF compile and visual QA after venue-template integration or major
+  layout changes before claiming final submission packaging is ready.
+- Create a final institutional/source archive only from a clean verified
+  submission tag.
 - If future methods are considered later, design them from the R023/R024
   trace diagnosis rather than from the earlier unsupported LV-VoI superiority
   story.

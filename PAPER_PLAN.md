@@ -283,6 +283,21 @@ Use `--compare-current-files` only as a drift diagnostic; a failure there means
 the current working tree differs from older snapshots, not that raw evidence is
 corrupt.
 
+R058 records the current submission-packaging pass. Bundled Tectonic 0.16.9 now
+compiles the current draft through a project-local `TECTONIC_CACHE_DIR` and
+compile-local `paper/figures/` snapshots, and the rendered 14-page PDF passed
+first visual QA. TeX Live/MiKTeX tools remain unavailable on `PATH`, so final
+venue-template integration should rerun compile and visual QA. Use the public
+GitHub repository for current source-state tracking, keep R047/R048 as
+provenance records, and create a frozen institutional/source archive only from
+the final verified submission tag.
+
+R059 records the evidence and experiment optimization route. Resolve packaging
+and audit gates first, then use cheap R023/R024 trace/offline diagnostics before
+launching any new training. Any future R060+ online method run must be
+cost-matched against the random-family baseline before it can support a
+positive method claim.
+
 ## Reviewer Feedback
 
 Secondary reviewer-agent feedback was not run in this turn because sub-agent spawning requires explicit user authorization in the current environment. Self-review:
@@ -327,5 +342,9 @@ Secondary reviewer-agent feedback was not run in this turn because sub-agent spa
 - [x] Integrate the R054 diagnostic figure into Results and extract its trace-profile logic into a tested evaluation helper (`results/r055_project_quality_pass/`).
 - [x] Extend the methodology with a derived protocol gate matrix, failure taxonomy, stop-rule metrics, and methodology-first Fig. 1 candidate (`results/r056_methodology_extension/`).
 - [x] Add repeatable Markdown local-link validation and repair row-aligned attention-profile gap handling (`results/r057_document_code_quality_pass/`).
-- [ ] Decide whether submission packaging also needs an institutional source archive.
-- [ ] Decide whether any robotics breadth beyond the cleaned Stack appendix is worth adding before submission.
+- [x] Record submission-packaging readiness, PDF compile/visual-QA pass, and final source-archive decision (`results/r058_submission_packaging_readiness/`).
+- [x] Record the evidence-first experiment optimization route and R060+ stop gates (`results/r059_evidence_experiment_optimization/`).
+- [x] Resolve current-draft PDF compilation and complete first visual QA.
+- [ ] Rerun PDF compile and visual QA after venue-template integration or major layout changes.
+- [ ] Run a final paper-claim audit if manuscript captions, numerical claims, comparison claims, or scope claims change.
+- [ ] Decide whether to execute the R059 offline trace audit before any new online experiment.

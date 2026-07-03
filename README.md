@@ -21,6 +21,8 @@ Start with:
 - [paper/PAPER_CLAIM_AUDIT.md](paper/PAPER_CLAIM_AUDIT.md)
 - [results/r056_methodology_extension/MANIFEST.md](results/r056_methodology_extension/MANIFEST.md)
 - [results/r057_document_code_quality_pass/MANIFEST.md](results/r057_document_code_quality_pass/MANIFEST.md)
+- [results/r058_submission_packaging_readiness/MANIFEST.md](results/r058_submission_packaging_readiness/MANIFEST.md)
+- [results/r059_evidence_experiment_optimization/MANIFEST.md](results/r059_evidence_experiment_optimization/MANIFEST.md)
 
 ## Visual Summary
 
@@ -43,6 +45,8 @@ README images:
 - [R056 methodology extension manifest](results/r056_methodology_extension/MANIFEST.md)
 - [R056 protocol gate matrix table](figures/TABLE_protocol_gate_matrix_r056.tex)
 - [R056 failure taxonomy table](figures/TABLE_failure_taxonomy_r056.tex)
+- [R058 submission packaging readiness](results/r058_submission_packaging_readiness/MANIFEST.md)
+- [R059 evidence and experiment optimization plan](results/r059_evidence_experiment_optimization/MANIFEST.md)
 - [trace geometry boxplots](results/r023_real_trace_seed0_2/r023_intervention_geometry_boxplots.png)
 - [R024 repair comparison](results/r024_score_floor_seed0_2/r024_success_cost_compare.png)
 - [Stack boundary appendix table](figures/TABLE_stack_boundary_appendix_r053.tex)

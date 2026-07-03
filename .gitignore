@@ -37,6 +37,10 @@ Thumbs.db
 *.run.xml
 *.synctex.gz
 *.toc
+paper/build/
+.tectonic-cache-dir/
+tmp_tectonic_smoke_build/
+results/r058_submission_packaging_readiness/pdf_visual_qa/main_page-*.png
 
 # Temporary scratch files
 *.tmp

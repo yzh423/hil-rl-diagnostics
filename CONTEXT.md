@@ -78,9 +78,10 @@ manuscript-ready Markdown and LaTeX tables from the audited registry. R037
 completed the first source-bank citation audit for candidate method/setup and
 evaluation references, keeping them staged outside the main bibliography. R038
 created the first current-route manuscript skeleton under `paper/`, importing
-R029/R036 assets and using only R027/R037-supported citation keys. PDF
-compilation is blocked on this machine by the incomplete local LaTeX runtime,
-not by a known source-file error. R039 adds `PROJECT_DASHBOARD.md`, `AGENTS.md`,
+R029/R036 assets and using only R027/R037-supported citation keys. R058 later
+resolves current-draft PDF compilation through bundled Tectonic with a
+project-local cache and compile-local `paper/figures/` snapshots. R039 adds
+`PROJECT_DASHBOARD.md`, `AGENTS.md`,
 and `results/r039_project_organization/` so future work starts from a compact
 project dashboard before touching evidence, code, or manuscript claims. R040
 polishes the abstract, Introduction, Diagnostic Protocol and Experimental Setup,
@@ -136,4 +137,15 @@ methodology-first Fig. 1 candidate from registered R021/R023/R024 evidence,
 without adding experiments or changing the negative LV-VoI claim boundary. R057
 adds repeatable Markdown local-link validation and repairs row-aligned
 attention-profile gap handling, improving project quality without changing
-experimental evidence or manuscript claims.
+experimental evidence or manuscript claims. R058 records the submission
+packaging readiness pass: bundled Tectonic 0.16.9 now compiles the current
+draft through a project-local `TECTONIC_CACHE_DIR`, `paper/figures/`
+compile-local snapshots, and first visual QA of the rendered 14-page PDF is
+complete. TeX Live/MiKTeX tools remain unavailable on `PATH`, so final
+venue-template integration should rerun compile and visual QA. R058 also
+decides to use public Git for current source-state tracking and to create a
+frozen institutional/source archive only from a final verified submission tag.
+R059 records the evidence-first optimization route: finish
+packaging gates, harden existing audits, use R023/R024 trace/offline
+diagnostics before new training, and require cost-matched stop gates before any
+future positive method claim.

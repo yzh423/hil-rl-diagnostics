@@ -1,0 +1,15 @@
+\begin{table*}[t]
+\centering
+\caption{Failure-mode taxonomy induced by the current diagnostic evidence. Each row links a failure mode to a registered source and a protocol response.}
+\label{tab:failure_taxonomy_r056}
+\begin{tabular}{p{0.21\textwidth}p{0.34\textwidth}p{0.07\textwidth}p{0.30\textwidth}}
+\toprule
+Failure mode & Diagnostic observation & Evidence & Protocol response \\
+\midrule
+Cost-matched reversal & random\_b350 dominates LV-VoI by +4.6 pp and 25.0 fewer human steps & R021 & Reject trigger-superiority claims before redesign. \\
+Over-triggering despite plausible geometry & LV-VoI starts 1.75x as often as random while mean 3D gripper-cube distance is lower (0.217 vs 0.285) & R023 & Do not explain the failure as a simple far-from-object threshold issue. \\
+Weak score-floor selectivity & Score-floor removes low-score post-floor starts but closes only 4.9\% of the start-count gap to random & R024 & Stop lightweight repair expansion under same-seed random dominance. \\
+Repair remains success-cost dominated & Score-floor remains -8.7 pp below same-seed random and costs 158.3 more human steps & R024 & Require a substantially different mechanism before new experiments. \\
+\bottomrule
+\end{tabular}
+\end{table*}

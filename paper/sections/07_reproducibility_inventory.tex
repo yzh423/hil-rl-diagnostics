@@ -8,20 +8,20 @@ The manuscript is organized around a registry-first reproducibility path. Raw ru
 \caption{Reproducibility inventory for the current diagnostic-protocol draft. The entries list the artifact that should be inspected before changing a claim, table, or figure.}
 \label{tab:reproducibility_inventory}
 \small
-\begin{tabular}{p{0.18\textwidth}p{0.30\textwidth}p{0.42\textwidth}}
+\begin{tabular}{p{0.17\textwidth}p{0.31\textwidth}p{0.42\textwidth}}
 \toprule
 \textbf{Need} & \textbf{Primary artifact} & \textbf{Purpose} \\
 \midrule
-Claim index & \texttt{results/EXPERIMENT\_EVIDENCE\_REGISTRY.csv} & Machine-readable source for success rates, confidence intervals, human-step costs, paper-artifact decisions, and claim status. \\
-Result map & \texttt{results/RESULTS\_INDEX.md} & Human-readable map separating paper-core evidence, historical baselines, and smoke/debug outputs. \\
-Numeric audit & \texttt{scripts/audit\_registry\_numbers.py} & Checks registry numbers against primary CSV rows before they are copied into prose, captions, or tables. \\
-Source audit & \texttt{scripts/validate\_evidence\_registry.py} & Checks that registry primary sources exist and that CSV sources are readable. \\
-Claim tables & \texttt{scripts/generate\_claim\_tables.py} and R036 tables & Regenerates the cost-matched and trigger-repair tables from audited registry rows. \\
+Claim index & \path{results/EXPERIMENT_EVIDENCE_REGISTRY.csv} & Machine-readable source for success rates, confidence intervals, human-step costs, paper-artifact decisions, and claim status. \\
+Result map & \path{results/RESULTS_INDEX.md} & Human-readable map separating paper-core evidence, historical baselines, and smoke/debug outputs. \\
+Numeric audit & \path{scripts/audit_registry_numbers.py} & Checks registry numbers against primary CSV rows before they are copied into prose, captions, or tables. \\
+Source audit & \path{scripts/validate_evidence_registry.py} & Checks that registry primary sources exist and that CSV sources are readable. \\
+Claim tables & \path{scripts/generate_claim_tables.py} and R036 tables & Regenerates the cost-matched and trigger-repair tables from audited registry rows. \\
 Paper-core runs & R020--R024 result directories & Store the Lift cost-matched reversal, negative repairs, and intervention trace diagnostics. \\
-Trace schema & \texttt{foresight\_hil/experiments/trace.py} and R023/R024 trace CSVs & Define and record intervention-start timing, budget fraction, geometry, score, and predicted failure diagnostics. \\
-Reproduction commands & \texttt{results/r044\_environment\_reproducibility\_audit/REPRODUCTION\_COMMANDS.md} & Central command sheet for smoke checks, verification, and future paper-core rerun planning. \\
-Citation contexts & \texttt{paper/CITATION\_AUDIT.md} & Current ledger showing that the manuscript citation contexts were audited without adding unsupported citation keys. \\
-Paper-claim audit & \texttt{paper/PAPER\_CLAIM\_AUDIT.md} and R052 & Current ledger checking manuscript numerical, comparison, and scope claims against the registry and primary sources. \\
+Trace schema & \path{foresight_hil/experiments/trace.py} and R023/R024 trace CSVs & Define and record intervention-start timing, budget fraction, geometry, score, and predicted failure diagnostics. \\
+Reproduction commands & \path{results/r044_environment_reproducibility_audit/REPRODUCTION_COMMANDS.md} & Central command sheet for smoke checks, verification, and future paper-core rerun planning. \\
+Citation contexts & \path{paper/CITATION_AUDIT.md} & Current ledger showing that the manuscript citation contexts were audited without adding unsupported citation keys. \\
+Paper-claim audit & \path{paper/PAPER_CLAIM_AUDIT.md} and R052 & Current ledger checking manuscript numerical, comparison, and scope claims against the registry and primary sources. \\
 \bottomrule
 \end{tabular}
 \end{table*}

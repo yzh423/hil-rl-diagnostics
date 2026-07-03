@@ -33,6 +33,8 @@ project stays readable as results accumulate.
 | Project quality pass | `results/r055_project_quality_pass/MANIFEST.md` |
 | Methodology extension | `results/r056_methodology_extension/MANIFEST.md` |
 | Document/code quality follow-up | `results/r057_document_code_quality_pass/MANIFEST.md` |
+| Submission packaging readiness | `results/r058_submission_packaging_readiness/MANIFEST.md` |
+| Evidence/experiment optimization plan | `results/r059_evidence_experiment_optimization/MANIFEST.md` |
 | Current manuscript skeleton | `paper/main.tex` |
 | Human-readable result map | `results/RESULTS_INDEX.md` |
 | Figure and table asset map | `figures/FIGURE_ASSET_INDEX.md` |
@@ -79,9 +81,14 @@ manifests, and audit packages for public-facing provenance.
     failure taxonomy, stop-rule metrics, and methodology-first Fig. 1 candidate.
 13. R057 records the document/code-quality follow-up: repeatable Markdown
     local-link validation and row-aligned attention-profile gap handling.
-14. Manuscript logic is maintained in `PAPER_PLAN.md`.
-15. Derived figure/table assets are generated into `figures/`.
-16. Figure/table provenance is tracked in `figures/FIGURE_ASSET_INDEX.md`.
+14. R058 records submission-packaging readiness, current-draft PDF
+    compile/visual-QA completion, public Git source-state tracking, and the
+    final source-archive decision.
+15. R059 records the evidence-first experiment optimization route and
+    cost-matched stop gates for future R060+ work.
+16. Manuscript logic is maintained in `PAPER_PLAN.md`.
+17. Derived figure/table assets are generated into `figures/`.
+18. Figure/table provenance is tracked in `figures/FIGURE_ASSET_INDEX.md`.
 
 The registry is the narrow interface for paper claims. Raw directories remain
 the implementation detail behind that interface.
@@ -128,6 +135,8 @@ the implementation detail behind that interface.
 | R055 | Project quality pass: synchronizes documentation/code consistency after R054, extracts tested attention-diagnostic profiling helpers, and integrates the R054 figure into Results. |
 | R056 | Methodology extension: derives a protocol gate matrix, failure taxonomy, stop-rule metrics, and methodology-first Fig. 1 candidate from registered R021/R023/R024 evidence. |
 | R057 | Document/code quality pass: adds repeatable Markdown local-link validation and repairs row-aligned attention-profile gap handling without changing experimental claims. |
+| R058 | Submission packaging readiness: records current-draft PDF compile/visual-QA completion, source-state tracking through public Git, and final source-archive decision. |
+| R059 | Evidence/experiment optimization plan: prioritizes packaging, evidence hardening, R023/R024 trace/offline gates, and cost-matched stop rules before future experiments. |
 
 ## Module Deepening Candidates
 
@@ -162,6 +171,8 @@ These are the current code-structure targets after R030.
 | Attention-diagnostic helper extraction | R055 moves R054 trace-profile collection and summarization out of the plotting script. | `foresight_hil/evaluation/attention_diagnostics.py`, `tests/test_attention_diagnostics.py`, and `results/r055_project_quality_pass/`. | Done first pass |
 | Methodology diagnostic extension | R056 moves gate/taxonomy/stop-rule derivation behind a tested helper and uses it for table and Fig. 1 generation. | `foresight_hil/evaluation/protocol_diagnostics.py`, `tests/test_protocol_diagnostics.py`, `scripts/generate_methodology_extension.py`, and `figures/gen_r056_methodology_figure.py`. | Done first pass |
 | Document link validation and attention-profile robustness | R057 adds a tested documentation-link validator and tightens the R054 trace-profile helper. | `foresight_hil/evaluation/document_links.py`, `scripts/validate_document_links.py`, `tests/test_document_links.py`, and `foresight_hil/evaluation/attention_diagnostics.py`. | Done first pass |
+| Submission packaging readiness | R058 records local PDF compile diagnosis, visual QA, source-state tracking, and source-archive decision. | `results/r058_submission_packaging_readiness/`. | Done first pass |
+| Evidence and experiment optimization | R059 records the evidence-first optimization route and R060+ experiment stop gates. | `results/r059_evidence_experiment_optimization/`. | Done first pass |
 
 ## Editing Rules
 

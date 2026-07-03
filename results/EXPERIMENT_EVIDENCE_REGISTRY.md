@@ -109,3 +109,12 @@ The registry supports the diagnostic-benchmark paper route:
 - R057 adds a repeatable Markdown local-link validator and repairs row-aligned
   attention-profile gap handling, improving project quality without changing
   experimental result claims.
+- R058 records the submission-packaging readiness pass: bundled Tectonic now
+  compiles the current PDF through a project-local cache and `paper/figures/`
+  snapshots, first visual QA is complete, public Git is the current source-state
+  tracker, and a frozen institutional/source archive should be produced only
+  from the final verified submission tag.
+- R059 records the evidence-first experiment optimization route: resolve
+  packaging gates, harden existing audits, use cheap R023/R024 trace/offline
+  diagnostics before new training, and require cost-matched stop gates before
+  any future positive method claim.

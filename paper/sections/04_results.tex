@@ -2,7 +2,7 @@
 
 The main result is a reversal under cost matching. In the initial five-seed reliability check, LV-VoI scale3 appeared plausible because it achieved a success rate close to a higher-cost random baseline. That interpretation changed once the random family was swept around the method's realized human cost. As shown in Table~\ref{tab:registry_costmatched_claims}, random b350 achieved 439/500 repeated successes (87.8\%, 95\% CI [84.6, 90.4]) at 177.0 best-step human steps, whereas LV-VoI scale3 achieved 416/500 repeated successes (83.2\%, 95\% CI [79.7, 86.2]) at 202.0 best-step human steps. The learned trigger is therefore not on the observed Lift success-cost frontier, so the current evidence does not support a claim that it allocates human attention more efficiently than random intervention.
 
-\begin{figure*}[t]
+\begin{figure*}[p]
     \centering
     \includegraphics[width=0.95\textwidth]{fig1_methodology_protocol_r056.pdf}
     \caption{Methodology-first overview of the diagnostic evaluation route. The figure states the gate sequence for HIL-RL human-attention allocation claims, then shows the current Lift verdicts and derived stop-rule metrics from registered R021/R023/R024 evidence. It is a protocol visualization rather than a new empirical result.}
@@ -17,7 +17,7 @@ Two lightweight trigger repairs remain negative under the same discipline. The m
 
 \input{figures/TABLE_registry_trigger_repairs_r036.tex}
 
-\begin{figure*}[t]
+\begin{figure*}[p]
     \centering
     \includegraphics[width=0.95\textwidth]{fig_attention_allocation_diagnostics_r054.pdf}
     \caption{Attention-allocation diagnostics for the current negative trigger result. The panels combine the R021 cost-matched reversal, the R024 repair stop gate, and R023/R024 intervention-start traces to show when budget is spent, how much budget has already been used, where the gripper is relative to the cube, and whether LV-VoI scores or failure probabilities saturate. The figure is diagnostic: it visualizes the registered R021/R023/R024 evidence and does not introduce a new positive method claim.}
@@ -29,3 +29,5 @@ The trace results sharpen the mechanism claim. Figure~\ref{fig:attention_allocat
 The score-floor repair confirms this interpretation. R024 mechanically removed low-score starts after step 4000: the trace table records zero post-floor starts below the 0.05 threshold. Nevertheless, the repair still produced 94 intervention starts, almost the same as the original LV-VoI count of 96 and far above the random b350 count of 55. Its median accepted score was only 0.067, indicating that the floor was too weak to create random-level selectivity. Together, the repair and trace results support a narrower conclusion: the current trigger suffers from budget-control and score-timing mismatch, and any new trigger should be evaluated through the same cost-matched and trace-level protocol before being expanded.
 
 Stack provides boundary evidence rather than a positive generalization result. With a strong matched behavioral-cloning initialization, the no-online-human Stack baseline achieved 131/180 repeated successes (72.8\%) at zero online human cost, while both random intervention and Stack-tuned LV-VoI achieved 107/180 repeated successes (59.4\%) at substantial human cost. These results do not support a broad robotics-transfer claim for the current trigger. They instead reinforce the paper's conservative framing: the Lift evidence motivates the diagnostic protocol, and Stack shows that adding online interventions can be harmful when the task and update mechanism are not aligned.
+
+\clearpage

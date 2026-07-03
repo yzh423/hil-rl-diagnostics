@@ -50,6 +50,8 @@ cost.
 | Project quality pass | `results/r055_project_quality_pass/MANIFEST.md` |
 | Methodology extension | `results/r056_methodology_extension/MANIFEST.md` |
 | Document/code quality follow-up | `results/r057_document_code_quality_pass/MANIFEST.md` |
+| Submission packaging readiness | `results/r058_submission_packaging_readiness/MANIFEST.md` |
+| Evidence/experiment optimization plan | `results/r059_evidence_experiment_optimization/MANIFEST.md` |
 | Future agent rules | `AGENTS.md` |
 
 ## Evidence Chain
@@ -68,6 +70,8 @@ cost.
 | Document link validation | `python scripts\validate_document_links.py` | Run after documentation or project-index changes. |
 | Display assets | `figures/` | Prefer R056/R054/R036 assets for the current route. |
 | Project-quality pass | `results/r055_project_quality_pass/` | Records documentation/code consistency checks and tested attention-diagnostic helper extraction. |
+| Submission packaging | `results/r058_submission_packaging_readiness/` | Records the current PDF compile path, visual QA, public Git source-state tracking, and final source-archive decision. |
+| Experiment optimization | `results/r059_evidence_experiment_optimization/` | Use trace/offline diagnostic gates and cost matching before any future method claim. |
 | Manuscript | `paper/` | Keep current-route writing separate from historical `proposal/`. |
 
 ## Canonical Commands
@@ -121,10 +125,15 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
 | Project quality pass | `results/r055_project_quality_pass/` and `foresight_hil/evaluation/attention_diagnostics.py` |
 | Methodology extension | `figures/fig1_methodology_protocol_r056.pdf`, `figures/TABLE_protocol_gate_matrix_r056.tex`, `figures/TABLE_failure_taxonomy_r056.tex`, and `results/r056_methodology_extension/` |
 | Document/code quality follow-up | `results/r057_document_code_quality_pass/` and `foresight_hil/evaluation/document_links.py` |
+| Submission packaging readiness | `results/r058_submission_packaging_readiness/` |
+| Evidence/experiment optimization plan | `results/r059_evidence_experiment_optimization/` |
 
-Current compile caveat: PDF compilation is blocked by the local LaTeX runtime or
-Tectonic cache availability. This is not currently a verified source-file
-error.
+Current compile caveat: R058 resolves the local PDF compile gate for the
+current draft by using bundled Tectonic 0.16.9 with a project-local
+`TECTONIC_CACHE_DIR` and compile-local `paper/figures/` snapshots. TeX
+Live/MiKTeX tools are still not on `PATH`, and the Tectonic cache is local and
+ignored by Git, so final venue-template integration should rerun compile and
+visual QA.
 
 Current citation caveat: R051 audited all 15 citation keys after the R050
 human-attention theme update and found no wrong-context citations. It did not
@@ -154,7 +163,11 @@ failure taxonomy, stop-rule metrics, and Fig. 1 candidate from registered
 R021/R023/R024 evidence. It does not add a new experiment or positive trigger
 claim. R057 adds repeatable Markdown local-link validation and repairs
 row-aligned attention-profile gap handling without changing experimental
-claims.
+claims. R058 records the current submission-packaging compile/visual-QA pass
+and source-archive decision. R059 records the evidence-first experiment optimization route:
+resolve packaging gates, harden existing audits, run cheap R023/R024
+trace/offline diagnostics before any new training, and require cost-matched
+stop gates before future positive method claims.
 Rerun or update the claim audit after numeric, comparison, or scope claims
 change.
 
@@ -184,16 +197,19 @@ change.
 
 ## Best Next Moves
 
-1. Keep the public GitHub package clean: source, registry-backed evidence,
+1. Rerun PDF compile and visual QA after venue-template integration or major
+   layout changes.
+2. Keep the public GitHub package clean: source, registry-backed evidence,
    figures, tables, and audits should stay tracked, while local process notes,
    checkpoints, caches, and third-party PDFs should stay untracked.
-2. Decide whether any robotics breadth beyond the cleaned Stack appendix is
-   worth adding before submission.
-3. Decide whether to install/fix a local LaTeX runtime or keep drafting in TeX
-   without compiling PDF locally.
-4. Keep `paper/CITATION_AUDIT.md` current if citation contexts or bibliography
+3. Create a frozen institutional/source archive only from the final verified
+   submission tag.
+4. Use R059 before spending compute on new experiments: first consider R023/R024
+   trace/offline diagnostics, then a cost-matched R060+ online run only if it
+   answers a manuscript-critical question.
+5. Keep `paper/CITATION_AUDIT.md` current if citation contexts or bibliography
    entries change again, and keep `paper/PAPER_CLAIM_AUDIT.md` current if
    numerical, comparison, or scope claims change.
-5. Only after the diagnostic paper spine is stable, decide whether a future
+6. Only after the diagnostic paper spine is stable, decide whether a future
    method should be phase-aware, contact-aware, or a separate benchmark-only
    extension.
