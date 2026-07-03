@@ -101,8 +101,13 @@ negative LV-VoI boundary.
 
 R062 records the repair pre-registration and candidate-logging smoke gate that
 must precede any formal online trigger repair. Its tiny logging smoke passed,
-but it does not change the empirical boundary; future formal repair evidence
-should start as R063+ after the trigger rule is frozen.
+but it does not change the empirical boundary.
+
+R063 records the formal repair go/no-go decision after R062: do not launch a
+formal online trigger repair before the current submission. If reviewer,
+advisor, venue, or thesis risk later requires a positive repair attempt, start
+from a fresh R064+ pre-registration with a frozen trigger rule, candidate-state
+traces, repeated evaluation, and cost-matched random comparison.
 
 ## Claims-Evidence Matrix
 
@@ -301,9 +306,10 @@ R059 records the evidence and experiment optimization route. Resolve packaging
 and audit gates first, then use cheap R023/R024 trace/offline diagnostics before
 launching any new training. R060 executes that first offline trace audit, and
 R061 adds candidate-state logging. R062 now records the passed logging smoke
-and formal-run gate. Any future R063+ online method run must be cost-matched
-against the random-family baseline before it can support a positive method
-claim.
+and formal-run readiness gate. R063 records a no-go decision for formal online
+repair before the current submission; any future R064+ online method run must
+be cost-matched against the random-family baseline before it can support a
+positive method claim.
 
 R060 shows that post-hoc accepted-start filtering can look much more selective
 than the actual R024 score-floor online follow-up, so it should be used to
@@ -311,9 +317,10 @@ screen or reject repair ideas, not to support online method-superiority prose.
 
 R061 adds the candidate-state logging interface required before a future online
 repair: `--trace_candidates` records accepted and rejected VoI gate evaluations.
-R062 records the passed smoke and pre-registration requirements. Any future
-R063+ online method run must still be cost-matched against the
-random-family baseline before it can support a positive method claim.
+R062 records the passed smoke and pre-registration requirements. R063 records
+the current no-go decision; any future R064+ online method run must still be
+cost-matched against the random-family baseline before it can support a
+positive method claim.
 
 ## Reviewer Feedback
 
@@ -367,5 +374,6 @@ Secondary reviewer-agent feedback was not run in this turn because sub-agent spa
 - [ ] Run a final paper-claim audit if manuscript captions, numerical claims, comparison claims, or scope claims change.
 - [x] Add candidate-state logging so future online repairs can archive accepted and rejected gate-evaluation states (`results/r061_candidate_state_logging/`).
 - [x] Pre-register the candidate-logging smoke and formal online-repair gate (`results/r062_repair_preregistration/`).
-- [x] Run only the R062 candidate-logging smoke before deciding whether a future R063+ online repair is necessary.
-- [ ] Decide whether a future R063+ online repair is manuscript-critical; if so, freeze the trigger rule before training.
+- [x] Run only the R062 candidate-logging smoke before deciding whether a future formal online repair is necessary.
+- [x] Decide whether a future formal online repair is manuscript-critical; R063-P0 records no-go for the current submission.
+- [ ] If reviewer/advisor feedback later requires a positive repair attempt, create a fresh R064+ pre-registration before training.

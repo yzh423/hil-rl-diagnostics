@@ -55,6 +55,7 @@ cost.
 | Offline trace trigger audit | `results/r060_offline_trace_trigger_audit/MANIFEST.md` |
 | Candidate-state logging interface | `results/r061_candidate_state_logging/MANIFEST.md` |
 | Repair pre-registration and smoke plan | `results/r062_repair_preregistration/MANIFEST.md` |
+| Formal repair go/no-go decision | `results/r063_formal_repair_decision/MANIFEST.md` |
 | Future agent rules | `AGENTS.md` |
 
 ## Evidence Chain
@@ -77,7 +78,8 @@ cost.
 | Experiment optimization | `results/r059_evidence_experiment_optimization/` | Use trace/offline diagnostic gates and cost matching before any future method claim. |
 | Offline trace audit | `results/r060_offline_trace_trigger_audit/` | Treat accepted-start gate filtering as a design screen, not online trigger evidence. |
 | Candidate-state logging | `results/r061_candidate_state_logging/` | Use before any future online trigger repair; archive accepted and rejected gate-evaluation states. |
-| Repair pre-registration | `results/r062_repair_preregistration/` | R062-S0 logging smoke has passed; use it before launching formal R063+ repair compute. It is not performance evidence. |
+| Repair pre-registration | `results/r062_repair_preregistration/` | R062-S0 logging smoke has passed. It is not performance evidence. |
+| Formal repair decision | `results/r063_formal_repair_decision/` | R063-P0 is no-go for formal online repair before the current submission; future repair compute must start as a fresh R064+ pre-registration. |
 | Manuscript | `paper/` | Keep current-route writing separate from historical `proposal/`. |
 
 ## Canonical Commands
@@ -137,6 +139,7 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
 | Offline trace trigger audit | `results/r060_offline_trace_trigger_audit/` |
 | Candidate-state logging interface | `results/r061_candidate_state_logging/` |
 | Repair pre-registration and smoke plan | `results/r062_repair_preregistration/` |
+| Formal repair go/no-go decision | `results/r063_formal_repair_decision/` |
 
 Current compile caveat: R058 resolves the local PDF compile gate for the
 current draft by using bundled Tectonic 0.16.9 with a project-local
@@ -188,9 +191,10 @@ not to claim online performance.
 
 Current experiment-instrumentation caveat: R061 adds `--trace_candidates` for
 VoI gate-evaluated states, including accepted and rejected decisions. R062-S0
-has passed as a tiny logging smoke, with accepted and rejected gate rows. Future
-R063+ online repairs still need fresh result directories, repeated evaluation,
-and cost-matched random comparison before any method claim changes.
+has passed as a tiny logging smoke, with accepted and rejected gate rows. R063-P0
+records a no-go decision for formal online repair before the current submission.
+Future R064+ online repairs still need fresh result directories, repeated
+evaluation, and cost-matched random comparison before any method claim changes.
 
 ## Code Map
 
@@ -226,9 +230,9 @@ and cost-matched random comparison before any method claim changes.
    checkpoints, caches, and third-party PDFs should stay untracked.
 3. Create a frozen institutional/source archive only from the final verified
    submission tag.
-4. Use R062 before spending compute on new formal repairs: the candidate-logging
-   smoke has passed, but any R063+ online repair still needs repeated
-   evaluation plus a cost-matched random comparison before it can affect claims.
+4. Use R063 before spending compute on new formal repairs: R063-P0 says no-go
+   for the current submission route. If reviewer/advisor pressure later makes a
+   repair necessary, create a fresh R064+ pre-registration before training.
 5. Keep `paper/CITATION_AUDIT.md` current if citation contexts or bibliography
    entries change again, and keep `paper/PAPER_CLAIM_AUDIT.md` current if
    numerical, comparison, or scope claims change.

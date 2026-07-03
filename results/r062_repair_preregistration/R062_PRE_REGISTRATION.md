@@ -9,8 +9,8 @@ confirm that candidate-state logging can be archived and that the next formal
 experiment has a frozen rule, cost-matched comparison, and stop criteria before
 spending compute.
 
-Formal online repair evidence, if still needed, should start as R063+ after the
-R062 smoke pass and after any new trigger rule is implemented in a separate
+Formal online repair evidence, if still needed, should start after a separate
+go/no-go decision and after any new trigger rule is implemented in a separate
 tested change.
 
 ## Frozen Context
@@ -57,10 +57,9 @@ is to verify logging, not learning:
 R062-S0 produced candidate rows and rejected-state coverage. The optional
 score-floor smoke is therefore not needed.
 
-## R063+ Formal-Run Gate
+## Formal-Run Gate
 
-A formal online repair should be created as R063+ only when all items below are
-true:
+A formal online repair should be created only when all items below are true:
 
 1. R062-S0 candidate logging smoke has passed.
 2. The exact trigger rule is frozen before launch.
@@ -78,5 +77,5 @@ true:
 
 Use R062 only to describe experimental discipline for future work. Do not add a
 new method-performance sentence, abstract claim, or figure caption from R062
-unless a later registered R063+ result supplies empirical evidence and the
+unless a later registered R064+ result supplies empirical evidence and the
 paper-claim audit is updated.

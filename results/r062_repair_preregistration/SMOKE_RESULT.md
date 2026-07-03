@@ -47,8 +47,9 @@ or exception.
 ## Boundary
 
 The optional score-floor rejection-coverage smoke is not needed because R062-S0
-already exercised rejected-state logging. A future R063+ formal repair still
-requires a separately frozen trigger rule, exact command logs, repeated
+already exercised rejected-state logging. R063-P0 later records no-go for
+formal online repair before the current submission. A future R064+ formal repair
+still requires a separately frozen trigger rule, exact command logs, repeated
 evaluation, candidate-state traces, intervention traces, cost-matched random
 comparison, registry row, and paper-claim audit before manuscript claims can
 change.

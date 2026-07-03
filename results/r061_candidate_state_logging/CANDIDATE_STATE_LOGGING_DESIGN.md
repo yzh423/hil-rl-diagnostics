@@ -55,7 +55,8 @@ steps are not candidate rows because the VoI gate is not evaluated there.
 
 ## Use In Future Experiments
 
-For any R063+ online repair after the R062 smoke/pre-registration gate:
+For any R064+ online repair after the R062 smoke/pre-registration gate and a
+reversal of the R063 no-go decision:
 
 1. Pre-register the trigger rule and expected stop gate.
 2. Run with `--trace_candidates` and `--trace_interventions`.

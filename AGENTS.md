@@ -27,6 +27,7 @@ Before making paper-facing changes, read:
 15. `results/r060_offline_trace_trigger_audit/MANIFEST.md`
 16. `results/r061_candidate_state_logging/MANIFEST.md`
 17. `results/r062_repair_preregistration/MANIFEST.md`
+18. `results/r063_formal_repair_decision/MANIFEST.md`
 
 ## Current Scientific Position
 
@@ -145,8 +146,11 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
   new online trigger repair.
 - Use R062 as the current pre-registration and candidate-logging smoke record
   before launching any formal online repair. R062-S0 passed as logging smoke
-  only. Future R063+ runs should archive both accepted and rejected
-  gate-evaluation states and remain cost matched.
+  only.
+- Use R063 as the current formal-repair go/no-go decision before spending repair
+  compute. R063-P0 is no-go for the current submission route; if a formal
+  repair becomes necessary later, start with a fresh R064+ pre-registration and
+  archive both accepted and rejected gate-evaluation states under cost matching.
 - Rerun PDF compile and visual QA after venue-template integration or major
   layout changes before claiming final submission packaging is ready.
 - Create a final institutional/source archive only from a clean verified

@@ -59,6 +59,7 @@ source is `results/EXPERIMENT_EVIDENCE_REGISTRY.csv`.
 | R060 | `results/r060_offline_trace_trigger_audit/` | Trace/offline diagnostic support | Audits R023/R024 accepted-start traces with phase summaries and post-hoc gates; useful as a design screen, not online method evidence. |
 | R061 | `results/r061_candidate_state_logging/` | Experiment-instrumentation support | Adds tested candidate-state logging for accepted and rejected VoI gate evaluations before any future online repair. |
 | R062 | `results/r062_repair_preregistration/` | Experiment-planning support | Pre-registers the candidate-logging smoke gate and records a tiny logging smoke with accepted/rejected gate rows; not formal empirical evidence. |
+| R063 | `results/r063_formal_repair_decision/` | Experiment-planning support | Records no-go for formal online repair before the current submission; any future formal repair should start as R064+ with a frozen trigger and cost-matched comparison. |
 
 ## Baseline And Historical Runs
 
@@ -89,7 +90,7 @@ evidence unless promoted through a new registry row with a clear primary source.
 
 ## Current Registry Rows
 
-The registry currently covers R018 and R020-R062, excluding voided R046. Add new rows when:
+The registry currently covers R018 and R020-R063, excluding voided R046. Add new rows when:
 
 - a result supports or rejects a paper claim;
 - a derived paper artifact is created;

@@ -44,11 +44,12 @@ that a run archived accepted and rejected VoI gate-evaluation states. It cannot
 support any claim that a trigger improves success rate, beats random, or
 generalizes to real humans or real robots.
 
-Any future R063+ online repair still needs a fresh result directory, exact
-command logs, candidate-state traces, repeated evaluation, cost-matched random
-comparison, registry rows, and claim audit before manuscript prose changes.
 R062 should be used first as the candidate-logging smoke and pre-registration
-gate.
+gate. R063 records no-go for formal online repair before the current
+submission. Any future R064+ online repair still needs a fresh result directory,
+exact command logs, candidate-state traces, repeated evaluation, cost-matched
+random comparison, registry rows, and claim audit before manuscript prose
+changes.
 
 ## Verification Record
 

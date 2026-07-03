@@ -64,10 +64,10 @@ This optional run is still a logging smoke, not a repair experiment.
 | Failure | Action |
 |---|---|
 | Command fails before writing headers | Debug runtime/import issue before any formal experiment. |
-| Candidate trace exists but has zero gate-evaluated rows | Adjust smoke length/refit settings; do not launch R063+. |
+| Candidate trace exists but has zero gate-evaluated rows | Adjust smoke length/refit settings; do not launch a formal repair. |
 | Candidate trace lacks required fields | Repair R061 logging/tests before any formal experiment. |
 | Candidate trace has only accepted rows | Run the optional stricter smoke before claiming rejected-state logging coverage. |
-| Smoke succeeds | Freeze a separate R063+ formal trigger rule and comparison plan before training. |
+| Smoke succeeds | Use a separate go/no-go decision before freezing any future formal trigger rule and comparison plan. |
 
 ## Boundary
 

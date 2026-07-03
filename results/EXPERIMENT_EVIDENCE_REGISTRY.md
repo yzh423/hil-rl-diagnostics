@@ -1,6 +1,6 @@
 # Experiment Evidence Registry
 
-This registry is the single entry point for paper-facing R018 and R020-R062
+This registry is the single entry point for paper-facing R018 and R020-R063
 evidence.
 Use `results/EXPERIMENT_EVIDENCE_REGISTRY.csv` as the machine-readable source
 when drafting claims, tables, captions, or rebuttal text.
@@ -29,7 +29,7 @@ when drafting claims, tables, captions, or rebuttal text.
 - Treat R023 as a trace diagnostic, not as the main success-rate evidence.
 - Treat R025/R026/R028/R029 as paper-preparation artifacts, not new experimental
   results.
-- Treat R030-R062 as structure, manuscript-theme, citation-audit,
+- Treat R030-R063 as structure, manuscript-theme, citation-audit,
   paper-claim-audit, paper-artifact, evidence-discipline,
   experiment-planning, trace-offline diagnostic, and instrumentation
   artifacts, not new experimental results.
@@ -131,3 +131,7 @@ The registry supports the diagnostic-benchmark paper route:
 - R062 pre-registers the candidate-logging smoke gate and records a tiny
   logging smoke that wrote accepted and rejected gate-evaluation rows. It is a
   planning/readiness artifact, not a formal online-repair result.
+- R063 records the formal repair go/no-go decision: do not launch a formal
+  online trigger repair before the current submission. Any future repair should
+  start as a fresh R064+ pre-registration with a frozen trigger rule and
+  cost-matched random comparison.

@@ -26,6 +26,7 @@ Start with:
 - [results/r060_offline_trace_trigger_audit/MANIFEST.md](results/r060_offline_trace_trigger_audit/MANIFEST.md)
 - [results/r061_candidate_state_logging/MANIFEST.md](results/r061_candidate_state_logging/MANIFEST.md)
 - [results/r062_repair_preregistration/MANIFEST.md](results/r062_repair_preregistration/MANIFEST.md)
+- [results/r063_formal_repair_decision/MANIFEST.md](results/r063_formal_repair_decision/MANIFEST.md)
 
 ## Visual Summary
 
@@ -53,6 +54,7 @@ README images:
 - [R060 offline trace trigger audit](results/r060_offline_trace_trigger_audit/TRACE_OFFLINE_AUDIT.md)
 - [R061 candidate-state logging interface](results/r061_candidate_state_logging/CANDIDATE_STATE_LOGGING_DESIGN.md)
 - [R062 repair pre-registration and smoke plan](results/r062_repair_preregistration/R062_PRE_REGISTRATION.md)
+- [R063 formal repair go/no-go decision](results/r063_formal_repair_decision/R063_GO_NO_GO_DECISION.md)
 - [trace geometry boxplots](results/r023_real_trace_seed0_2/r023_intervention_geometry_boxplots.png)
 - [R024 repair comparison](results/r024_score_floor_seed0_2/r024_success_cost_compare.png)
 - [Stack boundary appendix table](figures/TABLE_stack_boundary_appendix_r053.tex)
@@ -72,7 +74,8 @@ superior.
 | Trace diagnostics are useful for redesign. | R023/R024 show over-triggering and score/timing mismatch rather than a simple "too far from the cube" failure mode. |
 | Offline trace filtering is only a design screen. | R060 shows post-hoc accepted-start gates can look selective while the actual R024 score-floor follow-up still spends nearly as many starts. |
 | Future repairs need rejected-state logs. | R061 adds `--trace_candidates` so formal repairs can archive accepted and rejected VoI gate evaluations before any method claim. |
-| Formal repair experiments need a pre-registered smoke gate. | R062 records the candidate-logging smoke pass, required artifacts, and R063+ formal online-repair criteria without adding formal empirical results. |
+| Formal repair experiments need a pre-registered smoke gate. | R062 records the candidate-logging smoke pass and required artifacts without adding formal empirical results. |
+| Formal repair is not currently manuscript-critical. | R063-P0 records a no-go decision for formal online repair before the current submission; any future repair should start as R064+ with a frozen trigger rule and cost-matched random comparison. |
 | Stack remains boundary evidence. | R018/R053 show no-online matched BC outperforming current online intervention variants on Stack; this is robotics breadth as a limitation, not positive transfer. |
 
 Important limitations:
