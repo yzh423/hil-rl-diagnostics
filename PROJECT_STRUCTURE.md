@@ -24,6 +24,7 @@ project stays readable as results accumulate.
 | Version and command provenance repair | `results/r048_version_command_provenance/VERSION_PROVENANCE_REPAIR.md` |
 | Provenance validation gate | `results/r049_provenance_validation/PROVENANCE_VALIDATION_MODULE.md` |
 | Theme deepening package | `results/r050_theme_deepening/THEME_DEEPENING.md` |
+| Post-R050 citation audit | `results/r051_citation_context_audit/CITATION_CONTEXT_AUDIT.md` |
 | Current manuscript skeleton | `paper/main.tex` |
 | Human-readable result map | `results/RESULTS_INDEX.md` |
 | Figure and table asset map | `figures/FIGURE_ASSET_INDEX.md` |
@@ -60,9 +61,10 @@ manifests, and audit packages for public-facing provenance.
    drift through `python scripts/validate_provenance_package.py`.
 6. R050 records the current theme deepening from trigger diagnostics to
    human-attention allocation diagnostics.
-7. Manuscript logic is maintained in `PAPER_PLAN.md`.
-8. Derived figure/table assets are generated into `figures/`.
-9. Figure/table provenance is tracked in `figures/FIGURE_ASSET_INDEX.md`.
+7. R051 records the citation-context audit after the R050 theme update.
+8. Manuscript logic is maintained in `PAPER_PLAN.md`.
+9. Derived figure/table assets are generated into `figures/`.
+10. Figure/table provenance is tracked in `figures/FIGURE_ASSET_INDEX.md`.
 
 The registry is the narrow interface for paper claims. Raw directories remain
 the implementation detail behind that interface.
@@ -101,6 +103,7 @@ the implementation detail behind that interface.
 | R048 | Version and command provenance repair: deterministic source snapshot, Git diagnostic, and R020/R021 command boundary note. |
 | R049 | Provenance validation gate: tested validator and CLI for package self-consistency and optional drift diagnosis. |
 | R050 | Theme deepening: reframes the paper spine around human-attention allocation diagnostics without changing evidence boundaries. |
+| R051 | Post-R050 citation audit: verifies that all current citation contexts remain supported after the theme update. |
 
 ## Module Deepening Candidates
 
@@ -128,6 +131,7 @@ These are the current code-structure targets after R030.
 | Version and command provenance | R048 replaces invalid local Git provenance with a source snapshot and clarifies R020/R021 command reconstruction boundaries. | `results/r048_version_command_provenance/`. | Done first pass |
 | Provenance validation | R049 adds a tested validator for R047/R048 self-consistency and current-file drift diagnosis. | `foresight_hil/evaluation/provenance_validation.py`, `scripts/validate_provenance_package.py`, and `results/r049_provenance_validation/`. | Done first pass |
 | Theme deepening | R050 deepens the manuscript and public project framing around human-attention allocation without adding evidence or citations. | `results/r050_theme_deepening/`, `PAPER_PLAN.md`, `paper/`, `README.md`, and project indexes. | Done first pass |
+| Post-R050 citation audit | R051 audits current citation contexts after the human-attention theme update. | `paper/CITATION_AUDIT.md`, `paper/CITATION_AUDIT.json`, and `results/r051_citation_context_audit/`. | Done first pass |
 
 ## Editing Rules
 

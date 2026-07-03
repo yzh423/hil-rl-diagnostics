@@ -43,6 +43,7 @@ cost.
 | Version and command provenance repair | `results/r048_version_command_provenance/VERSION_PROVENANCE_REPAIR.md` |
 | Provenance validation gate | `results/r049_provenance_validation/PROVENANCE_VALIDATION_MODULE.md` |
 | Theme deepening package | `results/r050_theme_deepening/THEME_DEEPENING.md` |
+| Post-R050 citation audit | `results/r051_citation_context_audit/CITATION_CONTEXT_AUDIT.md` |
 | Future agent rules | `AGENTS.md` |
 
 ## Evidence Chain
@@ -98,14 +99,15 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
 | Version and command provenance repair | `results/r048_version_command_provenance/` |
 | Provenance validation gate | `results/r049_provenance_validation/` |
 | Theme deepening package | `results/r050_theme_deepening/` |
+| Post-R050 citation audit | `results/r051_citation_context_audit/` |
 
 Current compile caveat: PDF compilation is blocked by the local LaTeX runtime or
 Tectonic cache availability. This is not currently a verified source-file
 error.
 
-Current citation caveat: R042 audited all 15 citation keys used by the current
-manuscript contexts and fixed six metadata entries. It did not expand the
-literature review or choose the final journal reference style.
+Current citation caveat: R051 audited all 15 citation keys after the R050
+human-attention theme update and found no wrong-context citations. It did not
+expand the literature review or choose the final journal reference style.
 
 Current venue caveat: R043 selects IEEE T-ASE as the primary target route based
 on official scope and metric pages. Final SCI Q1 / CAS partition status still
@@ -155,7 +157,8 @@ citations, experiments, or a positive LV-VoI method claim.
    appendix or no new runs.
 3. Decide whether to install/fix a local LaTeX runtime or keep drafting in TeX
    without compiling PDF locally.
-4. Run a fresh citation-context audit after the R045 prose stabilizes.
+4. Keep `paper/CITATION_AUDIT.md` current if citation contexts or bibliography
+   entries change again.
 5. Only after the diagnostic paper spine is stable, decide whether a future
    method should be phase-aware, contact-aware, or a separate benchmark-only
    extension.

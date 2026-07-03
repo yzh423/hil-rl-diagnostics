@@ -62,6 +62,10 @@ current narrative rule: the paper evaluates whether a trigger really improves
 the allocation of scarce human intervention effort, not whether LV-VoI is a
 positive method result.
 
+R051 reruns citation-context audit after the R050 theme update. It finds that
+all 15 current citation keys still support their manuscript contexts and makes
+no bibliography changes.
+
 ## Claims-Evidence Matrix
 
 | Claim | Evidence | Status | Section |
@@ -189,10 +193,10 @@ imports R029/R036 display assets and uses only R027/R037-supported citation
 keys. PDF compilation still requires a complete local LaTeX runtime or a filled
 Tectonic cache.
 
-R042 completed the current manuscript citation-context audit. All 15 current
-citation keys support their manuscript contexts after six metadata fixes in
-`paper/references.bib` and `paper/sections/99_references.tex`. See
-`paper/CITATION_AUDIT.md` and `results/r042_citation_context_audit/`.
+R051 completed the current manuscript citation-context audit after the R050
+theme update. All 15 current citation keys support their manuscript contexts,
+with no additional bibliography changes after the R042 metadata fixes. See
+`paper/CITATION_AUDIT.md` and `results/r051_citation_context_audit/`.
 
 - Intro: HIL-RL, intervention learning, robot manipulation with human corrections. `[AUDITED R042]`
 - Related work: HIL-SERL-style systems, learning from interventions, active learning / VoI, uncertainty in model-based RL, negative results / reproducibility in RL. `[AUDITED R042]`
@@ -274,6 +278,6 @@ Secondary reviewer-agent feedback was not run in this turn because sub-agent spa
 - [x] Add a tested provenance-validation gate (`results/r049_provenance_validation/`).
 - [x] Initialize and publish a valid GitHub repository for the current source state.
 - [x] Deepen the paper spine around human-attention allocation diagnostics (`results/r050_theme_deepening/`).
+- [x] Rerun citation-context audit after the R050 theme update (`results/r051_citation_context_audit/`).
 - [ ] Decide whether submission packaging also needs an institutional source archive.
-- [ ] Rerun citation-context audit after R045 prose is stable.
 - [ ] Decide whether to add a small robotics breadth package before submission.

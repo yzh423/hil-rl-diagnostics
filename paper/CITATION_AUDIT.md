@@ -1,88 +1,52 @@
 # Citation Audit Report
 
-**Date**: 2026-07-02
+**Date**: 2026-07-03
 **Bib file**: `references.bib`
 **Cited entries audited**: 15
-**Overall verdict after fixes**: PASS
+**Overall verdict after R050 theme update**: PASS
 
 ## Summary
 
 | Finding type | Count | Status |
 |---|---:|---|
 | Context-supported cited entries | 15 | PASS |
-| Metadata fixes applied | 6 | FIXED |
+| Metadata fixes applied in this run | 0 | NOT NEEDED |
 | Wrong-context citations | 0 | PASS |
 | Missing cited keys | 0 | PASS |
-| Hallucinated/nonexistent entries after fixes | 0 | PASS |
+| Hallucinated/nonexistent entries | 0 | PASS |
 
-This audit checked every current `\cite{...}` occurrence in `paper/sections/*.tex`
-against `paper/references.bib` and fresh web/source lookups. The audit found no
-wrong-context citations, but it did find metadata drift in several entries. The
-metadata fixes were applied directly to `paper/references.bib` and the manual
-bibliography in `paper/sections/99_references.tex`.
+This audit checked every current `\cite{...}` occurrence in
+`paper/sections/*.tex` after the R050 human-attention allocation theme pass.
+The audit found no wrong-context citations and did not add, remove, or rewrite
+any citation key. The R050 wording remains within the support boundaries of the
+existing sources: HIL-RL systems and human corrections, human involvement across
+RL workflow phases, budget-aware querying/intervention, score calibration, and
+RL evaluation reliability.
 
-## Applied Metadata Fixes
+## Metadata Status
 
-### `luo2025hilserl`
+No bibliography metadata was changed in R051. The R042 metadata fixes remain in
+force:
 
-- **Issue**: The BibTeX entry claimed a Science Robotics publication and DOI
-  that were not verified by the web lookup or the local PDF first page.
-- **Action**: Replaced the entry with arXiv metadata for `arXiv:2410.21845`.
-- **Context verdict**: KEEP. The citation supports claims about HIL-RL systems
-  combining demonstrations, human corrections, and off-policy RL for robotic
-  manipulation.
-
-### `ball2023rlpd`
-
-- **Issue**: Metadata lacked PMLR volume/series/publisher details.
-- **Action**: Updated to the PMLR ICML 2023 record, volume 202, pages
-  1577--1594.
-- **Context verdict**: KEEP. The citation supports using offline data with
-  online off-policy RL.
-
-### `mandlekar2021robomimic`
-
-- **Issue**: Entry used CoRL 2021 placeholder-style metadata.
-- **Action**: Updated to the PMLR CoRL proceedings record: volume 164, pages
-  1678--1690, year 2022.
-- **Context verdict**: KEEP. The citation supports claims about robot
-  manipulation from offline human demonstrations and robomimic-style
-  demonstration infrastructure.
-
-### `hoque2021thrifty`
-
-- **Issue**: Entry used CoRL 2021 placeholder-style metadata.
-- **Action**: Updated to the PMLR CoRL proceedings record: volume 164, pages
-  598--608, year 2022.
-- **Context verdict**: KEEP. The citation supports budget-aware novelty/risk
-  gating for interactive imitation learning.
-
-### `cai2025aim`
-
-- **Issue**: Entry claimed PMLR 267 pages 6243--6256, but that PMLR page is a
-  different paper. The verifiable AIM record is `arXiv:2506.09176`, with an
-  arXiv note that it was an ICML 2025 Poster.
-- **Action**: Replaced the proceedings entry with arXiv metadata.
-- **Context verdict**: KEEP. The citation supports adaptive robot-gated
-  intervention mechanisms and reduced take-over cost.
-
-### `guo2017calibration`
-
-- **Issue**: Metadata lacked PMLR volume/pages/publisher.
-- **Action**: Updated to PMLR volume 70, pages 1321--1330.
-- **Context verdict**: KEEP. The citation supports the statement that modern
-  neural-network confidence estimates can be miscalibrated.
+- `luo2025hilserl`: arXiv metadata for `arXiv:2410.21845`.
+- `ball2023rlpd`: PMLR ICML 2023 record, volume 202, pages 1577--1594.
+- `mandlekar2021robomimic`: PMLR CoRL record, volume 164, pages 1678--1690,
+  year 2022.
+- `hoque2021thrifty`: PMLR CoRL record, volume 164, pages 598--608, year 2022.
+- `cai2025aim`: arXiv metadata for `arXiv:2506.09176`; arXiv notes ICML 2025
+  Poster.
+- `guo2017calibration`: PMLR volume 70, pages 1321--1330.
 
 ## Per-Entry Context Verdicts
 
 | Key | Existence / metadata source | Context verdict | Notes |
 |---|---|---|---|
-| `luo2025hilserl` | arXiv:2410.21845 | KEEP | Supports HIL-SERL-style real-robot HIL-RL with demonstrations, corrections, and efficient RL. |
-| `retzlaff2024hitl` | JAIR 79, DOI 10.1613/jair.1.15348 | KEEP | Supports broad HITL-RL framing and human involvement across phases. |
+| `luo2025hilserl` | arXiv:2410.21845 | KEEP | Supports HIL-RL systems combining demonstrations, human corrections, efficient RL, and robot manipulation. |
+| `retzlaff2024hitl` | JAIR 79, DOI 10.1613/jair.1.15348 | KEEP | Supports broad HITL-RL framing and human involvement across development, learning, evaluation, and deployment phases. |
 | `ball2023rlpd` | PMLR 202:1577--1594 | KEEP | Supports offline data mixed with online off-policy RL. |
 | `mandlekar2021robomimic` | PMLR 164:1678--1690 | KEEP | Supports learning from offline human demonstrations for robot manipulation. |
-| `hoque2021thrifty` | PMLR 164:598--608 | KEEP | Supports budget-aware novelty/risk expert-query gating. |
-| `cai2025aim` | arXiv:2506.09176 | KEEP | Supports robot-gated adaptive intervention and take-over cost reduction claims. |
+| `hoque2021thrifty` | PMLR 164:598--608 | KEEP | Supports budget-aware novelty/risk expert-query gating and supervisor-burden framing. |
+| `cai2025aim` | arXiv:2506.09176 | KEEP | Supports robot-gated adaptive intervention, monitoring-effort reduction, and take-over cost claims. |
 | `chua2018pets` | NeurIPS 2018 proceedings | KEEP | Supports uncertainty-aware probabilistic dynamics models. |
 | `janner2019mbpo` | NeurIPS 2019 proceedings | KEEP | Supports short model rollouts and model-trust framing. |
 | `guo2017calibration` | PMLR 70:1321--1330 | KEEP | Supports neural-network calibration/miscalibration context. |
@@ -91,7 +55,7 @@ bibliography in `paper/sections/99_references.tex`.
 | `robosuite2020` | arXiv:2009.12293 | KEEP | Supports robosuite as the simulator/framework substrate. |
 | `henderson2018deeprlmatters` | AAAI 2018 proceedings, DOI 10.1609/aaai.v32i1.11694 | KEEP | Supports RL reproducibility and reporting-discipline concerns. |
 | `agarwal2021statisticalprecipice` | arXiv:2108.13264 | KEEP | Supports uncertainty in few-run deep RL evaluation and interval reporting. |
-| `wilson1927score` | JASA 22(158):209--212, DOI 10.1080/01621459.1927.10502953 | KEEP | Supports Wilson/binomial-proportion interval use. |
+| `wilson1927score` | JASA 22(158):209--212, DOI 10.1080/01621459.1927.10502953 | KEEP | Supports Wilson/binomial-proportion interval use; R042 CrossRef verification retained. |
 
 ## Verified Source URLs
 
@@ -122,9 +86,12 @@ bibliography in `paper/sections/99_references.tex`.
   paper.
 - The cite keys `mandlekar2021robomimic` and `hoque2021thrifty` were kept for
   continuity, even though the corrected metadata year is 2022.
+- The R050 phrase "human-attention allocation" is a manuscript framing term. It
+  is supported across the HITL-RL survey and budget-aware intervention/querying
+  sources, not attributed as a phrase coined by a single cited paper.
 
 ## Next Actions
 
 No citation-context rewrite is required after this audit. Before final
 submission, choose the target journal family and format references consistently
-for that venue.
+for that venue; if new literature is added, rerun this audit.

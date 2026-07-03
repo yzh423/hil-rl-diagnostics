@@ -1,0 +1,109 @@
+{
+  "filepath": "paper\\references.bib",
+  "total_entries": 15,
+  "valid_entries": 15,
+  "errors": [],
+  "warnings": [
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry luo2025hilserl: Missing recommended field \"volume\"",
+      "entry": "luo2025hilserl"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry luo2025hilserl: Missing recommended field \"pages\"",
+      "entry": "luo2025hilserl"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry cai2025aim: Missing recommended field \"volume\"",
+      "entry": "cai2025aim"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry cai2025aim: Missing recommended field \"pages\"",
+      "entry": "cai2025aim"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry chua2018pets: Missing recommended field \"pages\"",
+      "entry": "chua2018pets"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry janner2019mbpo: Missing recommended field \"pages\"",
+      "entry": "janner2019mbpo"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry sac2018applications: Missing recommended field \"volume\"",
+      "entry": "sac2018applications"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry sac2018applications: Missing recommended field \"pages\"",
+      "entry": "sac2018applications"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry robosuite2020: Missing recommended field \"volume\"",
+      "entry": "robosuite2020"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry robosuite2020: Missing recommended field \"pages\"",
+      "entry": "robosuite2020"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry henderson2018deeprlmatters: Missing recommended field \"pages\"",
+      "entry": "henderson2018deeprlmatters"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "volume",
+      "severity": "medium",
+      "message": "Entry agarwal2021statisticalprecipice: Missing recommended field \"volume\"",
+      "entry": "agarwal2021statisticalprecipice"
+    },
+    {
+      "type": "missing_recommended_field",
+      "field": "pages",
+      "severity": "medium",
+      "message": "Entry agarwal2021statisticalprecipice: Missing recommended field \"pages\"",
+      "entry": "agarwal2021statisticalprecipice"
+    }
+  ],
+  "duplicates": [],
+  "venue_standard_checked": null,
+  "min_count_checked": null,
+  "manuscript_results": {
+    "checked": false,
+    "manuscript_filepath": null,
+    "cited_keys": [],
+    "missing_keys": [],
+    "unused_keys": []
+  }
+}

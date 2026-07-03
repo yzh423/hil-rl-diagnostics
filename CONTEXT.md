@@ -116,4 +116,5 @@ R048 remains the historical repair artifact for the earlier invalid-Git
 workspace state. R050 deepens the current paper spine from trigger diagnostics
 to human-attention allocation diagnostics, updating the manuscript, plan, and
 public project framing without changing evidence boundaries, citations, or raw
-results.
+results. R051 reruns the citation-context audit after R050 and finds no
+wrong-context citation in the current 15-key manuscript bibliography.

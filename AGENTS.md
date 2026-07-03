@@ -100,8 +100,8 @@ python C:\Users\14228\.codex\skills\citation-management\scripts\validate_citatio
   in addition to the public Git repository and R048 source snapshot.
 - Use R047 as the current source/hash/compute/command provenance package before
   making paper-facing evidence claims.
-- Rerun citation-context audit after the R045 Note to Practitioners and
-  reproducibility appendix prose stabilizes.
+- Keep the R051 citation-context audit current if citation contexts or
+  bibliography entries change again.
 - Decide whether to add small robotics breadth evidence before submission:
   cleaned Stack appendix, an explicitly scoped new in-project pilot, or no new
   runs.
